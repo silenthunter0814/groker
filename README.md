@@ -12,9 +12,6 @@
 4. 右下角应显示：`Powered by MathJax`  
 
 按快捷键：Ctrl + Shift + P  
-通过 cmd-shift-p 然后选择 Markdown Preview Enhanced: Open Mathjax config 命令来打开 Mathjax 配置文件
-
-
 输入并选择：Preferences: Open User Settings (UI)  
 搜索并设置 MathJax: markdown-preview-enhanced
 
