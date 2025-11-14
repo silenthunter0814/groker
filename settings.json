@@ -10,6 +10,5 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "editor.autoIndentOnPaste": true,
-    "markdown-preview-enhanced.executablePath": "/usr/bin/google-chrome",
     "markdown-preview-enhanced.mathRenderingOption": "MathJax"
 }
