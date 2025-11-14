@@ -1,0 +1,15 @@
+{
+    "editor.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.formatOnPaste": true,
+    "workbench.editor.enablePreview": false,
+    "emmet.preferences": {},
+    "workbench.settings.applyToAllProfiles": [],
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "editor.autoIndentOnPaste": true,
+    "markdown-preview-enhanced.executablePath": "/usr/bin/google-chrome",
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax"
+}
