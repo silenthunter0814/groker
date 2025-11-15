@@ -1,7 +1,24 @@
 ---
 title: 微积分速成教程
+<<<<<<< HEAD
 author: 考德·格洛克
 date: 2025.11.15
+=======
+author: 你的名字
+date: 2025
+mainfont: Noto Sans CJK SC
+CJKmainfont: Noto Sans CJK SC
+lang: zh-CN
+papersize: a4
+fontsize: 11pt
+geometry: margin=1in
+
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    toc_depth: 2
+>>>>>>> 94b428c (update)
 ---
 
 # 《微积分速成教程》
@@ -55,7 +72,7 @@ date: 2025.11.15
 
 ---
 
-![cover](images/cover.jpg)
+![cover](images/cover.png)
 
 *图 0.1：微积分核心思想——无限逼近*  
   
