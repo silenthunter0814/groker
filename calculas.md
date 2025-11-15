@@ -72,9 +72,17 @@ output:
 
 ![](images/01/1.1.png)
 
-<div class="caption">图 1.1：克罗克代数环轴 </div>
+<div class="caption">图 1.1：格罗克代数环轴 </div>
 
 </div>
+
+
+
+
+
+
+
+
 
 
 
