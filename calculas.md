@@ -87,12 +87,12 @@ $$ \lim_{x \to x_0} f(x) = L \tag{1.1} $$
 令 $\varepsilon > 0$，取 $\delta = \varepsilon / 3$。  
 当 $0 < |x - 2| < \delta$ 时，
 
-$$
+
 \begin{align}
 |(3x - 1) - 5| &= |3x - 6| \\
                  &= 3|x - 2| < 3 \cdot \frac{\varepsilon}{3} = \varepsilon
 \end{align}
-$$
+
 
 $\therefore$ 极限为 5. $\square$
 

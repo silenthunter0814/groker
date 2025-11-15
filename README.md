@@ -9,28 +9,81 @@
 
 3. 取消线：$$ \cancel{abc} $$
 
-4. 右下角应显示：`Powered by MathJax`  
+**设置**
+- 按快捷键：Ctrl + Shift + P  
+- 输入并选择：Preferences: Open User Settings (UI)  
+- 搜索并设置 MathJax: markdown-preview-enhanced
 
-按快捷键：Ctrl + Shift + P  
-输入并选择：Preferences: Open User Settings (UI)  
-搜索并设置 MathJax: markdown-preview-enhanced
+**settings.json**
+``` {highlight=13}
+{
+    "editor.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.formatOnPaste": true,
+    "workbench.editor.enablePreview": false,
+    "emmet.preferences": {},
+    "workbench.settings.applyToAllProfiles": [],
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "editor.autoIndentOnPaste": true,
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax"
+}
+```
 
+**git configration**
+- git config --global user.name "Silent Hunter"  
+- git config --global user.email zhangliwen000@gmail.com  
+- git config --global init.defaultBranch main  
+- git config --global pull.rebase true  
 
-|                        设置项                         |   正确值   |        明         |
-|----------------------------------------------------|---------|------------------|
-| Markdown Preview Enhanced: Math Rendering Option   | MathJax | 强制使用 MathJax 引擎  |
-| Markdown Preview Enhanced: Enable Script Execution | 勾上      | 允许加载扩展（如 mhchem） |
-| Markdown Preview Enhanced: Live Update             | 勾上      | 实时刷新             |
+- git pull  
+- git push
+- git commit
 
+**脚注**
+Content [^1]
+[^1]: Hi! This is a footnote
 
+Content [^2]
+[^2]: Hi! This is a footnote
 
+**上标**
+30^th^
 
+**下标**
+H~2~O
 
+**缩略**
+*[HTML]: Hyper Text Markup Language
+*[W3C]: World Wide Web Consortium
+The HTML specification
+is maintained by the W3C.
 
-git config --global user.name "Silent Hunter"  
-git config --global user.email zhangliwen000@gmail.com  
-git config --global init.defaultBranch main  
-git config --global pull.rebase true  
+**标记**
+==marked==
 
-git pull  
-git push
+**提示信息**
+
+!!! note 注释
+    This is the admonition body
+
+!!! info 信息
+!!! tip 要点
+!!! caution 警告
+!!! example 例题1.1 计算积分
+    $f(x) = \int f(x)dx$
+
+@import "https://cdn.plot.ly/plotly-latest.min.js"
+
+```javascript {cmd=true element="<div id='tester'></div>}
+var TESTER = document.getElementByID('tester');
+Plotly.plot(TESTER, [{
+    x: [1, 2, 3, 4],
+    y: [1, 2, 3, 4]
+}, {
+    margin: {t: 0}
+}])
+''
+```
