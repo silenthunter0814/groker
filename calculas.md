@@ -16,23 +16,6 @@ output:
     toc_depth: 2
 ---
 
-<style>
-.center-box {
-  text-align: center;     /* 图片 + 名称整体居中 */
-  margin: 1.5rem 0;
-}
-.center-box img {
-  max-width: 40%;         /* 控制图片宽度，可调 */
-  height: auto;
-  border-radius: 6px;
-}
-.center-box .caption {
-  margin-top: .1rem;
-  font-size: .9em;
-  color: #555;
-  font-style: italic;
-}
-</style>
 
 # 《微积分速成教程》
 
@@ -68,15 +51,14 @@ output:
 
 和传统的实数数轴不同，格洛克数轴是一个圆环，圆环长度固定为 $\infty$ ，并将其分割为相等的 $\infty$ 段，每段长度为 1, 将数轴逆时针依次标注 0, 1, 2, ...，顺时针标注为 -1, -2, ...，这样我们就得到了一个覆盖 $\left(-\infty, \infty\right)$ 数字空间的环形数轴。
 
-<div class="center-box">  
 
-![](images/01/1.1.png)
+<div style="text-align: center;">
+  <img src="images/01/1.1.png" style="width: 40%;">
 
-<div class="caption">图 1.1：格罗克代数环轴 </div>
-
+  <p style="font-size: 0.9em; color: #555; margin-top: 5px;">
+    图 1.1：格罗克代数环轴 
+  </p>
 </div>
-
-
 
 
 
