@@ -75,15 +75,3 @@ is maintained by the W3C.
 !!! example 例题1.1 计算积分
     $f(x) = \int f(x)dx$
 
-@import "https://cdn.plot.ly/plotly-latest.min.js"
-
-```javascript {cmd=true element="<div id='tester'></div>}
-var TESTER = document.getElementByID('tester');
-Plotly.plot(TESTER, [{
-    x: [1, 2, 3, 4],
-    y: [1, 2, 3, 4]
-}, {
-    margin: {t: 0}
-}])
-''
-```
