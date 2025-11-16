@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 NOV 2025 18:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 NOV 2025 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -824,6 +824,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./chapter/01.tex
 Chapter 1.
+
+Package fontspec Warning: Font "FandolHei-Regular" does not contain requested
+(fontspec)                Script "CJK".
+
 [1
 
 
@@ -845,11 +849,11 @@ Chapter 2.
 
 ] (./main.aux (./chapter/01.aux) (./chapter/02.aux)) ) 
 Here is how much of TeX's memory you used:
- 27229 strings out of 477728
- 585224 string characters out of 5842237
+ 27236 strings out of 477728
+ 585391 string characters out of 5842237
  882085 words of memory out of 5000000
- 47398 multiletter control sequences out of 15000+600000
- 478809 words of font info for 98 fonts, out of 8000000 for 9000
+ 47401 multiletter control sequences out of 15000+600000
+ 478833 words of font info for 101 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,9n,97p,486b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 
