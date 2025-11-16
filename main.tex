@@ -1,0 +1,150 @@
+% =======================================================
+% 1. 文档类型与中文支持
+% =======================================================
+% 使用 book 文档类，12pt 字号，twoside 用于确保内文页面排版一致性。
+\documentclass[12pt, twoside]{book}
+\usepackage{ctex} % 中文支持宏包，确保中文和标点符号正确排版。
+% **重要：请确保 VS Code 使用 XeLaTeX 或 LuaLaTeX 编译**
+
+% =======================================================
+% 2. 布局与边距设置 (geometry 宏包)
+% =======================================================
+\usepackage{geometry}
+
+% 电子书不需要 KDP 物理裁切尺寸。我们采用标准 A4 作为基础，
+% 并设置足够的边距，让内容在转换为 Fixed-Layout 时显得美观且清晰。
+\geometry{
+    a4paper,       % 采用标准的 A4 纸张作为排版基准
+    margin=1.5in,  % 相对宽松的边距，减少信息密度，提高阅读舒适度
+    % margin=1.25in, % 也可以尝试 1.25in
+}
+
+% =======================================================
+% 3. 数学与排版增强宏包
+% =======================================================
+\usepackage{amsmath}   % 扩展数学环境（如 align, multline）
+\usepackage{amssymb}   % 常用数学符号（如 \mathbb, \mathfrak）
+\usepackage{amsthm}    % 定理、引理、证明环境
+\usepackage{graphicx}  % 插入图片/图形
+\usepackage{caption}   % 用于更好地控制图片标题
+\usepackage{wrapfig}   % 用于文本环绕图片
+\usepackage{fancyhdr}  % 自定义页眉页脚（电子书的页眉/页脚通常会在转换时被忽略）
+\usepackage{indentfirst} % 解决中文段落首行缩进问题
+\setlength{\parindent}{2em} % 设置中文段落首行缩进两个汉字宽度
+
+% 定义微积分教材中常用的环境
+\newtheorem{theorem}{定理}[chapter]  % 定理，按章编号
+\newtheorem{definition}{定义}[chapter]  % 定义，按章编号
+\newtheorem{lemma}{引理}[chapter]  % 引理
+\newtheorem{example}{例}[section]  % 示例，按节编号
+
+% =======================================================
+% 4. 文档开始与内容结构
+% =======================================================
+\pagestyle{plain} % 默认页码样式
+
+% 添加 hyperref 宏包来生成 PDF 书签和超链接
+\usepackage{hyperref}
+\usepackage{fancyhdr}  
+\usepackage{indentfirst}
+
+% 推荐的 hyperref 设置：
+\hypersetup{
+    unicode=true,       % 启用 unicode，支持中文书签
+    colorlinks=true,    % 使用颜色而不是边框来标识链接
+    linkcolor=blue,     % 内部链接颜色
+    citecolor=green,    % 引用链接颜色
+    urlcolor=cyan       % URL 链接颜色
+}
+\usepackage[numbered]{bookmark}
+
+\begin{document}
+
+% --- 扉页 (Front Matter) ---
+\frontmatter 
+\title{\heiti 微积分基础教程\\ \normalsize (Calculus Fundamentals)} % 使用黑体字体显示中文标题
+\author{您的姓名}
+\date{\today}
+\maketitle % 生成标题页
+
+% 版权页信息 (Fixed-Layout 电子书需要包含这些信息)
+\newpage
+\thispagestyle{empty} % 清除此页的页码和页眉
+\section*{\heiti 版权信息}
+\vspace{1cm}
+本书仅提供电子版，固定版式。\\
+版权所有 \textcopyright\ 2025 by 您的姓名。保留一切权利。
+\vfill % 垂直填充
+
+\chapter*{\heiti 前言}
+\begin{wrapfigure}{r}{0.4\textwidth} % r: 右侧，0.4\textwidth: 宽度为页面文本宽度的 40%
+    \centering
+    \includegraphics[width=\linewidth]{images/cover.png} % 宽度为 wrapfigure 环境的 100%
+    \caption{\heiti 另一张图片，位于右侧}
+    \label{fig:another_image}
+\end{wrapfigure}
+
+自牛顿与莱布尼茨独立创设微积分（1660–1680 年代）以来，这门“变化的数学”已走过三个半世纪。三百年间，微积分从“计算变化率”演化为“描述一切可微结构”的元语言：数学不再只是工具，它已经从一门关于量的科学，演变为一门关于模式、结构和形式推理的宏大体系。
+
+现代微积分以其严谨性而闻名，但其基石——极限的 $\varepsilon-\delta$ 定义和由此构建的标准分析体系，正在向哲学化甚至宗教化方向发展：非直观性、逻辑严重形式化，过度僵化、挑战常识，和现实严重脱节正在演变成数学空想主义。  
+
+有鉴于此，格洛克以极度自下而上的方式重新思考整个微积分体系，成功建立可视化的格洛克代数空间，可视化范围从 $\left(-\infty^\infty,\infty^\infty\right)$ 每一个数都可见，并将 $\infty, \varepsilon$ 定义为未解析数，分别表示无穷大和无穷小，突然之间，一切都变得如此简单，并由此带来以下颠覆性的数学结果：
+
+\begin{figure}[h] 
+    % [htbp] 是浮动位置的优先级控制：
+    % h (here) - 尽量放在代码位置；t (top) - 放在页顶；
+    % b (bottom) - 放在页底；p (page) - 放在独立浮动页。
+    
+    \centering % **使整个 figure 环境的内容居中**
+    
+    % 插入图片
+    % width 参数控制图片大小，例如：0.7\textwidth 表示文本宽度的 70%
+    \includegraphics[width=0.7\textwidth]{images/cover.png} 
+    
+    % 图片说明（标题），位于图片正下方
+    % ctex 宏包会自动将 "Figure" 翻译成 "图"
+    \caption{\heiti 示例插图：函数的几何图形展示} 
+\end{figure}
+
+极限被重新定义，简单而直观，极限的计算只是简单的数学计算，洛必达法则不再必要，神秘性已全部消失。
+
+开闭区间被重新描述，无穷小的数值化定义使开区间基本消失，在极限状态下都是闭区间。
+
+连续性、间断点等相关理论已消失，基本只保留描述性概念和常识。
+
+数列与极限的收敛相关内容是为了传统趋近极限的表述，而无穷大和无穷小不再是一个趋近的概念，这部分内容已经没有意义。因此只保留数列的通项公式并作为统一的函数对待。
+
+导数不再是一个莱布尼兹定义的神秘符号 $\frac d {dx} F(x)$，现在只是一个重新定义的点 x 位置的点微分的商，即 $d F(x)/ dx$，和小学的除法运算没有什么不同，更强调计算结果是瞬时变化率或几何图形上的斜率。
+
+积分被重新定义，删除积分定理等内容，重新定义积分为微分的逆运算。具体变化为点积分简称为积分取代不定积分，保留定积分并重新命名为区间积分对应区间微分。
+
+自然常数 e 被重新定义为 $e = \left(1 + \varepsilon \right)^\infty$，清晰而直观，并拓展为自然常数序列 $e_n = \left(1 + n\varepsilon \right)^\infty$，使其不再具有神秘性。
+
+定义和定理中的函数只进行最小化覆盖，即只包含一个定义域区间，消除传统定义和定理的繁杂限制条件，简单而清晰。
+
+然而，更严肃而重要的思考是，我们为什么要接受数学基础/数理逻辑/集合论/数学分析这些所谓的数学家小圈子理论，无论对于普通人还是科研人员既看不懂也没有任何实用价值。回归常识和简单，我们真的需要数学家小圈子给我们解释为什么 1 + 1 = 2 吗？
+
+\vspace{1cm} % 增加垂直间距，让签名和正文分开
+\begin{flushright} 
+    \textbf{考德·格洛克} \\ % 签名/作者名 (加粗)
+    \vspace{0.3cm} % 签名和日期之间留出一点垂直间距
+    2025年11月
+\end{flushright}
+
+\newpage
+\tableofcontents % 自动生成目录
+
+% --- 正文 (Main Content) ---
+\mainmatter % 切换到阿拉伯数字页码
+\pagestyle{headings} % 切换到标准的页眉/页脚样式
+
+
+
+\include{chapter/01}
+\include{chapter/02}
+
+
+
+
+
+\end{document}

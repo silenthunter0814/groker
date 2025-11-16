@@ -1,0 +1,28 @@
+\chapter{格洛克代数空间}
+自微积分诞生以来，如何阐释、理解无穷大和无穷小以及由此引出的函数的极限一直是问题的核心。
+
+\section{格洛克代数环轴}
+和传统的实数数轴不同，格洛克数轴是一个圆环，圆环长度固定为 $\infty$ ，并将其分割为相等的 $\infty$ 段，每段长度为 1, 将数轴逆时针依次标注 0, 1, 2, ...，顺时针标注为 -1, -2, ...，这样我们就得到了一个覆盖 $\left(-\infty, \infty\right)$ 数字空间的环形数轴。
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/01/1.1.png} 
+    \caption{\heiti 格罗克代数环轴}
+\end{figure}
+
+\begin{example}
+求函数 $f(x) = \frac{\sqrt{x-4}}{x-5}$ 的定义域。
+\end{example}
+
+\section{极限的概念}
+\begin{definition}[极限的 $\epsilon-\delta$ 定义]
+\label{def:limit}
+对于函数 $f(x)$，如果存在实数 $L$，使得对任意给定的 $\epsilon > 0$，都存在 $\delta > 0$，当 $0 < |x - a| < \delta$ 时，有 $|f(x) - L| < \epsilon$，则称 $L$ 为函数 $f(x)$ 在点 $a$ 处的极限，记为 $\lim_{x \to a} f(x) = L$。
+\end{definition}
+
+\begin{theorem}[极限的四则运算]
+设 $\lim_{x \to a} f(x)$ 和 $\lim_{x \to a} g(x)$ 都存在，则有：
+$$ \lim_{x \to a} [f(x) \pm g(x)] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) $$
+$$ \lim_{x \to a} [f(x) g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) $$
+$$ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}, \quad \text{其中 } \lim_{x \to a} g(x) \neq 0 $$
+\end{theorem}
