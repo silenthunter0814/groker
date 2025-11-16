@@ -56,6 +56,29 @@
     citecolor=green,    % 引用链接颜色
     urlcolor=cyan       % URL 链接颜色
 }
+
+% 确保已导入宏包
+\usepackage{tcolorbox}
+\usepackage{xcolor} 
+
+% --- 1. 定义 info 环境 ---
+\newtcolorbox{info}[1]{
+    colback=blue!5!white,          % 内容区背景: 浅蓝色
+    colframe=blue!75!black,        % 边框颜色: 深蓝色
+    colbacktitle=blue!75!black,    % 标题栏背景色: 深蓝色 (保持与边框一致)
+    coltitle=white,                % 标题文本颜色: 白色 (与深蓝背景形成高对比)
+    title={#1}                     % 标题内容
+}
+
+% --- 2. 定义 warning 环境 ---
+\newtcolorbox{warning}[1]{
+    colback=yellow!10!white,
+    colframe=red!75!black,
+    colbacktitle=red!75!black,
+    coltitle=white,
+    title={#1}
+}
+
 \usepackage[numbered]{bookmark}
 \setlength{\parindent}{0pt} % 将段落缩进长度设为 0
 
@@ -131,6 +154,14 @@
     \vspace{0.3cm} % 签名和日期之间留出一点垂直间距
     2025年11月
 \end{flushright}
+
+\begin{info}{重要提示}
+    请确保您已安装 tcolorbox 宏包。
+\end{info}
+
+\begin{warning}{风险提示}
+    不要在数学环境中使用 \\ 换行，请改用 align 或 split 环境。
+\end{warning}
 
 \newpage
 \tableofcontents % 自动生成目录
