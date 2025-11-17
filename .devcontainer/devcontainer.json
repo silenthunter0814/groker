@@ -3,9 +3,10 @@
     "name": "LaTeX with Chinese Support",
     "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {"flavor": "texlive-medium"} 
+        "ghcr.io/devcontainers-contrib/features/texlive-full:2": {
+            "scheme": "medium"
+        }
     },
-    
     "postCreateCommand": "tlmgr install --no-interactive ctex fontspec collection-langchinese collection-fontsrecommended || true",
     "customizations": {
         "vscode": {
@@ -13,33 +14,38 @@
                 "james-yu.latex-workshop"
             ],
             "settings": {
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex -> bibtex -> xelatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        }
-    ], 
-    "latex-workshop.latex.tools": [
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        }
-    ],
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "xelatex → bibtex → xelatex×2",
+                        "tools": [
+                            "xelatex",
+                            "bibtex",
+                            "xelatex",
+                            "xelatex"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "xelatex",
+                        "command": "xelatex",
+                        "args": [
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "%DOC%"
+                        ]
+                    },
+                    {
+                        "name": "bibtex",
+                        "command": "bibtex",
+                        "args": [
+                            "%DOCFILE%"
+                        ]
+                    }
+                ],
                 "latex-workshop.view.pdf.viewer": "tab"
             }
         }
     }
-
 }
-
