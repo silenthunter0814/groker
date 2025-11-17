@@ -2,8 +2,8 @@
 % 1. 文档类型与中文支持
 % =======================================================
 % 使用 book 文档类，12pt 字号，twoside 用于确保内文页面排版一致性。
-\documentclass[12pt, twoside]{book}
-\usepackage{ctex} % 中文支持宏包，确保中文和标点符号正确排版。
+\documentclass[12pt, twoside]{ctexbook}
+% \usepackage{ctex} % 中文支持宏包，确保中文和标点符号正确排版。
 % **重要：请确保 VS Code 使用 XeLaTeX 或 LuaLaTeX 编译**
 
 % =======================================================
@@ -114,7 +114,7 @@
 
 有鉴于此，格洛克以极度自下而上的方式重新思考整个微积分体系，成功建立可视化的格洛克代数空间，可视化范围从 $\left(-\infty^\infty,\infty^\infty\right)$ 每一个数都可见，并将 $\infty, \varepsilon$ 定义为未解析数，分别表示无穷大和无穷小，突然之间，一切都变得如此简单，并由此带来以下颠覆性的数学结果：
 
-\begin{figure}[h] 
+\begin{figure}[htbp] 
     % [htbp] 是浮动位置的优先级控制：
     % h (here) - 尽量放在代码位置；t (top) - 放在页顶；
     % b (bottom) - 放在页底；p (page) - 放在独立浮动页。
