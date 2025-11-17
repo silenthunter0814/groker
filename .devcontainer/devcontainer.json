@@ -3,12 +3,12 @@
     "name": "LaTeX with Chinese Support",
     "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers-contrib/features/texlive-full:2": {
-            "flavor": "texlive-medium"
-        }
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {} // 仅保留 D-I-D
     },
-    //"postCreateCommand": "sudo apt-get update && sudo apt-get install -y fonts-noto-cjk || true",
+    
+    // 使用 apt-get 安装 TeXLive 的中文支持包和字体
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y texlive-latex-extra texlive-lang-cjk latexmk fonts-noto-cjk",
+
     "customizations": {
         "vscode": {
             "extensions": [
