@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  17 NOV 2025 20:16
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  17 NOV 2025 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -839,7 +839,12 @@ LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <12> not 
  [2]
 File: images/01/1.4.png Graphic file (type bmp)
 <images/01/1.4.png>
- [3]) [4]
+ [3]
+
+LaTeX Font Warning: Font shape `TU/FandolHei-Regular(0)/m/it' undefined
+(Font)              using `TU/FandolHei-Regular(0)/m/n' instead on input line 91.
+
+) [4]
 \openout2 = `chapter/02.aux'.
 
  (./chapter/02.tex
@@ -849,12 +854,16 @@ File: images/01/1.4.png Graphic file (type bmp)
 
 
 
-] (./main.aux (./chapter/01.aux) (./chapter/02.aux)) ) 
+] (./main.aux (./chapter/01.aux) (./chapter/02.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 28013 strings out of 477728
- 609083 string characters out of 5842237
+ 28038 strings out of 477728
+ 610793 string characters out of 5842237
  892513 words of memory out of 5000000
- 48175 multiletter control sequences out of 15000+600000
+ 48200 multiletter control sequences out of 15000+600000
  478809 words of font info for 98 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,9n,97p,1253b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
