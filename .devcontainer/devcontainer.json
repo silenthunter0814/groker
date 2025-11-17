@@ -6,13 +6,11 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2": {"flavor": "texlive-medium"} 
     },
     
-    // 使用 apt-get 安装 TeXLive 的中文支持包和字体
-    //"postCreateCommand": "tlmgr install --no-interactive ctex fontspec collection-langchinese collection-fontsrecommended || true",
+    "postCreateCommand": "tlmgr install --no-interactive ctex fontspec collection-langchinese collection-fontsrecommended || true",
     "customizations": {
         "vscode": {
             "extensions": [
-                "james-yu.latex-workshop",
-                "valentjn.vscode-ltex"
+                "james-yu.latex-workshop"
             ],
             "settings": {
     "latex-workshop.latex.recipes": [
