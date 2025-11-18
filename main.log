@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  18 NOV 2025 18:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  18 NOV 2025 20:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -822,9 +822,12 @@ File: images/01/1.4.png Graphic file (type bmp)
 
 
 LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/b/it' undefined
-(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 99.
+(Font)              using `TU/FandolSong-Regular(0)/b/n' instead on input line 96.
 
-[3] [4]) [5]
+[3]
+File: images/01/1.5.png Graphic file (type bmp)
+<images/01/1.5.png>
+ [4]) [5]
 \openout2 = `chapter/02.aux'.
 
  (./chapter/02.tex [6
@@ -840,12 +843,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 28020 strings out of 477728
- 610170 string characters out of 5842237
+ 28039 strings out of 477728
+ 611154 string characters out of 5842237
  892521 words of memory out of 5000000
- 48188 multiletter control sequences out of 15000+600000
+ 48206 multiletter control sequences out of 15000+600000
  478769 words of font info for 93 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 89i,9n,97p,1253b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,9n,97p,1253b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (15 pages).
