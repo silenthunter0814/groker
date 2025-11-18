@@ -67,7 +67,7 @@
     colframe=blue!75!black,        % 边框颜色: 深蓝色
     colbacktitle=blue!75!black,    % 标题栏背景色: 深蓝色 (保持与边框一致)
     coltitle=white,                % 标题文本颜色: 白色 (与深蓝背景形成高对比)
-    title={#1}                     % 标题内容
+    title={\textbf{#1}}                     % 标题内容
 }
 
 % --- 2. 定义 warning 环境 ---
@@ -76,7 +76,7 @@
     colframe=red!75!black,
     colbacktitle=red!75!black,
     coltitle=white,
-    title={#1}
+    title={\textbf{#1}}
 }
 
 \usepackage[numbered]{bookmark}
@@ -86,7 +86,7 @@
 
 % --- 扉页 (Front Matter) ---
 \frontmatter 
-\title{\heiti 微积分基础教程\\ \normalsize (Calculus Fundamentals)} % 使用黑体字体显示中文标题
+\title{\textbf{微积分基础教程}\\ \normalsize (Calculus Fundamentals)} % 使用黑体字体显示中文标题
 \author{您的姓名}
 \date{\today}
 \maketitle % 生成标题页
@@ -94,17 +94,17 @@
 % 版权页信息 (Fixed-Layout 电子书需要包含这些信息)
 \newpage
 \thispagestyle{empty} % 清除此页的页码和页眉
-\section*{\heiti 版权信息}
+\section*{\textbf{版权信息}}
 \vspace{1cm}
 本书仅提供电子版，固定版式。\\
 版权所有 \textcopyright\ 2025 by 您的姓名。保留一切权利。
 \vfill % 垂直填充
 
-\chapter*{\heiti 前言}
+\chapter*{\textbf{前言}}
 \begin{wrapfigure}{r}{0.4\textwidth} % r: 右侧，0.4\textwidth: 宽度为页面文本宽度的 40%
     \centering
     \includegraphics[width=\linewidth]{images/cover.png} % 宽度为 wrapfigure 环境的 100%
-    \caption{\heiti 另一张图片，位于右侧}
+    \caption{\textbf{另一张图片，位于右侧}}
     \label{fig:another_image}
 \end{wrapfigure}
 
@@ -127,7 +127,7 @@
     
     % 图片说明（标题），位于图片正下方
     % ctex 宏包会自动将 "Figure" 翻译成 "图"
-    \caption{\heiti 示例插图：函数的几何图形展示} 
+    \caption{\textbf{示例插图：函数的几何图形展示}} 
 \end{figure}
 
 极限被重新定义，简单而直观，极限的计算只是简单的数学计算，洛必达法则不再必要，神秘性已全部消失。
