@@ -133,10 +133,29 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     （5）对于 $n > 1$ 有，$\log_n\infty < \sqrt[n]{\infty} < \infty < \infty^n < n^\infty < \infty!$。
 \end{definition}
 
+\medskip
+
 性质（1）对无穷大和无穷小的关系进行了标准化，使得数学属性更加清晰，高阶无穷大和无穷小的比较和转换变成了数学计算，而不是逻辑分析。
 
-对于性质（2），当 $n = 0$ 时有 $$\infty + C = \infty,\quad 1 + C\varepsilon = 1$$
-本质上是将本章第一节关于无穷大和无穷小的运算规则进行了合并。
+\medskip
+
+对于性质（2），当 $n = 0$ 时有
+\begin{align}
+    \infty + C = \infty \\
+    \quad 1 + C\varepsilon = 1
+\end{align}
+
+将 （1.1）两边同时减去 $\infty$，将（1.2）两边同时减去 1,得到
+\begin{align}
+    C = 0 \\
+    C\varepsilon = 0
+\end{align}
+
+（1.3）说明在格洛克宏空间1轴（1阶无穷大）的视角来看，无论 C 多么大，都是 $\infty$ 的无穷小，格洛克宏空间1轴上的值都为 0；（1.4）说明了在格洛克 0 轴（实数轴）的视角来看，无论 n 多么大，$n\varepsilon$ 都是无穷小，在格洛克 0 轴上的值都为 0。这也是后续章节进行极限计算时的正确结果。
+
+性质（2）本质上是将本章第一节关于无穷大和无穷小的运算规则进行了合并。
+
+\medskip
 
 性质（3）可以合并到性质（4），分开是为了突出 0 的特殊性。$C^+$ 表示实数 C 右侧最靠近它的数，$C^-$ 表示 C 左侧最靠近它的数。这可以用格洛克微空间展开的术语进行理解。
 
@@ -153,8 +172,64 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 事实上，我们也可以指定 $C^+ = C + n\varepsilon,\; C^- = C - n\varepsilon$，结果也是正确的。从格洛克 0 轴（或实数轴）的角度来看，无论我们指定靠近 C 的距离是多么小，无论是百万分之一还是千万分之一，都是 $n\varepsilon$ 的无穷大。
 
+\medskip
 
+性质（5）明确了不等式的各项位于不同阶的格洛克宏空间，不等式的左侧都是右侧的无穷小，体现了如下运算规则：
+\begin{align*}
+    \log_n\infty + \sqrt[n]{\infty} + \infty + \infty^n + n^\infty + \infty! \\
+    = \sqrt[n]{\infty} + \infty + \infty^n + n^\infty + \infty! \\
+    = \infty + \infty^n + n^\infty + \infty! \\
+    = \infty^n + n^\infty + \infty! \\
+    = n^\infty + \infty! \\
+    = \infty!
+\end{align*}
 
+虽然不等式的每一项都是无穷大，但它们的增长速度比值都达到了无穷大的量级，这可以由函数图形进行直观的观察,这里略去繁琐的证明过程。
+
+\medskip
+
+\begin{example}
+    数列用符号 $\{f(n)\}$ 表示，其中 $f(n)$ 是通项公式。如果 $n \to \infty,\; f(n) = C$ 那么数列是收敛的；如果 $n \to \infty,\; f(n) = \infty$ 那么数列是发散的；否则数列既不收敛也不发散。
+
+    判断下列数列的收敛性：
+
+    $(1)\,\left\{(-1)^n \frac 1 n\right\} \quad (2)\,\left\{(-1)^n \frac {n+1}{n}\right\} \quad (3)\,\left\{n - \frac {1}{n}\right\}$
+    
+    \medskip
+
+    \textbf{解：}
+
+    (1)
+    \begin{align*}
+        f(n) &= (-1)^n \frac 1 n \\
+        f(\infty) &= (-1)^\infty \frac {1}{\infty} \\
+        f(\infty) &= (-1)^\infty \varepsilon 
+    \end{align*}
+
+    $f(\infty) = \varepsilon = 0$，如果 $\infty$ 为偶数；$f(\infty) = -\varepsilon = 0$，如果 $\infty$ 为奇数。 
+    
+    综合奇偶两种情况，$f(\infty) = 0$，数列收敛。
+
+    (2)
+    \begin{align*}
+        f(n) &= (-1)^n \frac {n+1}{n} \\
+        f(\infty) &= (-1)^\infty \frac {\infty+1}{\infty} \\
+        f(\infty) &= (-1)^\infty \frac {\infty}{\infty} \\
+        f(\infty) &= (-1)^\infty
+    \end{align*}
+    数列在 1 和 -1 之间来回振荡，既不收敛也不发散。
+    
+    (3)
+    \begin{align*}
+        f(n) &= n - \frac {1}{n} \\
+        f(\infty) &= \infty - \frac {1}{\infty} \\
+        f(\infty) &= \infty - \varepsilon \\
+        f(\infty) &= \infty
+    \end{align*}
+    数列发散。    
+\end{example}
+
+通过上面的例子可以看出，关于无穷大和无穷小的计算完全符合数学运算法则，比传统的基于数学分析的形式化方法简单而清晰。
 
 \begin{info}{格洛克观点}
     格洛克代数空间的建立可以使我们抛弃传统的基于语言的数学逻辑，转而专注于简单精确的数学计算。后续章节我们将会看到微积分学是多么的简单，大量晦涩的定义、定理将被抛弃，一切变得如此不可思议。
