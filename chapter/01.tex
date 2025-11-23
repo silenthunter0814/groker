@@ -190,6 +190,17 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 \medskip
 
+关于性质（6），传统的无穷大和无穷小并没有明确的等阶划分，事实上覆盖了整个格洛克代数空间。通过等效重定义，我们可以得到一个明确的计算结果。如
+\begin{align*}
+    f(\infty) &= \log_n{\infty} \\
+    &= \log_n{n^\infty} \qquad (\infty \gets n^\infty) \\
+    &= \infty
+\end{align*}
+
+观察对数函数的图形，它是一个增长异常缓慢的函数，因此 $\log_n{\infty}$ 是一个非常低阶的无穷大，通过等效重定义，我们得到了一个明确的无穷大结果，本质上我们改变了无穷大在宏空间的位置，但没有改变传统无穷大的结果，这在极限计算时很有用。
+
+\medskip
+
 \begin{example}
     数列用符号 $\{f(n)\}$ 表示，其中 $f(n)$ 是通项公式。如果 $n \to \infty,\; f(n) = C$ 那么数列是收敛的；如果 $n \to \infty,\; f(n) = \infty$ 那么数列是发散的；否则数列既不收敛也不发散。
 
@@ -232,6 +243,21 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 \end{example}
 
 通过上面的例子可以看出，关于无穷大和无穷小的计算完全符合数学运算法则，比传统的基于数学分析的形式化方法简单而清晰。
+
+\medskip
+
+\begin{example}
+    \begin{align*}
+        f(\infty) &= \frac{\sqrt{\infty + 3}}{\infty} \\
+        &= \frac{\sqrt{(\infty^2 -3) + 3}}{\infty^2 -3} \qquad (\infty \gets \infty^2 -3) \\
+        &= \frac \infty {\infty^2} \\
+        &= \frac 1 \infty \\
+        &= \varepsilon \\
+        &= 0
+    \end{align*}
+\end{example}
+
+通过等效重定义，我们精确计算出了表达式的结果，无需进行繁琐的形式化数学分析。
 
 \begin{info}{格洛克观点}
     格洛克代数空间的建立可以使我们抛弃传统的基于语言的数学逻辑，转而专注于简单精确的数学计算。后续章节我们将会看到微积分学是多么的简单，大量晦涩的定义、定理将被抛弃，一切变得如此不可思议。
