@@ -95,11 +95,20 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 格洛克采用逆向思维，并以可视化的格洛克代数空间和无穷大无穷小的定义作为逻辑支撑，给出极限的定义：
 
 \begin{definition}[函数的极限]
+    对于函数 $f(x),\, x \to a \;\iff\; x = a\pm\varepsilon$，函数 $f(x)$ 在 $x$ 趋近于 $a$ 时的极限
 
+    $\qquad (1)\; \lim_{x\to a} f(x) = f(a \pm \varepsilon) = f(a)$，如果 $a$ 位于定义域区间内。
+
+    $\qquad (2)\; \lim_{x\to a^+} f(x) = f(a + \varepsilon)$，如果 $a$ 位于定义域区间左边界。
+
+    $\qquad (3)\; \lim_{x\to a^-} f(x) = f(a - \varepsilon)$，如果 $a$ 位于定义域区间右边界。
 \end{definition}
 
+对于（2）和（3），如果 $a$ 是闭区间边界，极限值应用 $f(a)$ 仍然成立。
 
 \medskip
+
+格洛克将传统极限的动态趋近描述转换成了静态描述，因为在格洛克微空间“看到了”最接近 $a$ 的极限位置。由此不再需要晦涩难解的逻辑推理描述，简单直接地进行极限计算。
 
 \begin{info}{极限的 $\epsilon-\delta$ 定义}
     设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义。如果存在一个实数 $L$，使得：
