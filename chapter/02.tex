@@ -92,7 +92,11 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 
 从上面直觉出发，逐渐演变完善了极限的 $\epsilon-\delta$ 定义。 $\epsilon-\delta$ 定义为极限提供了逻辑严密性，但代价是牺牲了直觉性、增加了学习难度和操作复杂性。
 
-格洛克采用逆向思维，并以可视化的格洛克代数空间和无穷大无穷小的定义作为逻辑支撑，给出极限的定义：
+\medskip
+
+\textbf{格洛克极限定义}
+
+格洛克采用逆向思维，并以可视化的格洛克代数空间和无穷大无穷小的定义作为逻辑支撑，给出极限的定义。
 
 \begin{definition}[函数的极限]
     对于函数 $f(x),\, x \to a \;\iff\; x = a\pm\varepsilon$，函数 $f(x)$ 在 $x$ 趋近于 $a$ 时的极限
@@ -109,6 +113,62 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 \medskip
 
 格洛克将传统极限的动态趋近描述转换成了静态描述，因为在格洛克微空间“看到了”最接近 $a$ 的极限位置。由此不再需要晦涩难解的逻辑推理描述，简单直接地进行极限计算。
+
+\medskip
+
+\begin{example} 计算极限
+
+    $(1)\; \lim_{x \to 1}(2x + 1) \quad (2)\; \lim_{x \to \infty} \frac{3x^3 - x + 5}{2x^3 + 4x^2 - 1} \quad (3)\; \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \quad (4)\; \lim_{x \to 0} \frac{\sqrt{1 + x} - 1}{x}$
+    
+\medskip
+
+    \textbf{解：}
+    \begin{flalign*}
+        &(1)\; \lim_{x \to 1}(2x + 1) = 2\cdot (1) + 1 = 3 & \\
+        &(2)\; \lim_{x \to \infty} \frac{3x^3 - x + 5}{2x^3 + 4x^2 - 1} = \frac{3\infty^3 - \infty + 5}{2\infty^3 + 4\infty^2 - 1} = \frac{3\infty^3}{2\infty^3} = \frac 3 2 & \\
+        &(3)\; \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \frac{(2+\varepsilon)^2 - 4}{(2+\varepsilon) - 2} = \frac{4\varepsilon + \varepsilon^2}{\varepsilon} = 4 + \varepsilon = 4 & \\
+        &(4)\; \lim_{x \to 0} \frac{\sqrt{1 + x} - 1}{x} = \frac{\sqrt{1 + \varepsilon} - 1}{\varepsilon} &\\
+        &\qquad = \frac{(\sqrt{1 + \varepsilon} - 1)(\sqrt{1 + \varepsilon} + 1)}{\varepsilon(\sqrt{1 + \varepsilon} + 1)} &\\
+        &\qquad = \frac{1}{\sqrt{1 + \varepsilon} + 1} = \frac 1 2 &
+    \end{flalign*}    
+\end{example}
+
+上例（3）和（4）略去了计算左极限，因为左右极限相等。
+
+\medskip
+
+\textbf{函数的连续性}
+
+（1）在定义域区间内函数总是连续的，在闭区间左边界右连续，在闭区间右边界左连续。
+
+（2）如果分段函数的分段点有定义，分段子函数分别为 $f_1, f_2$，并且有 $f_1(a-\varepsilon) = f_2(a+\varepsilon) = f(a)$，那么分段函数在分段点处连续。
+
+\medskip
+
+函数的连续性是显而易见的，换句话说，函数 $f(x)$ 的值随着自变量 $x$ 的连续变化而连续变化。函数图形可视化的证明了函数的连续性。事实上，证明函数的连续性很容易进入逻辑上的循环证明。
+
+讨论函数的连续性只有在函数的两个相邻区间的分段点处才有意义，格洛克采用分段函数的方式描述了这种情况，分段子函数 $f_1, f_2$ 可以相同，也可以不同。
+
+具有苛刻定义的非常规函数因失去一般性不在这里进行讨论。
+
+\medskip
+
+\begin{example} 计算极限
+
+    $(1)\; \lim_{x \to 0} \frac 1 x \qquad (2)\; \lim_{x \to 0} |x|$
+    
+\medskip
+
+    \textbf{解：}
+    \begin{flalign*}
+        &(1)\; \lim_{x \to 0^-} \frac 1 x = \frac{1}{-\varepsilon} = -\infty \qquad\; \lim_{x \to 0^+} \frac 1 x = \frac{1}{\varepsilon} = \infty& \\
+        &\text{左右极限不相等，极限不存在。}& \\
+        &(2)\; \lim_{x \to 0^-} |x| = |-\varepsilon| = \varepsilon = 0 \qquad \lim_{x \to 0^+} |x| = |\varepsilon| = 0& \\
+        &\text{分段点 0 左右极限相等，极限存在，极限值为 0。}& \\
+        &\text{分段点 0 有定义且函数值为 0，所以函数在分段点 0 处连续。}&
+    \end{flalign*}
+        
+\end{example}
 
 \begin{info}{极限的 $\epsilon-\delta$ 定义}
     设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义。如果存在一个实数 $L$，使得：
