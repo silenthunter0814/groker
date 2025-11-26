@@ -170,6 +170,43 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
         
 \end{example}
 
+\medskip
+
+\begin{example} 计算极限
+
+    $$\lim_{x \to 0}\frac{\sin x}{x}$$
+    
+\medskip
+
+    \textbf{解：} 这是一个著名的极限问题，传统上使用夹逼定理进行求解。
+
+    当光滑曲线上的两点 $A, B$ 越来越接近时，曲线弧 $AB$ 与割线 $AB$ 逐渐重合，换句话说，只要 $A, B$ 两点的距离足够小，$\widehat{AB} = |AB|$，如图2.1 所示。
+
+    \begin{figure}[htbp] 
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/02/2.1.png} 
+        \caption{\textbf{单位圆上的弧}}
+    \end{figure}
+
+    我们取弧长 $\widehat{AB} = \varepsilon$，得到如下关系：
+    $$|AB| = \varepsilon,\quad \angle{AOB} = \varepsilon,\quad |AC| = \angle{AOC} = \frac{\varepsilon}{2}$$
+
+    根据三角公式
+    \begin{align*}
+        sin\frac{\varepsilon}{2} &= \frac{AC}{OA} = AC = \frac{\varepsilon}{2} \\
+        \cos\frac{\varepsilon}{2} &= \frac{OC}{OA} = \sqrt{1-\left(\frac\varepsilon 2 \right)^2}
+    \end{align*}
+    
+    现在我们可以计算极限
+    \begin{align*}
+        \lim_{x \to 0}\frac{\sin x}{x} &= \frac{\sin \varepsilon}{\varepsilon} = \frac{2\sin\frac{\varepsilon}{2}\cos\frac{\varepsilon}{2}}{\varepsilon} \\
+        &= \frac{2\cdot \frac\varepsilon 2 \cdot \sqrt{1-\left(\frac\varepsilon 2 \right)^2}}{\varepsilon} \\
+        &= \sqrt{1-\left(\frac\varepsilon 2 \right)^2} \\
+        &= 1
+    \end{align*}
+
+\end{example}
+
 \begin{info}{极限的 $\epsilon-\delta$ 定义}
     设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义。如果存在一个实数 $L$，使得：
 
