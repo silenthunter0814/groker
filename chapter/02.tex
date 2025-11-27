@@ -250,3 +250,53 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
 从格洛克代数空间的角度看，自然常数是一个未解析的无穷大无穷小计算表达式。
 
 自然对数，记作 $\ln(x)$，是以 $e$ 为底的对数函数，它是 $\log_e(x)$ 的简写。
+
+\medskip
+
+\begin{example} 计算极限
+    \begin{align*}
+        \lim_{x \to \infty} \left(1 + \frac{2}{x}\right)^x &= \left(1 + \frac{2}{\infty}\right)^\infty \\
+        &= \left(1 + \frac{2}{2\infty}\right)^{2\infty} \qquad (\infty \gets 2\infty) \\
+        &= \left[\left(1 + \frac{1}{\infty}\right)^\infty \right]^2 \\
+        &= e^2 \\
+        \\
+        \lim_{x \to 0}\ln(1+x) &= \ln(1+0) = 0
+    \end{align*}
+\end{example}
+
+\section{泰勒展开在极限计算中的应用}
+泰勒展开（Taylor Series Expansion）是计算涉及 $e$, $\ln(x)$, $\sin(x)$, $\cos(x)$ 等基本函数的极限时，一个非常强大且高效的工具。
+
+它主要利用函数在某一点（通常是 $x=0$，即麦克劳林展开）附近的多项式近似来简化分子和分母。
+
+常用函数的麦克劳林展开式 ($x \to 0$)
+\begin{align}
+    \sin x &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots \\
+    \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots \\
+    \tan x &= x + \frac{x^3}{3} + \frac{2x^5}{15} + \cdots \\
+    e^x &= 1 + x +\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+    \ln(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots
+\end{align}
+
+\medskip
+
+\begin{example} 计算极限
+    \begin{align*}
+        \lim_{x \to 0} \frac{\ln(1+x)}{x} &= \frac{\ln(1+\epsilon)}{\epsilon} = \frac{\epsilon}{\epsilon} = 1 \\
+        \lim_{x \to 0} \frac{\ln(\cos x)}{x^2} &= \frac{\ln(\cos \epsilon)}{\epsilon^2} = \frac{\ln\left(1 - \frac{1}{2}\epsilon^2 \right)}{\epsilon^2} \\
+        &= \frac{-\frac{1}{2}\epsilon^2}{\epsilon^2} = -\frac 1 2 \\
+        \lim_{x \to 0} \frac{e^{x^2} - 1 - x^2}{x^4} &= \frac{e^{\epsilon^2} - 1 - \epsilon^2}{\epsilon^4} \\
+        &= \frac{\left(1+\epsilon^2+\frac{1}{2}\epsilon^4 \right) - 1 - \epsilon^2}{\epsilon^4} \\
+        &= \frac 1 2
+    \end{align*}
+\end{example}
+
+使用泰勒展开计算极限的要点：
+
+（1）确定阶数： 根据分母的无穷小阶数来确定分子和分母需要展开到的阶数。目标是让分子中最低次项（非零项）的阶数与分母的阶数相等。
+
+（2）抵消低阶项： 展开后，分子中的低阶项（如常数项、一次项等）通常会相互抵消，只剩下与分母同阶或更高阶的无穷小项。
+
+（3）提取主部： 保留分子分母中最低次项的系数，即可求出极限。
+
+我们在学习泰勒级数之前，提前利用泰勒级数的展开式来简化复杂极限的计算，避免进行不必要的复杂逻辑分析。
