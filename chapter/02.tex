@@ -264,6 +264,18 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
     \end{align*}
 \end{example}
 
+\medskip
+
+\begin{example} 计算极限 $\lim_{x \to 0}\frac{e^x - 1}{x}$。
+    \begin{align*}
+        \lim_{x \to 0}\frac{e^x - 1}{x} &= \left[(1 + \epsilon)^{\infty \cdot \epsilon} - 1 \right] \cdot \frac 1 \epsilon \\
+        &= \frac{(1 + \epsilon) - 1}{\epsilon} = \frac \epsilon \epsilon \\
+        &= 1
+    \end{align*}
+\end{example}
+
+
+
 \section{泰勒展开在极限计算中的应用}
 泰勒展开（Taylor Series Expansion）是计算涉及 $e$, $\ln(x)$, $\sin(x)$, $\cos(x)$ 等基本函数的极限时，一个非常强大且高效的工具。
 
@@ -288,6 +300,20 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
         \lim_{x \to 0} \frac{e^{x^2} - 1 - x^2}{x^4} &= \frac{e^{\epsilon^2} - 1 - \epsilon^2}{\epsilon^4} \\
         &= \frac{\left(1+\epsilon^2+\frac{1}{2}\epsilon^4 \right) - 1 - \epsilon^2}{\epsilon^4} \\
         &= \frac 1 2
+    \end{align*}
+\end{example}
+
+\medskip
+
+\begin{example} 计算极限 $\lim_{x \to 0}\frac{a^x - 1}{x}$。
+    \begin{align*}
+        \lim_{x \to 0}\frac{a^x - 1}{x} &= \frac{a^\epsilon - 1}{\epsilon} \\
+        y &= \frac{a^\epsilon - 1}{\epsilon} \\
+        1 + y\epsilon &= a^\epsilon \\
+        \ln (1 + y\epsilon) &= \ln a^\epsilon \\
+        y \cdot \epsilon &= \ln a \cdot \epsilon \\
+        y &= \ln a \\
+        \lim_{x \to 0}\frac{a^x - 1}{x} &= \ln a
     \end{align*}
 \end{example}
 
