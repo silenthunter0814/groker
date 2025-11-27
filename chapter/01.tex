@@ -8,17 +8,17 @@
 
 {\textbf{格洛克：无穷大和无穷小的直观理解}}
 
-无穷大和无穷小是具有特殊作用的两个数，分别用 $\infty, \varepsilon$ 表示，对于 $\infty$，所有实数都是它的无穷小；对于 $\varepsilon$，所有实数都是它的无穷大。
+无穷大和无穷小是具有特殊作用的两个数，分别用 $\infty, \epsilon$ 表示，对于 $\infty$，所有实数都是它的无穷小；对于 $\epsilon$，所有实数都是它的无穷大。
 
 由此产生如下运算法则：对于任意实数 C
-\begin{align*}\infty + C = \infty \\\varepsilon + C = C \end{align*}
+\begin{align*}\infty + C = \infty \\\epsilon + C = C \end{align*}
 
-这是基于 $\infty, \varepsilon$ 本身的直观语义得出的。更进一步，基于数的性质，我们得到：
+这是基于 $\infty, \epsilon$ 本身的直观语义得出的。更进一步，基于数的性质，我们得到：
 \begin{align*}
     C_1\infty + C_2 = C_1\left(\infty + \frac{C_2}{C_1}\right) = C_1\infty \\
-    C_1\varepsilon + C_2 = C_1\left(\varepsilon + \frac{C_2}{C_1}\right) = C_2 \\
+    C_1\epsilon + C_2 = C_1\left(\epsilon + \frac{C_2}{C_1}\right) = C_2 \\
     C_1\infty^2 + C_2\infty = \infty(C_1\infty + C_2) = C_1\infty^2 \\
-    C_1\varepsilon^2 + C_2\varepsilon = \varepsilon(C_1\varepsilon + C_2) = C_2\varepsilon
+    C_1\epsilon^2 + C_2\epsilon = \epsilon(C_1\epsilon + C_2) = C_2\epsilon
 \end{align*}
 
 这和 200 多年来的传统解释完全不同，甚至相反。传统解释中并不认为无穷大和无穷小是数，因此不能直接进行数学运算，强调它是一个无限趋近的“动态"过程，因此理解起来要困难复杂得多。
@@ -46,27 +46,27 @@
     \caption{\textbf{格洛克 0 阶数轴}}
 \end{figure}
 
-需要注意的是，$\infty, -\infty$ 和原点 0 重合，这意味着数值大小达到 $\infty$ 时需要进位，以表示 $\infty$ 量级或更大的数。基于同样的原理，我们还需要量级更小的单位，即 $\varepsilon$，用来进位到格洛克 0 阶数轴。
+需要注意的是，$\infty, -\infty$ 和原点 0 重合，这意味着数值大小达到 $\infty$ 时需要进位，以表示 $\infty$ 量级或更大的数。基于同样的原理，我们还需要量级更小的单位，即 $\epsilon$，用来进位到格洛克 0 阶数轴。
 \begin{figure}[htbp] 
     \centering
     \includegraphics[width=0.6\textwidth]{images/01/1.3.png} 
     \caption{\textbf{宏空间和微空间}}
 \end{figure}
 
-$\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\varepsilon$ 以及更小的量级称为\textbf{格洛克微空间}，图1.3 表示了格洛克宏空间 1 轴，格洛克 0 轴和格洛克微空间 1 轴。
+$\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\epsilon$ 以及更小的量级称为\textbf{格洛克微空间}，图1.3 表示了格洛克宏空间 1 轴，格洛克 0 轴和格洛克微空间 1 轴。
 
 宏空间 1 轴覆盖区间 $[0, \infty^2)$，单位刻度大小为 $1\infty$，将 1 单位刻度放大 $\infty$ 倍，得到格洛克 0 轴。
 
 格洛克 0 轴覆盖区间 $[0, \infty)$，单位刻度大小为 1，将 1 单位刻度放大 $\infty$ 倍，得到微空间 1 轴。
 
-微空间 1 轴覆盖区间 $[0, 1)$，单位刻度大小为 $\frac 1 \infty$，即 $1\varepsilon$。
+微空间 1 轴覆盖区间 $[0, 1)$，单位刻度大小为 $\frac 1 \infty$，即 $1\epsilon$。
 
 将宏空间和微空间以同样的方式分别向上和向下延展，形成完整的格洛克代数空间。
 
 \medskip
 
 \begin{info}{宏空间和微空间}
-    这是一个相对的概念，如 $\infty^{n+1}$ 是 $\infty^n$ 的宏空间，$\infty^n$ 是 $\infty^{n+1}$ 的微空间；$\varepsilon^n$ 是 $\varepsilon^{n+1}$ 的宏空间，$\varepsilon^{n+1}$ 是 $\varepsilon^n$ 的微空间。
+    这是一个相对的概念，如 $\infty^{n+1}$ 是 $\infty^n$ 的宏空间，$\infty^n$ 是 $\infty^{n+1}$ 的微空间；$\epsilon^n$ 是 $\epsilon^{n+1}$ 的宏空间，$\epsilon^{n+1}$ 是 $\epsilon^n$ 的微空间。
 
     宏空间是微空间的无穷大，微空间是宏空间的无穷小。
 \end{info}
@@ -82,9 +82,9 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \caption{\textbf{格洛克代数空间}}
 \end{figure}
 
-由于指数进位回 0,$\infty^\infty$ 和 $\varepsilon^\infty$ 回归原点 0,图中未予显示。
+由于指数进位回 0,$\infty^\infty$ 和 $\epsilon^\infty$ 回归原点 0,图中未予显示。
 
-格洛克代数空间最大覆盖范围 $[0,\infty^\infty)$，最小单位刻度 $1\varepsilon^{\infty-1}$，可以满足任何数值的可视化标注。
+格洛克代数空间最大覆盖范围 $[0,\infty^\infty)$，最小单位刻度 $1\epsilon^{\infty-1}$，可以满足任何数值的可视化标注。
 
 需要注意的是，由于所有实数都是 $\infty$ 的无穷小，正数 C 只能标注在任一轴的最左侧的相对无穷小区间；同样的，负数 -C 只能标注在最右侧的相对无穷小区间。
 
@@ -116,23 +116,23 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 \begin{definition}{无穷大和无穷小}
 
-    设 $\infty, \varepsilon$ 是未解析数（unsolved number)， $\infty$ 是正整数， 表示无穷大， $\varepsilon$ 表示无穷小。
+    设 $\infty, \epsilon$ 是未解析数（unsolved number)， $\infty$ 是正整数， 表示无穷大， $\epsilon$ 表示无穷小。
 
     \medskip
 
     \textbf{性质列表}
 
-    （1）$\infty, \varepsilon$ 互为倒数，即 $\infty\cdot\varepsilon = 1$ 。
+    （1）$\infty, \epsilon$ 互为倒数，即 $\infty\cdot\epsilon = 1$ 。
 
-    （2）对于任意实数 C，整数 n，$\infty^{n+1} + C\infty^n = \infty^{n+1},\; \varepsilon^n + C\varepsilon^{n+1} = \varepsilon^n$。
+    （2）对于任意实数 C，整数 n，$\infty^{n+1} + C\infty^n = \infty^{n+1},\; \epsilon^n + C\epsilon^{n+1} = \epsilon^n$。
 
-    （3） $\varepsilon$ 是最小的正数，$-\varepsilon$ 是最大的负数，$0^+ = \varepsilon,\; 0^- = -\varepsilon$。
+    （3） $\epsilon$ 是最小的正数，$-\epsilon$ 是最大的负数，$0^+ = \epsilon,\; 0^- = -\epsilon$。
 
-    （4）对于任意实数 C，$C^+ = C + \varepsilon,\; C^- = C - \varepsilon$。
+    （4）对于任意实数 C，$C^+ = C + \epsilon,\; C^- = C - \epsilon$。
 
     （5）对于 $n > 1$ 有，$\log_n\infty < \sqrt[n]{\infty} < \infty < \infty^n < n^\infty < \infty!$。
 
-    （6）等效重定义。如果关于 $\infty$ 的表达式 $g(\infty)$ 的值仍是无穷大，那么 $\infty$ 可以重定义为 $g(\infty)$，记作：$\infty \gets g(\infty), \varepsilon \gets \frac{1}{g(\infty)}$。
+    （6）等效重定义。如果关于 $\infty$ 的表达式 $g(\infty)$ 的值仍是无穷大，那么 $\infty$ 可以重定义为 $g(\infty)$，记作：$\infty \gets g(\infty), \epsilon \gets \frac{1}{g(\infty)}$。
 \end{definition}
 
 \medskip
@@ -144,16 +144,16 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 对于性质（2），当 $n = 0$ 时有
 \begin{align}
     \infty + C = \infty \\
-    \quad 1 + C\varepsilon = 1
+    \quad 1 + C\epsilon = 1
 \end{align}
 
 将 （1.1）两边同时减去 $\infty$，将（1.2）两边同时减去 1,得到
 \begin{align}
     C = 0 \\
-    C\varepsilon = 0
+    C\epsilon = 0
 \end{align}
 
-（1.3）说明在格洛克宏空间1轴（1阶无穷大）的视角来看，无论 C 多么大，都是 $\infty$ 的无穷小，格洛克宏空间1轴上的值都为 0；（1.4）说明了在格洛克 0 轴（实数轴）的视角来看，无论 n 多么大，$n\varepsilon$ 都是无穷小，在格洛克 0 轴上的值都为 0。这也是后续章节进行极限计算时的正确结果。
+（1.3）说明在格洛克宏空间1轴（1阶无穷大）的视角来看，无论 C 多么大，都是 $\infty$ 的无穷小，格洛克宏空间1轴上的值都为 0；（1.4）说明了在格洛克 0 轴（实数轴）的视角来看，无论 n 多么大，$n\epsilon$ 都是无穷小，在格洛克 0 轴上的值都为 0。这也是后续章节进行极限计算时的正确结果。
 
 性质（2）本质上是将本章第一节关于无穷大和无穷小的运算规则进行了合并。
 
@@ -165,14 +165,14 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 \textbf{格洛克微空间展开}
 
-对于展开点 C，取单位长度区间 $[C, C+1]$ 并放大 $\infty$ 倍数，当我们将 C 点与微空间 1 轴的 0 对齐，将会“看到”最靠近 C 右侧的坐标刻度是 $1\varepsilon$。类似地，取单位长度区间 $[C-1, C]$ 并放大 $\infty$ 倍数，将 C-1 点与微空间 1 轴的 0 对齐，将会“看到”最靠近 C 左侧的坐标刻度是 $-1\varepsilon$。如图1.6 所示。
+对于展开点 C，取单位长度区间 $[C, C+1]$ 并放大 $\infty$ 倍数，当我们将 C 点与微空间 1 轴的 0 对齐，将会“看到”最靠近 C 右侧的坐标刻度是 $1\epsilon$。类似地，取单位长度区间 $[C-1, C]$ 并放大 $\infty$ 倍数，将 C-1 点与微空间 1 轴的 0 对齐，将会“看到”最靠近 C 左侧的坐标刻度是 $-1\epsilon$。如图1.6 所示。
 \begin{figure}[htbp] 
     \centering
     \includegraphics[width=0.8\textwidth]{images/01/1.6.png} 
     \caption{\textbf{格洛克微空间展开}}
 \end{figure}
 
-事实上，我们也可以指定 $C^+ = C + n\varepsilon,\; C^- = C - n\varepsilon$，结果也是正确的。从格洛克 0 轴（或实数轴）的角度来看，无论我们指定靠近 C 的距离是多么小，无论是百万分之一还是千万分之一，都是 $n\varepsilon$ 的无穷大。
+事实上，我们也可以指定 $C^+ = C + n\epsilon,\; C^- = C - n\epsilon$，结果也是正确的。从格洛克 0 轴（或实数轴）的角度来看，无论我们指定靠近 C 的距离是多么小，无论是百万分之一还是千万分之一，都是 $n\epsilon$ 的无穷大。
 
 \medskip
 
@@ -216,10 +216,10 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \begin{align*}
         f(n) &= (-1)^n \frac 1 n \\
         f(\infty) &= (-1)^\infty \frac {1}{\infty} \\
-        f(\infty) &= (-1)^\infty \varepsilon 
+        f(\infty) &= (-1)^\infty \epsilon 
     \end{align*}
 
-    $f(\infty) = \varepsilon = 0$，如果 $\infty$ 为偶数；$f(\infty) = -\varepsilon = 0$，如果 $\infty$ 为奇数。 
+    $f(\infty) = \epsilon = 0$，如果 $\infty$ 为偶数；$f(\infty) = -\epsilon = 0$，如果 $\infty$ 为奇数。 
     
     综合奇偶两种情况，$f(\infty) = 0$，数列收敛。
 
@@ -236,7 +236,7 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \begin{align*}
         f(n) &= n - \frac {1}{n} \\
         f(\infty) &= \infty - \frac {1}{\infty} \\
-        f(\infty) &= \infty - \varepsilon \\
+        f(\infty) &= \infty - \epsilon \\
         f(\infty) &= \infty
     \end{align*}
     数列发散。    
@@ -252,7 +252,7 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
         &= \frac{\sqrt{(\infty^2 -3) + 3}}{\infty^2 -3} \qquad (\infty \gets \infty^2 -3) \\
         &= \frac \infty {\infty^2} \\
         &= \frac 1 \infty \\
-        &= \varepsilon \\
+        &= \epsilon \\
         &= 0
     \end{align*}
 \end{example}

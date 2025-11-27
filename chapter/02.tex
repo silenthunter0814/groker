@@ -45,7 +45,7 @@
 
 依据格洛克无穷大和无穷小定义的性质（4），有
 
-$\qquad (a, b) \Rightarrow [a+\varepsilon, b-\varepsilon]\qquad (a, \infty) \Rightarrow [a+\varepsilon, \infty)$
+$\qquad (a, b) \Rightarrow [a+\epsilon, b-\epsilon]\qquad (a, \infty) \Rightarrow [a+\epsilon, \infty)$
 
 $\infty)$ 既可以理解为开区间也可以理解为闭区间，根据具体的问题进行不同的理解。
 
@@ -99,13 +99,13 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 格洛克采用逆向思维，并以可视化的格洛克代数空间和无穷大无穷小的定义作为逻辑支撑，给出极限的定义。
 
 \begin{definition}[函数的极限]
-    对于函数 $f(x),\, x \to a \;\iff\; x = a\pm\varepsilon$，函数 $f(x)$ 在 $x$ 趋近于 $a$ 时的极限
+    对于函数 $f(x),\, x \to a \;\iff\; x = a\pm\epsilon$，函数 $f(x)$ 在 $x$ 趋近于 $a$ 时的极限
 
-    $\qquad (1)\; \lim_{x\to a} f(x) = f(a \pm \varepsilon) = f(a)$，如果 $a$ 位于定义域区间内。
+    $\qquad (1)\; \lim_{x\to a} f(x) = f(a \pm \epsilon) = f(a)$，如果 $a$ 位于定义域区间内。
 
-    $\qquad (2)\; \lim_{x\to a^+} f(x) = f(a + \varepsilon)$，如果 $a$ 位于定义域区间左边界。
+    $\qquad (2)\; \lim_{x\to a^+} f(x) = f(a + \epsilon)$，如果 $a$ 位于定义域区间左边界。
 
-    $\qquad (3)\; \lim_{x\to a^-} f(x) = f(a - \varepsilon)$，如果 $a$ 位于定义域区间右边界。
+    $\qquad (3)\; \lim_{x\to a^-} f(x) = f(a - \epsilon)$，如果 $a$ 位于定义域区间右边界。
 \end{definition}
 
 对于（2）和（3），如果 $a$ 是闭区间边界，极限值应用 $f(a)$ 仍然成立。
@@ -126,10 +126,10 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
     \begin{flalign*}
         &(1)\; \lim_{x \to 1}(2x + 1) = 2\cdot (1) + 1 = 3 & \\
         &(2)\; \lim_{x \to \infty} \frac{3x^3 - x + 5}{2x^3 + 4x^2 - 1} = \frac{3\infty^3 - \infty + 5}{2\infty^3 + 4\infty^2 - 1} = \frac{3\infty^3}{2\infty^3} = \frac 3 2 & \\
-        &(3)\; \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \frac{(2+\varepsilon)^2 - 4}{(2+\varepsilon) - 2} = \frac{4\varepsilon + \varepsilon^2}{\varepsilon} = 4 + \varepsilon = 4 & \\
-        &(4)\; \lim_{x \to 0} \frac{\sqrt{1 + x} - 1}{x} = \frac{\sqrt{1 + \varepsilon} - 1}{\varepsilon} &\\
-        &\qquad = \frac{(\sqrt{1 + \varepsilon} - 1)(\sqrt{1 + \varepsilon} + 1)}{\varepsilon(\sqrt{1 + \varepsilon} + 1)} &\\
-        &\qquad = \frac{1}{\sqrt{1 + \varepsilon} + 1} = \frac 1 2 &
+        &(3)\; \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = \frac{(2+\epsilon)^2 - 4}{(2+\epsilon) - 2} = \frac{4\epsilon + \epsilon^2}{\epsilon} = 4 + \epsilon = 4 & \\
+        &(4)\; \lim_{x \to 0} \frac{\sqrt{1 + x} - 1}{x} = \frac{\sqrt{1 + \epsilon} - 1}{\epsilon} &\\
+        &\qquad = \frac{(\sqrt{1 + \epsilon} - 1)(\sqrt{1 + \epsilon} + 1)}{\epsilon(\sqrt{1 + \epsilon} + 1)} &\\
+        &\qquad = \frac{1}{\sqrt{1 + \epsilon} + 1} = \frac 1 2 &
     \end{flalign*}    
 \end{example}
 
@@ -141,7 +141,7 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 
 （1）在定义域区间内函数总是连续的，在闭区间左边界右连续，在闭区间右边界左连续。
 
-（2）如果分段函数的分段点有定义，分段子函数分别为 $f_1, f_2$，并且有 $f_1(a-\varepsilon) = f_2(a+\varepsilon) = f(a)$，那么分段函数在分段点处连续。
+（2）如果分段函数的分段点有定义，分段子函数分别为 $f_1, f_2$，并且有 $f_1(a-\epsilon) = f_2(a+\epsilon) = f(a)$，那么分段函数在分段点处连续。
 
 \medskip
 
@@ -161,9 +161,9 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
 
     \textbf{解：}
     \begin{flalign*}
-        &(1)\; \lim_{x \to 0^-} \frac 1 x = \frac{1}{-\varepsilon} = -\infty \qquad\; \lim_{x \to 0^+} \frac 1 x = \frac{1}{\varepsilon} = \infty& \\
+        &(1)\; \lim_{x \to 0^-} \frac 1 x = \frac{1}{-\epsilon} = -\infty \qquad\; \lim_{x \to 0^+} \frac 1 x = \frac{1}{\epsilon} = \infty& \\
         &\text{左右极限不相等，极限不存在。}& \\
-        &(2)\; \lim_{x \to 0^-} |x| = |-\varepsilon| = \varepsilon = 0 \qquad \lim_{x \to 0^+} |x| = |\varepsilon| = 0& \\
+        &(2)\; \lim_{x \to 0^-} |x| = |-\epsilon| = \epsilon = 0 \qquad \lim_{x \to 0^+} |x| = |\epsilon| = 0& \\
         &\text{分段点 0 左右极限相等，极限存在，极限值为 0。}& \\
         &\text{分段点 0 有定义且函数值为 0，所以函数在分段点 0 处连续。}&
     \end{flalign*}
@@ -188,20 +188,20 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
         \caption{\textbf{单位圆上的弧}}
     \end{figure}
 
-    我们取弧长 $\widehat{AB} = \varepsilon$，得到如下关系：
-    $$|AB| = \varepsilon,\quad \angle{AOB} = \varepsilon,\quad |AC| = \angle{AOC} = \frac{\varepsilon}{2}$$
+    我们取弧长 $\widehat{AB} = \epsilon$，得到如下关系：
+    $$|AB| = \epsilon,\quad \angle{AOB} = \epsilon,\quad |AC| = \angle{AOC} = \frac{\epsilon}{2}$$
 
     根据三角公式
     \begin{align*}
-        sin\frac{\varepsilon}{2} &= \frac{AC}{OA} = AC = \frac{\varepsilon}{2} \\
-        \cos\frac{\varepsilon}{2} &= \frac{OC}{OA} = \sqrt{1-\left(\frac\varepsilon 2 \right)^2}
+        sin\frac{\epsilon}{2} &= \frac{AC}{OA} = AC = \frac{\epsilon}{2} \\
+        \cos\frac{\epsilon}{2} &= \frac{OC}{OA} = \sqrt{1-\left(\frac\epsilon 2 \right)^2}
     \end{align*}
     
     现在我们可以计算极限
     \begin{align*}
-        \lim_{x \to 0}\frac{\sin x}{x} &= \frac{\sin \varepsilon}{\varepsilon} = \frac{2\sin\frac{\varepsilon}{2}\cos\frac{\varepsilon}{2}}{\varepsilon} \\
-        &= \frac{2\cdot \frac\varepsilon 2 \cdot \sqrt{1-\left(\frac\varepsilon 2 \right)^2}}{\varepsilon} \\
-        &= \sqrt{1-\left(\frac\varepsilon 2 \right)^2} \\
+        \lim_{x \to 0}\frac{\sin x}{x} &= \frac{\sin \epsilon}{\epsilon} = \frac{2\sin\frac{\epsilon}{2}\cos\frac{\epsilon}{2}}{\epsilon} \\
+        &= \frac{2\cdot \frac\epsilon 2 \cdot \sqrt{1-\left(\frac\epsilon 2 \right)^2}}{\epsilon} \\
+        &= \sqrt{1-\left(\frac\epsilon 2 \right)^2} \\
         &= 1
     \end{align*}
 
@@ -218,10 +218,10 @@ $$f(x) = \begin{cases} x^2 + 1, & \text{if } x < 1 \\ 3x - 1, & \text{if } x \ge
     \textbf{解：} 利用半角公式有 $\cos x = 1 - 2\sin^2\left(\frac x 2 \right)$，所以
 
     \begin{align*}
-        \lim_{x \to 0}\frac{1 - \cos x}{x} &= \frac{1 - \cos \varepsilon}{\varepsilon} \\
-        &= \frac{1 - 1 + 2\sin^2\left(\frac \varepsilon 2 \right)}{\varepsilon} \\
-        &= \frac{2\cdot \left(\frac \varepsilon 2 \right)^2}{\varepsilon} \\
-        &= \frac 1 2 \varepsilon = 0
+        \lim_{x \to 0}\frac{1 - \cos x}{x} &= \frac{1 - \cos \epsilon}{\epsilon} \\
+        &= \frac{1 - 1 + 2\sin^2\left(\frac \epsilon 2 \right)}{\epsilon} \\
+        &= \frac{2\cdot \left(\frac \epsilon 2 \right)^2}{\epsilon} \\
+        &= \frac 1 2 \epsilon = 0
     \end{align*}
 
         
@@ -249,4 +249,4 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
 
 从格洛克代数空间的角度看，自然常数是一个未解析的无穷大无穷小计算表达式。
 
-自然对数，记作 $ln(x)$，是以 $e$ 为底的对数函数。它是 $log_e(x)$ 的简写。
+自然对数，记作 $\ln(x)$，是以 $e$ 为底的对数函数，它是 $\log_e(x)$ 的简写。
