@@ -268,13 +268,24 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
 
 \begin{example} 计算极限 $\lim_{x \to 0}\frac{e^x - 1}{x}$。
     \begin{align*}
-        \lim_{x \to 0}\frac{e^x - 1}{x} &= \left[(1 + \epsilon)^{\infty \cdot \epsilon} - 1 \right] \cdot \frac 1 \epsilon \\
+        \lim_{x \to 0}\frac{e^x - 1}{x} &= \frac{e^\epsilon - 1}{\epsilon} \\
+        &= \left[(1 + \epsilon)^{\infty \cdot \epsilon} - 1 \right] \cdot \frac 1 \epsilon \\
         &= \frac{(1 + \epsilon) - 1}{\epsilon} = \frac \epsilon \epsilon \\
         &= 1
     \end{align*}
 \end{example}
 
+结合例2.3.3 的结果，并巧妙的利用无穷小的等效重定义，我们可以计算一般指数函数的极限。
 
+\begin{example} 计算极限 $\lim_{x \to 0}\frac{a^x - 1}{x}$。
+    \begin{align*}
+        a^x = e^{\ln a^x} &= e^{x\ln a} \\
+        \lim_{x \to 0}\frac{a^x - 1}{x} &= \frac{a^\epsilon - 1}{\epsilon} = \frac{e^{\epsilon\ln a} - 1}{\epsilon} \\
+        &= \frac{e^\epsilon - 1}{\epsilon/\ln a} \qquad (\epsilon \gets \epsilon/\ln a) \\
+        &= \ln a \cdot \frac{e^\epsilon - 1}{\epsilon} \\
+        &= \ln a
+    \end{align*}
+\end{example}
 
 \section{泰勒展开在极限计算中的应用}
 泰勒展开（Taylor Series Expansion）是计算涉及 $e$, $\ln(x)$, $\sin(x)$, $\cos(x)$ 等基本函数的极限时，一个非常强大且高效的工具。
