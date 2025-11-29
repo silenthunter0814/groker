@@ -265,18 +265,30 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
     &= e \cdot (1+\epsilon) \\
     &= e
 \end{align*}
-
 自然对数，记作 $\ln(x)$，是以 $e$ 为底的对数函数，它是 $\log_e(x)$ 的简写。
-
-\medskip
-
 \begin{theorem} 自然恒等式
     \begin{align}
         (1 + a \cdot \epsilon)^b &= e^{ab \cdot \epsilon} = 1 + ab \cdot \epsilon \\
-        a^\epsilon &= e^{\ln a \cdot \epsilon} = 1 + \ln a \cdot \epsilon
+        a^\epsilon &= e^{\ln a \cdot \epsilon} = 1 + \ln a \cdot \epsilon \\
+        \ln(1 + a \cdot \epsilon) &= a\cdot \epsilon
     \end{align}
-    
 \end{theorem}
+
+\textbf{证明}
+\begin{align*}
+    (1 + a \cdot \epsilon)^b &= (1 + a \cdot \epsilon)^{\frac{1}{a\epsilon} \cdot a\epsilon \cdot b} \\
+    &= e^{ab \cdot \epsilon} \\
+    &= (1 + ab \cdot \epsilon)^{\frac{1}{ab \cdot \epsilon} \cdot (ab \cdot \epsilon)} \\
+    &= 1 + ab \cdot \epsilon \\
+    \\
+    a^\epsilon &= e^{\ln a ^ \epsilon} = e^{\epsilon \cdot \ln a} \\
+    &= (1 + \epsilon \cdot \ln a)^{\frac{1}{\epsilon \cdot \ln a} \cdot (\epsilon \cdot \ln a)} \\
+    &= 1 + \ln a \cdot \epsilon \\
+    \\
+    \ln(1 + a \cdot \epsilon) &= \ln e^{a \cdot \epsilon} \\
+    &= a \cdot \epsilon \cdot \ln e \\
+    &= a \cdot \epsilon
+\end{align*}
 
 \begin{example} 计算极限
     \begin{align*}
@@ -286,41 +298,20 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
         \\
         \lim_{x \to 0}\frac{\ln(1+3x)}{x} &= \frac{\ln(1+3\epsilon)}{\epsilon} \\
         &= \frac{\ln e^{3\epsilon}}{\epsilon} = \frac{3\epsilon}{\epsilon} \\
-        &= 3
-    \end{align*}
-\end{example}
-
-\begin{align}
-    \ln(1 + \epsilon) &= \epsilon \\
-    \ln(1 - \epsilon) &= -\epsilon \\
-    \ln(1 + C\epsilon) &= C\epsilon \\
-    (1 + \epsilon)^C &= e^{C\epsilon} \\
-    (1 - \epsilon)^C &= e^{-C\epsilon}
-\end{align}
-
-
-\medskip
-
-\begin{example} 计算极限 $\lim_{x \to 0}\frac{e^x - 1}{x}$。
-    \begin{align*}
+        &= 3 \\
+        \\
         \lim_{x \to 0}\frac{e^x - 1}{x} &= \frac{e^\epsilon - 1}{\epsilon} \\
         &= \left[(1 + \epsilon)^{\infty \cdot \epsilon} - 1 \right] \cdot \frac 1 \epsilon \\
         &= \frac{(1 + \epsilon) - 1}{\epsilon} = \frac \epsilon \epsilon \\
-        &= 1
+        &= 1  \\
+        \\
+        \lim_{x \to 0}\frac{a^x - 1}{x} &= \frac{a^\epsilon - 1}{\epsilon} \\
+        &= \frac{(1 + \ln a \cdot \epsilon) - 1}{\epsilon} \\
+        &= \frac{\ln a \cdot \epsilon}{\epsilon} \\
+        &= \ln a              
     \end{align*}
 \end{example}
 
-结合例2.3.2 的结果，并巧妙的利用无穷小的等效重定义，我们可以计算一般指数函数的极限。
-
-\begin{example} 计算极限 $\lim_{x \to 0}\frac{a^x - 1}{x}$。
-    \begin{align*}
-        a^x = e^{\ln a^x} &= e^{x\ln a} \\
-        \lim_{x \to 0}\frac{a^x - 1}{x} &= \frac{a^\epsilon - 1}{\epsilon} = \frac{e^{\epsilon\ln a} - 1}{\epsilon} \\
-        &= \frac{e^\epsilon - 1}{\epsilon/\ln a} \qquad (\epsilon \gets \epsilon/\ln a) \\
-        &= \ln a \cdot \frac{e^\epsilon - 1}{\epsilon} \\
-        &= \ln a
-    \end{align*}
-\end{example}
 
 \begin{warning}{自然恒等式是极限运算}
     显然，定理2.1 的恒等结果是在舍弃更高阶无穷小后的极限运算结果，例如极限计算
