@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {2.1}理解函数}{9}{section.2.1}%
 \contentsline {section}{\numberline {2.2}函数的极限}{11}{section.2.2}%
 \contentsline {section}{\numberline {2.3}自然常数和自然对数}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}泰勒展开在极限计算中的应用}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.4}泰勒展开在极限计算中的应用}{17}{section.2.4}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}点微分和导数}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}导数的定义与几何意义}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.1}瞬时变化量与点微分}{19}{section.3.1}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}积分和积分方法}{21}{chapter.4}%
 \contentsline {section}{\numberline {4.1}导数的定义与几何意义}{21}{section.4.1}%

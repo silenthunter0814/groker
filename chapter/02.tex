@@ -247,22 +247,57 @@ $e$ 可以定义为以下极限：
 
 $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \infty \right)^\infty = (1 + \epsilon)^\infty$$
 
-从格洛克代数空间的角度看，自然常数是一个未解析的无穷大无穷小计算表达式。
+从格洛克代数空间的角度看，自然常数是一个未解析的无穷大无穷小计算表达式。使用无穷大等效重定义 $\infty \gets f(\infty)$，格洛克给出自然常数的定义。
+
+\begin{definition}{自然常数}
+
+    设 $f(\infty)$ 是关于 $\infty$ 的表达式，即 $f(\infty)$ 位于格洛克宏空间；$f(\epsilon)$ 是关于 $\epsilon$ 的表达式，即 $f(\epsilon)$ 位于格洛克微空间。自然常数 $e$ 定义为
+    \begin{align}
+        e &= \left(1 + \frac 1 {f(\infty)} \right)^{f(\infty)} \\
+        e &= (1 + f(\epsilon))^{1 / f(\epsilon)}
+    \end{align}
+\end{definition}
+
+需要明确的是，即使 $f(\infty), f(\epsilon)$ 是负值时，自然常数的定义仍然有效。
+\begin{align*}
+    \left(1-\frac 1 \infty \right)^{-\infty} &= \left(\frac{\infty-1}{\infty} \right)^{-\infty} = \left(\frac{\infty}{\infty-1}\right)^\infty \\
+    &= \left(1 + \frac{1}{\infty-1} \right)^{\infty-1} \cdot \left(1 + \frac{1}{\infty-1} \right) \\
+    &= e \cdot (1+\epsilon) \\
+    &= e
+\end{align*}
 
 自然对数，记作 $\ln(x)$，是以 $e$ 为底的对数函数，它是 $\log_e(x)$ 的简写。
 
 \medskip
 
+\begin{theorem} 自然恒等式
+    \begin{align}
+        (1 + a \cdot \epsilon)^b &= e^{ab \cdot \epsilon} = 1 + ab \cdot \epsilon \\
+        a^\epsilon &= e^{\ln a \cdot \epsilon} = 1 + \ln a \cdot \epsilon
+    \end{align}
+    
+\end{theorem}
+
 \begin{example} 计算极限
     \begin{align*}
         \lim_{x \to \infty} \left(1 + \frac{2}{x}\right)^x &= \left(1 + \frac{2}{\infty}\right)^\infty \\
-        &= \left(1 + \frac{2}{2\infty}\right)^{2\infty} \qquad (\infty \gets 2\infty) \\
-        &= \left[\left(1 + \frac{1}{\infty}\right)^\infty \right]^2 \\
+        &= \left(1 + \frac{2}{\infty}\right)^{\frac \infty 2 \cdot 2} \\
         &= e^2 \\
         \\
-        \lim_{x \to 0}\ln(1+x) &= \ln(1+0) = 0
+        \lim_{x \to 0}\frac{\ln(1+3x)}{x} &= \frac{\ln(1+3\epsilon)}{\epsilon} \\
+        &= \frac{\ln e^{3\epsilon}}{\epsilon} = \frac{3\epsilon}{\epsilon} \\
+        &= 3
     \end{align*}
 \end{example}
+
+\begin{align}
+    \ln(1 + \epsilon) &= \epsilon \\
+    \ln(1 - \epsilon) &= -\epsilon \\
+    \ln(1 + C\epsilon) &= C\epsilon \\
+    (1 + \epsilon)^C &= e^{C\epsilon} \\
+    (1 - \epsilon)^C &= e^{-C\epsilon}
+\end{align}
+
 
 \medskip
 
@@ -286,6 +321,14 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
         &= \ln a
     \end{align*}
 \end{example}
+
+\begin{warning}{自然恒等式是极限运算}
+    显然，定理2.1 的恒等结果是在舍弃更高阶无穷小后的极限运算结果，例如极限计算
+    $$\frac{e^{\epsilon^2} - 1 - \epsilon^2}{\epsilon^4}$$
+    我们不能简单的应用定理2.1，那样分子将为0，此时正确的方法是使用“平滑”的泰勒展开来得到更高阶无穷小，从而计算出正确的结果。
+
+    定理2.1 的意义在于简化指数函数导数公式的推导，免去复杂的逻辑推理。
+\end{warning}
 
 \section{泰勒展开在极限计算中的应用}
 泰勒展开（Taylor Series Expansion）是计算涉及 $e$, $\ln(x)$, $\sin(x)$, $\cos(x)$ 等基本函数的极限时，一个非常强大且高效的工具。
