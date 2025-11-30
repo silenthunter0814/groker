@@ -332,7 +332,8 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
     \cos x &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots \\
     \tan x &= x + \frac{x^3}{3} + \frac{2x^5}{15} + \cdots \\
     e^x &= 1 + x +\frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
-    \ln(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots
+    \ln(1+x) &= x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots \\
+    (1+x)^a &= 1 + ax + \frac{a(a-1)}{2!}x^2 + \frac{a(a-1)(a-2)}{3!}x^3 + \cdots
 \end{align}
 
 \medskip
@@ -344,21 +345,16 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
         &= \frac{-\frac{1}{2}\epsilon^2}{\epsilon^2} = -\frac 1 2 \\
         \lim_{x \to 0} \frac{e^{x^2} - 1 - x^2}{x^4} &= \frac{e^{\epsilon^2} - 1 - \epsilon^2}{\epsilon^4} \\
         &= \frac{\left(1+\epsilon^2+\frac{1}{2}\epsilon^4 \right) - 1 - \epsilon^2}{\epsilon^4} \\
-        &= \frac 1 2
+        &= \frac{\frac{1}{2}\epsilon^4}{\epsilon^4} = \frac 1 2
     \end{align*}
 \end{example}
 
 \medskip
 
-\begin{example} 计算极限 $\lim_{x \to 0}\frac{a^x - 1}{x}$。
+\begin{example} 计算极限 
     \begin{align*}
-        \lim_{x \to 0}\frac{a^x - 1}{x} &= \frac{a^\epsilon - 1}{\epsilon} \\
-        y &= \frac{a^\epsilon - 1}{\epsilon} \\
-        1 + y\epsilon &= a^\epsilon \\
-        \ln (1 + y\epsilon) &= \ln a^\epsilon \\
-        y \cdot \epsilon &= \ln a \cdot \epsilon \\
-        y &= \ln a \\
-        \lim_{x \to 0}\frac{a^x - 1}{x} &= \ln a
+        \lim_{x \to 0}\frac{\sin x}{x} &= \frac{\sin \epsilon}{\epsilon} = \frac \epsilon \epsilon = 1 \\
+        \lim_{x \to 0}\frac{1 - \cos x}{x} &= \frac{1 - \cos \epsilon}{\epsilon} = \frac{1 - (1 - \frac 1 2 \epsilon^2)}{\epsilon} = \frac 1 2 \epsilon = 0 \\
     \end{align*}
 \end{example}
 
@@ -371,3 +367,9 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
 （3）提取主部： 保留分子分母中最低次项的系数，即可求出极限。
 
 我们在学习泰勒级数之前，提前利用泰勒级数的展开式来简化复杂极限的计算，避免进行不必要的复杂逻辑分析。
+
+\medskip
+
+\begin{warning}{循环论证}
+    复杂多项式的泰勒级数展开在计算极限时很强大和直观，但是注意不能用它来证明极限和导数的推导，因为泰勒级数是在极限和导数的理论框架下推导出来的。否则可能会出现循环论证的逻辑错误。
+\end{warning}
