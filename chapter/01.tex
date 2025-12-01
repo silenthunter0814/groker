@@ -264,27 +264,3 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 \begin{info}{格洛克观点}
     格洛克代数空间的建立可以使我们抛弃传统的基于语言的数学逻辑，转而专注于简单精确的数学计算。后续章节我们将会看到微积分学是多么的简单，大量晦涩的定义、定理将被抛弃，一切变得如此不可思议。
 \end{info}
-
-\begin{example}
-    求函数 $f(x) = \frac{\sqrt{x-4}}{x-5}$ 的定义域。
-\end{example}
-
-\section{极限的概念}
-\begin{definition}[极限的 $\epsilon-\delta$ 定义]
-\label{def:limit}
-对于函数 $f(x)$，如果存在实数 $L$，使得对任意给定的 $\epsilon > 0$，都存在 $\delta > 0$，当 $0 < |x - a| < \delta$ 时，有 $|f(x) - L| < \epsilon$，则称 $L$ 为函数 $f(x)$ 在点 $a$ 处的极限，记为 $\lim_{x \to a} f(x) = L$。
-
-设函数 $f(x)$ 在点 $x_0$ 的某个去心邻域内有定义。如果存在一个实数 $L$，使得：
-
-    对于任意给定的正数 $\epsilon$ (无论它多么小)，总存在一个正数 $\delta$ (它通常依赖于 $\epsilon$)，使得当 $x$ 满足 $0 < |x - x_0| < \delta$ 时，都有 $|f(x) - L| < \epsilon$ 成立。
-
-则称 $L$ 是函数 $f(x)$ 当 $x$ 趋近于 $x_0$ 时的极限，记作：
-$$\lim_{x \to x_0} f(x) = L$$
-\end{definition}
-
-\begin{theorem}[极限的四则运算]
-设 $\lim_{x \to a} f(x)$ 和 $\lim_{x \to a} g(x)$ 都存在，则有：
-$$ \lim_{x \to a} [f(x) \pm g(x)] = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) $$
-$$ \lim_{x \to a} [f(x) g(x)] = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) $$
-$$ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}, \quad \text{其中 } \lim_{x \to a} g(x) \neq 0 $$
-\end{theorem}
