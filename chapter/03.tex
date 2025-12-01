@@ -10,6 +10,8 @@
 \section{极限变化量与点微分}
 通过前面三章的学习，我们具备了解决瞬时速度和切线问题的理论框架，以此为切入点，引出点微分的概念。
 
+\medskip
+
 \textbf{瞬时速度问题}
 
 我们首先考察平均速度的问题，如果位移函数 $S = F(x)$，其中自变量 $x$ 表示时间，那么在 $t_1, t_2$时间间隔内的平均速度表示为
@@ -24,13 +26,32 @@ $$\overline{v} = \frac{F(t + \Delta t) - F(t)}{\Delta t} $$
 $$v = \frac{F(t+\epsilon) - F(t)}{\epsilon}$$
 对于任意时刻 $x$，我们得到数学描述的速度函数
 \begin{align}
-    f(x) = \frac{F(x+\epsilon) - F(x)}{\epsilon}
+    v(x) = \frac{F(x+\epsilon) - F(x)}{\epsilon}
 \end{align}
 
+\begin{example}
+    假设一个物体沿直线运动，其位移 $S$（单位：米，m）随时间 $t$（单位：秒，s）变化的函数关系为：$$S(t) = 3t^2 + 5t - 2$$计算该物体在 $t = 2$ 秒时的瞬时速度。
 
+    \textbf{解：}
 
+    首先求解瞬时速度函数 $v(t)$:
+    \begin{align*}
+        v(t) &= \frac{S(t+\epsilon) - S(t)}{(t+\epsilon) - t} \\
+        &=\frac{[3(t+\epsilon)^2 + 5(t+\epsilon) - 2] - (3t^2 + 5t - 2)}{\epsilon}\\
+        &= \frac{(3t^2+6t\cdot\epsilon+3\epsilon^2+5t+5\epsilon-2) - (3t^2 + 5t - 2)}{\epsilon} \\
+        &= \frac{6t\cdot\epsilon + 5\epsilon + 3\epsilon^2}{\epsilon} \\
+        &= 6t + 5 + 3\epsilon \\
+        &= 6t + 5 
+    \end{align*}
+    有了速度函数，现在我们可以计算物体在 $t = 2$ 秒时的瞬时速度 $$v(2) = 6\cdot (2) + 5 = 17$$
+\end{example}
 
+\medskip
 
+\textbf{切线斜率问题}
+
+几何上，直线的斜率可通过已知的两点坐标计算 $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+切线是一条“刚好触碰”曲线上某一点的直线。
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
 导数表示函数在某点变化率的精确度量。
