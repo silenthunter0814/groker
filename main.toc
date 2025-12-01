@@ -10,5 +10,5 @@
 \contentsline {section}{\numberline {2.4}泰勒展开在极限计算中的应用}{17}{section.2.4}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}点微分和导数}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}极限变化量与点微分}{19}{section.3.1}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}积分和积分方法}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}导数的定义与几何意义}{21}{section.4.1}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}积分和积分方法}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}导数的定义与几何意义}{23}{section.4.1}%

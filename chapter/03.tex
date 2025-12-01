@@ -54,10 +54,10 @@ $$v = \frac{F(t+\epsilon) - F(t)}{\epsilon}$$
 切线是一条“刚好触碰”曲线上某一点的直线。对于曲线 $y = F(x)$ 上的某一点 $P$，如果我们要计算经过 $P$ 点切线的斜率，会遇到和上面计算瞬时速度相同的问题，我们还需要曲线上额外的一点 $Q$，即计算割线 $PQ$ 的斜率来近似 $P$ 点切线的斜率。$Q$ 越接近 $P$，计算的割线斜率就越接近 $P$ 点切线的斜率。
 $$m_{PQ} = \frac{y_Q - y_P}{x_Q - x_P}$$
 
-令 $\Delta x = x_Q - x_P$，并使 $\Delta x$ 足够小 曲线 $y = F(x)$ 上经过 $P$ 点切线的斜率可近似表示为
+令 $\Delta x = x_Q - x_P$，并使 $\Delta x$ 足够小，曲线 $y = F(x)$ 上经过 $P$ 点切线的斜率可近似表示为
 $$m_P \approx \frac{F(x_P + \Delta x) - F(x_P)}{\Delta x}$$
 我们在数值 $x_P$ 处进行格洛克微空间展开，获取最小的 $PQ$ 间隔 $\epsilon$，得到 $P$ 点切线的斜率
-$$m_P \approx \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
+$$m_P = \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
 对于曲线上的任意点 $(x, F(x))$，切线的斜率函数表示为
 \begin{align}
     m(x) = \frac{F(x + \epsilon) - F(x)}{\epsilon}
@@ -83,9 +83,11 @@ $$m_P \approx \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
         y - y_0 &= m (x - x_0) \\
         y - 4 &= 4 (x - 2) \\
         y &= 4x - 8 + 4 \\
-        y = 4x - 4
+        y &= 4x - 4
     \end{align*}
 \end{example}
+
+
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
