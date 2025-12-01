@@ -11,14 +11,14 @@
 无穷大和无穷小是具有特殊作用的两个数，分别用 $\infty, \epsilon$ 表示，对于 $\infty$，所有实数都是它的无穷小；对于 $\epsilon$，所有实数都是它的无穷大。
 
 由此产生如下运算法则：对于任意实数 C
-\begin{align*}\infty + C = \infty \\\epsilon + C = C \end{align*}
+\begin{align*}\infty + C &= \infty \\\epsilon + C &= C \end{align*}
 
 这是基于 $\infty, \epsilon$ 本身的直观语义得出的。更进一步，基于数的性质，我们得到：
 \begin{align*}
-    C_1\infty + C_2 = C_1\left(\infty + \frac{C_2}{C_1}\right) = C_1\infty \\
-    C_1\epsilon + C_2 = C_1\left(\epsilon + \frac{C_2}{C_1}\right) = C_2 \\
-    C_1\infty^2 + C_2\infty = \infty(C_1\infty + C_2) = C_1\infty^2 \\
-    C_1\epsilon^2 + C_2\epsilon = \epsilon(C_1\epsilon + C_2) = C_2\epsilon
+    C_1\infty + C_2 &= C_1\left(\infty + \frac{C_2}{C_1}\right) = C_1\infty \\
+    C_1\epsilon + C_2 &= C_1\left(\epsilon + \frac{C_2}{C_1}\right) = C_2 \\
+    C_1\infty^2 + C_2\infty &= \infty(C_1\infty + C_2) = C_1\infty^2 \\
+    C_1\epsilon^2 + C_2\epsilon &= \epsilon(C_1\epsilon + C_2) = C_2\epsilon
 \end{align*}
 
 这和 200 多年来的传统解释完全不同，甚至相反。传统解释中并不认为无穷大和无穷小是数，因此不能直接进行数学运算，强调它是一个无限趋近的“动态"过程，因此理解起来要困难复杂得多。
@@ -143,14 +143,14 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 对于性质（2），当 $n = 0$ 时有
 \begin{align}
-    \infty + C = \infty \\
-    \quad 1 + C\epsilon = 1
+    \infty + C &= \infty \\
+    1 + C\epsilon &= 1
 \end{align}
 
 将 （1.1）两边同时减去 $\infty$，将（1.2）两边同时减去 1,得到
 \begin{align}
-    C = 0 \\
-    C\epsilon = 0
+    C &= 0 \\
+    C\epsilon &= 0
 \end{align}
 
 （1.3）说明在格洛克宏空间1轴（1阶无穷大）的视角来看，无论 C 多么大，都是 $\infty$ 的无穷小，格洛克宏空间1轴上的值都为 0；（1.4）说明了在格洛克 0 轴（实数轴）的视角来看，无论 n 多么大，$n\epsilon$ 都是无穷小，在格洛克 0 轴上的值都为 0。这也是后续章节进行极限计算时的正确结果。
@@ -216,7 +216,7 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \begin{align*}
         f(n) &= (-1)^n \frac 1 n \\
         f(\infty) &= (-1)^\infty \frac {1}{\infty} \\
-        f(\infty) &= (-1)^\infty \epsilon 
+        &= (-1)^\infty \epsilon 
     \end{align*}
 
     $f(\infty) = \epsilon = 0$，如果 $\infty$ 为偶数；$f(\infty) = -\epsilon = 0$，如果 $\infty$ 为奇数。 
@@ -227,8 +227,8 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \begin{align*}
         f(n) &= (-1)^n \frac {n+1}{n} \\
         f(\infty) &= (-1)^\infty \frac {\infty+1}{\infty} \\
-        f(\infty) &= (-1)^\infty \frac {\infty}{\infty} \\
-        f(\infty) &= (-1)^\infty
+        &= (-1)^\infty \frac {\infty}{\infty} \\
+        &= (-1)^\infty
     \end{align*}
     数列在 1 和 -1 之间来回振荡，既不收敛也不发散。
     
@@ -236,8 +236,8 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     \begin{align*}
         f(n) &= n - \frac {1}{n} \\
         f(\infty) &= \infty - \frac {1}{\infty} \\
-        f(\infty) &= \infty - \epsilon \\
-        f(\infty) &= \infty
+        &= \infty - \epsilon \\
+        &= \infty
     \end{align*}
     数列发散。    
 \end{example}
