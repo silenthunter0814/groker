@@ -107,6 +107,46 @@ $$m_P = \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
 因此，（3.1）和（3.2）可以统一表示为 $$f(x) = \frac{dF(x)}{dx}$$ 微分表达式与微分自变量的比值称为微分变化率，极限变化率或瞬时变化率，传统上统一定义为导函数，简称导数。
 
 \section{导数和导数公式}
+
+有了微分的定义，我们在此基础上定义导函数。导函数简称导数。
+
+\begin{definition}{导函数}
+    微分函数与微分自变量的比值函数称为导函数，简称导数。如果原函数用 $f(x)$ 表示，那么导函数用 $f'(x)$ 表示。$$f'(x) = \frac{df(x)}{dx}$$    
+    导数用来描述函数相对其自变量的微分变化率，极限变化率或瞬时变化率，或者几何上的曲线切线的斜率。
+    如果 $F(x)$ 表示原函数，那么通常用 $f(x)$ 表示导函数，有时也用 $F'(x)$ 表示导函数。
+\end{definition}
+
+\begin{example}
+    已知函数 $f(x) = \frac 1 x$，求函数在点 $(1, f(1))$ 处的切线斜率,并求出通过该点的切线方程。
+
+    \textbf{解：}
+
+    首先求导函数 $f'(x)$:
+    \begin{align*}
+        f'(x) &= \frac{df(x)}{dx} \\
+        &= \frac{f(x + \epsilon) - f(x)}{(x+\epsilon) - \epsilon} \\
+        &=\frac{1/(x+\epsilon) - 1/x}{\epsilon} \\
+        &= \frac{x - (x+\epsilon)}{x(x+\epsilon)}\cdot \frac 1 {\epsilon}\\
+        &= \frac{-\epsilon}{x(x+\epsilon)}\cdot \frac 1 {\epsilon}\\
+        &= -\frac{1}{x^2 + x\cdot\epsilon} \\
+        &= -\frac{1}{x^2}
+    \end{align*}
+    有了导函数，现在我们可以计算函数在点 $(1, f(1)) = (1, 1)$ 处的切线斜率 $$f'(1) = -\frac{1}{(1)^2} = -1$$
+    切线方程 (点斜式): 
+    \begin{align*}
+        y - y_0 &= m (x - x_0) \\
+        y - 1 &= (-1)\cdot (x - 1) \\
+        y &= -x + 1 + 1 \\
+        y &= -x + 2
+    \end{align*}
+\end{example}
+
+\textbf{常用导函数公式}
+
+$(1)\; f(x) = C$
+
+$$\frac{dC}{dx} = 0$
+
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
 导数表示函数在某点变化率的精确度量。
