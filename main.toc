@@ -10,5 +10,6 @@
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}点微分和导数}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}极限变化量与点微分}{19}{section.3.1}%
 \contentsline {section}{\numberline {3.2}导数和导数公式}{22}{section.3.2}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}积分和积分方法}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}导数的定义与几何意义}{23}{section.4.1}%
+\contentsline {section}{\numberline {3.3}导数的运算法则}{27}{section.3.3}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}积分和积分方法}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}导数的定义与几何意义}{29}{section.4.1}%

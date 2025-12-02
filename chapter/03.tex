@@ -153,6 +153,7 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 \end{align}
 
 （2）幂函数 $f(x) = x^n$
+
 当 $n$ 为整数时，考虑二项式定理 $$(x+\epsilon)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} \epsilon^k = x^n + \binom{n}{1} x^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n$$
 \begin{align*}
     \frac{dx^n}{dx} &= \frac{(x+\epsilon)^n - x^n}{\epsilon} \\
@@ -164,7 +165,7 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 
 所以，幂函数的导数公式
 \begin{align}
-    f'(x) = \frac{dx^n}{dx}} = nx^{n-1}
+    f'(x) = \frac{dx^n}{dx} = nx^{n-1}
 \end{align}
 
 （3）指数函数 $f(x) = e^x,\; f(x) = a^x$
@@ -280,9 +281,9 @@ $$
 
 积的导数（乘法定则）$$(uv)' = u'v + uv'$$
 
-商的导数（除法定则）$$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$
+商的导数（除法定则）$$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$$
 
-$复合函数的导数（链式法则）如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数是：$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
+复合函数的导数（链式法则）如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数是：$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
 
 
 例子 1: 求 $f(x) = x^5 + \ln x$ 的导数。$$f'(x) = (x^5)' + (\ln x)' = 5x^{5-1} + \frac{1}{x} = 5x^4 + \frac{1}{x}$$
