@@ -216,6 +216,80 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
     f'(x) = \frac{d\log_a x}{dx} &= \frac{1}{x\ln a}
 \end{align}
 
+（5）三角函数 $f(x) = \sin x,\; f(x) = \cos x$
+
+对于 $f(x) = \sin x$，考虑使用和角公式 $\sin(x+\epsilon) = \sin x\cdot\cos\epsilon + \cos x\cdot\sin\epsilon$。
+\begin{align*}
+    \frac{d\sin x}{dx} &= \frac{\sin(x+\epsilon) - \sin x}{\epsilon} \\
+    &= \frac{(\sin x\cdot\cos\epsilon + \cos x\cdot\sin\epsilon) - \sin x}{\epsilon} \\
+    &= \frac{\sin x(\cos\epsilon - 1) + \cos x\cdot\sin\epsilon}{\epsilon} \\
+    &= \sin x\cdot\frac{\cos\epsilon-1}{\epsilon} + \cos x\cdot\frac{\sin\epsilon}{\epsilon} \\
+    &= \sin x\cdot 0 + \cos x\cdot 1 \\
+    &= \cos x
+\end{align*}
+
+对于 $f(x) = \cos x$，考虑使用和角公式 $\cos(x+\epsilon) = \cos x\cos\epsilon - \sin x\sin\epsilon$。
+\begin{align*}
+    \frac{d\cos x}{dx} &= \frac{\cos(x+\epsilon) - \cos x}{\epsilon} \\
+    &= \frac{\cos x\cos\epsilon - \sin x\sin\epsilon - \cos x}{\epsilon} \\
+    &= \frac{\cos x(\cos\epsilon -1) - \sin x\sin\epsilon}{\epsilon} \\
+    &= \cos\cdot\frac{\cos\epsilon - 1}{\epsilon} - \sin x\cdot\frac{\sin\epsilon}{\epsilon} \\
+    &= \cos\cdot 0 - \sin x\cdot 1 \\
+    &= -\sin x
+\end{align*}
+所以，三角函数的导数公式
+\begin{align}
+    f'(x) = \frac{d\sin x}{dx} &= \cos x \\
+    f'(x) = \frac{d\cos x}{dx} &= -\sin x
+\end{align}
+
+这些是常用的基本函数导数公式，一些不太常用到的函数，如反函数等我们不再一一推导。
+
+\textbf{基本函数导数公式}
+$$\begin{array}{ll}
+    \text{函数 } f(x) & \text{导数 } f'(x) \\
+    \hline
+    C \text{ (常数)} & 0 \\
+    x^n & nx^{n-1} \\
+    e^x & e^x \\
+    a^x & a^x \ln a \\
+    \ln x & \frac{1}{x} \\
+    \log_a x & \frac{1}{x \ln a} \\
+    \sin x & \cos x \\
+    \cos x & -\sin x \\
+    \tan x & \sec^2 x \\
+    \cot x & -\csc^2 x \\
+    \sec x & \sec x \tan x \\
+    \csc x & -\csc x \cot x \\
+    \arcsin x & \frac{1}{\sqrt{1-x^2}} \\
+    \arccos x & -\frac{1}{\sqrt{1-x^2}} \\
+    \arctan x & \frac{1}{1+x^2} \\
+    \text{arccot } x & -\frac{1}{1+x^2} \\
+    \end{array}
+$$
+
+
+\section{导数的运算法则}
+
+假设 $u = u(x)$ 和 $v = v(x)$ 都是可导函数，$C$ 是常数。
+
+
+常数与函数积的导数$$(Cu)' = C u'$$
+
+和或差的导数$$(u \pm v)' = u' \pm v'$$
+
+积的导数（乘法定则）$$(uv)' = u'v + uv'$$
+
+商的导数（除法定则）$$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$
+
+$复合函数的导数（链式法则）如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数是：$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
+
+
+例子 1: 求 $f(x) = x^5 + \ln x$ 的导数。$$f'(x) = (x^5)' + (\ln x)' = 5x^{5-1} + \frac{1}{x} = 5x^4 + \frac{1}{x}$$
+
+例子 2: 求 $g(x) = x \cos x$ 的导数（使用积的导数公式）。$$g'(x) = (x)' \cos x + x (\cos x)' = 1 \cdot \cos x + x (-\sin x) = \cos x - x \sin x$$
+
+例子 3: 求 $h(x) = e^{2x}$ 的导数（使用链式法则）。令 $u = 2x$，则 $h(x) = e^u$。$$\frac{dh}{dx} = \frac{d(e^u)}{du} \cdot \frac{d(2x)}{dx} = e^u \cdot 2 = 2e^{2x}$$
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
