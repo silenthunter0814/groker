@@ -157,8 +157,11 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 
 （2）幂函数 $f(x) = x^n$
 
-当 $n$ 为整数时，考虑二项式定理 $$(x+\epsilon)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} \epsilon^k = x^n + \binom{n}{1} x^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n$$
+当 $n$ 为整数时，考虑二项式定理 
 \begin{align*}
+    (x+\epsilon)^n &= \sum_{k=0}^{n} \binom{n}{k} x^{n-k} \epsilon^k \\
+    &= x^n + \binom{n}{1} x^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n \\
+    \\
     \frac{dx^n}{dx} &= \frac{(x+\epsilon)^n - x^n}{\epsilon} \\
     &= \frac{\left[x^n + nx^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n\right]-x^n}{\epsilon} \\
     &= nx^{n-1} + \binom{n}{2} x^{n-2}\epsilon + \cdots + \epsilon^{n-1} \\
@@ -179,10 +182,8 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
     &= \frac{e^x \cdot (e^\epsilon -1)}{\epsilon} \\
     &= e^x \cdot \frac{e^\epsilon -1}{\epsilon} \\
     &= e^x \cdot \frac{(1 + \epsilon) -1}{\epsilon} \\
-    &= e^x \cdot 1 = e^x
-\end{align*}
-
-\begin{align*}
+    &= e^x \cdot 1 = e^x \\
+    \\
     \frac{da^x}{dx} &= \frac{a^{x+\epsilon} - a^x}{\epsilon} \\
     &= \frac{a^x \cdot (a^\epsilon -1)}{\epsilon} \\
     &= a^x \cdot \frac{a^\epsilon -1}{\epsilon} \\
@@ -197,16 +198,14 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 
 (4)对数函数 $f(x) = \ln x,\; f(x) = \log_a x$
 
-使用上一章的自然恒等式 $ln(1 + a \epsilon) = a \epsilon$
+使用上一章的自然恒等式 $\ln(1 + a \epsilon) = a \epsilon$
 \begin{align*}
     \frac{d\ln x}{dx} &= \frac{\ln(x+\epsilon) - \ln x}{\epsilon} \\
     &= \ln \frac{x+\epsilon}{x} \cdot \frac 1 \epsilon \\
     &= \ln (1 + \frac{1}{x} \cdot \epsilon) \cdot \frac 1 \epsilon \\
     &= \frac{1}{x} \cdot \epsilon \cdot \frac 1 \epsilon \\
-    &= \frac 1 x
-\end{align*}
-
-\begin{align*}
+    &= \frac 1 x \\
+    \\
     \frac{d\log_a x}{dx} &= \frac{\log_a(x+\epsilon) - \log_a x}{\epsilon} \\
     &= \log_a \frac{x + \epsilon}{x} \cdot \frac{1}{\epsilon}\\
     &= \log_a(1 + \frac{\epsilon}{x}) \cdot \frac{1}{\epsilon}\\
