@@ -277,9 +277,19 @@ $$
 假设 $u = u(x)$ 和 $v = v(x)$ 都是可导函数，$C$ 是常数。
 
 
-常数与函数积的导数$$(Cu)' = C u'$$
+（1）常数与函数积的导数$$(Cu)' = C u'$$
+$$\frac{dCu(x)}{dx} = \frac{Cu(x+\epsilon) - Cu(x)}{\epsilon} = C\cdot\frac{u(x+\epsilon) - u(x)}{\epsilon} = C\cdot\frac{du(x)}{dx}$$
 
-和或差的导数$$(u \pm v)' = u' \pm v'$$
+（2）和或差的导数$$(u \pm v)' = u' \pm v'$$
+\begin{align*}
+    \frac{d(u(x)+v(x))}{dx} &= \frac{(u(x+\epsilon)+v(x+\epsilon) - (u(x)+v(x))}{\epsilon} \\
+    &= \frac{u(x+\epsilon)-u(x)}{\epsilon} + \frac{v(x+\epsilon)-v(x)}{\epsilon} \\
+    &= \frac{du(x)}{dx} + \frac{dv(x)}{dx} = u' + v'
+\end{align*}
+
+\begin{example}
+    求 $f(x) = x^5 + \ln x$ 的导数。$$f'(x) = (x^5)' + (\ln x)' = 5x^{5-1} + \frac{1}{x} = 5x^4 + \frac{1}{x}$$
+\end{example}
 
 积的导数（乘法定则）$$(uv)' = u'v + uv'$$
 
@@ -288,7 +298,7 @@ $$
 复合函数的导数（链式法则）如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数是：$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
 
 
-例子 1: 求 $f(x) = x^5 + \ln x$ 的导数。$$f'(x) = (x^5)' + (\ln x)' = 5x^{5-1} + \frac{1}{x} = 5x^4 + \frac{1}{x}$$
+例子 1: 
 
 例子 2: 求 $g(x) = x \cos x$ 的导数（使用积的导数公式）。$$g'(x) = (x)' \cos x + x (\cos x)' = 1 \cdot \cos x + x (-\sin x) = \cos x - x \sin x$$
 
