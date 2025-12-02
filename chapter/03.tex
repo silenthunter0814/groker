@@ -277,12 +277,12 @@ $$
 假设 $u = u(x)$ 和 $v = v(x)$ 都是可导函数，$C$ 是常数。
 
 
-（1）常数与函数积的导数$$(Cu)' = C u'$$
+（1）常数与函数积的导数 $(Cu)' = C u'$
 $$\frac{dCu(x)}{dx} = \frac{Cu(x+\epsilon) - Cu(x)}{\epsilon} = C\cdot\frac{u(x+\epsilon) - u(x)}{\epsilon} = C\cdot\frac{du(x)}{dx}$$
 
-（2）和或差的导数$$(u \pm v)' = u' \pm v'$$
+（2）和或差的导数 $(u \pm v)' = u' \pm v'$
 \begin{align*}
-    \frac{d(u(x)+v(x))}{dx} &= \frac{(u(x+\epsilon)+v(x+\epsilon) - (u(x)+v(x))}{\epsilon} \\
+    \frac{d[u(x)+v(x)]}{dx} &= \frac{[u(x+\epsilon)+v(x+\epsilon)] - [u(x)+v(x)]}{\epsilon} \\
     &= \frac{u(x+\epsilon)-u(x)}{\epsilon} + \frac{v(x+\epsilon)-v(x)}{\epsilon} \\
     &= \frac{du(x)}{dx} + \frac{dv(x)}{dx} = u' + v'
 \end{align*}
@@ -291,18 +291,48 @@ $$\frac{dCu(x)}{dx} = \frac{Cu(x+\epsilon) - Cu(x)}{\epsilon} = C\cdot\frac{u(x+
     求 $f(x) = x^5 + \ln x$ 的导数。$$f'(x) = (x^5)' + (\ln x)' = 5x^{5-1} + \frac{1}{x} = 5x^4 + \frac{1}{x}$$
 \end{example}
 
-积的导数（乘法定则）$$(uv)' = u'v + uv'$$
+(3)积的导数（乘法定则）$(uv)' = u'v + uv'$
 
-商的导数（除法定则）$$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$$
+积的导数可参考图3.1 进行计算。
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/03/3.1.png} 
+    \caption{\textbf{积的导数}}
+\end{figure}
 
-复合函数的导数（链式法则）如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数是：$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
+\begin{align*}
+    \frac{d[u(x)v(x)]}{dx} &= \frac{u(x+\epsilon)v(x+\epsilon) - u(x)v(x)}{\epsilon} \\
+    &= \frac{[u(x+\epsilon)-u(x)]v(x) + u(x)[v(x+\epsilon)-v(x)] + [u(x+\epsilon)-u(x)]\cdot [v(x+\epsilon)-v(x)]}{\epsilon} \\
+    &= \frac{du(x)}{dx}\cdot v(x) + u(x)\cdot\frac{dv(x)}{dx} + \frac{[u(x+\epsilon)-u(x)]\cdot [v(x+\epsilon)-v(x)]}{\epsilon^2}\cdot\epsilon \\
+    &= u'(x)v(x) + u(x)v'(x) + u'(x)v'(x)\cdot\epsilon \\
+    &= u'v + uv'
+\end{align*}
 
+\begin{example} 求 $g(x) = x \cos x$ 的导数。
+    $$g'(x) = (x)' \cos x + x (\cos x)' = 1 \cdot \cos x + x (-\sin x) = \cos x - x \sin x$$
+\end{example}
 
-例子 1: 
+（4）商的导数（除法定则）$$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad (v \neq 0)$$
+仍然参考图3.1 进行面积变换。
+\begin{align*}
+    \left(\frac{u}{v}\right)' &= \left[\frac{u(x+\epsilon)}{v(x+\epsilon)} - \frac{u(x)}{v(x)}\right]\cdot\frac{1}{\epsilon} \\
+    &= \frac{u(x+\epsilon)v(x) - u(x)v(x+\epsilon)}{v(x+\epsilon)v(x)\cdot\epsilon} \\
+    &= \frac{[u(x+\epsilon)-u(x)]\cdot v(x) - u(x)\cdot [v(x+\epsilon)-v(x)]}{v(x+\epsilon)v(x)\cdot\epsilon} \\
+    &= \frac{u'(x)\cdot v(x) - u(x)\cdot v'(x)}{v(x+\epsilon)v(x)} \\
+    &= \frac{u'v - uv'}{v^2}
+\end{align*}
 
-例子 2: 求 $g(x) = x \cos x$ 的导数（使用积的导数公式）。$$g'(x) = (x)' \cos x + x (\cos x)' = 1 \cdot \cos x + x (-\sin x) = \cos x - x \sin x$$
+（5）链式法则
 
-例子 3: 求 $h(x) = e^{2x}$ 的导数（使用链式法则）。令 $u = 2x$，则 $h(x) = e^u$。$$\frac{dh}{dx} = \frac{d(e^u)}{du} \cdot \frac{d(2x)}{dx} = e^u \cdot 2 = 2e^{2x}$$
+如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数：
+$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(g(x)) \cdot g'(x)$$
+
+链式法则是除法运算的简单算术变换，可以用相对速度的概念进行理解。
+
+\begin{example} 求 $h(x) = e^{2x}$ 的导数。
+    
+    令 $u = 2x$，则 $h(x) = e^u$。$$\frac{dh}{dx} = \frac{d(e^u)}{du} \cdot \frac{d(2x)}{dx} = e^u \cdot 2 = 2e^{2x}$$
+\end{example}
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
