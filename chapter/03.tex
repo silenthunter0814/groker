@@ -111,7 +111,8 @@ $$m_P = \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
 有了微分的定义，我们在此基础上定义导函数。导函数简称导数。
 
 \begin{definition}{导函数}
-    微分函数与微分自变量的比值函数称为导函数，简称导数。如果原函数用 $f(x)$ 表示，那么导函数用 $f'(x)$ 表示。$$f'(x) = \frac{df(x)}{dx}$$    
+
+    微分函数与微分自变量的比值函数称为导函数。如果原函数用 $f(x)$ 表示，那么导函数用 $f'(x)$ 表示。$$f'(x) = \frac{df(x)}{dx}$$    
     导数用来描述函数相对其自变量的微分变化率，极限变化率或瞬时变化率，或者几何上的曲线切线的斜率。
     如果 $F(x)$ 表示原函数，那么通常用 $f(x)$ 表示导函数，有时也用 $F'(x)$ 表示导函数。
 \end{definition}
@@ -188,18 +189,18 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 \end{align*}
 所以，指数函数的导数公式
 \begin{align}
-    f'(x) = \frac{e^x}{dx} &= e^x \\
-    f'(x) = \frac{a^x}{dx} &= a^x \ln a
+    f'(x) &= \frac{e^x}{dx} = e^x \\
+    f'(x) &= \frac{a^x}{dx} = a^x \ln a
 \end{align}
 
-(4)对数函数 $f(x) = \ln x,\; f(x) = log_a x$
+(4)对数函数 $f(x) = \ln x,\; f(x) = \log_a x$
 
 使用上一章的自然恒等式 $ln(1 + a \epsilon) = a \epsilon$
 \begin{align*}
     \frac{d\ln x}{dx} &= \frac{\ln(x+\epsilon) - \ln x}{\epsilon} \\
-    &= \ln \frac{x+\epsilon}{x} \cdot 1 \epsilon \\
-    &= \ln (1 + \frac{1}{x} \cdot \epsilon) \cdot 1 \epsilon \\
-    &= \frac{1}{x} \cdot \epsilon) \cdot 1 \epsilon \\
+    &= \ln \frac{x+\epsilon}{x} \cdot \frac 1 \epsilon \\
+    &= \ln (1 + \frac{1}{x} \cdot \epsilon) \cdot \frac 1 \epsilon \\
+    &= \frac{1}{x} \cdot \epsilon \cdot \frac 1 \epsilon \\
     &= \frac 1 x
 \end{align*}
 
@@ -213,8 +214,8 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 \end{align*}
 所以，对数函数的导数公式
 \begin{align}
-    f'(x) = \frac{d\ln x}{dx} &= \frac 1 x \\
-    f'(x) = \frac{d\log_a x}{dx} &= \frac{1}{x\ln a}
+    f'(x) &= \frac{d\ln x}{dx} = \frac 1 x \\
+    f'(x) &= \frac{d\log_a x}{dx} = \frac{1}{x\ln a}
 \end{align}
 
 （5）三角函数 $f(x) = \sin x,\; f(x) = \cos x$
@@ -234,38 +235,38 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
     \frac{d\cos x}{dx} &= \frac{\cos(x+\epsilon) - \cos x}{\epsilon} \\
     &= \frac{\cos x\cos\epsilon - \sin x\sin\epsilon - \cos x}{\epsilon} \\
     &= \frac{\cos x(\cos\epsilon -1) - \sin x\sin\epsilon}{\epsilon} \\
-    &= \cos\cdot\frac{\cos\epsilon - 1}{\epsilon} - \sin x\cdot\frac{\sin\epsilon}{\epsilon} \\
-    &= \cos\cdot 0 - \sin x\cdot 1 \\
+    &= \cos x\cdot\frac{\cos\epsilon - 1}{\epsilon} - \sin x\cdot\frac{\sin\epsilon}{\epsilon} \\
+    &= \cos x\cdot 0 - \sin x\cdot 1 \\
     &= -\sin x
 \end{align*}
 所以，三角函数的导数公式
 \begin{align}
-    f'(x) = \frac{d\sin x}{dx} &= \cos x \\
-    f'(x) = \frac{d\cos x}{dx} &= -\sin x
+    f'(x) &= \frac{d\sin x}{dx} = \cos x \\
+    f'(x) &= \frac{d\cos x}{dx} = -\sin x
 \end{align}
 
 这些是常用的基本函数导数公式，一些不太常用到的函数，如反函数等我们不再一一推导。
 
 \textbf{基本函数导数公式}
 $$\begin{array}{ll}
-    \text{函数 } f(x) & \text{导数 } f'(x) \\
+    \text{函数 } f(x) &\qquad \text{导数 } f'(x) \\
     \hline
-    C \text{ (常数)} & 0 \\
-    x^n & nx^{n-1} \\
-    e^x & e^x \\
-    a^x & a^x \ln a \\
-    \ln x & \frac{1}{x} \\
-    \log_a x & \frac{1}{x \ln a} \\
-    \sin x & \cos x \\
-    \cos x & -\sin x \\
-    \tan x & \sec^2 x \\
-    \cot x & -\csc^2 x \\
-    \sec x & \sec x \tan x \\
-    \csc x & -\csc x \cot x \\
-    \arcsin x & \frac{1}{\sqrt{1-x^2}} \\
-    \arccos x & -\frac{1}{\sqrt{1-x^2}} \\
-    \arctan x & \frac{1}{1+x^2} \\
-    \text{arccot } x & -\frac{1}{1+x^2} \\
+    C \text{ (常数)} &\qquad 0 \\
+    x^n &\qquad nx^{n-1} \\
+    e^x &\qquad e^x \\
+    a^x &\qquad a^x \ln a \\
+    \ln x &\qquad \frac{1}{x} \\
+    \log_a x &\qquad\frac{1}{x \ln a} \\
+    \sin x &\qquad \cos x \\
+    \cos x &\qquad -\sin x \\
+    \tan x &\qquad \sec^2 x \\
+    \cot x &\qquad -\csc^2 x \\
+    \sec x &\qquad \sec x \tan x \\
+    \csc x &\qquad -\csc x \cot x \\
+    \arcsin x &\qquad \frac{1}{\sqrt{1-x^2}} \\
+    \arccos x &\qquad -\frac{1}{\sqrt{1-x^2}} \\
+    \arctan x &\qquad \frac{1}{1+x^2} \\
+    \text{arccot } x &\qquad -\frac{1}{1+x^2} \\
     \end{array}
 $$
 
