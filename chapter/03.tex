@@ -169,27 +169,52 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 
 （3）指数函数 $f(x) = e^x,\; f(x) = a^x$
 
-使用上一章的自然恒等式
+使用上一章的自然恒等式 $e^\epsilon = 1 + \epsilon,\; a^\epsilon = 1 + \ln a \cdot \epsilon$
 \begin{align*}
     \frac{de^x}{dx} &= \frac{e^{x+\epsilon} - e^x}{\epsilon} \\
     &= \frac{e^x \cdot (e^\epsilon -1)}{\epsilon} \\
-    &= e^x \cdot \frac{(e^\epsilon -1)}{\epsilon} \\
+    &= e^x \cdot \frac{e^\epsilon -1}{\epsilon} \\
+    &= e^x \cdot \frac{(1 + \epsilon) -1}{\epsilon} \\
     &= e^x \cdot 1 = e^x
 \end{align*}
 
 \begin{align*}
     \frac{da^x}{dx} &= \frac{a^{x+\epsilon} - a^x}{\epsilon} \\
     &= \frac{a^x \cdot (a^\epsilon -1)}{\epsilon} \\
-    &= a^x \cdot \frac{(a^\epsilon -1)}{\epsilon} \\
+    &= a^x \cdot \frac{a^\epsilon -1}{\epsilon} \\
+    &= a^x \cdot \frac{(1 + \ln a \cdot \epsilon) -1}{\epsilon} \\
     &= a^x \ln a
 \end{align*}
 所以，指数函数的导数公式
 \begin{align}
-    f'(x) = \frac{e^x}{dx}} &= e^2 \\
+    f'(x) = \frac{e^x}{dx} &= e^x \\
     f'(x) = \frac{a^x}{dx} &= a^x \ln a
 \end{align}
 
+(4)对数函数 $f(x) = \ln x,\; f(x) = log_a x$
 
+使用上一章的自然恒等式 $ln(1 + a \epsilon) = a \epsilon$
+\begin{align*}
+    \frac{d\ln x}{dx} &= \frac{\ln(x+\epsilon) - \ln x}{\epsilon} \\
+    &= \ln \frac{x+\epsilon}{x} \cdot 1 \epsilon \\
+    &= \ln (1 + \frac{1}{x} \cdot \epsilon) \cdot 1 \epsilon \\
+    &= \frac{1}{x} \cdot \epsilon) \cdot 1 \epsilon \\
+    &= \frac 1 x
+\end{align*}
+
+\begin{align*}
+    \frac{d\log_a x}{dx} &= \frac{\log_a(x+\epsilon) - \log_a x}{\epsilon} \\
+    &= \log_a \frac{x + \epsilon}{x} \cdot \frac{1}{\epsilon}\\
+    &= \log_a(1 + \frac{\epsilon}{x}) \cdot \frac{1}{\epsilon}\\
+    &=\frac{\ln(1 + \frac{\epsilon}{x})}{\ln a} \cdot \frac{1}{\epsilon}\\
+    &= \frac{1}{\ln a}\cdot\frac{\epsilon}{x} \cdot \frac{1}{\epsilon}\\
+    &= \frac{1}{x\ln a}
+\end{align*}
+所以，对数函数的导数公式
+\begin{align}
+    f'(x) = \frac{d\ln x}{dx} &= \frac 1 x \\
+    f'(x) = \frac{d\log_a x}{dx} &= \frac{1}{x\ln a}
+\end{align}
 
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
