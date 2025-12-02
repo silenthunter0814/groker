@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  2 DEC 2025 21:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  2 DEC 2025 21:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -862,7 +862,7 @@ Underfull \vbox (badness 5288) has occurred while \output is active []
 File: images/03/3.1.png Graphic file (type bmp)
 <images/03/3.1.png>
 
-Overfull \hbox (82.24011pt too wide) detected at line 309
+Overfull \hbox (22.7768pt too wide) detected at line 309
 []
  []
 
