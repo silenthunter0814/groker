@@ -143,9 +143,54 @@ $$m_P = \frac{F(x_P + \epsilon) - F(x_P)}{\epsilon}$$
 
 \textbf{常用导函数公式}
 
-$(1)\; f(x) = C$
+求解导函数，需要同时进行代数运算和极限运算，从示例可以看出，即使是简单的原函数，求解导函数也相当繁琐。因此有必要推导一些常用函数的导函数形成导函数公式，避免重复进行极限的繁琐计算。
 
-$$\frac{dC}{dx} = 0$
+（1）常数函数 $f(x) = C$
+$$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilon} = 0$$
+所以，常数函数的导函数为 0，即
+\begin{align}
+    f'(x) = \frac{dC}{dx} = 0
+\end{align}
+
+（2）幂函数 $f(x) = x^n$
+当 $n$ 为整数时，考虑二项式定理 $$(x+\epsilon)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} \epsilon^k = x^n + \binom{n}{1} x^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n$$
+\begin{align*}
+    \frac{dx^n}{dx} &= \frac{(x+\epsilon)^n - x^n}{\epsilon} \\
+    &= \frac{\left[x^n + nx^{n-1}\epsilon + \binom{n}{2} x^{n-2}\epsilon^2 + \cdots + \epsilon^n\right]-x^n}{\epsilon} \\
+    &= nx^{n-1} + \binom{n}{2} x^{n-2}\epsilon + \cdots + \epsilon^{n-1} \\
+    &= nx^{n-1}
+\end{align*}
+当 $n$ 为一般实数时上面的公式也成立，通常需要依赖于指数和对数函数的导数公式，这里略去推导过程。
+
+所以，幂函数的导数公式
+\begin{align}
+    f'(x) = \frac{dx^n}{dx}} = nx^{n-1}
+\end{align}
+
+（3）指数函数 $f(x) = e^x,\; f(x) = a^x$
+
+使用上一章的自然恒等式
+\begin{align*}
+    \frac{de^x}{dx} &= \frac{e^{x+\epsilon} - e^x}{\epsilon} \\
+    &= \frac{e^x \cdot (e^\epsilon -1)}{\epsilon} \\
+    &= e^x \cdot \frac{(e^\epsilon -1)}{\epsilon} \\
+    &= e^x \cdot 1 = e^x
+\end{align*}
+
+\begin{align*}
+    \frac{da^x}{dx} &= \frac{a^{x+\epsilon} - a^x}{\epsilon} \\
+    &= \frac{a^x \cdot (a^\epsilon -1)}{\epsilon} \\
+    &= a^x \cdot \frac{(a^\epsilon -1)}{\epsilon} \\
+    &= a^x \ln a
+\end{align*}
+所以，指数函数的导数公式
+\begin{align}
+    f'(x) = \frac{e^x}{dx}} &= e^2 \\
+    f'(x) = \frac{a^x}{dx} &= a^x \ln a
+\end{align}
+
+
+
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
 $$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
