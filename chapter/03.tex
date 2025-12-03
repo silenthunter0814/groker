@@ -334,7 +334,7 @@ $$\frac{dCu(x)}{dx} = \frac{Cu(x+\epsilon) - Cu(x)}{\epsilon} = C\cdot\frac{u(x+
     \end{align}
 \end{example}
 
-（5）链式法则
+（5）链式法则（复合函数求导）
 
 如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数：
 $$\frac{dy}{dx} = \frac{df(u)}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f(g(x))]' = f'(u) \cdot g'(x)$$
@@ -344,6 +344,33 @@ $$\frac{dy}{dx} = \frac{df(u)}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f
 \begin{example} 求 $h(x) = e^{2x}$ 的导数。
     
     令 $u = 2x$，则 $h(x) = e^u$。$$\frac{dh}{dx} = \frac{d(e^u)}{du} \cdot \frac{d(2x)}{dx} = e^u \cdot 2 = 2e^{2x}$$
+\end{example}
+
+（6）反函数的导数
+
+假设 $f$ 是一个可导的单调函数，并且 $y = f(x)$ 有反函数 $f^{-1}(x)$，其中 $y = f(x)$ 的反函数为 $x = f^{-1}(y)$。我们想要推导出 $(f^{-1})'(y)$ 的公式。
+
+首先，由反函数的定义，知道 $$f(f^{-1}(y)) = y$$
+
+等式两边关于 $y$ 求导 (使用链式法则):$$\left[f(f^{-1}(y))\right]' = y'$$
+
+左边应用链式法则，右边直接求导得到 $1$。所以有：$$f'(f^{-1}(y)) \cdot (f^{-1})'(y) = 1$$
+
+将 $(f^{-1})'(y)$ 单独提出来:$$(f^{-1})'(y) = \frac{1}{f'(f^{-1}(y))}$$
+
+所以反函数的导数公式为：
+\begin{align}
+    (f^{-1})'(y) = \frac{1}{f'(x)}
+\end{align}
+其中 $x = f^{-1}(y)$。
+
+\begin{example} 假设 $f(x) = x^3$，那么反函数为 $f^{-1}(y) = y^{1/3}$。求反函数的导数。
+    
+    首先，求原函数 $f(x)$ 的导数:$$f'(x) = 3x^2$$
+    那么反函数 $(f^{-1})'(y)$ 为:根据反函数导数公式:$$(f^{-1})'(y) = \frac{1}{f'(x)}$$
+    代入 $f'(x) = 3x^2$:$$(f^{-1})'(y) = \frac{1}{3x^2}$$
+    由于 $x = f^{-1}(y) = y^{1/3}$，我们将 $x$ 替换为 $y^{1/3}$:$$(f^{-1})'(y) = \frac{1}{3(y^{1/3})^2}$$
+    化简最终结果:$$(f^{-1})'(y) = \frac{1}{3y^{2/3}}$$
 \end{example}
 
 函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
