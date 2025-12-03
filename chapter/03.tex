@@ -322,6 +322,18 @@ $$\frac{dCu(x)}{dx} = \frac{Cu(x+\epsilon) - Cu(x)}{\epsilon} = C\cdot\frac{u(x+
     &= \frac{u'v - uv'}{v^2}
 \end{align*}
 
+\begin{example} 求 $f(x) = \tan x$ 的导数。
+    \begin{align*}
+        (\tan x)' &= \left(\frac{\sin x}{\cos x}\right)' = \frac{(\sin x)'\cdot\cos x - \sin x\cdot (\cos x)'}{\cos^2 x} \\
+        &= \frac{\cos^2 x - \sin x\cdot (-\sin x)}{\cos^2 x} \\
+        &= \frac{1}{\cos^2 x} = \sec^2 x
+    \end{align*}
+    所以
+    \begin{align}
+        (\tan x)' = \sec^2 x
+    \end{align}
+\end{example}
+
 （5）链式法则
 
 如果 $y = f(u)$ 且 $u = g(x)$，那么 $y$ 对 $x$ 的导数：
