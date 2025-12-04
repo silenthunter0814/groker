@@ -640,6 +640,35 @@ $n!$: $n$ 的阶乘。
     这就是函数 $f(x) = \sin x$ 的麦克劳林级数。
 \end{example}
 
+常用的麦克劳林级数在上一章已给出，这里不在赘述。
+
 \section{微分公式和运算法则}
+如果导数已知，那么通过变换可以得到原函数的微分公式，即
+\begin{align}
+    f'(x) = \frac{df(x)}{dx} \iff df(x) = f'(x)\,dx
+\end{align}
+因为 $dx = \epsilon \neq 0$，所以式3.21 的变换恒成立。
 
-
+\textbf{基本函数微分公式}
+$$
+\begin{array}{ll}
+     dF(x) &\qquad f'(x)\,dx \\
+    \hline
+    dC \text{ (常数)} &\qquad 0 \\
+    dx^n &\qquad nx^{n-1} \\
+    de^x &\qquad e^x \\
+    da^x &\qquad a^x \ln a \\
+    d\ln x &\qquad \frac{1}{x} \\
+    d\log_a x &\qquad\frac{1}{x \ln a} \\
+    d\sin x &\qquad \cos x \\
+    d\cos x &\qquad -\sin x \\
+    \tan x &\qquad \sec^2 x \\
+    \cot x &\qquad -\csc^2 x \\
+    \sec x &\qquad \sec x \tan x \\
+    \csc x &\qquad -\csc x \cot x \\
+    \arcsin x &\qquad \frac{1}{\sqrt{1-x^2}} \\
+    \arccos x &\qquad -\frac{1}{\sqrt{1-x^2}} \\
+    \arctan x &\qquad \frac{1}{1+x^2} \\
+    \text{arccot } x &\qquad -\frac{1}{1+x^2} \\
+\end{array}
+$$
