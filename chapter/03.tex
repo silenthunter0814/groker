@@ -249,7 +249,8 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
 这些是常用的基本函数导数公式，其它直接推导相对复杂的函数，我们在后续章节中利用导数的运算法则进行推导。
 
 \textbf{基本函数导数公式}
-$$\begin{array}{ll}
+$$
+\begin{array}{ll}
     \text{函数 } f(x) &\qquad \text{导数 } f'(x) \\
     \hline
     C \text{ (常数)} &\qquad 0 \\
@@ -268,7 +269,7 @@ $$\begin{array}{ll}
     \arccos x &\qquad -\frac{1}{\sqrt{1-x^2}} \\
     \arctan x &\qquad \frac{1}{1+x^2} \\
     \text{arccot } x &\qquad -\frac{1}{1+x^2} \\
-    \end{array}
+\end{array}
 $$
 
 
@@ -461,6 +462,8 @@ $$\frac{dy}{dx} = \frac{df(u)}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f
 
 对于一个在某点 $a$ 处无限可导的函数 $f(x)$，我们希望用一个多项式来近似表示它，并且要求这个多项式在 $x=a$ 及其附近与原函数 $f(x)$ 有相同的值和相同的各阶导数值。这个多项式就是泰勒多项式（Taylor Polynomial），当其项数趋于无穷时，就变成了泰勒级数。
 
+\medskip
+
 \textbf{泰勒级数的推导}
 
 我们假设要找一个 $n$ 次多项式 $P_n(x)$ 来近似 $f(x)$，以 $x=a$ 为中心点：
@@ -523,6 +526,10 @@ $f^{(n)}(a)$: 函数 $f(x)$ 的 $n$ 阶导数在点 $x=a$ 处的值。
 
 $n!$: $n$ 的阶乘。
 
+\medskip
+
+\textbf{麦克劳林级数}
+
 麦克劳林级数是泰勒级数的一个特殊情况，即展开点 $a=0$ 时的泰勒级数。
 
 麦克劳林级数是函数 $f(x)$ 在 $x=0$ 处的泰勒级数：
@@ -532,6 +539,8 @@ $n!$: $n$ 的阶乘。
 \end{align}
 
 泰勒级数的本质上是利用函数在一点（a）处的值和各阶导数值来构造一个无限阶多项式，使该多项式能够完全匹配原函数在该点处的局部行为。
+
+\medskip
 
 \begin{example} 函数 $f(x) = e^x$ 的麦克劳林级数
 
@@ -580,4 +589,57 @@ $n!$: $n$ 的阶乘。
     &e^x = e^a + \frac{e^a}{1!}(x-a) + \frac{e^a}{2!}(x-a)^2 + \frac{e^a}{3!}(x-a)^3 + \cdots
 \end{align*}
 可以看出，这个形式是 $\left(e^a\right)$ 乘以 $\left(1 + (x-a) + \frac{(x-a)^2}{2!} + \cdots\right)$，这与 $e^{x-a}$ 的麦克劳林级数相乘，符合指数函数的性质 $e^x = e^a \cdot e^{x-a}$。
+
+\begin{example} 函数 $f(x) = e^x$ 的麦克劳林级数
+
+    （1）计算函数及其各阶导数在 $x=0$ 处的值
+    
+    我们需要计算 $f(x) = \sin x$ 在 $x=0$ 处的各阶导数的值 $f^{(n)}(0)$：
+    \begin{align*}
+    \begin{array}{lll}
+        \text{第 0 阶：} &f(x) = \sin x &f(0) = \sin(0) = 0 \\
+        \text{第 1 阶：} &f'(x) = \cos x &f'(0) = \cos(0) = 1 \\
+        \text{第 2 阶：} &f''(x) = -\sin x &f''(0) = -\sin(0) = 0 \\
+        \text{第 3 阶：} &f'''(x) = -\cos x &f'''(0) = -\cos(0) = -1 \\
+        \text{第 4 阶：} &f^{(4)}(x) = \sin x &f^{(4)}(0) = \sin(0) = 0 \\
+        \text{第 5 阶：} &f^{(5)}(x) = \cos x &f^{(5)}(0) = \cos(0) = 1                 
+    \end{array}
+    \end{align*} 
+
+    （2）观察周期规律
+    
+    我们可以看到 $f^{(n)}(0)$ 的值以 $0, 1, 0, -1$ 为周期重复出现：
+    \begin{align*}
+        \begin{array}{lll}
+            n &f^{(n)}(x)\quad &f^{(n)}(0) \\
+            0 &\sin x &0 \\
+            1 &\cos x &1 \\
+            2 &-\sin x &0 \\
+            3 &-\cos x &-1 \\
+            4 &\sin x &0 \\
+            5 &\cos x &1 \\
+            \cdots &\cdots &\cdots
+        \end{array}
+    \end{align*}
+    这意味着只有当 $n$ 是奇数 ($n=2k+1$) 时，系数才非零。
+    
+    当 $n = 1, 5, 9, \dots$ 时，$f^{(n)}(0) = 1$
+    
+    当 $n = 3, 7, 11, \dots$ 时，$f^{(n)}(0) = -1$
+
+    （3）代入麦克劳林级数公式
+    
+    将计算出的 $f^{(n)}(0)$ 值代入麦克劳林级数公式：
+    \begin{align*}
+    &f(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \frac{f^{(4)}(0)}{4!}x^4 + \frac{f^{(5)}(0)}{5!}x^5 + \cdots \\
+    &\sin x = 0 + 1 \cdot x + \frac{0}{2!}x^2 + \frac{-1}{3!}x^3 + \frac{0}{4!}x^4 + \frac{1}{5!}x^5 + \cdots \\
+    &\sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!} - \cdots
+    \end{align*}
+
+    （4）写出级数的求和形式该级数只包含奇数次幂项，且符号正负交替，我们可以用一个求和符号来表示它：$$\sin x = \sum_{k=0}^{\infty} (-1)^k \frac{x^{2k+1}}{(2k+1)!}$$
+    这就是函数 $f(x) = \sin x$ 的麦克劳林级数。
+\end{example}
+
+\section{微分公式和运算法则}
+
 
