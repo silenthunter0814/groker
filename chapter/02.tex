@@ -359,11 +359,15 @@ $$e = \lim_{x \to \infty}\left(1 + \frac 1 x \right)^x = \left(1 + \frac 1 \inft
     \end{align*}
 \end{example}
 
-\begin{example} 计算极限 $\lim_{x \to 1}\frac{\ln x}{1-x}$
+\begin{example} 计算极限 $\lim_{x \to 1}\frac{\ln x}{1-x},\; \lim_{x \to \infty}\frac{\ln x}{\sqrt[n]{x}}$
     \begin{align*}
         \lim_{x \to 1}\frac{\ln x}{1-x} &= \frac{\ln(1 + \epsilon)}{1 - (1+\epsilon)} \\
         &= \frac{\ln e^\epsilon}{-\epsilon} \\
-        &= \frac{\epsilon}{-\epsilon} = -1
+        &= \frac{\epsilon}{-\epsilon} = -1 \\
+        \\
+        \lim_{x \to \infty}\frac{\ln x}{\sqrt[n]{x}} &= \frac{\ln \infty}{\sqrt[n]{\infty}} \\
+        &= \frac{\ln \infty^n}{\sqrt[n]{\infty^n}} \qquad (\infty \gets \infty^n) \\
+        &= \frac{n\ln \infty}{\infty} = 0
     \end{align*}
 \end{example}
 
