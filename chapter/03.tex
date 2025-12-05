@@ -701,3 +701,5 @@ $$
     &d\frac u v = \frac{vdu - udv + du\cdot dv}{v^2} = \frac{vdu - udv}{v^2} \\
     &du(v(x)) = u'(v)\cdot dv = u'(v)\cdot v'\,dx 
 \end{align}
+
+$d(uv)$ 和 $d\frac u v$ 的中间项中，我们保留了$du\cdot dv = u'\,dx \cdot v'\,dx = u'v'\,d^2 x$，这是一个二阶无穷小，正常情况下极限计算后为 0，如公式右侧结果所示。考虑到微分减法，如 $d(uv) - vdu - udv = du\cdot dv$，在与二阶无穷小比值的情况下，这会得到正确结果。
