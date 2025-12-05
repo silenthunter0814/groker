@@ -654,6 +654,17 @@ $n!$: $n$ 的阶乘。
     &(1+x)^\alpha = \sum_{n=0}^{\infty} \binom{\alpha}{n} x^n = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!} x^2 + \cdots
 \end{align}
 
+\medskip
+
+\begin{example} 计算极限
+    \begin{align*}
+        \lim_{x \to 0} \frac{\cos(x) - 1 + \frac{1}{2}x^2}{x^4} &= \frac{\cos(\epsilon) - 1 + \frac{1}{2}\epsilon^2}{\epsilon^4} \\
+        &= \frac{\left(1 - \frac{\epsilon^2}{2!} + \frac{\epsilon^4}{4!}\right) - 1 + \frac{1}{2}\epsilon^2}{\epsilon^4} \\
+        &= \frac{\frac{\epsilon^4}{4!}}{\epsilon^4} \\
+        &= \frac{1}{4!}
+    \end{align*}
+\end{example}
+
 \section{微分公式和运算法则}
 如果导数已知，那么通过变换可以得到原函数的微分公式，即
 \begin{align}
@@ -703,3 +714,5 @@ $$
 \end{align}
 
 $d(uv)$ 和 $d\frac u v$ 的中间项中，我们保留了$du\cdot dv = u'\,dx \cdot v'\,dx = u'v'\,d^2 x$，这是一个二阶无穷小，正常情况下极限计算后为 0，如公式右侧结果所示。考虑到微分减法，如 $d(uv) - vdu - udv = du\cdot dv$，在与二阶无穷小比值的情况下，这会得到正确结果。
+
+
