@@ -14,4 +14,4 @@
 \contentsline {section}{\numberline {3.4}泰勒级数和麦克劳林级数}{34}{section.3.4}%
 \contentsline {section}{\numberline {3.5}微分公式和运算法则}{40}{section.3.5}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}导数的定义与几何意义}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.1}函数单调性}{43}{section.4.1}%
