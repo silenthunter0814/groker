@@ -84,4 +84,35 @@ $f'(x) = 0$ (有限点)：这意味着函数曲线只有在孤立的几个点上
     函数在 $x=1$ 处达到局部最大值，$f(1) = 1 \cdot e^{-1} = \frac{1}{e}$。
 \end{example}
 
+\section{函数的极值}
+函数极值（Extremum）是局部极大值（Local Maximum）和局部极小值（Local Minimum）的统称，反映了函数在其定义域的局部范围内的最大或最小性。
+
+\medskip
+
+\begin{definition}{函数极值}
+    对于函数 $f(x)$ 区间内某一点 $x = x_0$:
+
+    （1）$f(x_0)$ 是局部极大值，如果：$f(x_0) > f(x_0-\epsilon)$ 并且 $f(x_0) > f(x_0+\epsilon)$
+
+    （2）$f(x_0)$ 是局部极小值，如果：$f(x_0) < f(x_0-\epsilon)$ 并且 $f(x_0) < f(x_0+\epsilon)$
+\end{definition}
+
+从图像上看，局部极大值点就像是函数图形上的山顶，局部极小值点就像是函数图形上的山谷底部。
+
+\begin{example} 判断 $x = 0$ 是否是函数的极值点，$f(x) = x^2,\;g(x) = x^3$。
+
+    对于 $f(x) = x^2$：
+    \begin{align*}
+        &f(0) - f(0-\epsilon) = (0)^2 - (-\epsilon)^2 = -\epsilon^2 < 0 \\
+        &f(0) - f(0+\epsilon) = (0)^2 - (\epsilon)^2 = -\epsilon^2 < 0
+    \end{align*}
+    所以 $f(0) < f(0-\epsilon)$ 并且 $f(0) < f(0+\epsilon)$，$f(0)$ 是函数 $f(x) = x^2$ 的局部极小值。
+
+    对于 $g(x) = x^3$：
+    \begin{align*}
+        &g(0) - g(0-\epsilon) = (0)^3 - (-\epsilon)^3 = \epsilon^3 > 0 \\
+        &g(0) - g(0+\epsilon) = (0)^3 - (\epsilon)^3 = -\epsilon^3 < 0
+    \end{align*}
+    所以 $x = 0$ 不是函数 $g(x) = x^3$ 的极值点。
+\end{example}
 
