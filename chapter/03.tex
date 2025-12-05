@@ -715,4 +715,23 @@ $$
 
 $d(uv)$ 和 $d\frac u v$ 的中间项中，我们保留了$du\cdot dv = u'\,dx \cdot v'\,dx = u'v'\,d^2 x$，这是一个二阶无穷小，正常情况下极限计算后为 0，如公式右侧结果所示。考虑到微分减法，如 $d(uv) - vdu - udv = du\cdot dv$，在与二阶无穷小比值的情况下，这会得到正确结果。
 
+\medskip
+
+\begin{example} 复合函数 $\sin^3 x$ 微分展开
+    \begin{align*}
+        u(x) &= x^3,\quad v(x) = \sin x \\
+        u'(x) &= 3x^2 \to u'(v) = 3\sin^2 x \\
+        v'(x) &= \cos x \\
+        d\sin^3x &= u'(v)\cdot v'\,dx = 3\sin^2 x\cos x\,dx
+    \end{align*}
+\end{example}
+
+\begin{example} 复合函数 $e^{\cos(2x)}$ 微分展开
+    \begin{align*}
+        de^{\cos(2x)} &= e^{\cos(2x)}\cdot d\cos(2x) \\
+        &= e^{\cos(2x)}\cdot (-\sin(2x))\cdot d2x \\
+        &= -2\sin(2x)e^{\cos(2x)}\,dx
+    \end{align*}
+\end{example}
+
 
