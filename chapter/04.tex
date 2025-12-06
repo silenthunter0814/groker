@@ -102,6 +102,8 @@ $f'(x) = 0$ (有限点)：这意味着函数曲线只有在孤立的几个点上
 
 从图像上看，局部极大值点就像是函数图形上的山顶，局部极小值点就像是函数图形上的山谷底部。
 
+\medskip
+
 \begin{example} 判断 $x = 0$ 是否是函数的极值点，$f(x) = x^2,\;g(x) = x^3$。
 
     对于 $f(x) = x^2$：
@@ -160,6 +162,38 @@ $f'(x) = 0$ (有限点)：这意味着函数曲线只有在孤立的几个点上
 
 \medskip
 
+\begin{example} 求函数 $f(x) = x \ln x$ 的极值。
+
+    由于函数定义域要求 $x > 0$，因此我们只在开区间 $(0, \infty)$ 上求解。
+
+    求导数：使用乘积法则 $(uv)' = u'v + uv'$，其中 $u=x$, $v=\ln x$。
+    \begin{align*}
+        f'(x) &= (x)' \cdot \ln x + x \cdot (\ln x)' \\
+        &= 1 \cdot \ln x + x \cdot \frac{1}{x} = \ln x + 1
+    \end{align*}
+    求驻点（令 $f'(x) = 0$）：
+
+    $\ln x + 1 = 0 \Rightarrow \ln x = -1$
+
+    解得驻点：$x = e^{-1} = \frac{1}{e}$。
+    
+    判断极值：
+    \begin{align*}
+        &f'\left(\frac{1}{e}-\epsilon\right) &= \ln\left(\frac{1}{e}-\epsilon\right) + 1 \\
+        &= \ln\left(\frac{1 - e\epsilon}{e}\right) \\
+        &= \ln(1 - e\epsilon) - \ln e + 1 \\
+        &= -e\epsilon < 0 \\
+        \\
+        &f'\left(\frac{1}{e}+\epsilon\right) &= \ln\left(\frac{1}{e}+\epsilon\right) + 1 \\
+        &= \ln\left(\frac{1 + e\epsilon}{e}\right) \\
+        &= \ln(1 + e\epsilon) - \ln e + 1 \\
+        &= e\epsilon > 0        
+    \end{align*}
+    $x = e^{-1} = \frac{1}{e}$ 是极小值点，$f\left(\frac{1}{e}\right) = \frac{1}{e} \cdot \ln\left(\frac{1}{e}\right) = -\frac{1}{e}$
+\end{example}
+
+\medskip
+
 \textbf{极值与最值（全局极值）的区别}
 
 极值是一个局部性的概念，而最值是全局性的概念。
@@ -170,6 +204,8 @@ $f'(x) = 0$ (有限点)：这意味着函数曲线只有在孤立的几个点上
 
 最值需要评估所有极值和区间边界的值，并选取最大值或最小值。
 
+\medskip
 
+求解闭区间最值需要比较函数在所有驻点和闭区间端点处的函数值。
 
 
