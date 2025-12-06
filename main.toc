@@ -16,3 +16,4 @@
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{43}{chapter.4}%
 \contentsline {section}{\numberline {4.1}函数单调性}{43}{section.4.1}%
 \contentsline {section}{\numberline {4.2}函数的极值}{45}{section.4.2}%
+\contentsline {section}{\numberline {4.3}函数的渐近线}{47}{section.4.3}%
