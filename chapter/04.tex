@@ -223,3 +223,112 @@ $f'(x) = 0$ (有限点)：这意味着函数曲线只有在孤立的几个点上
     比较结果：最大值：$f(0) = 0$，最小值：$f\left(\frac{\pi}{3}\right) \approx -0.685$
 \end{example}
 
+\section{函数的渐近线}
+渐近线（Asymptote）是一条直线，当函数曲线上的点无限远离原点（即 $x$ 或 $y$ 坐标趋于无穷大）时，该曲线与这条直线之间的距离趋近于零。
+
+简单来说，渐近线就是函数图形在无穷远处无限靠近却永远不会相交的直线。
+
+渐近线主要分为三类：垂直渐近线，水平渐近线和斜渐近线。
+
+\medskip
+
+\textbf{垂直渐近线 (Vertical Asymptote)}
+
+垂直渐近线是形如 $x = a$ 的竖直线。
+
+\medskip
+
+\begin{definition}{垂直渐近线}
+    如果当 $x$ 从左侧或右侧趋近于某个有限值 $a$ 时，函数 $f(x)$ 的值趋向于正无穷 ($\infty$) 或负无穷 ($-\infty$)，即：
+    \begin{align}
+        \lim_{x \to a^-} f(x) &= f(a-\epsilon) = \pm \infty \\
+        \lim_{x \to a^+} f(x) &= f(a+\epsilon) = \pm \infty
+    \end{align}
+    那么直线 $x = a$ 就是函数 $f(x)$ 的垂直渐近线。
+\end{definition}
+对于有理函数（即两个多项式的比 $f(x) = \frac{P(x)}{Q(x)}$），垂直渐近线通常出现在使分母 $Q(x)$ 为零，但分子 $P(x)$ 不为零的点 $x=a$ 处。
+
+\medskip
+
+\begin{example} 求函数 $f(x) = \frac{1}{x-2}$ 的垂直渐近线。
+
+    分母 $x-2 = 0$ 时，$x = 2$，此时分子 $1 \neq 0$。
+
+    检查极限：
+    \begin{align*}
+        \lim_{x \to 2^-} f(x) &= f(2-\epsilon) = \frac{1}{(2-\epsilon)-2} \\
+        &= \frac{1}{-\epsilon} = -\infty \\
+        \\
+        \lim_{x \to 2^+} f(x) &= f(2+\epsilon) = \frac{1}{(2+\epsilon)-2} \\
+        &= \frac{1}{\epsilon} = \infty
+    \end{align*}
+    所以，直线 $x = 2$ 是垂直渐近线。
+\end{example}
+
+\medskip
+
+\textbf{水平渐近线 (Horizontal Asymptote)}
+
+水平渐近线是形如 $y = b$ 的水平线。
+
+\medskip
+
+\begin{definition}{水平渐近线}
+    如果当 $x$ 趋向于正无穷 ($\infty$) 或负无穷 ($-\infty$) 时，函数 $f(x)$ 的值趋近于某个有限值 $b$，即：
+    \begin{align}
+        \lim_{x \to \infty} f(x) &= f(\infty) = b \\
+        \lim_{x \to -\infty} f(x) &= f(-\infty) = b
+    \end{align}
+    那么直线 $y = b$ 就是函数 $f(x)$ 的水平渐近线。
+\end{definition}
+
+\medskip
+
+\begin{example} 求函数 $f(x) = \frac{3x^2 - 5}{2x^2 + x}$ 的水平渐近线。
+
+    检查极限：
+    \begin{align*}
+        \lim_{x \to \infty} f(x) &= f(\infty) = \frac{3\infty^2 - 5}{2\infty^2 + x} \\
+        &= \frac{3\infty^2}{2\infty^2} = \frac{3}{2} 
+    \end{align*}
+    所以水平渐近线为：y = \frac{3}{2}。
+\end{example}
+
+\medskip
+
+\textbf{斜渐近线 (Slant/Oblique Asymptote))}
+
+斜渐近线是形如 $y = kx + b$ 的斜直线（其中 $k \neq 0$）。
+
+\medskip
+
+\begin{definition}{斜渐近线}
+    如果函数 $f(x)$ 满足：
+    \begin{align}
+        k &= \lim_{x \to \pm \infty} \frac{f(x)}{x} = \frac{f(\pm\infty)}{\pm\infty} \\
+        b &= \lim_{x \to \pm \infty} [f(x) - kx] = f(\pm\infty) - k(\pm\infty)
+    \end{align}
+    且 $k$ 和 $b$ 都是有限的实数，那么直线 $y = kx + b$ 就是函数 $f(x)$ 的斜渐近线。
+\end{definition}
+
+对于有理函数 $f(x) = \frac{P(x)}{Q(x)}$，只有当分子的次数恰好比分母的次数高 1 ($n = m + 1$) 时，函数才可能存在斜渐近线。
+
+\medskip
+
+\begin{example} 求函数 $f(x) = \frac{x^2 + 1}{x - 1}$ 的斜渐近线。
+
+    
+    分子次数 $n=2$，分母次数 $m=1$，$n=m+1$，存在斜渐近线。
+    \begin{align*}
+        k &= \frac{f(\infty)}{\infty} = \frac{\infty^2 + 1}{(\infty - 1)\cdot \infty} \\
+        &= \frac{\infty^2 + 1}{\infty^2 - \infty} = \frac{\infty^2 }{\infty^2 } \\
+        &= 1 \\
+        b &= f(\infty) - k(\infty) = \frac{\infty^2 + 1}{\infty - 1} - \infty \\
+        &= \frac{\infty^2 + 1}{\infty - 1} - \frac{\infty^2 - \infty}{\infty - 1} \\
+        &= \frac{\infty + 1}{\infty - 1} \\
+        &= 1
+    \end{align*}
+    因此，直线 $y = x + 1$ 是斜渐近线。
+\end{example}
+
+
