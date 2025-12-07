@@ -23,5 +23,32 @@ $$\int \frac{dF(x)}{dx}\,dx = \int f(x)\,dx = F(x) + C$$
 如果对一个函数先求不定积分，再求导，就会回到原来的函数。
 $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 
+\begin{center}
+\begin{tikzpicture}[
+    % 样式定义
+    function/.style={font=\color{blue!70!black}\large}, 
+    op_arrow/.style={very thick, draw=black, >=stealth}
+]
+
+% 1. 定义节点 (Functions)
+\node[function] (Fx) at (0, 0) {$F(x)$};
+\node[function, right=3.5cm of Fx] (dFx) {$dF(x)$};
+\node[function, right=3.5cm of dFx] (fx) {$f(x)$};
 
 
+% --- 上半部分: 微分标签 (方向: F(x) -> dF(x) -> f(x)) ---
+% 路径 1: F(x) -> dF(x)
+\draw[->, op_arrow] (Fx.north) to[out=60, in=120] node[midway, above, label] {微分} (dFx.north);
+% 路径 2: dF(x) -> f(x)
+\draw[->, op_arrow] (dFx.north) to[out=60, in=120] node[midway, above, label] {$\frac{dF(x)}{dx}$} (fx.north);
+
+
+% --- 下半部分: 积分标签 (方向: f(x) -> dF(x) -> F(x)) ---
+% 路径 3: f(x) -> dF(x)
+\draw[->, op_arrow] (fx.south) to[out=-120, in=-60] node[midway, below, label] {$f(x) \cdot dx$} (dFx.south);
+% 路径 4: dF(x) -> F(x)
+\draw[->, op_arrow] (dFx.south) to[out=-120, in=-60] node[midway, below, label] {积分} (Fx.south);
+
+
+\end{tikzpicture}
+\end{center}
