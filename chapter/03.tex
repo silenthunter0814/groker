@@ -169,7 +169,7 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
     &= nx^{n-1} + \binom{n}{2} x^{n-2}\epsilon + \cdots + \epsilon^{n-1} \\
     &= nx^{n-1}
 \end{align*}
-当 $n$ 为一般实数时上面的公式也成立，通常需要依赖于指数和对数函数的导数公式，这里略去推导过程。
+当 $n$ 为一般实数时上面的公式也成立，通常需要依赖于指数和对数函数的导数公式，本节稍后作为例题进行推导。
 
 所以，幂函数的导数公式
 \begin{align}
@@ -220,6 +220,22 @@ $$\frac{dC}{dx} = \frac{f(x + \epsilon) - f(x)}{\epsilon} = \frac{C - C}{\epsilo
     f'(x) &= \frac{d\ln x}{dx} = \frac 1 x \\
     f'(x) &= \frac{d\log_a x}{dx} = \frac{1}{x\ln a}
 \end{align}
+    
+\medskip
+
+\begin{example} 推导幂函数 $f(x) = x^n$ 的导数公式。 
+    \begin{align*}
+        \frac{dx^n}{dx} &= \frac{(x+\epsilon)^n - x^n}{\epsilon} \\
+        &= \left(e^{n\ln(x+\epsilon)} - e^{n\ln x}\right) \cdot\frac{1}{\epsilon} \\
+        &= \left(e^{n\ln x + n\ln(1+\frac{\epsilon}{x})} - e^{n\ln x}\right) \cdot\frac{1}      {\epsilon} \\
+        &= \left(e^{n\ln x + \frac{n\epsilon}{x}} - e^{n\ln x}\right) \cdot\frac{1}{\epsilon}        \\
+        &= e^{n\ln x} \cdot \left(e^{\frac{n\epsilon}{x}} - 1 \right) \cdot\frac{1}{\epsilon}       \\
+        &= x^n\cdot \frac{(1+\frac{n\epsilon}{x}) - 1}{\epsilon} \\
+        &= x^n \cdot \frac n x \\
+        &= nx^{n-1}
+    \end{align*}
+\end{example}
+
 
 （5）三角函数 $f(x) = \sin x,\; f(x) = \cos x$
 
