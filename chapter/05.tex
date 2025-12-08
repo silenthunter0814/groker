@@ -114,6 +114,32 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
     &(18)\; \int \frac{1}{u\sqrt{u^2 - a^2}} \, du = \frac{1}{a} \operatorname{arcsec}\left(\frac{|u|}{a}\right) + C \quad (a > 0)
 \end{align*}
 
+对于公式（10）：
+\begin{align*}
+    \int \sec u \tan u \, du &= \int \frac{1}{\cos u}\cdot \frac{\sin u}{\cos u}\,dx \\
+    &= \int\frac{d(-\cos u)}{(\cos u)^2} = -\frac{1}{-2 + 1}(\cos u)^{-2+1} \\
+    &= \frac{1}{\cos u} = \sec u
+\end{align*}
+对于公式（14）：
+\begin{align*}
+    \int \sec u \, du &= \int \sec u \cdot \frac{\sec u + \tan u}{\sec u + \tan u} \, du \\
+    &= \int \frac{\sec u (\sec u + \tan u)}{\sec u + \tan u} \, du \\
+    &= \int \frac{\sec^2 u + \sec u \tan u}{\sec u + \tan u} \, du
+\end{align*}
+令 $w = \sec u + \tan u$，回忆导数公式：
+\begin{align*}
+    &\frac{d\sec u}{du} = \sec u \tan u \qquad \frac{d\tan u}{du} = \sec^2 u \\
+    &\frac{dw}{du} = \frac{d}{du}(\sec u + \tan u) = \sec u \tan u + \sec^2 u \\
+    &dw = (\sec^2 u + \sec u \tan u) \, du
+\end{align*}
+将换元结果 $w$ 和 $dw$ 代入原积分表达式：
+\begin{align*}
+    \int \frac{\sec^2 u + \sec u \tan u}{\sec u + \tan u} \, du &= \int \frac{1}{w} \, dw \\
+    &= \ln|w| + C \\
+    &= \ln|\sec u + \tan u| + C
+\end{align*}
+因此，我们推导出：$$\int \sec u \, du = \ln|\sec u + \tan u| + C$$
+
 
 
 
