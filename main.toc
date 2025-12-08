@@ -18,5 +18,6 @@
 \contentsline {section}{\numberline {4.2}函数的极值}{45}{section.4.2}%
 \contentsline {section}{\numberline {4.3}函数的渐近线}{47}{section.4.3}%
 \contentsline {section}{\numberline {4.4}牛顿法解方程}{50}{section.4.4}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}点积分和积分方法}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}导数的定义与几何意义}{53}{section.5.1}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}不定积分的基本概念}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}导数的定义与几何意义}{55}{section.5.2}%
