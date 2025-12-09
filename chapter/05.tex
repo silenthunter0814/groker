@@ -208,7 +208,25 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 
 \textbf{2. 分部积分法}
 
+分部积分法源于乘积求导法则：$$(uv)' = u'v + uv'$$
+对等式两边求积分：$$\int (uv)' \,dx = \int u'v \,dx + \int uv' \,dx$$
+等式的左边 $\int (uv)' \,dx = \int \,d(uv) = uv$，因此：$$uv = \int v \,du + \int u \,dv$$
+稍作移项，就得到了分部积分公式：
+\begin{align}
+    \int u \,dv = uv - \int v \,du
+\end{align}
 
+分部积分法的核心在于将一个难以求解的积分 $\int u \,dv$ 转化为一个相对更容易求解的积分 $\int v \,du$。
+
+\medskip
+
+分部积分法的步骤
+应用分部积分法的关键在于对被积函数 $f(x)$ 进行合理的分解，即选择 $u$ 和 $dv$。
+（1）分解被积函数：将被积函数 $f(x) \,dx$ 分解为两部分：$u$ 和 $dv$。
+（2）目标： 使 $\int v \,du$ 比 $\int u \,dv$ 更容易计算。
+（3）求 $du$ 和 $v$：对 $u$ 求微分，得到 $du$。对 $dv$ 求积分，得到 $v$（通常忽略常数 $C$，因为最终的 $C$ 会加在最后的结果中）。
+（4）应用公式：将被积函数、 $u$、 $v$ 和 $du$ 代入分部积分公式：$$\int u dv = uv - \int v du$$
+（5）求解新的积分：计算等式右侧的积分 $\int v du$。
 
 \medskip
 
