@@ -220,13 +220,52 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 
 \medskip
 
-分部积分法的步骤
-应用分部积分法的关键在于对被积函数 $f(x)$ 进行合理的分解，即选择 $u$ 和 $dv$。
-（1）分解被积函数：将被积函数 $f(x) \,dx$ 分解为两部分：$u$ 和 $dv$。
-（2）目标： 使 $\int v \,du$ 比 $\int u \,dv$ 更容易计算。
-（3）求 $du$ 和 $v$：对 $u$ 求微分，得到 $du$。对 $dv$ 求积分，得到 $v$（通常忽略常数 $C$，因为最终的 $C$ 会加在最后的结果中）。
-（4）应用公式：将被积函数、 $u$、 $v$ 和 $du$ 代入分部积分公式：$$\int u dv = uv - \int v du$$
-（5）求解新的积分：计算等式右侧的积分 $\int v du$。
+\begin{example} 求 $\int x e^{x} \,dx$。
+
+    首先将积分转化为 $\int u \,dv$ 的形式：$\int x e^{x} \,dx = \int x \,de^x$。
+
+    对照公式，$u = x,\quad v = e^x$，所以
+    \begin{align*}
+        \int x e^{x} \,dx ^= \int x \,de^x \\
+        &= x\cdot e^x - \int e^x \,dx \\
+        &= xe^x - e^x + C
+    \end{align*}
+\end{example}
+
+\begin{example} 求 $\int \ln x \,dx$。
+
+    对照公式，$u = \ln x,\quad v = x$，所以
+    \begin{align*}
+        \int \ln x \,dx &= \ln x \cdot x - \int x \,d \ln x \\
+        &= x\ln x - \int x\cdot\left(\frac 1 x\right) \,dx \\
+        &= x\ln x - x + C
+    \end{align*}
+\end{example}
+
+\begin{example} 求解 $\int x\cos x \,dx$。
+
+    首先将积分转化为 $\int u \,dv$ 的形式：$\int x\cos x \,dx = \int x \,d\sin x$。
+
+    对照公式，$u = x,\quad v = \sin x$，所以
+    \begin{align*}
+        \int x\cos x \,dx &= \int x \,d\sin x \\
+        &= x\cdot\sin x - \int \sin x \,dx \\
+        &= x\sin x - (-\cos x) \\
+        &= x\sin x + \cos x + C
+    \end{align*}
+\end{example}
+
+\begin{example} 求解 $\int x^2 e^x \,dx$。
+    \begin{align*}
+        \int x^2 e^x \,dx &= \int x^2 \,de^x = x^2\cdot e^x - \int e^x \,dx^2 \\
+        &= x^2 e^x - \int e^x\cdot 2x \,dx = x^2e^x - 2\int x \,de^x\\
+        &= x^2e^x - 2\left[x\cdot e^x - \int e^x \,dx \right] \\
+        &= x^2e^x - 2xe^x + 2e^x + C \\
+        &= (x^2 - 2x + 2)e^x + C
+    \end{align*}
+\end{example}
+
+分部积分法重要的不是用 $u$ 和 $v$ 进行变量替换，而是形成 $\int u \,dv$ 的形式，然后写出紧凑并且逻辑连贯的解题过程。
 
 \medskip
 
