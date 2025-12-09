@@ -22,4 +22,3 @@
 \contentsline {section}{\numberline {5.1}不定积分的基本概念}{53}{section.5.1}%
 \contentsline {section}{\numberline {5.2}基本积分公式}{55}{section.5.2}%
 \contentsline {section}{\numberline {5.3}积分技术}{56}{section.5.3}%
-\contentsline {section}{\numberline {5.4}导数的定义与几何意义}{63}{section.5.4}%

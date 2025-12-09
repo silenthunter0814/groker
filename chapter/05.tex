@@ -153,9 +153,9 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 
 \medskip
 
-\textbf{1. 替换法}
+\textbf{1. 换元法}
 
-替换法（也称为换元法）用于简化积分变量，通过引入新变量 $u = g(x)$ ，使积分形式更简单。步骤：
+换元法用于简化积分变量，通过引入新变量 $u = g(x)$ ，使积分形式更简单。步骤：
 
 （1）选择 $u = g(x)$，计算 $du = g'(x)\,dx$。
 
@@ -331,9 +331,9 @@ $$
 
 \begin{example} 求积分 $\int \frac{1}{x^2 - 5x + 6} \,dx$。
 
-    步骤一：分解分母分母 
+    步骤一：分解分母
     
-    $x^2 - 5x + 6$ 可分解为 $(x-2)(x-3)$。
+    分母 $x^2 - 5x + 6$ 可分解为 $(x-2)(x-3)$。
 
     步骤二：构建部分分式（类型 I）
     $$\frac{1}{x^2 - 5x + 6} = \frac{1}{(x-2)(x-3)} = \frac{A}{x-2} + \frac{B}{x-3}$$
@@ -405,7 +405,7 @@ $$
     步骤三：进行积分
     $$\int \frac{1}{x} \,dx + \int \frac{1-x}{x^2 + 1} \,dx + \int \frac{3x - 2}{(x^2 + 1)^2} \,dx$$
 
-    第一项 (线性因子)$$\int \frac{1}{x} \,dx = \\ln|x|$$
+    第一项 (线性因子)$$\int \frac{1}{x} \,dx = \ln|x|$$
     第二项 (不同的二次因子)将分子拆开：
     \begin{align*}
         \int \frac{1-x}{x^2 + 1} \,dx &= \int \frac{1}{x^2 + 1} \,dx - \int \frac{x}{x^2 + 1} \,dx \\
@@ -418,11 +418,11 @@ $$
     $\int \frac{3x}{(x^2 + 1)^2} \,dx$: 使用代换 $u = x^2 + 1$, $du = 2x \,dx$
     $$\frac{3}{2} \int \frac{1}{u^2} du = \frac{3}{2} \left(-\frac{1}{u}\right) = \-\frac{3}{2(x^2 + 1)}$$
 
-    $\int \frac{2}{(x^2 + 1)^2} \,dx$: 需要使用三角代换 $x = \tan\theta$, $\,dx = \sec^2\theta d\theta$
+    $\int \frac{2}{(x^2 + 1)^2} \,dx$: 需要使用三角代换 $x = \tan\theta$, $\,dx = \sec^2\theta \,d\theta$
     \begin{align*}
-        \int \frac{2}{(\tan^2\theta + 1)^2} \sec^2\theta d\theta &= \int \frac{2}{(\sec^2\theta)^2} \sec^2\theta d\theta \\
-        &= 2 \int \frac{1}{\sec^2\theta} d\theta = 2 \int \cos^2\theta d\theta \\
-        &= 2 \int \frac{1 + \cos(2\theta)}{2} d\theta = \int (1 + \cos(2\theta)) d\theta \\
+        \int \frac{2}{(\tan^2\theta + 1)^2} \sec^2\theta \,d\theta &= \int \frac{2}{(\sec^2\theta)^2} \sec^2\theta \,d\theta \\
+        &= 2 \int \frac{1}{\sec^2\theta} \,d\theta = 2 \int \cos^2\theta \,d\theta \\
+        &= 2 \int \frac{1 + \cos(2\theta)}{2} \,d\theta = \int (1 + \cos(2\theta)) \,d\theta \\
         &= \theta + \frac{1}{2}\sin(2\theta) = \theta + \sin\theta\cos\theta
     \end{align*}
 
@@ -563,7 +563,7 @@ $$\sin^2 x = \frac{1 - \cos 2x}{2} \qquad \cos^2 x = \frac{1 + \cos 2x}{2}$$
 
     代入万能换元公式：
     \begin{align*} 
-        \int \frac{1}{3 + 5 \cos x} \,x &= \int \frac{1}{3 + 5 \left(\frac{1 - t^2}{1 + t^2}\right)} \cdot \frac{2}{1 + t^2} \,dt \\ 
+        \int \frac{1}{3 + 5 \cos x} \,dx &= \int \frac{1}{3 + 5 \left(\frac{1 - t^2}{1 + t^2}\right)} \cdot \frac{2}{1 + t^2} \,dt \\ 
         &= \int \frac{1}{\frac{3(1 + t^2) + 5(1 - t^2)}{1 + t^2}} \cdot \frac{2}{1 + t^2} \,dt \\ 
         &= \int \frac{1 + t^2}{(3 + 3t^2) + (5 - 5t^2)} \cdot \frac{2}{1 + t^2} \,dt \\ 
         &= \int \frac{2}{8 - 2t^2} \,dt \\ 
@@ -581,7 +581,7 @@ $$\sin^2 x = \frac{1 - \cos 2x}{2} \qquad \cos^2 x = \frac{1 + \cos 2x}{2}$$
     \end{align*}
 
     替换回 $x$： 
-    $$\int \frac{1}{3 + 5 \cos x} \,x = \frac{1}{4} \ln \left| \frac{2 + \tan \frac{x}{2}}{2 - \tan \frac{x}{2}} \right| + C$$
+    $$\int \frac{1}{3 + 5 \cos x} \,dx = \frac{1}{4} \ln \left| \frac{2 + \tan \frac{x}{2}}{2 - \tan \frac{x}{2}} \right| + C$$
 \end{example}
 
 \medskip
@@ -599,9 +599,8 @@ $$\sin^2 x = \frac{1 - \cos 2x}{2} \qquad \cos^2 x = \frac{1 + \cos 2x}{2}$$
 
     第一个积分（$u$ 换元）：$\int \tan x \sec^2 x \,dx$
     
-    令 $u = \tan x$，则 $du = \sec^2 x \,dx$。
-    
-    $\int u \,du = \frac{u^2}{2} = \frac{1}{2} \tan^2 x$
+    令 $u = \tan x$，则 $du = \sec^2 x \,dx$    
+    $$\int u \,du = \frac{u^2}{2} = \frac{1}{2} \tan^2 x$$
 
     第二个积分（基础公式）：$\int \tan x \, dx = -\ln|\cos x|$
 
@@ -612,4 +611,3 @@ $$\sin^2 x = \frac{1 - \cos 2x}{2} \qquad \cos^2 x = \frac{1 + \cos 2x}{2}$$
 相对来说微分很简单，但积分却不是。 在求函数的导数时，通常很清楚必须应用哪个公式，但应该使用哪种方法来积分给定函数可能并不明显。由于本节的积分问题都集中在对应的方法上，因此通常很清楚对给定的积分时使用什么方法。
 
 无论如何，熟练掌握基础公式的推导过程和基本应用是提高积分技术的基础。
-
