@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  9 DEC 2025 18:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  9 DEC 2025 20:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -935,12 +935,7 @@ File: images/04/4.1.png Graphic file (type bmp)
 ] [54]
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [55] [56] [57] [58] [59]
-Overfull \hbox (48.9488pt too wide) detected at line 312
-[]
- []
-
-[60] [61] [62]) [63] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux))
+ [55] [56] [57] [58] [59] [60] [61] [62]) [63] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
