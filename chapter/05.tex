@@ -280,7 +280,7 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 部分分式法仅适用于真有理函数的积分，即分子多项式的次数低于分母多项式的次数。
 
 如果是非真有理函数（分子次数 $\ge$ 分母次数），必须先使用多项式长除法将其分解为一个多项式（可直接积分）和一个真有理函数，然后对剩下的真有理函数部分应用部分分式法。例如
-$$\int \frac{x^3 + x}{x^2 - 4} dx$$
+$$\int \frac{x^3 + x}{x^2 - 4} \,dx$$
 需要先进行长除法：$\frac{x^3 + x}{x^2 - 4} = x + \frac{5x}{x^2 - 4}$。接下来只需要对 $\frac{5x}{x^2 - 4}$ 应用部分分式法。
 
 \medskip
@@ -323,13 +323,13 @@ $$
 
 将确定系数后的部分分式代回积分式中，然后分别对每一项进行积分。
 
-线性因子项 $\int \frac{A}{ax+b} dx$ 通常使用对数 $\frac{A}{a} \ln|ax+b| + C$。
+线性因子项 $\int \frac{A}{ax+b} \,dx$ 通常使用对数 $\frac{A}{a} \ln|ax+b| + C$。
 
-不可分解二次因子项 $\int \frac{Ax+B}{ax^2+bx+c} dx$ 通常需要配方，拆分成 $\ln$ 形式和 $\arctan$ 形式的组合。
+不可分解二次因子项 $\int \frac{Ax+B}{ax^2+bx+c} \,dx$ 通常需要配方，拆分成 $\ln$ 形式和 $\arctan$ 形式的组合。
 
 \medskip
 
-\begin{example} 求积分 $\int \frac{1}{x^2 - 5x + 6} dx$。
+\begin{example} 求积分 $\int \frac{1}{x^2 - 5x + 6} \,dx$。
 
     步骤一：分解分母分母 
     
@@ -345,15 +345,104 @@ $$
 
     步骤四：进行积分
     \begin{align*}
-        \int \frac{1}{x^2 - 5x + 6} dx &= \int \left( \frac{1}{x-3} - \frac{1}{x-2} \right) dx \\
-        &= \int \frac{1}{x-3} dx - \int \frac{1}{x-2} dx \\
+        \int \frac{1}{x^2 - 5x + 6} \,dx &= \int \left( \frac{1}{x-3} - \frac{1}{x-2} \right) \,dx \\
+        &= \int \frac{1}{x-3} \,dx - \int \frac{1}{x-2} \,dx \\
         &= \ln|x-3| - \ln|x-2| + C \\
         &= \ln \left| \frac{x-3}{x-2} \right| + C
     \end{align*}
-
 \end{example}
 
+\begin{example} 求积分：$$\int \frac{x^3 + 4x^2 - x + 1}{x(x^2 + 1)^2} \,dx$$
+    步骤一：分解分母与构建部分分式
+    
+    分母已经分解：$x(x^2 + 1)^2$。
+    
+    $x$: 不同的线性因子。
+    
+    $(x^2 + 1)^2$: 重复的不可分解二次因子。根据分解规则，构造部分分式：
+    $$\frac{x^3 + 4x^2 - x + 1}{x(x^2 + 1)^2} = \frac{A}{x} + \frac{Bx + C}{x^2 + 1} + \frac{Dx + E}{(x^2 + 1)^2}$$
+
+    步骤二：确定待定系数
+    
+    通分并比较分子：$$x^3 + 4x^2 - x + 1 = A(x^2 + 1)^2 + (Bx + C)x(x^2 + 1) + (Dx + E)x$$
+
+    展开并分组：
+    $$x^3 + 4x^2 - x + 1 = A(x^4 + 2x^2 + 1) + (Bx^2 + Cx)(x^2 + 1) + Dx^2 + Ex$$
+    $$x^3 + 4x^2 - x + 1 = Ax^4 + 2Ax^2 + A + Bx^4 + Bx^2 + Cx^3 + Cx + Dx^2 + Ex$$
+    $$x^3 + 4x^2 - x + 1 = (A + B)x^4 + (C)x^3 + (2A + B + D)x^2 + (C + E)x + (A)$$
+
+    比较等式两边 $x^n$ 项的系数：
+$$
+\begin{array}{llll}
+    $x$ \text{的幂次} &\qquad \text{左边系数} &\qquad \text{右边系数} &\qquad \text{得到的方程} \\
+    \hline
+    x^4 &\qquad 0 &\qquad A+B &qquad (1)\; A + B = 0 \\
+    x^3 &\qquad 1 &\qquad C &qquad (2)\; C = 1 \\
+    x^2 &\qquad 4 &\qquad 2A+B+D &qquad (3)\; 2A + B + D = 4 \\
+    x^1 &\qquad -1 &\qquad C+E &qquad (4)\; C + E = -1 \\
+    x^0 \text{(常数项)} &\qquad 1 &\qquad A &qquad (5)\; A = 1 \\
+\end{array}
+$$
+
+    求解系数：
+    
+    由 (5) 得 $A = 1$。
+    
+    由 (2) 得 $C = 1$。
+    
+    将 $A=1$ 代入 (1) 得 $1 + B = 0 \Rightarrow B = -1$。
+    
+    将 $C=1$ 代入 (4) 得 $1 + E = -1 \Rightarrow E = -2$。
+    
+    将 $A=1$ 和 $B=-1$ 代入 (3) 得 $2(1) + (-1) + D = 4 \Rightarrow 1 + D = 4 \Rightarrow D = 3$。
+
+    分解结果：
+    $$\frac{x^3 + 4x^2 - x + 1}{x(x^2 + 1)^2} = \frac{1}{x} + \frac{-x + 1}{x^2 + 1} + \frac{3x - 2}{(x^2 + 1)^2}$$
+
+    步骤三：进行积分
+    $$\int \frac{1}{x} \,dx + \int \frac{1-x}{x^2 + 1} \,dx + \int \frac{3x - 2}{(x^2 + 1)^2} \,dx$$
+
+    第一项 (线性因子)$$\int \frac{1}{x} \,dx = \mathbf{\ln|x|}$$
+    第二项 (不同的二次因子)将分子拆开：
+    \begin{align*}
+        \int \frac{1-x}{x^2 + 1} \,dx &= \int \frac{1}{x^2 + 1} \,dx - \int \frac{x}{x^2 + 1} \,dx \\
+        &= \arctan x - \frac{1}{2}\int \frac{1}{x^2 + 1} d(x^2+1) \\
+        &= \arctan x - \frac{1}{2}\ln(x^2 + 1)
+    \end{align*}
+
+    第三项 (重复的二次因子)将分子拆开：
+    $$\int \frac{3x - 2}{(x^2 + 1)^2} \,dx = \int \frac{3x}{(x^2 + 1)^2} \,dx - \int \frac{2}{(x^2 + 1)^2} \,dx$$
+    $\int \frac{3x}{(x^2 + 1)^2} \,dx$: 使用代换 $u = x^2 + 1$, $du = 2x \,dx$
+    $$\frac{3}{2} \int \frac{1}{u^2} du = \frac{3}{2} \left(-\frac{1}{u}\right) = \mathbf{-\frac{3}{2(x^2 + 1)}}$$
+
+    $\int \frac{2}{(x^2 + 1)^2} \,dx$: 需要使用三角代换 $x = \tan\theta$, $\,dx = \sec^2\theta d\theta$
+    \begin{align*}
+        \int \frac{2}{(\tan^2\theta + 1)^2} \sec^2\theta d\theta &= \int \frac{2}{(\sec^2\theta)^2} \sec^2\theta d\theta \\
+        &= 2 \int \frac{1}{\sec^2\theta} d\theta = 2 \int \cos^2\theta d\theta \\
+        &= 2 \int \frac{1 + \cos(2\theta)}{2} d\theta = \int (1 + \cos(2\theta)) d\theta \\
+        &= \theta + \frac{1}{2}\sin(2\theta) = \theta + \sin\theta\cos\theta
+    \end{align*}
+
+    因为 $x = \tan\theta$, 所以 $\theta = \arctan(x)$。
+    
+    由三角函数关系可知 $\sin\theta = \frac{x}{\sqrt{x^2+1}}$ 且 $\cos\theta = \frac{1}{\sqrt{x^2+1}}$。
+    所以 $$\int \frac{2}{(x^2 + 1)^2} \,dx = \arctan(x) + \frac{x}{x^2 + 1}$$
+
+    最终结果
+
+    将所有部分相加：
+    \begin{align*}
+        &\int \frac{x^3 + 4x^2 - x + 1}{x(x^2 + 1)^2} \,dx \\
+        &= \ln|x| + \arctan(x) - \frac{1}{2} \ln(x^2 + 1) - \frac{3}{2(x^2 + 1)} - \left( \arctan(x) + \frac{x}{x^2 + 1} \right) \\
+        &= \ln|x| - \frac{1}{2} \ln(x^2 + 1) - \frac{3}{2(x^2 + 1)} - \frac{x}{x^2 + 1} + C \\
+        &= \ln \left| \frac{x}{\sqrt{x^2 + 1}} \right| - \frac{2x + 3}{2(x^2 + 1)} + C
+    \end{align*}
+\end{example}
+
+可以看到，包含重复因子和二次因子的分解步骤与基础情况相同，但确定系数和积分求解过程会复杂很多。
+
 部分分式法是微积分中处理有理函数积分的基础工具，关键在于正确分解分母并准确构造部分分式。
+
 \medskip
 
 \textbf{4. 三角函数积分法}
