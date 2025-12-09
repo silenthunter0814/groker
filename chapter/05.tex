@@ -450,12 +450,166 @@ $$
 
 \textbf{4. 三角函数积分法}
 
+三角函数的积分通常需要结合三角恒等式和换元法来求解。
 
+\medskip
 
+（1） 降幂与倍角恒等式积分（针对偶次幂）
 
-\section{导数的定义与几何意义}
-函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
-$$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
-导数表示函数在某点变化率的精确度量。
+当积分中包含 $\sin x$ 或 $\cos x$ 的偶次幂时，核心策略是使用降幂公式将其转化为 $\cos(2nx)$ 的线性组合。
 
+核心公式：
+$$\sin^2 x = \frac{1 - \cos 2x}{2} \qquad \cos^2 x = \frac{1 + \cos 2x}{2}$$
+
+\begin{example} 求积分 $\int \cos^2 x \,dx$。
+    \begin{align*}
+        \int \cos^2 x \,dx &= \int \frac{1 + \cos 2x}{2} \,dx & \quad \text{(使用降幂公式)} \\ 
+        &= \frac{1}{2} \int (1 + \cos 2x) \,dx \\ 
+        &= \frac{1}{2} \left( \int 1 \,dx + \int \cos 2x \,dx \right) \\ 
+        &= \frac{1}{2} \left( x + \frac{1}{2} \sin 2x \right) + C & \quad \text{(使用 $u=2x$ 换元)} \\ 
+        &= \frac{1}{2} x + \frac{1}{4} \sin 2x + C
+    \end{align*}
+\end{example}
+
+\begin{example} 求积分 $\int \sin^4 x \,dx$。
+
+    第一次降幂： 将 $\sin^4 x$ 视为 $(\sin^2 x)^2$，使用降幂公式 $\sin^2 x = \frac{1 - \cos 2x}{2}$。
+    \begin{align*} 
+        \int \sin^4 x \, dx &= \int \left(\sin^2 x\right)^2 \,dx \\ 
+        &= \int \left(\frac{1 - \cos 2x}{2}\right)^2 \,dx \\ 
+        &= \frac{1}{4} \int (1 - 2\cos 2x + \cos^2 2x) \,dx
+    \end{align*}
+
+    第二次降幂： 对 $\cos^2 2x$ 使用降幂公式 $\cos^2 \theta = \frac{1 + \cos 2\theta}{2}$，其中 $\theta = 2x$。
+    $$\cos^2 2x = \frac{1 + \cos(2 \cdot 2x)}{2} = \frac{1 + \cos 4x}{2}$$
+
+    代入并积分：
+    \begin{align*} 
+        \int \sin^4 x \,dx &= \frac{1}{4} \int \left( 1 - 2\cos 2x + \frac{1 + \cos 4x}{2} \right) \,dx \\ 
+        &= \frac{1}{4} \int \left( \frac{3}{2} - 2\cos 2x + \frac{1}{2}\cos 4x \right) \,dx \\ 
+        &= \frac{1}{4} \left( \frac{3}{2} x - 2 \cdot \frac{1}{2}\sin 2x + \frac{1}{2} \cdot \frac{1}{4}\sin 4x \right) + C \\ 
+        &= \frac{3}{8} x - \frac{1}{4}\sin 2x + \frac{1}{32}\sin 4x + C
+    \end{align*}
+\end{example}
+
+\medskip
+
+（2）奇次幂的积分（$u$ 换元法）
+
+当积分形如 $\int \sin^m x \cos^n x \,dx$，且 $m$ 或 $n$ 至少有一个是正奇数时，我们使用 $u$ 换元法。
+
+留下一个奇数次幂的因子（如 $\sin x$ 或 $\cos x$）作为 $du$ 的一部分。
+
+将剩余的偶次幂因子利用 $\sin^2 x + \cos^2 x = 1$ 的关系，转化成另一个三角函数。
+
+\medskip
+
+\begin{example} 求积分 $\int \sin^3 x \cos^2 x \,dx$。
+
+    $m=3$ 是奇数，我们留下一个 $\sin x$：
+    
+    变形： $\sin^3 x \cos^2 x = \sin^2 x \cos^2 x \cdot \sin x = (1 - \cos^2 x) \cos^2 x \cdot \sin x$
+    
+    换元： 令 $u = \cos x$，则 $du = -\sin x \, dx$，即 $\sin x \, dx = -du$。
+    
+    代入：
+    \begin{align*} 
+        \int \sin^3 x \cos^2 x \, dx &= \int (1 - \cos^2 x) \cos^2 x \cdot \sin x \, dx \\ 
+        &= \int (1 - u^2) u^2 (-du) \\ 
+        &= \int (u^4 - u^2) \, du \\ 
+        &= \frac{u^5}{5} - \frac{u^3}{3} + C \\ 
+        &= \frac{\cos^5 x}{5} - \frac{\cos^3 x}{3} + C
+    \end{align*}
+\end{example}
+
+\begin{example} 求积分 $\int \sin^2 x \cos^5 x \,dx$。
+
+    $n=5$ 是奇数，我们留下一个 $\cos x$ 作为 $du$ 的部分。
+    
+    变形： 提取一个 $\cos x$，将剩余的 $\cos^4 x$ 转化为 $\sin x$ 的形式。
+    \begin{align*} 
+        \sin^2 x \cos^5 x &= \sin^2 x \cos^4 x \cdot \cos x \\ 
+        &= \sin^2 x (\cos^2 x)^2 \cdot \cos x \\ 
+        &= \sin^2 x (1 - \sin^2 x)^2 \cdot \cos x
+    \end{align*}
+
+    换元： 令 $u = \sin x$，则 $du = \cos x \,dx$。
+    
+    代入并积分：
+    \begin{align*} 
+        \int \sin^2 x \cos^5 x \,dx &= \int u^2 (1 - u^2)^2 \,du \\ 
+        &= \int u^2 (1 - 2u^2 + u^4) \,du \\ 
+        &= \int (u^2 - 2u^4 + u^6) \,du \\ 
+        &= \frac{1}{3}u^3 - \frac{2}{5}u^5 + \frac{1}{7}u^7 + C
+    \end{align*}
+
+    替换回 $x$：
+    $$\int \sin^2 x \cos^5 x \,dx = \frac{1}{3}\sin^3 x - \frac{2}{5}\sin^5 x + \frac{1}{7}\sin^7 x + C$$
+\end{example}
+
+\medskip
+
+（3）万能换元法（针对三角有理函数）
+
+对于任何形如 $\int R(\sin x, \cos x) \,dx$ 的有理函数积分（$R$ 是关于 $\sin x$ 和 $\cos x$ 的多项式的比），万能换元法保证能将其转化为关于新变量 $t$ 的有理函数积分，理论上总能求解。
+
+核心换元：令 $t = \tan \frac{x}{2}$。
+
+核心替换关系：$$\sin x = \frac{2t}{1 + t^2} \qquad \cos x = \frac{1 - t^2}{1 + t^2} \qquad dx = \frac{2}{1 + t^2} \,dt$$
+
+\medskip
+
+\begin{example} 求积分 $\int \frac{1}{3 + 5 \cos x} \,dx$。
+
+    代入万能换元公式：
+    \begin{align*} 
+        \int \frac{1}{3 + 5 \cos x} \,x &= \int \frac{1}{3 + 5 \left(\frac{1 - t^2}{1 + t^2}\right)} \cdot \frac{2}{1 + t^2} \,dt \\ 
+        &= \int \frac{1}{\frac{3(1 + t^2) + 5(1 - t^2)}{1 + t^2}} \cdot \frac{2}{1 + t^2} \,dt \\ 
+        &= \int \frac{1 + t^2}{(3 + 3t^2) + (5 - 5t^2)} \cdot \frac{2}{1 + t^2} \,dt \\ 
+        &= \int \frac{2}{8 - 2t^2} \,dt \\ 
+        &= \int \frac{1}{4 - t^2} \,dt
+    \end{align*}
+
+    部分分式分解： 
+    $$\frac{1}{4 - t^2} = \frac{1}{(2 - t)(2 + t)} = \frac{1}{4} \left( \frac{1}{2 + t} + \frac{1}{2 - t} \right)$$
+
+    积分：
+    \begin{align*} 
+        \int \frac{1}{4 - t^2} \,dt &= \frac{1}{4} \int \left( \frac{1}{2 + t} + \frac{1}{2 - t} \right) \,dt \\ 
+        &= \frac{1}{4} \left( \ln|2 + t| - \ln|2 - t| \right) + C \\ 
+        &= \frac{1}{4} \ln \left| \frac{2 + t}{2 - t} \right| + C
+    \end{align*}
+
+    替换回 $x$： 
+    $$\int \frac{1}{3 + 5 \cos x} \,x = \frac{1}{4} \ln \left| \frac{2 + \tan \frac{x}{2}}{2 - \tan \frac{x}{2}} \right| + C$$
+\end{example}
+
+\medskip
+
+（4）其它 $u$ 换元应用
+
+对于涉及 $\sec x$, $\tan x$, $\csc x$, $\cot x$ 的积分，常常通过恒等式将其转化为 $\sin x$ 和 $\cos x$ 的形式，或直接使用特定的 $u$ 换元。
+
+\medskip
+
+\begin{example} 求积分 $\int \tan^3 x \,dx$。
+
+    变形： $\tan^3 x = \tan x \cdot \tan^2 x = \tan x (\sec^2 x - 1)$
+    $$\int \tan^3 x \,dx = \int \tan x \sec^2 x \,dx - \int \tan x \,dx$$
+
+    第一个积分（$u$ 换元）：$\int \tan x \sec^2 x \,dx$
+    
+    令 $u = \tan x$，则 $du = \sec^2 x \,dx$。
+    
+    $\int u \,du = \frac{u^2}{2} = \frac{1}{2} \tan^2 x$
+
+    第二个积分（基础公式）：$\int \tan x \, dx = -\ln|\cos x|$
+
+    合并：$$\int \tan^3 x \,dx = \frac{1}{2} \tan^2 x + \ln|\cos x| + C$$
+
+\end{example}
+
+相对来说微分很简单，但积分却不是。 在求函数的导数时，通常很清楚必须应用哪个公式，但应该使用哪种方法来积分给定函数可能并不明显。由于本节的积分问题都集中在对应的方法上，因此通常很清楚对给定的积分时使用什么方法。
+
+无论如何，熟练掌握基础公式的推导过程和基本应用是提高积分技术的基础。
 
