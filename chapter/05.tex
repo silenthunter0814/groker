@@ -302,12 +302,12 @@ $$\int \frac{x^3 + x}{x^2 - 4} \,dx$$
 
 $$
 \begin{array}{ll}
-    \text{分母因子类型} &\qquad \text{对应的部分分式形式} \\
+    \text{分母因子类型} &\quad \text{对应的部分分式形式} \\
     \hline
-    \text{I. 不同的线性因子 } (ax+b) &\qquad \frac{A}{ax+b} \\
-    \text{II. 重复的线性因子 } (ax+b)^n &\qquad \frac{A_1}{ax+b} + \frac{A_2}{(ax+b)^2} + \dots + \frac{A_n}{(ax+b)^n} \\
-    \text{III. 不同的不可分解二次因子 }(ax^2+bx+c) &\qquad \frac{Ax+B}{ax^2+bx+c} \\
-    \text{IV. 重复的不可分解二次因子 } (ax^2+bx+c)^n &\qquad \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{(ax^2+bx+c)^2} + \dots + \frac{A_n x+B_n}{(ax^2+bx+c)^n}
+    \text{I. 不同的线性因子 } (ax+b) &\quad \frac{A}{ax+b} \\
+    \text{II. 重复的线性因子 } (ax+b)^n &\quad \frac{A_1}{ax+b} + \frac{A_2}{(ax+b)^2} + \dots + \frac{A_n}{(ax+b)^n} \\
+    \text{III. 不同的不可分解二次因子 }(ax^2+bx+c) &\quad \frac{Ax+B}{ax^2+bx+c} \\
+    \text{IV. 重复的不可分解二次因子 } (ax^2+bx+c)^n &\quad \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{(ax^2+bx+c)^2} + \dots + \frac{A_n x+B_n}{(ax^2+bx+c)^n}
 \end{array}
 $$
 
@@ -367,20 +367,23 @@ $$
     通分并比较分子：$$x^3 + 4x^2 - x + 1 = A(x^2 + 1)^2 + (Bx + C)x(x^2 + 1) + (Dx + E)x$$
 
     展开并分组：
-    $$x^3 + 4x^2 - x + 1 = A(x^4 + 2x^2 + 1) + (Bx^2 + Cx)(x^2 + 1) + Dx^2 + Ex$$
-    $$x^3 + 4x^2 - x + 1 = Ax^4 + 2Ax^2 + A + Bx^4 + Bx^2 + Cx^3 + Cx + Dx^2 + Ex$$
-    $$x^3 + 4x^2 - x + 1 = (A + B)x^4 + (C)x^3 + (2A + B + D)x^2 + (C + E)x + (A)$$
+    \begin{align*}
+        &x^3 + 4x^2 - x + 1 \\
+        &= A(x^4 + 2x^2 + 1) + (Bx^2 + Cx)(x^2 + 1) + Dx^2 + Ex \\
+        &= Ax^4 + 2Ax^2 + A + Bx^4 + Bx^2 + Cx^3 + Cx + Dx^2 + Ex \\
+        &= (A + B)x^4 + (C)x^3 + (2A + B + D)x^2 + (C + E)x + (A)
+    \end{align*}
 
     比较等式两边 $x^n$ 项的系数：
 $$
 \begin{array}{llll}
     $x$ \text{的幂次} &\qquad \text{左边系数} &\qquad \text{右边系数} &\qquad \text{得到的方程} \\
     \hline
-    x^4 &\qquad 0 &\qquad A+B &qquad (1)\; A + B = 0 \\
-    x^3 &\qquad 1 &\qquad C &qquad (2)\; C = 1 \\
-    x^2 &\qquad 4 &\qquad 2A+B+D &qquad (3)\; 2A + B + D = 4 \\
-    x^1 &\qquad -1 &\qquad C+E &qquad (4)\; C + E = -1 \\
-    x^0 \text{(常数项)} &\qquad 1 &\qquad A &qquad (5)\; A = 1 \\
+    x^4 &\qquad 0 &\qquad A+B &\qquad (1)\; A + B = 0 \\
+    x^3 &\qquad 1 &\qquad C &\qquad (2)\; C = 1 \\
+    x^2 &\qquad 4 &\qquad 2A+B+D &\qquad (3)\; 2A + B + D = 4 \\
+    x^1 &\qquad -1 &\qquad C+E &\qquad (4)\; C + E = -1 \\
+    x^0 \text{(常数项)} &\qquad 1 &\qquad A &\qquad (5)\; A = 1 \\
 \end{array}
 $$
 
@@ -402,7 +405,7 @@ $$
     步骤三：进行积分
     $$\int \frac{1}{x} \,dx + \int \frac{1-x}{x^2 + 1} \,dx + \int \frac{3x - 2}{(x^2 + 1)^2} \,dx$$
 
-    第一项 (线性因子)$$\int \frac{1}{x} \,dx = \mathbf{\ln|x|}$$
+    第一项 (线性因子)$$\int \frac{1}{x} \,dx = \\ln|x|$$
     第二项 (不同的二次因子)将分子拆开：
     \begin{align*}
         \int \frac{1-x}{x^2 + 1} \,dx &= \int \frac{1}{x^2 + 1} \,dx - \int \frac{x}{x^2 + 1} \,dx \\
@@ -413,7 +416,7 @@ $$
     第三项 (重复的二次因子)将分子拆开：
     $$\int \frac{3x - 2}{(x^2 + 1)^2} \,dx = \int \frac{3x}{(x^2 + 1)^2} \,dx - \int \frac{2}{(x^2 + 1)^2} \,dx$$
     $\int \frac{3x}{(x^2 + 1)^2} \,dx$: 使用代换 $u = x^2 + 1$, $du = 2x \,dx$
-    $$\frac{3}{2} \int \frac{1}{u^2} du = \frac{3}{2} \left(-\frac{1}{u}\right) = \mathbf{-\frac{3}{2(x^2 + 1)}}$$
+    $$\frac{3}{2} \int \frac{1}{u^2} du = \frac{3}{2} \left(-\frac{1}{u}\right) = \-\frac{3}{2(x^2 + 1)}$$
 
     $\int \frac{2}{(x^2 + 1)^2} \,dx$: 需要使用三角代换 $x = \tan\theta$, $\,dx = \sec^2\theta d\theta$
     \begin{align*}
@@ -423,17 +426,17 @@ $$
         &= \theta + \frac{1}{2}\sin(2\theta) = \theta + \sin\theta\cos\theta
     \end{align*}
 
-    因为 $x = \tan\theta$, 所以 $\theta = \arctan(x)$。
+    因为 $x = \tan\theta$, 所以 $\theta = \arctan x$。
     
     由三角函数关系可知 $\sin\theta = \frac{x}{\sqrt{x^2+1}}$ 且 $\cos\theta = \frac{1}{\sqrt{x^2+1}}$。
-    所以 $$\int \frac{2}{(x^2 + 1)^2} \,dx = \arctan(x) + \frac{x}{x^2 + 1}$$
+    所以 $$\int \frac{2}{(x^2 + 1)^2} \,dx = \arctan x + \frac{x}{x^2 + 1}$$
 
     最终结果
 
     将所有部分相加：
     \begin{align*}
         &\int \frac{x^3 + 4x^2 - x + 1}{x(x^2 + 1)^2} \,dx \\
-        &= \ln|x| + \arctan(x) - \frac{1}{2} \ln(x^2 + 1) - \frac{3}{2(x^2 + 1)} - \left( \arctan(x) + \frac{x}{x^2 + 1} \right) \\
+        &= \ln|x| + \arctan x - \frac{1}{2} \ln(x^2 + 1) - \frac{3}{2(x^2 + 1)} - \left( \arctan x + \frac{x}{x^2 + 1} \right) \\
         &= \ln|x| - \frac{1}{2} \ln(x^2 + 1) - \frac{3}{2(x^2 + 1)} - \frac{x}{x^2 + 1} + C \\
         &= \ln \left| \frac{x}{\sqrt{x^2 + 1}} \right| - \frac{2x + 3}{2(x^2 + 1)} + C
     \end{align*}
@@ -446,6 +449,7 @@ $$
 \medskip
 
 \textbf{4. 三角函数积分法}
+
 
 
 
