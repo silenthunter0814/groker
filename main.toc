@@ -24,5 +24,6 @@
 \contentsline {section}{\numberline {5.3}积分技术}{56}{section.5.3}%
 \contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{69}{chapter.6}%
 \contentsline {section}{\numberline {6.1}一阶常微分方程}{69}{section.6.1}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}积分和积分方法}{75}{chapter.7}%
-\contentsline {section}{\numberline {7.1}导数的定义与几何意义}{75}{section.7.1}%
+\contentsline {section}{\numberline {6.2}二阶线性常微分方程}{75}{section.6.2}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}积分和积分方法}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}导数的定义与几何意义}{81}{section.7.1}%

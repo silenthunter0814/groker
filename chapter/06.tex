@@ -385,13 +385,13 @@ $$y' = re^{rx} \qquad y'' = r^2e^{rx}$$
 核心思想： 猜测 $y_p(x)$ 的形式应与 $r(x)$ 的形式相似。
 
 $$
-\begin{array}{cc}
-\text{\textbf{非齐次项 } r(x) \text{\textbf{ 的形式}} & y_p(x) \text{ \textbf{的初始猜测形式}} \\
+\begin{array}{ll}
+r(x) \text{ 的形式} &\qquad y_p(x) \text{的初始猜测形式} \\
 \hline
-A e^{ax} & K e^{ax} \\
-A x^n & K_n x^n + K_{n-1} x^{n-1} + \dots + K_0 \\
-A \cos(\omega x) \text{ 或 } B \sin(\omega x) & K_1 \cos(\omega x) + K_2 \sin(\omega x) \\
-\text{乘积：例如 } x e^{ax} & \text{乘积：例如 } (K_1 x + K_0) e^{ax} \\
+A e^{ax} &\qquad K e^{ax} \\
+A x^n &\qquad K_n x^n + K_{n-1} x^{n-1} + \dots + K_0 \\
+A \cos(\omega x) \text{ 或 } B \sin(\omega x) &\qquad K_1 \cos(\omega x) + K_2 \sin(\omega x) \\
+\text{乘积：例如 } x e^{ax} &\qquad \text{乘积：例如 } (K_1 x + K_0) e^{ax} 
 \end{array}
 $$
 
@@ -421,7 +421,7 @@ $$
     求导：
     \begin{align*}
         y_p' &= -A \sin(x) + B \cos(x) \\
-        y_p'' = -A \cos(x) - B \sin(x)
+        y_p'' &= -A \cos(x) - B \sin(x)
     \end{align*}
     代入原方程 $y'' - 3y' - 4y = 2 \sin(x)$：
     \begin{align*}

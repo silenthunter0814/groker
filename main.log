@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  10 DEC 2025 16:37
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  10 DEC 2025 19:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,12 +945,12 @@ Underfull \vbox (badness 5260) has occurred while \output is active []
 
 ]
 第六章
-[69] [70] [71] [72] [73]) [74]
+[69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79]) [80]
 \openout2 = `chapter/07.aux'.
 
  (./chapter/07.tex
 第七章
-) [75
+) [81
 
 
 
@@ -961,12 +961,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31409 strings out of 477728
- 701874 string characters out of 5842237
+ 31441 strings out of 477728
+ 704140 string characters out of 5842237
  965329 words of memory out of 5000000
- 51484 multiletter control sequences out of 15000+600000
+ 51516 multiletter control sequences out of 15000+600000
  479438 words of font info for 99 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,16n,97p,1253b,774s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (83 pages).
+Output written on main.pdf (89 pages).
