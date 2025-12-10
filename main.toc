@@ -22,7 +22,7 @@
 \contentsline {section}{\numberline {5.1}不定积分的基本概念}{53}{section.5.1}%
 \contentsline {section}{\numberline {5.2}基本积分公式}{55}{section.5.2}%
 \contentsline {section}{\numberline {5.3}积分技术}{56}{section.5.3}%
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}积分和积分方法}{69}{chapter.6}%
-\contentsline {section}{\numberline {6.1}导数的定义与几何意义}{69}{section.6.1}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}积分和积分方法}{71}{chapter.7}%
-\contentsline {section}{\numberline {7.1}导数的定义与几何意义}{71}{section.7.1}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{69}{chapter.6}%
+\contentsline {section}{\numberline {6.1}一阶常微分方程}{69}{section.6.1}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}积分和积分方法}{75}{chapter.7}%
+\contentsline {section}{\numberline {7.1}导数的定义与几何意义}{75}{section.7.1}%

@@ -60,7 +60,7 @@
 
 这是一个比例增长模型，如人口增长率与人口成正比。
 
-\begin{example} 求解考虑微分方程：$\frac{dy}{dx} = x^2 y$。
+\begin{example} 求解微分方程：$\frac{dy}{dx} = x^2 y$。
 
     分离变量：假设 $y \neq 0$，将 $y$ 除到左边， $dx$ 乘到右边：$$\frac{1}{y} dy = x^2 dx$$
 
@@ -96,14 +96,14 @@ $P(x)$ 和 $Q(x)$ 是只与自变量 $x$ 有关的已知函数（或常数）。
 
 求解步骤：
 
-求解一阶线性微分方程的标准方法是利用积分因子法（Integrating Factor Method）。
+求解一阶线性微分方程的标准方法是利用积分因子法。
 
-（1）确定积分因子 
+（1）确定积分因子 $I(x)$
 
-$I(x)$积分因子 $I(x)$ 定义为：
+积分因子 $I(x)$ 定义为：
 \begin{align*}
     &I(x) = e^{\int P(x) \,dx} \\
-    &I'(x) = e^{\int P(x) \,dx} \cdot \left(\int P(x) \,dx} \right)' = I(x)P(x)
+    &I'(x) = e^{\int P(x) \,dx} \cdot \left(\int P(x) \,dx \right)' = I(x)P(x)
 \end{align*}
 注意： 在计算 $\int P(x) \,dx$ 时，可以不加任意常数 $C$，因为 $C$ 最终会被消去。
 
@@ -117,12 +117,12 @@ $$\frac{d}{dx} [I(x) y] = I(x) \frac{dy}{dx} + I(x) P(x) y$$
 
 （3）积分并得到通解
 
-对上式两边关于 $x$ 进行积分：$$I(x) y = \int I(x) Q(x) dx + C$$
+对上式两边关于 $x$ 进行积分：$$I(x) y = \int I(x) Q(x) \,dx + C$$
 
 其中 $C$ 是积分常数。
 
 最后，解出 $y$，得到方程的通解：
-$$y = \frac{1}{I(x)} \left[ \int I(x) Q(x) dx + C \right]$$
+$$y = \frac{1}{I(x)} \left[ \int I(x) Q(x) \,dx + C \right]$$
 
 \medskip
 
