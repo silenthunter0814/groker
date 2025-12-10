@@ -682,6 +682,58 @@ $n!$: $n$ 的阶乘。
     \end{align*}
 \end{example}
 
+\medskip
+
+\textbf{欧拉公式}
+
+如果 $\theta$ 是实数，即某个角度的弧度度量，则复指数函数 $e^{i\theta}$ 定义为
+\begin{align}
+    e^{i\theta} = \cos\theta + i\sin\theta
+\end{align}
+也称为欧拉公式，以瑞士数学家莱昂哈德·欧拉（Leonhard Euler，1707-1783）的名字命名。
+
+该公式可以通过将麦克劳林级数 $e^x$ 中的 $x$ 正式替换为 $i\theta$ 并推导得出
+\begin{align*}
+    e^{i\theta} &= 1 + i\theta + \frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} + \frac{(i\theta)^5}{5!} + \frac{(i\theta)^6}{6!} + \cdots \\
+    &= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + i\frac{\theta^5}{5!} - \frac{\theta^6}{6!} + \cdots \\
+    &= \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \frac{\theta^6}{6!} + \cdots\right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots\right)\\
+    &= \cos\theta + i\sin\theta
+\end{align*}
+其中最后一步来自 $\cos\theta$ 和 $\sin\theta$ 的麦克劳林级数。
+
+如果 $z = a + bi$ 是任意复数，则复指数 $e^z$ 定义为
+\begin{align}
+    e^z = e^{a+bi} = e^a(\cos b + i\sin b)
+\end{align}
+
+\medskip
+
+\begin{example} 证明和角公式$$\cos(a+b) = \cos a\cos b - \sin a\sin b \qquad \sin(a+b) = \cos a\sinb + \sin a\cos b$$
+    要证明和角公式，我们可以利用欧拉公式 $e^{i\theta} = \cos\theta + i\sin\theta$
+    $$e^{i(a+b)} = \cos(a+b) + i\sin(a+b)$$
+    应用欧拉公式于 $a$ 和 $b$
+    $$e^{ia} = \cos a + i\sin a \qquad e^{ib} = \cos b + i\sin b$$
+    将这两个表达式相乘: 
+    \begin{align*}
+        e^{i(a+b)} &= e^{ia}\cdot e^{ib} = (\cos a + i\sin a)(\cos b + i\sin b) \\
+        e^{i(a+b)} &= \cos a\cos b + i\cos a\sin b + i\sin a\cos b + i^2\sin a\sin b \\
+        e^{i(a+b)} &= (\cos a\cos b - \sin a\sin b) + i(\cos a\sin b + \sin a\cos b)
+    \end{align*}
+    与欧拉公式的形式对比:$e^{i(a+b)} = \cos(a+b) + i\sin(a+b)$
+
+    实部：
+    \begin{align}
+        \cos(a+b) = \cos a\cos b - \sin a\sin b
+    \end{align}
+    虚部：
+    \begin{align}
+        \sin(a+b) = \cos a\sinb + \sin a\cos b
+    \end{align}
+    由此，我们证明了余弦(实部)和正弦(虚部)和角公式。
+\end{example}
+
+这个证明利用了复数的性质和欧拉公式，将三角函数的和角问题简化到了复数乘法的框架内。
+
 \section{微分公式和运算法则}
 如果导数已知，那么通过变换可以得到原函数的微分公式，即
 \begin{align}
