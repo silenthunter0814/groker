@@ -1,5 +1,236 @@
-\chapter{积分和积分方法}
-\section{导数的定义与几何意义}
-函数 $f(x)$ 在点 $x_0$ 处的导数定义为：
-$$ f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} $$
-导数表示函数在某点变化率的精确度量。
+\chapter{常微分方程}
+常微分方程（Ordinary Differential Equations, ODE）是数学中描述变化率的重要工具，广泛应用于物理、工程、生物等领域。
+
+常微分方程涉及未知函数及其导数的方程，其中未知函数只有一个自变量（通常是时间或空间变量）。例如，$\frac{dy}{dx} = f(x, y)$ 就是一个一阶常微分方程。
+
+阶数：方程中最高导数的阶数。一阶涉及一阶导数，二阶涉及二阶导数，以此类推。
+
+线性 vs. 非线性：线性ODE的未知函数及其导数以线性形式出现（无乘积或幂次），如 $y'' + p(x)y' + q(x)y = r(x)$。
+
+齐次 vs. 非齐次：齐次方程的右边为 $0$，非齐次有非零项。
+
+通解 vs. 特解：通解包含任意常数，特解通过初始条件确定。
+
+
+
+\section{一阶常微分方程}
+一阶ODE的形式为 $\frac{dy}{dx} = f(x, y)$。常见类型包括可分离、线性、齐次等。
+
+\medskip
+
+\textbf{可分离方程}
+
+如果方程可写成 $\frac{dy}{dx} = g(x) h(y)$，则可分离。
+
+\medskip
+
+求解步骤：
+
+（1）分离变量
+
+假设 $h(y) \neq 0$，将 $h(y)$ 除到等号左边，并将 $dx$ 乘到等号右边，得到微分形式：$$\frac{1}{h(y)} dy = g(x) dx$$
+为了简化表示，我们通常用 $p(y) = \frac{1}{h(y)}$ 来表示左边只含 $y$ 的部分。方程变为：$$p(y) dy = g(x) dx$$
+
+（2）积分
+
+对等式的两边分别进行不定积分：$$\int p(y) dy = \int g(x) dx + C$$
+其中 $C$ 是任意常数。
+
+（3）得到通解
+
+执行积分后，通常可以得到一个包含 $x, y$ 和常数 $C$ 的隐式解，即方程的通解。如果可能，也可以进一步解出 $y$ 关于 $x$ 的显式解。
+
+\medskip
+
+\begin{example} 求解 $\frac{dy}{dx} = \frac{y}{x}$（假设 $x \neq 0,\; y \neq 0$）。
+    
+    分离变量得 $\frac{dy}{y} = \frac{dx}{x}$。
+
+    两边积分：
+    \begin{align*}
+        &\int \frac{dy}{y} = \int \frac{dx}{x} \\
+        &\ln |y| = \ln |x| + C \\
+        &e^{\ln |y|} = e^{\ln |x| + C} \\
+        &|y| = e^C \cdot |x| \\
+        &y = A x \qquad (A = \pm e^C,\quad \text{其中$A$ 为任意非零常数})
+    \end{align*}
+    
+    方程通解：$y(x) = A x$。
+\end{example}
+
+这是一个比例增长模型，如人口增长率与人口成正比。
+
+\begin{example} 求解考虑微分方程：$\frac{dy}{dx} = x^2 y$。
+
+    分离变量：假设 $y \neq 0$，将 $y$ 除到左边， $dx$ 乘到右边：$$\frac{1}{y} dy = x^2 dx$$
+
+    积分：对两边分别积分：
+    \begin{align*}
+        &\int \frac{1}{y} \,dy = \int x^2 \,dx + C \\
+        &\ln|y| = \frac{1}{3} x^3 + C
+    \end{align*}
+
+    得到通解（显式解）：将通解转化为显式形式（解出 $y$）：
+    $$|y| = e^{\frac{1}{3} x^3 + C} = e^C e^{\frac{1}{3} x^3}$$
+
+    令 $A = \pm e^C$（$A$ 为任意非零常数），则：$$y = A e^{\frac{1}{3} x^3}$$
+
+    如果考虑到 $y=0$ 也是原方程的一个解（即 $y \equiv 0$），并且 $y \equiv 0$ 可以包含在上述通解中（令 $A=0$），所以最终的通解为：
+    $$y = A e^{\frac{1}{3} x^3} \quad (\text{其中 } A \text{ 是任意常数})$$
+\end{example}
+
+\medskip
+
+\textbf{线性方程}
+
+一阶线性微分方程的标准形式可以表示为：$$\frac{dy}{dx} + P(x) y = Q(x)$$
+其中：
+
+$y$ 是未知函数（因变量），它是 $x$ 的函数。
+
+$\frac{dy}{dx}$ 是 $y$ 对 $x$ 的一阶导数。
+
+$P(x)$ 和 $Q(x)$ 是只与自变量 $x$ 有关的已知函数（或常数）。
+
+\medskip
+
+求解步骤：
+
+求解一阶线性微分方程的标准方法是利用积分因子法（Integrating Factor Method）。
+
+（1）确定积分因子 
+
+$I(x)$积分因子 $I(x)$ 定义为：
+\begin{align*}
+    &I(x) = e^{\int P(x) \,dx} \\
+    &I'(x) = e^{\int P(x) \,dx} \cdot \left(\int P(x) \,dx} \right)' = I(x)P(x)
+\end{align*}
+注意： 在计算 $\int P(x) \,dx$ 时，可以不加任意常数 $C$，因为 $C$ 最终会被消去。
+
+（2）求解过程
+
+将标准形式的微分方程 $\frac{dy}{dx} + P(x) y = Q(x)$ 两边同乘以积分因子 $I(x)$：
+$$I(x) \frac{dy}{dx} + I(x) P(x) y = I(x) Q(x)$$
+关键在于，等式的左边正好是函数乘积 $I(x) y$ 的导数：
+$$\frac{d}{dx} [I(x) y] = I(x) \frac{dy}{dx} + I(x) P(x) y$$
+所以原方程变为：$$\frac{d}{dx} [I(x) y] = I(x) Q(x)$$
+
+（3）积分并得到通解
+
+对上式两边关于 $x$ 进行积分：$$I(x) y = \int I(x) Q(x) dx + C$$
+
+其中 $C$ 是积分常数。
+
+最后，解出 $y$，得到方程的通解：
+$$y = \frac{1}{I(x)} \left[ \int I(x) Q(x) dx + C \right]$$
+
+\medskip
+
+\begin{example} 求解微分方程：$$\frac{dy}{dx} + \frac{2}{x} y = x$$
+
+    确定 $P(x)$ 和 $Q(x)$：$P(x) = \frac{2}{x},\;Q(x) = x$
+
+    计算积分因子 $I(x)$：
+    \begin{align*}
+        &\int P(x) \,dx = \int \frac{2}{x} \,dx = 2 \ln|x| = \ln(x^2) \\
+        &I(x) = e^{\int P(x) dx} = e^{\ln(x^2)} = x^2
+    \end{align*}
+
+    应用公式或直接求解：将原方程乘以 $I(x) = x^2$：$$x^2 \frac{dy}{dx} + 2xy = x^3$$
+    左边可以写成 $\frac{d}{dx} (x^2 y)$：$$\frac{d}{dx} (x^2 y) = x^3$$
+
+    积分：
+    \begin{align*}
+        \int \frac{d}{dx} (x^2 y) \,dx &= \int x^3 \,dx \\
+        x^2 y &= \frac{1}{4} x^4 + C
+    \end{align*}
+
+    得到通解：
+    \begin{align*}
+        &y = \frac{1}{x^2} \left( \frac{1}{4} x^4 + C \right) \\
+        &y = \frac{1}{4} x^2 + \frac{C}{x^2}
+    \end{align*}
+\end{example}
+
+一阶线性方程的求解公式是：
+$$y = e^{-\int P(x) \,dx} \left[ \int Q(x) e^{\int P(x) \,dx} \,dx + C \right]$$
+这个公式是通用且可靠的。
+
+\medskip
+
+\textbf{齐次方程}
+
+一个一阶常微分方程可以写成：$$\frac{dy}{dx} = f(x, y)$$
+如果函数 $f(x, y)$ 是一个零次齐次函数，它总是可以写成只依赖于 $\frac{y}{x}$ 的某个函数 $g\left(\frac{y}{x}\right)$。
+
+因此，一阶齐次微分方程的标准形式可以写成：$$\frac{dy}{dx} = g\left(\frac{y}{x}\right)$$
+
+一阶齐次微分方程通过代换 $u = \frac{y}{x}$ 转化为可分离变量方程来求解。
+
+\medskip
+
+求解步骤：
+
+齐次微分方程的求解方法是利用一个巧妙的变量代换，将其转化为可分离变量方程来求解。
+
+（1）变量代换
+
+令一个新的变量 $u$ 为 $\frac{y}{x}$：$$u = \frac{y}{x} \quad \implies \quad y = ux$$
+
+（2）转换微分
+
+对 $y = ux$ 两边关于 $x$ 求导（使用乘积求导法则）：
+$$\frac{dy}{dx} = \frac{d}{dx} (ux) = \frac{du}{dx} x + u \frac{dx}{dx} = x \frac{du}{dx} + u$$
+
+（3）代入原方程
+
+将 $\frac{dy}{dx}$ 和 $\frac{y}{x}$ 代入原方程 $\frac{dy}{dx} = g\left(\frac{y}{x}\right)$：
+$$x \frac{du}{dx} + u = g(u)$$
+
+（4）转化为可分离变量方程
+
+将 $u$ 移到等式右边：$$x \frac{du}{dx} = g(u) - u$$
+假设 $g(u) - u \neq 0$，现在方程变成了关于 $x$ 和 $u$ 的可分离变量方程：
+$$\frac{1}{g(u) - u} du = \frac{1}{x} dx$$
+
+（5）积分求解
+
+对两边积分：$$\int \frac{1}{g(u) - u} du = \int \frac{1}{x} dx + C$$
+解出关于 $u$ 和 $x$ 的关系。
+
+（6）还原变量
+
+用 $u = \frac{y}{x}$ 替换回 $u$，得到原方程关于 $y$ 和 $x$ 的通解。
+
+\medskip
+
+\begin{example} 求解微分方程：$$\frac{dy}{dx} = \frac{y^2 + x^2}{xy}$$
+
+    判断齐次性：
+    $$\frac{dy}{dx} = \frac{y^2}{xy} + \frac{x^2}{xy} = \frac{y}{x} + \frac{x}{y}$$
+    由于右边可以表示成 $\frac{y}{x}$ 的函数 $$g\left(\frac{y}{x}\right) = \frac{y}{x} + \frac{1}{\frac{y}{x}}$$
+    所以是齐次方程。
+
+    变量代换：令 $u = \frac{y}{x}$，则 $\frac{dy}{dx} = x \frac{du}{dx} + u$。
+
+    代入方程：$$x \frac{du}{dx} + u = u + \frac{1}{u}$$
+
+    分离变量：$u$ 被抵消：
+    \begin{align*}
+        x \frac{du}{dx} &= \frac{1}{u} \\
+        u du &= \frac{1}{x} \,dx
+    \end{align*}
+
+    积分求解：
+    \begin{align*}
+        \int u \,du &= \int \frac{1}{x} \,dx + C \\
+        \frac{1}{2} u^2 &= \ln|x| + C
+    \end{align*}    
+    
+    还原变量：用 $u = \frac{y}{x}$ 替换：
+    \begin{align*}
+        \frac{1}{2} \left(\frac{y}{x}\right)^2 = \ln|x| + C \\
+        \frac{y^2}{2x^2} = \ln|x| + C \\
+        y^2 = 2x^2 (\ln|x| + C)
+    \end{align*}
+\end{example}
