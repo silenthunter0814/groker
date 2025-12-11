@@ -235,6 +235,46 @@ $$\frac{1}{g(u) - u} du = \frac{1}{x} dx$$
     \end{align*}
 \end{example}
 
+\begin{example} 求解微分方程：$\frac{dy}{dx} = \frac{1}{x+y}$
+
+    我们可以使用变量替换法来求解。
+
+    变量替换
+    
+    设 $u = x + y$。
+    对 $u = x + y$ 关于 $x$ 求导：
+    $$\frac{du}{dx} = \frac{d}{dx}(x+y) = \frac{dx}{dx} + \frac{dy}{dx}$$
+    即$$\frac{du}{dx} = 1 + \frac{dy}{dx}$$
+    因此，我们可以将 $\frac{dy}{dx}$ 表示为：$$\frac{dy}{dx} = \frac{du}{dx} - 1$$
+
+    代入原方程
+    
+    将 $u = x+y$ 和 $\frac{dy}{dx} = \frac{du}{dx} - 1$ 代入原方程 $\frac{dy}{dx} = \frac{1}{x+y}$：$$\frac{du}{dx} - 1 = \frac{1}{u}$$
+
+    分离变量
+    
+    将方程整理为可分离变量的形式：$$\frac{du}{dx} = 1 + \frac{1}{u} = \frac{u+1}{u}$$
+    分离变量，得到：$$\frac{u}{u+1} du = dx$$
+
+    积分
+    
+    对等式两边进行积分：$$\int \frac{u}{u+1} du = \int dx$$
+    对于左边的积分，可以将 $\frac{u}{u+1}$ 改写为 $1 - \frac{1}{u+1}$：$$\int \left( 1 - \frac{1}{u+1} \right) du = \int dx$$
+    进行积分：
+    $$\int 1 du - \int \frac{1}{u+1} du = \int dx$$
+    $$u - \ln|u+1| = x + C$$
+    其中 $C$ 是任意常数。
+
+    还原变量
+    
+    最后，用 $x+y$ 替换 $u$：$$(x+y) - \ln|x+y+1| = x + C$$
+    两边消去 $x$：$$y - \ln|x+y+1| = C$$
+
+    原微分方程 $\frac{dy}{dx} = \frac{1}{x+y}$ 的通解为：
+    $$y - \ln|x+y+1| = C$$
+    这是一个隐式解。
+\end{example}
+
 
 \section{二阶线性常微分方程}
 一个二阶线性常微分方程的一般形式可以表示为：$$y'' + P(x)y' + Q(x)y = R(x)$$
