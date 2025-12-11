@@ -87,6 +87,85 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 \end{tikzpicture}
 \end{center}
 
+\section{不定积分的主要性质}
+
+\medskip
+
+\textbf{1. 导数与不定积分的互逆关系}
+
+不定积分与微分（求导数）是互逆运算。
+
+不定积分的导数等于被积函数：$$\left(\int f(x) dx\right)' = f(x)$$
+
+函数的微分（导数）的不定积分等于该函数与任意常数之和：$$\int F'(x) dx = F(x) + C$$
+其中，$C$ 是积分常数。
+
+\medskip
+
+\textbf{2. 积分的基本运算法则}
+
+（1）常数倍的积分
+
+常数因子可以提到积分号的外面（其中 $k$ 是不为零的常数）：
+\begin{align}
+    \int k f(x) \,dx = k \int f(x) \,dx
+\end{align}
+
+（2）和（差）的积分
+
+有限个函数的和（差）的积分等于各个函数的积分的和（差）：
+\begin{align}
+    \int [f(x) \pm g(x)] \,dx = \int f(x) \,dx \pm \int g(x) \,dx
+\end{align}
+
+（3）乘积的链式法则
+
+基于微分的链式法则：
+\begin{align}
+    \int u'(v)\cdot v' \,dx = \int u'(v) \,dv = \int \,du(v) = u(v(x)) + c
+\end{align}
+
+\medskip
+
+\begin{example} 计算积分 $\int (2\cos x + \sin x) \,dx$。
+    \begin{align*}
+        \int (2\cos x + \sin x) \,dx &= \int 2\cos x \,dx + \int \sin x \,dx \\
+        &= 2\cdot \int \,d\sin x + \int \,d(-\cos x) \\
+        &= (2\sin x + C_1) - (\cos x + C_2) \\
+        &= 2\sin x - \cos x + C
+    \end{align*}
+\end{example}
+
+在上面的计算中 $C_1$ 和 $C_2$ 被合并成了一个常数项 $C$，在实际的计算中，$C_1$ 和 $C_2$ 可以省略。
+
+\medskip
+
+\begin{example} 计算积分 $\int \tan x \,dx$。
+
+    因为 $\tan x = \frac{\sin x}{\cos x}$
+    \begin{align*}
+        \int \tan x \,dx &= \int \frac{\sin x}{\cos x} \,dx \\
+        &= \int \frac{1}{\cos x} \,d(-\cosx) = -\int \frac{1}{\cos x} \,d\cosx
+    \end{align*}
+
+    对照链式法则公式：
+    \begin{align*}
+        &u' = \frac{1}{x} \quad u = \ln x \quad v = \cos x \\
+        &\implies u'(v) = \frac{1}{\cos x} \quad u(v) = \ln(\cosx)
+    \end{align*}
+    所以 $$\int \tan x \,dx = -\int \frac{1}{\cos x} \,d\cosx = -\int \,d\ln |\cos x| = -ln |\cos x| + C$$
+\end{example}
+
+\medskip
+
+\textbf{3. 不定积分的几何意义}
+
+不定积分 $\int f(x) dx = F(x) + C$ 表示由函数 $f(x)$ 的所有原函数组成的曲线族。
+
+对于曲线族中的任意一条曲线 $y = F(x) + C_1$ 和 $y = F(x) + C_2$，在横坐标 $x_0$ 处的切线斜率都等于 $f(x_0)$，因此它们是互相平行的。
+
+这个曲线族中的任意一条曲线，都可以通过将其中任一条曲线沿 $y$ 轴方向作平移得到。
+
 
 \section{基本积分公式}
 将第三章的导数公式或微分公式进行适当变换，即可得到常用积分公式。
