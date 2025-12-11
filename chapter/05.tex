@@ -87,6 +87,7 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 \end{tikzpicture}
 \end{center}
 
+
 \section{不定积分的主要性质}
 
 \medskip
@@ -122,7 +123,7 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 
 基于微分的链式法则：
 \begin{align}
-    \int u'(v)\cdot v' \,dx = \int u'(v) \,dv = \int \,du(v) = u(v(x)) + c
+    \int u'(v)\cdot v' \,dx = \int u'(v) \,dv = \int \,du(v) = u(v(x)) + C
 \end{align}
 
 \medskip
@@ -141,19 +142,17 @@ $$\frac{d}{dx} \left(\int f(x)\,dx\right) = \frac{d}{dx} (F(x) + C) = f(x)$$
 \medskip
 
 \begin{example} 计算积分 $\int \tan x \,dx$。
-
-    因为 $\tan x = \frac{\sin x}{\cos x}$
     \begin{align*}
         \int \tan x \,dx &= \int \frac{\sin x}{\cos x} \,dx \\
-        &= \int \frac{1}{\cos x} \,d(-\cosx) = -\int \frac{1}{\cos x} \,d\cosx
+        &= \int \frac{1}{\cos x} \,d(-\cos x) = -\int \frac{1}{\cos x} \,d\cos x
     \end{align*}
 
     对照链式法则公式：
     \begin{align*}
-        &u' = \frac{1}{x} \quad u = \ln x \quad v = \cos x \\
-        &\implies u'(v) = \frac{1}{\cos x} \quad u(v) = \ln(\cosx)
+        &u' = \frac{1}{x} \qquad u = \ln x \qquad v = \cos x \\
+        \implies &u'(v) = \frac{1}{\cos x} \qquad u(v) = \ln(\cos x)
     \end{align*}
-    所以 $$\int \tan x \,dx = -\int \frac{1}{\cos x} \,d\cosx = -\int \,d\ln |\cos x| = -ln |\cos x| + C$$
+    所以 $$\int \tan x \,dx = -\int \frac{1}{\cos x} \,d\cos x = -\int \,d\ln |\cos x| = -\ln |\cos x| + C$$
 \end{example}
 
 \medskip

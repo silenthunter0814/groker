@@ -20,8 +20,9 @@
 \contentsline {section}{\numberline {4.4}牛顿法解方程}{52}{section.4.4}%
 \contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{55}{chapter.5}%
 \contentsline {section}{\numberline {5.1}不定积分的基本概念}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}基本积分公式}{57}{section.5.2}%
-\contentsline {section}{\numberline {5.3}积分技术}{58}{section.5.3}%
+\contentsline {section}{\numberline {5.2}不定积分的主要性质}{57}{section.5.2}%
+\contentsline {section}{\numberline {5.3}基本积分公式}{58}{section.5.3}%
+\contentsline {section}{\numberline {5.4}积分技术}{60}{section.5.4}%
 \contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{71}{chapter.6}%
 \contentsline {section}{\numberline {6.1}一阶常微分方程}{71}{section.6.1}%
 \contentsline {section}{\numberline {6.2}二阶线性常微分方程}{78}{section.6.2}%
