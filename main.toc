@@ -12,21 +12,22 @@
 \contentsline {section}{\numberline {3.2}导数和导数公式}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}导数的运算法则}{29}{section.3.3}%
 \contentsline {section}{\numberline {3.4}泰勒级数和麦克劳林级数}{35}{section.3.4}%
-\contentsline {section}{\numberline {3.5}微分公式和运算法则}{41}{section.3.5}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{45}{chapter.4}%
-\contentsline {section}{\numberline {4.1}函数单调性}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}函数的极值}{47}{section.4.2}%
-\contentsline {section}{\numberline {4.3}函数的渐近线}{49}{section.4.3}%
-\contentsline {section}{\numberline {4.4}牛顿法解方程}{52}{section.4.4}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}不定积分的基本概念}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}不定积分的主要性质}{57}{section.5.2}%
-\contentsline {section}{\numberline {5.3}基本积分公式}{58}{section.5.3}%
-\contentsline {section}{\numberline {5.4}积分技术}{60}{section.5.4}%
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{71}{chapter.6}%
-\contentsline {section}{\numberline {6.1}一阶常微分方程}{71}{section.6.1}%
-\contentsline {section}{\numberline {6.2}二阶线性常微分方程}{78}{section.6.2}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{85}{chapter.7}%
-\contentsline {section}{\numberline {7.1}区间微分}{85}{section.7.1}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{89}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{89}{section.8.1}%
+\contentsline {section}{\numberline {3.5}欧拉公式}{41}{section.3.5}%
+\contentsline {section}{\numberline {3.6}微分公式和运算法则}{43}{section.3.6}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}函数单调性}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}函数的极值}{49}{section.4.2}%
+\contentsline {section}{\numberline {4.3}函数的渐近线}{51}{section.4.3}%
+\contentsline {section}{\numberline {4.4}牛顿法解方程}{54}{section.4.4}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}不定积分的基本概念}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}不定积分的主要性质}{59}{section.5.2}%
+\contentsline {section}{\numberline {5.3}基本积分公式}{60}{section.5.3}%
+\contentsline {section}{\numberline {5.4}积分技术}{62}{section.5.4}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{73}{chapter.6}%
+\contentsline {section}{\numberline {6.1}一阶常微分方程}{73}{section.6.1}%
+\contentsline {section}{\numberline {6.2}二阶线性常微分方程}{80}{section.6.2}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{87}{chapter.7}%
+\contentsline {section}{\numberline {7.1}区间微分}{87}{section.7.1}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{91}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{91}{section.8.1}%
