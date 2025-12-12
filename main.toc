@@ -28,5 +28,5 @@
 \contentsline {section}{\numberline {6.2}二阶线性常微分方程}{78}{section.6.2}%
 \contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{85}{chapter.7}%
 \contentsline {section}{\numberline {7.1}区间微分}{85}{section.7.1}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{87}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{87}{section.8.1}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{89}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{89}{section.8.1}%
