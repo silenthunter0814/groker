@@ -11,7 +11,11 @@
 需要注意的是，微矩形的面积和对应点的 $F(x)$ 线性极限变化量精确相等。
 
 接下来我们考虑图中函数 $f(x)$ 在区间 $[x, x+\delta]$ 投影到 $x$ 轴（曲边梯形）的面积 $S$：
-$$S = f(x) \,dx + \frac{1}{2}[f(x+\delta)-f(x)]\cdot dx = f(x) \,dx + \frac{1}{2} \,df(x)\cdot dx = f(x) \,dx + \frac{1}{2}f'(x) \,d^2x$$
+\begin{align*}
+    S &= f(x) \,dx + \frac{1}{2}[f(x+\delta)-f(x)]\cdot dx \\
+    &= f(x) \,dx + \frac{1}{2} \,df(x)\cdot dx \\
+    &= f(x) \,dx + \frac{1}{2}f'(x) \,d^2x
+\end{align*}
 
 很明显，$d^2x = \delta^2$，微三角形的面积是一个二阶无穷小，因此可以忽略，所以 $$S = f(x) \,dx = dF(x) = F(x+\delta) - F(x) $$
 
@@ -31,23 +35,24 @@ $$S = f(x) \,dx + \frac{1}{2}[f(x+\delta)-f(x)]\cdot dx = f(x) \,dx + \frac{1}{2
 
 （2）面积计算
 
-向右微分 $x$ 取值：$$x = a, a+\delta, a+2\delta, \cdots, a+(\inft-2)\delta, a+(\inft-1)\delta$$
-注意：$a+(\inft-1)\delta = b-\delta, a+(\inft-2)\delta = b-2\delta, \cdots$
+向右微分 $x$ 取值：$$x = a, a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta$$
+注意：$a+(\infty-1)\delta = b-\delta, a+(\infty-2)\delta = b-2\delta, \dots$
 
-向左微分 $x$ 取值：$$x = a+\delta, a+2\delta, \cdots, a+(\inft-2)\delta, a+(\inft-1)\delta, b$$
+向左微分 $x$ 取值：$$x = a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta, b$$
 
 对应关系及面积计算见下表：
 $$
 \begin{array}{llll}
-    n \text{值} &\quad x \text{值} &\quad \text{面积} &\quad F(x) 线性变化量
+    n \text{值} &\quad x \text{值} &\quad \text{面积} &\quad F(x) 线性变化量 \\
     \hline
     0 &\quad a+0\delta &\quad f(a+0\delta) \,dx &\quad F(a+1\delta)-F(a+0\delta) \\
     1 &\quad a+1\delta &\quad f(a+1\delta) \,dx &\quad F(a+2\delta)-F(a+1\delta) \\
     2 &\quad a+2\delta &\quad f(a+2\delta) \,dx &\quad F(a+3\delta)-F(a+2\delta) \\
     \vdots  &\quad\vdots &\quad\vdots &\quad\vdots \\
     \infty-2 &\quad a+(\infty-2)\delta &\quad f(a+(\infty-2)\delta) \,dx &\quad F(a+(\infty-1)\delta)-F(a+(\infty-2)\delta) \\
-    \inty-1 &\quad a+(\infty-1)\delta &\quad f(a+(\infty-1)\delta) \,dx &\quad F(b)-F(a+(\infty-1)\delta) \\    
-\end{arrayy}
+    \infty-1 &\quad a+(\infty-1)\delta &\quad f(a+(\infty-1)\delta) \,dx &\quad F(b)-F(a+(\infty-1)\delta) \\
+    \hline
+\end{array}
 $$
 
 
