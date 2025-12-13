@@ -816,6 +816,39 @@ $$z = x + iy = r(\cos\theta + i\sin\theta) = r e^{i\theta}$$
 
 这个证明利用了复数的性质和欧拉公式，将三角函数的和角问题简化到了复数乘法的框架内。
 
+\medskip
+
+\begin{example} $a\cos x + b\sin x$ 转换为复指数形式。
+
+    欧拉公式定义了复指数 $e^{i\theta}$ 和三角函数之间的关系：
+    \begin{align*}
+        e^{i\theta} &= \cos \theta + i \sin \theta \\
+        e^{-i\theta} &= \cos(-\theta) + i \sin(-\theta) = \cos \theta - i\sin theta
+    \end{align*}
+    将上面两个公式左右同时相加和相减，分别得到 $\cos \theta$ 和 $\sin \theta$ 复指数表示：
+    \begin{align*}
+        e^{i\theta} + e^{-i\theta} &= (\cos \theta + i \sin \theta) + (\cos \theta - i\sin theta) \\
+        e^{i\theta} + e^{-i\theta} &= 2\cos \theta \\
+        \\
+        \cos \theta &= \frac{e^{i\theta} + e^{-i\theta}}{2} \\
+        \\
+        \sin \theta &= \frac{e^{i\theta} - e^{-i\theta}}{2i}
+    \end{align*}
+
+    $a\cos x + b\sin x$ 的复指数表示:
+    \begin{aligned} 
+        a\cos x + b\sin x &= a \left( \frac{e^{ix} + e^{-ix}}{2} \right) + b \left( \frac{e^{ix} - e^{-ix}}{2i} \right) \\ 
+        &= \frac{a}{2} (e^{ix} + e^{-ix}) + \frac{b}{2i} (e^{ix} - e^{-ix}) \\
+        &= \frac{a}{2} e^{ix} + \frac{a}{2} e^{-ix} - \frac{bi}{2} e^{ix} + \frac{bi}{2} e^{-ix} \\ 
+        &= \left( \frac{a}{2} - \frac{bi}{2} \right) e^{ix} + \left( \frac{a}{2} + \frac{bi}{2} \right) e^{-ix} \\ 
+        &= \left( \frac{a - bi}{2} \right) e^{ix} + \left( \frac{a + bi}{2} \right) e^{-ix}
+    \end{aligned}
+
+    如果复数： $$c = \frac{a - bi}{2}$$
+    那么其共轭复数：$$\bar{c} = \frac{a + bi}{2}$$
+\end{example}
+
+事实上，上例完成了傅立叶三角级数到复指数级数的变换。
 
 \section{微分公式和运算法则}
 如果导数已知，那么通过变换可以得到原函数的微分公式，即
