@@ -5,7 +5,7 @@
 
 格洛克提出区间微分的概念，并据此进行区间积分，计算在格洛克微空间进行，极限计算得出微积分的基本定理，在理解上更加简单直接。
 
-\section{区间微分}
+\section{区间微分和区间积分}
 考虑函数 $F(x)$ 的点微分：$dF(x) = f(x) \,dx$，在几何上，左侧是线性的极限变化量，右侧是一个高度为 $f(x)$，宽度为无穷小的微矩形的面积，如图7.1 所示。
 \begin{figure}[htbp] 
     \centering
@@ -26,7 +26,13 @@
 
 沿着这个思路，我们着手解决求不规则图形面积的问题。
 
-考虑一个函数 $f(x)$，我们想要求曲线 $y=f(x)$、直线 $x=a$、$x=b$ 以及 $x$ 轴所围成的曲边梯形的面积 $A$。
+考虑一个函数 $f(x)$，我们想要求曲线 $y=f(x)$、直线 $x=a$、$x=b$ 以及 $x$ 轴所围成的曲边梯形的面积 $A$， 如下图。
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/07/7.2.png} 
+    \caption{\textbf{区间微分}}
+\end{figure}
+
 
 计算这个面积的基本思路是：
 
@@ -64,20 +70,44 @@ $$
 \end{array}
 $$
 
+表中面积列的每行和对应的 $F(x)$ 线性变化量列的每行都精确相等，两列分别相加，有曲边梯形的面积 $A$ 等于面积列的总和，所以
+\begin{align*}
+    f(a+0\delta) \,dx + f(a+1\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx &= F(a+\delta)-F(a) + F(a+2\delta)-F(a+\delta) + F(a+3\delta)-F(a+2\delta) + \cdots + F(b-\delta)-F(b-2\delta) + F(b)-F(b-\delta) \\
+    f(a+0\delta) \,dx + f(a+1\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx &= F(b) - F(a) \\
+
+    \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx &= F(b) - F(a)
+\end{align*}
+
+曲边梯形的面积 $A$ 等于面积列的总和，所以
+\begin{align}
+    A = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a)
+\end{align}
 
 \medskip
 
+（3）积分表示
 
-
-
-
+应用积分符号，并限定积分区间，我们得到定积分计算曲边梯形面积的表示形式：
+\begin{align}
+    \int_a^b f(x) \,dx = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a) = F(x) \Bigg|_{x=a}^{x=b}
+\end{align}
 
 $a$ 和 $b$ 分别是积分下限和积分上限，定义了积分的区间。
 
-定积分的结果是一个确定的数值。
+定积分 $\int_{a}^{b} f(x) \, dx$ 在几何上表示函数 $y=f(x)$ 的图像、直线 $x=a$、$x=b$ 和 $x$ 轴所围成的有向面积。
 
-几何意义一般情况：定积分 $\int_{a}^{b} f(x) \, dx$ 在几何上表示函数 $y=f(x)$ 的图像、直线 $x=a$、$x=b$ 和 $x$ 轴所围成的有向面积。
+定积分的结果是一个确定的数值。
 
 在 $x$ 轴上方的面积取正值。
 
 在 $x$ 轴下方的面积取负值。
+
+定积分的无限和形式（及变种）主要用于近似计算，数学精确计算采用不定积分计算原函数再应用积分区间，如公式右侧的形式。
+
+\medskip
+
+传统上定义的定积分也可称作区间积分。
+
+
+\section{定积分的主要性质}
+
