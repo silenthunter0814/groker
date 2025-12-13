@@ -42,20 +42,20 @@
 
 分割：将区间 $[a, b]$ 分割成 $\infty$ 个小区间，区间宽度 $\delta = \frac{b-a}{\infty} = (b-a)\epsilon$。
 
-向右微分：对于区间 $[a, b-\delta]$ 内任意分割点 $x$，微分形式：$dx = (x + \delta) - x = \delta$。
+右微分：对于区间 $[a, b-\delta]$ 内任意分割点 $x$，微分形式：$dx = (x + \delta) - x = \delta$。
 
-向左微分：对于区间 $[a+\delta, b]$ 内任意分割点 $x$，微分形式：$dx = x - (x - \delta) = \delta$。
+左微分：对于区间 $[a+\delta, b]$ 内任意分割点 $x$，微分形式：$dx = x - (x - \delta) = \delta$。
 
 \medskip
 
 （2）面积计算
 
-向右微分 $x$ 取值：$$x = a, a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta$$
+右微分 $x$ 取值：$$x = a, a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta$$
 注意：$a+(\infty-1)\delta = b-\delta, a+(\infty-2)\delta = b-2\delta, \dots$
 
-向左微分 $x$ 取值：$$x = a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta, b$$
+左微分 $x$ 取值：$$x = a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta, b$$
 
-对应关系及面积计算见下表：
+对应关系及面积计算如下表所示：
 $$
 \begin{array}{llll}
     n \text{值} &\quad x \text{值} &\quad \text{面积} &\quad F(x) \text{线性变化量} \\
@@ -72,15 +72,17 @@ $$
 
 表中面积列的每行和对应的 $F(x)$ 线性变化量列的每行都精确相等，两列分别相加，有曲边梯形的面积 $A$ 等于面积列的总和，所以
 \begin{align*}
-    f(a+0\delta) \,dx + f(a+1\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx &= F(a+\delta)-F(a) + F(a+2\delta)-F(a+\delta) + F(a+3\delta)-F(a+2\delta) + \cdots + F(b-\delta)-F(b-2\delta) + F(b)-F(b-\delta) \\
-    f(a+0\delta) \,dx + f(a+1\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx &= F(b) - F(a) \\
-
-    \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx &= F(b) - F(a)
+    &f(a+\delta) \,dx + f(a+1\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx \\
+    &= F(a+\delta)-F(a) + F(a+2\delta)-F(a+\delta) + \cdots + F(b)-F(b-\delta) \\
+    &= F(b) - F(a) \\
+    \\
+    &\sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a)
 \end{align*}
 
 曲边梯形的面积 $A$ 等于面积列的总和，所以
 \begin{align}
-    A = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a)
+    A = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(右微分)} \\
+    A = \sum_{n=1}^{\infty}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(左微分)}
 \end{align}
 
 \medskip
@@ -89,7 +91,7 @@ $$
 
 应用积分符号，并限定积分区间，我们得到定积分计算曲边梯形面积的表示形式：
 \begin{align}
-    \int_a^b f(x) \,dx = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a) = F(x) \Bigg|_{x=a}^{x=b}
+    \int_a^b f(x) \,dx = \sum_{n=1}^{\infty}f(a+n\delta) \,dx = F(b) - F(a) = F(x) \Bigg|_{x=a}^{x=b}
 \end{align}
 
 $a$ 和 $b$ 分别是积分下限和积分上限，定义了积分的区间。
@@ -110,4 +112,3 @@ $a$ 和 $b$ 分别是积分下限和积分上限，定义了积分的区间。
 
 
 \section{定积分的主要性质}
-
