@@ -130,9 +130,9 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
     （4）对于任意实数 C，$C^+ = C + \epsilon,\; C^- = C - \epsilon$。
 
-    （5）对于 $n > 1$ 有，$\log_n\infty < \sqrt[n]{\infty} < \infty < \infty^n < n^\infty < \infty!$。
+    （5）等效重定义。如果关于 $\infty$ 的表达式 $g(\infty)$ 的值仍是无穷大，那么 $\infty$ 可以重定义为 $g(\infty)$，记作：$\infty \gets g(\infty), \epsilon \gets \frac{1}{g(\infty)}$。
 
-    （6）等效重定义。如果关于 $\infty$ 的表达式 $g(\infty)$ 的值仍是无穷大，那么 $\infty$ 可以重定义为 $g(\infty)$，记作：$\infty \gets g(\infty), \epsilon \gets \frac{1}{g(\infty)}$。
+    （6）对于 $n > 1$ 有，$\log_n\infty < \sqrt[n]{\infty} < \infty < \infty^n < n^\infty < \infty!$。
 \end{definition}
 
 \medskip
@@ -176,7 +176,18 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
 
 \medskip
 
-性质（5）明确了不等式的各项位于不同阶的格洛克宏空间，不等式的左侧都是右侧的无穷小，体现了如下运算规则：
+关于性质（5），传统的无穷大和无穷小并没有明确的等阶划分，事实上覆盖了整个格洛克代数空间。通过等效重定义，我们可以得到一个明确的计算结果。如
+\begin{align*}
+    f(\infty) &= \log_n{\infty} \\
+    &= \log_n{n^\infty} \qquad (\infty \gets n^\infty) \\
+    &= \infty
+\end{align*}
+
+观察对数函数的图形，它是一个增长异常缓慢的函数，因此 $\log_n{\infty}$ 是一个非常低阶的无穷大，通过等效重定义，我们得到了一个明确的无穷大结果，本质上我们改变了无穷大在宏空间的位置，但没有改变传统无穷大的结果，这在极限计算时很有用。
+
+\medskip
+
+性质（6）明确了不等式的各项位于不同阶的格洛克宏空间，不等式的左侧都是右侧的无穷小，体现了如下运算规则：
 \begin{align*}
     \log_n\infty + \sqrt[n]{\infty} + \infty + \infty^n + n^\infty + \infty! \\
     = \sqrt[n]{\infty} + \infty + \infty^n + n^\infty + \infty! \\
@@ -186,18 +197,25 @@ $\infty$ 以及更大的量级称为\textbf{格洛克宏空间}，对应的，$\
     = \infty!
 \end{align*}
 
-虽然不等式的每一项都是无穷大，但它们的增长速度比值都达到了无穷大的量级，这可以由函数图形进行直观的观察,这里略去繁琐的证明过程。
+虽然不等式的每一项都是无穷大，但它们的增长速度比值都达到了无穷大的量级，严格的证明需要后续知识的支撑，这里只进行说明性的证明：
 
-\medskip
+增长顺序链：$\text{对数函数} \ll \text{幂函数} \ll \text{指数函数} \ll \text{阶乘函数}$
 
-关于性质（6），传统的无穷大和无穷小并没有明确的等阶划分，事实上覆盖了整个格洛克代数空间。通过等效重定义，我们可以得到一个明确的计算结果。如
+对数函数增长得极其缓慢，它是“加法”的逆运算（将乘法转化为加法），而幂函数仍涉及乘法。通过将无穷大“放大”，可以看出两者的差距巨大：
 \begin{align*}
-    f(\infty) &= \log_n{\infty} \\
-    &= \log_n{n^\infty} \qquad (\infty \gets n^\infty) \\
-    &= \infty
+    \frac{\sqrt[n]{\infty}}{\log_n\infty} &= \frac{\sqrt[n]{\infty^n}}{\log_n\infty^n} \qquad (\infty \gets \infty^n) \\
+    &= \frac{\infty}{n\log_n\infty} \qquad (\infty \gets n^\infty) \\
+    &= \frac{1}{n}\frac{n^\infty}{\infty}
 \end{align*}
 
-观察对数函数的图形，它是一个增长异常缓慢的函数，因此 $\log_n{\infty}$ 是一个非常低阶的无穷大，通过等效重定义，我们得到了一个明确的无穷大结果，本质上我们改变了无穷大在宏空间的位置，但没有改变传统无穷大的结果，这在极限计算时很有用。
+在幂函数家族内部，指数越大，增长越快，即 $\sqrt[n]{x} \ll x \ll x^n$
+
+幂函数 $x^n$ 只进行有限次的乘法（$n$ 次），而指数函数 $b^x$ 涉及无限次的乘法（$x$ 次 $b$ 相乘）。
+
+阶乘函数 $x!$ 的乘数是不断增大的 ($1, 2, 3, \ldots, x$)，而指数函数 $n^x$ 的乘数是固定的 $n$，即
+$$\frac{n^\infty}{\infty!} = \underbrace{\left(\frac{n}{1} \cdot \frac{n}{2} \cdot \ldots \cdot \frac{n}{n}\right)}_{C_n \text{ (常数)}} \cdot \underbrace{\left(\frac{n}{n+1} \cdot \frac{n}{n+2} \cdot \ldots \cdot \frac{n}{\infty}\right)}_{P_x \text{ (收敛部分)}}$$
+
+可以通过函数的图形陡峭程度直观理解这种增长速度差异。
 
 \medskip
 
