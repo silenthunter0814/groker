@@ -211,10 +211,43 @@ $$F(x) = \int_a^x f(t) \, dt$$
 
 变限积分函数 $F(x)$ 实际上是 $f(x)$ 的一个原函数。
 
-变限积分函数最重要的性质是它的导数。$$F'(x) = \frac{d}{dx} \int_a^x f(t) \, dt = f(x)$$
+变限积分函数最重要的性质是它的导数：$$F'(x) = \frac{d}{dx} \int_a^x f(t) \, dt = f(x)$$
+
+链式法则应用：如果上限不是 $x$，而是关于 $x$ 的函数 $u(x)$
+$$\frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)$$
+
 根据上面的求导法则，$F'(x) = f(x)$，这证明了任何连续函数都存在原函数。
 
 变限积分函数是许多求解微分方程的方法的基础。
+
+\medskip
+
+\begin{example} 给定变限积分函数 $F(x)$：$$F(x) = \int_1^x (t^3 + 2t) \, dt$$
+    求 $F(x)$ 的解析表达式和导函数 $F'(x)$。
+
+    \begin{align*}
+        \int_1^x (t^3 + 2t) \, dt &=  \left[\frac{t^4}{4} + t^2 + C\right]_1^x \\
+        &= \left( \frac{x^4}{4} + x^2 \right) - \left( \frac{1^4}{4} + 1^2 \right) \\
+        &= \frac{x^4}{4} + x^2 - \frac{5}{4}
+    \end{align*}
+
+    $F(x)$ 的解析表达式：$$F(x) = \frac{x^4}{4} + x^2 - \frac{5}{4}$$
+
+    导函数 $F'(x)$：
+    \begin{align*}
+        F'(x) &= \frac{d}{dx} \left( \frac{1}{4}x^4 + x^2 - \frac{5}{4} \right) \\
+        &= \frac{1}{4} \cdot 4x^3 + 2x - 0 \\
+        &= x^3 + 2x
+    \end{align*}
+\end{example}
+
+如果例子中上限是 $u(x) = \sin x$，则
+\begin{align*}
+    H(x) &= \int_1^{\sin x} (t^3 + 2t) \, dt = \frac{1}{4}\sin^4 x + \sin^2 x - \frac{5}{4} \\
+    H'(x) &= \frac{d}{dx}\int_1^{\sin x} (t^3 + 2t) \, dt \\
+    &= \left(\sin^3 x + 2\sin x \right) \cdot \frac{d\sin x}{dx} \\
+    &= \left(\sin^3 x + 2\sin x \right)\cos x
+\end{align*}
 
 \medskip
 
