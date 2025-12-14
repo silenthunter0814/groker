@@ -81,8 +81,10 @@ $$
 
 曲边梯形的面积 $A$ 等于面积列的总和，所以
 \begin{align}
-    A = \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(右微分)} \\
-    A = \sum_{n=1}^{\infty}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(左微分)}
+    \delta &= \frac{b-a}{\infty} = (b-a)\epsilon \\
+    dx &= (x + \delta) - x = x - (x - \delta) = \delta \\
+    A &= \sum_{n=0}^{\infty - 1}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(右微分)} \\
+    A &= \sum_{n=1}^{\infty}f(a+n\delta) \,dx = F(b) - F(a) \qquad \text{(左微分)}
 \end{align}
 
 \medskip
