@@ -32,5 +32,5 @@
 \contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{87}{chapter.7}%
 \contentsline {section}{\numberline {7.1}区间微分和区间积分}{87}{section.7.1}%
 \contentsline {section}{\numberline {7.2}定积分的主要性质}{90}{section.7.2}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{93}{section.8.1}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{95}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{95}{section.8.1}%
