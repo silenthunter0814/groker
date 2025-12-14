@@ -153,6 +153,8 @@ $$\int_a^c f(x) \, dx + \int_c^b f(x) \, dx = \int_a^b f(x) \, dx$$
 $$\int_{-a}^a f(x) \, dx = 2 \int_0^a f(x) \, dx \quad (\text{当 } f(x) \text{ 为偶函数时})$$
 奇函数在对称区间上的定积分恒等于零。$$\int_{-a}^a f(x) \, dx = 0 \quad (\text{当 } f(x) \text{ 为奇函数时})$$
 
+\medskip
+
 \begin{example} 计算定积分。
     \begin{align*}
         \int_{-1}^1 (x^2 + 1) \, dx &= 2 \int_0^1 (x^2 + 1) \, dx \\
@@ -169,6 +171,8 @@ $$\int_{-a}^a f(x) \, dx = 2 \int_0^a f(x) \, dx \quad (\text{当 } f(x) \text{ 
     \int_{-a}^a [f_{\text{even}}(x) + f_{\text{odd}}(x)] \, dx &= \int_{-a}^a f_{\text{even}}(x) \, dx + \int_{-a}^a f_{\text{odd}}(x) \, dx \\
     &= 2 \int_0^a f_{\text{even}}(x) \, dx + 0
 \end{align*}
+
+\medskip
 
 \begin{example} 计算定积分 $\int_{- \pi}^{\pi} (x^5 + \cos x) \, dx$。
 
@@ -230,6 +234,29 @@ $$F(x) = \int_a^x f(t) \, dt$$
     \int_{a+\epsilon}^{b} f(x) \,dx &= F(b) - F(a+\epsilon)
 \end{align*}
 
+\medskip
 
+\begin{example} 计算广义积分 $\int_1^{\infty} \frac{1}{x^2} \, dx$。
+    \begin{align*}
+        \int_1^{\infty} \frac{1}{x^2} \, dx = \int_1^\infty x^{-2} \, dx \\
+        &= \left[ \frac{x^{-1}}{-1} \right]_1^\infty = \left[ -\frac{1}{x} \right]_1^\infty \\
+        &= \left( -\frac{1}{\infty} - \left(-\frac{1}{1}\right) \right) \\
+        &= -\epsilon + 1 = 1
+    \end{align*}
+    极限存在且为有限值 $1$，因此该广义积分收敛，其值为 $1$。
+\end{example}
+
+\begin{example} 计算广义积分 $\int_0^1 \frac{1}{\sqrt{x}} \, dx$。
+    
+    被积函数 $f(x) = \frac{1}{\sqrt{x}}$ 在积分区间的下限 $x=0$ 处没有定义，且 $\lim_{x \to 0^+} \frac{1}{\sqrt{x}} = +\infty$。因此 $x=0$ 是一个瑕点。
+
+    \begin{align*}
+        \int_0^1 \frac{1}{\sqrt{x}} \, dx &= \int_{\epsilon}^1 x^{-1/2} \, dx \\
+        &= \left[ \frac{x^{1/2}}{1/2} \right]_{\epsilon}^1 = 2\sqrt{x} \Biggr |_{\epsilon}^1 \\
+        &= 2\sqrt{1} - 2\sqrt{\epsilon} = 2
+    \end{align*}
+
+    极限存在且为有限值 $2$，因此该广义积分收敛，其值为 $2$。
+\end{example}
 
 
