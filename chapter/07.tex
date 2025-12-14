@@ -186,15 +186,14 @@ $$F(x) = \int_a^x f(t) \, dt$$
 广义积分（Improper Integral），也常被称为瑕积分或反常积分。
 
 在格洛克代数空间，广义积分和普通积分没有什么不同，除了最后需要进行极限计算。
-\begin{align}
-    \int_{a}^{\infty} f(x) \, dx = \F(\infty) - F(a)$$ \\
-    \int_{-\infty}^{b} f(x) \, dx = F(b) - F(-\infty) \\
-    \int_{-\infty}^{\infty} f(x) \, dx = \int_{-\infty}^{C} f(x) \, dx + \int_{C}^{\infty} f(x) \, dx = \F(\infty) - F(-\infty) \\
+\begin{align*}
+    \int_{a}^{\infty} f(x) \, dx &= F(\infty) - F(a) \\
+    \int_{-\infty}^{b} f(x) \, dx &= F(b) - F(-\infty) \\
+    \int_{-\infty}^{\infty} f(x) \, dx &= \int_{-\infty}^{C} f(x) \, dx + \int_{C}^{\infty} f(x) \, dx = F(\infty) - F(-\infty) \\
     \\
-    \int_{a}{b-\epsilon} f(x) \,dx = f(b-\epsilon) - f(a) \\
-    \int_{a+\epsilon}{b} f(x) \,dx = f(b) - f(a+\epsilon)
-\end{align}
-
+    \int_{a}^{b-\epsilon} f(x) \,dx &= F(b-\epsilon) - F(a) \\
+    \int_{a+\epsilon}^{b} f(x) \,dx &= F(b) - F(a+\epsilon)
+\end{align*}
 
 
 

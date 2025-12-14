@@ -12,9 +12,10 @@
 \contentsline {section}{\numberline {3.1}极限变化量与点微分}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}导数和导数公式}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}导数的运算法则}{29}{section.3.3}%
-\contentsline {section}{\numberline {3.4}泰勒级数和麦克劳林级数}{35}{section.3.4}%
-\contentsline {section}{\numberline {3.5}欧拉公式}{41}{section.3.5}%
-\contentsline {section}{\numberline {3.6}微分公式和运算法则}{44}{section.3.6}%
+\contentsline {section}{\numberline {3.4}高阶导数}{35}{section.3.4}%
+\contentsline {section}{\numberline {3.5}泰勒级数和麦克劳林级数}{35}{section.3.5}%
+\contentsline {section}{\numberline {3.6}欧拉公式}{42}{section.3.6}%
+\contentsline {section}{\numberline {3.7}微分公式和运算法则}{44}{section.3.7}%
 \contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}函数单调性}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}函数的极值}{49}{section.4.2}%
@@ -31,5 +32,5 @@
 \contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{87}{chapter.7}%
 \contentsline {section}{\numberline {7.1}区间微分和区间积分}{87}{section.7.1}%
 \contentsline {section}{\numberline {7.2}定积分的主要性质}{90}{section.7.2}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{91}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{91}{section.8.1}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{93}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{93}{section.8.1}%
