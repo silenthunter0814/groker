@@ -147,6 +147,41 @@ $$\int_a^a f(x) \, dx = 0$$
 区间可加性（对积分区间的拆分与合并）： 如果 $c$ 是 $[a, b]$ 区间上的任意一点（不一定非要在 $a$ 和 $b$ 之间），定积分可以在该点处进行拆分或合并。
 $$\int_a^c f(x) \, dx + \int_c^b f(x) \, dx = \int_a^b f(x) \, dx$$
 
+对称区间：
+
+偶函数在对称区间上的定积分等于它在 $[0, a]$ 区间上定积分的两倍。
+$$\int_{-a}^a f(x) \, dx = 2 \int_0^a f(x) \, dx \quad (\text{当 } f(x) \text{ 为偶函数时})$$
+奇函数在对称区间上的定积分恒等于零。$$\int_{-a}^a f(x) \, dx = 0 \quad (\text{当 } f(x) \text{ 为奇函数时})$$
+
+\begin{example}
+    \begin{align*}
+        \int_{-1}^1 (x^2 + 1) \, dx &= 2 \int_0^1 (x^2 + 1) \, dx \\
+        &= 2 \left[ \frac{x^3}{3} + x \right]_0^1 = 2 \left[ \left(\frac{1^3}{3} + 1\right) - 0 \right] \\
+        &= 2 \left( \frac{1}{3} + 1 \right) = 2 \cdot \frac{4}{3} = \frac{8}{3} \\
+        \\
+        \int_{-2}^2 x^3 \, dx &= \left[ \frac{x^4}{4} \right]_{-2}^2 \\
+        &= \frac{2^4}{4} - \frac{(-2)^4}{4} = \frac{16}{4} - \frac{16}{4} = 0
+    \end{align*}
+\end{example}
+
+在遇到复杂的定积分时，如果积分区间是对称的，可以将函数拆分为奇函数部分和偶函数部分，然后分别应用上述性质进行简化：
+\begin{align*}
+    \int_{-a}^a [f_{\text{even}}(x) + f_{\text{odd}}(x)] \, dx &= \int_{-a}^a f_{\text{even}}(x) \, dx + \int_{-a}^a f_{\text{odd}}(x) \, dx \\
+    &= 2 \int_0^a f_{\text{even}}(x) \, dx + 0
+\end{align*}
+
+\begin{example} 计算定积分 $\int_{- \pi}^{\pi} (x^5 + \cos x) \, dx$。
+
+    $x^5$ 是奇函数，其积分在 $[-\pi, \pi]$ 上为 0。
+    
+    $\cos x$ 是偶函数。因
+    \begin{align*}
+        \int_{- \pi}^{\pi} (x^5 + \cos x) \, dx &= 0 + \int_{- \pi}^{\pi} \cos x \, dx \\
+        &= 2 \int_0^{\pi} \cos x \, dx = 2 [\sin x]_0^{\pi} \\
+        &= 2 (\sin \pi - \sin 0) = 2 (0 - 0) = 0
+    \end{align*}
+\end{example}
+
 \medskip
 
 \textbf{4. 比较性质}
