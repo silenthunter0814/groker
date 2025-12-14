@@ -211,10 +211,15 @@ $$F(x) = \int_a^x f(t) \, dt$$
 
 变限积分函数 $F(x)$ 实际上是 $f(x)$ 的一个原函数。
 
-变限积分函数最重要的性质是它的导数：$$F'(x) = \frac{d}{dx} \int_a^x f(t) \, dt = f(x)$$
+变限积分函数最重要的性质是它的导数：
+\begin{align}
+    F'(x) = \frac{d}{dx} \int_a^x f(t) \, dt = f(x)
+\end{align}
 
 链式法则应用：如果上限不是 $x$，而是关于 $x$ 的函数 $u(x)$
-$$\frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)$$
+\begin{align}
+    \frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)
+\end{align}
 
 根据上面的求导法则，$F'(x) = f(x)$，这证明了任何连续函数都存在原函数。
 
@@ -257,7 +262,7 @@ $$\frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)$$
 
 广义积分（Improper Integral），也常被称为瑕积分或反常积分。
 
-在格洛克代数空间，广义积分和普通积分没有什么不同，除了最后需要进行极限计算。
+在格洛克代数空间，开区间可以转换为闭区间，因此广义积分和普通积分没有什么不同，除了最后需要进行极限计算。
 \begin{align*}
     \int_{a}^{\infty} f(x) \, dx &= F(\infty) - F(a) \\
     \int_{-\infty}^{b} f(x) \, dx &= F(b) - F(-\infty) \\
@@ -271,7 +276,7 @@ $$\frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)$$
 
 \begin{example} 计算广义积分 $\int_1^{\infty} \frac{1}{x^2} \, dx$。
     \begin{align*}
-        \int_1^{\infty} \frac{1}{x^2} \, dx = \int_1^\infty x^{-2} \, dx \\
+        \int_1^{\infty} \frac{1}{x^2} \, dx &= \int_1^\infty x^{-2} \, dx \\
         &= \left[ \frac{x^{-1}}{-1} \right]_1^\infty = \left[ -\frac{1}{x} \right]_1^\infty \\
         &= \left( -\frac{1}{\infty} - \left(-\frac{1}{1}\right) \right) \\
         &= -\epsilon + 1 = 1
@@ -291,5 +296,4 @@ $$\frac{d}{dx} \int_a^{u(x)} f(t) \, dt = f(u(x)) \cdot u'(x)$$
 
     极限存在且为有限值 $2$，因此该广义积分收敛，其值为 $2$。
 \end{example}
-
 
