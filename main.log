@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 DEC 2025 06:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 DEC 2025 06:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -974,19 +974,19 @@ File: images/04/4.1.png Graphic file (type bmp)
 
 
 
-] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]) [93]
+] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]) [94]
 \openout2 = `chapter/07.aux'.
 
- (./chapter/07.tex [94
+ (./chapter/07.tex
+第七章
+File: images/07/7.1.png Graphic file (type bmp)
+<images/07/7.1.png>
+[95
 
 
 
 
 ]
-第七章
-File: images/07/7.1.png Graphic file (type bmp)
-<images/07/7.1.png>
-[95]
 File: images/07/7.2.png Graphic file (type bmp)
 <images/07/7.2.png>
  [96] [97] [98] [99] [100] [101] [102]
