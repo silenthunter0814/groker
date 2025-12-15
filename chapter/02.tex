@@ -133,6 +133,110 @@ $f \circ g$ 和 $g \circ f$ 通常并不相同，也就是说复合函数的顺�
 \end{example}
 
 \section{参数方程}
+参数方程是一个非常重要的数学概念，尤其在描述运动轨迹和复杂曲线时非常方便。
+
+\medskip
+
+在平面直角坐标系中，我们通常用一个含有 $x$ 和 $y$ 的方程（普通方程）来表示一条曲线。
+
+普通方程（或笛卡尔方程）： $y = f(x)$ 或 $F(x, y) = 0$。
+
+参数方程（Parametric Equation）则是引入一个参数（通常用 $t$ 或 $\theta$ 表示），将曲线上点的坐标 $(x, y)$ 分别表示成这个参数的函数：
+\begin{cases}
+    x = f(t) \\
+    y = g(t)    
+\end{cases} \quad (t \text{ 为参数})
+
+当参数 $t$ 在一个指定的范围内变化时，对应的 $(x, y)$ 坐标点就描绘出一条曲线。在物理学中，参数 $t$ 常常代表时间。
+
+\medskip
+
+使用参数方程有几个显著的优点：
+
+描述运动轨迹更自然： 如果 $t$ 代表时间，那么 $x=f(t)$ 和 $y=g(t)$ 就直接描述了一个物体在 $t$ 时刻的横坐标和纵坐标，非常适合描述质点运动。
+
+表示复杂曲线更简单： 有些曲线的普通方程非常复杂，甚至无法写出，但它们的参数方程却相对简单。例如摆线 (Cycloid)。
+
+表示非函数关系： 普通方程 $y=f(x)$ 只能表示一个 $x$ 对应一个 $y$ 的函数关系。但对于圆这样的曲线（一个 $x$ 对应两个 $y$），用参数方程表示更为简洁。
+
+\medskip
+
+常见曲线的参数方程
+
+\usepackage{booktabs} % 必须引入 booktabs 宏包
+\begin{table}[h]
+    \centering
+    \caption{常见曲线的参数方程（极简版）}
+    \label{tab:parametric_equations_minimal}
+    \begin{tabular}{ccccc}
+        \textbf{曲线类型} & \textbf{普通方程} & \textbf{参数方程} & \textbf{参数 $t$ 的范围} & \textbf{备注} \\
+        \midrule % 仅在表头下方使用这条中等粗细横线
+        直线 & $y - y_0 = m(x - x_0)$ & $\begin{cases} x = x_0 + a t \\ y = y_0 + b t \end{cases}$ & $t \in (-\infty, \infty)$ & $m = b/a$ \\
+        圆 & $(x-h)^2 + (y-k)^2 = r^2$ & $\begin{cases} x = h + r \cos t \\ y = k + r \sin t \end{cases}$ & $t \in [0, 2\pi)$ & $t$ 表示圆心角 \\
+        椭圆 & $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ & $\begin{cases} x = a \cos t \\ y = b \sin t \end{cases}$ & $t \in [0, 2\pi)$ & $t$ 为辅助角 \\
+        抛物线 & $y^2 = 2px$ & $\begin{cases} x = \frac{p}{2} t^2 \\ y = p t \end{cases}$ & $t \in (-\infty, \infty)$ & $p$ 为焦距 \\
+        % 没有 \bottomrule
+    \end{tabular}
+\end{table}
+
+\medskip
+
+普通方程与参数方程的互化
+
+（1）参数方程化为普通方程：核心思想是消去参数 $t$。
+
+\begin{example} 将 $\begin{cases} x = 2t + 1 \\ y = 4t^2 \end{cases}$ 化为普通方程。
+
+    从第一个方程解出 $t$： $t = \frac{x-1}{2}$
+    
+    代入第二个方程： $y = 4 \left( \frac{x-1}{2} \right)^2$
+    
+    化简： $y = 4 \cdot \frac{(x-1)^2}{4} = (x-1)^2$
+    
+    结果： 普通方程为 $y = (x-1)^2$ (开口向上的抛物线)。
+\end{example}
+
+\begin{example} 将 $\begin{cases} x = 3 \cos \theta \\ y = 3 \sin \theta \end{cases}$ 化为普通方程。
+
+    利用三角恒等式： $\cos^2 \theta + \sin^2 \theta = 1$
+    
+    解出 $\cos \theta$ 和 $\sin \theta$： $\cos \theta = x/3$, $\sin \theta = y/3$
+    
+    代入恒等式： $(x/3)^2 + (y/3)^2 = 1$
+    
+    化简： $x^2 + y^2 = 9$
+    
+    结果： 普通方程为 $x^2 + y^2 = 9$ (圆心在原点，半径为 3 的圆)。
+\end{example}
+
+\medskip
+
+（2）普通方程化为参数方程：核心思想是选择一个合适的参数 $t$。
+
+选择参数没有固定方法，但通常选择 $x$ 或 $y$ 或它们的组合，或选择一个有几何意义的角。
+
+\medskip
+
+\begin{example} 将直线 $y = 3x - 5$ 化为参数方程。
+
+    设 $x = t$：
+    
+    代入原方程： $y = 3t - 5$
+    
+    结果： $\begin{cases} x = t \\ y = 3t - 5 \end{cases}$
+\end{example}
+
+\begin{example} 将椭圆 $\frac{x^2}{16} + \frac{y^2}{9} = 1$ 化为参数方程。
+
+    改写方程： $(\frac{x}{4})^2 + (\frac{y}{3})^2 = 1$
+    
+    利用三角恒等式，设 $\frac{x}{4} = \cos \theta$ 和 $\frac{y}{3} = \sin \theta$：
+    
+    结果： $\begin{cases} x = 4 \cos \theta \\ y = 3 \sin \theta \end{cases}$ ($\theta$ 为参数)
+\end{example}
+
+参数方程是用一个独立的变量 $t$ 来间接描述 $x$ 和 $y$ 的关系。
+
 
 \section{函数的极限}
 函数极限是微积分中的一个基本概念，它描述了一个函数在自变量（输入值）接近某一给定值时，它的函数值（输出值）所表现出的趋势。
