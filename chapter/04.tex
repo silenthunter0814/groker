@@ -3,6 +3,79 @@
 
 \section{极限计算}
 
+\textbf{1. $\frac{0}{0}$ 型不定式的极限}
+
+由微分的基本定义 $df(x) = f(x+\epsilon) - f(x)$ 得到$$f(x+\epsilon) = df(x) + f(x)$$
+
+如果 $f(x)$ 在 $x = c$ 处为 $0$，即 $f(c) = 0$，则
+$$f(c + \epsilon) = df(c) + f(c) = df(c) \qquad if f(c) = 0$$
+
+同时，基于 $df(x) = f'(x) \,dx \iff df(c) = f'(c) \cdot \epsilon$。
+
+结合以上两点，我们考虑当 $f(c) = g(c) = 0,\; x \to c$ 时函数 $\frac{f(x)}{g(x)}$ 的极限：
+\begin{align*}
+    \lim_{x \to c}\frac{f(x)}{g(x) &= \frac{f(c+\epsilon)}{g(c+\epsilon)} \\
+    &= \frac{df(c) + f(c)}{dg(c) + g(c)} \\
+    &= \frac{df(c)}{dg(c)} \qquad (if f(c) = g(c) = 0) \\
+    &= \frac{f'(c) \cdot \epsilon}{g'(c) \cdot \epsilon} \\
+    &= \frac{f'(c)}{g'(c)}
+\end{align*}
+
+将上面的内容进行总结，我们得到：
+ 
+对于比值函数 $\frac{f(x)}{g(x)}$，如果 $f(c) = g(c) = 0$，那么 $x \to c$ 时函数的极限
+\begin{align}
+    \lim_{x \to c}\frac{f(x)}{g(x) = \frac{f(c+\epsilon)}{g(c+\epsilon)} = \frac{f'(c)}{g'(c)} \qquad (\text{if } f(c) = g(c) = 0)
+\end{align}
+
+\medskip
+
+\begin{example} 求 $\lim_{x\to 0} \frac{\sin x}{x}$。
+    
+    当 $x \to 0$ 时，分子 $f(0) = \sin 0 = 0$，分母 $g(0) = (0) = 0$。
+    \begin{align*}
+        f'(x) = (\sin x)' = \cos x \qquad g'(x) = (x)' = 1 \\
+        f'(0) = \cos 0 = 1 \qquad g'(0) = 1 \\
+        \lim_{x\to 0} \frac{\sin x}{x} = \frac{f'(0)}{g'(0)} = \frac{1}{1} = 1
+    \end{align*}
+\end{example}
+
+\begin{example} 求  $\lim_{x\to 0} \frac{e^x - 1 - x}{x^2}$。
+    
+    当 $x \to 0$ 时，分子 $f(0) = e^0 - 1 - (0) = 0$，分母 $g(0) = (0)^2 = 0$。
+    \begin{align*}
+        \lim_{x\to 0} \frac{e^x - 1 - x}{x^2} = \lim_{x\to 0} \frac{(e^x - 1 - x)'}{(x^2)'} = \lim_{x\to 0} \frac{e^x - 1}{2x}
+    \end{align*}
+
+    当 $x \to 0$ 时，分子 $f(0) = e^0 - 1 = 0$，分母 $g(0) = 2(0) = 0$。
+    \begin{align*}
+        \lim_{x\to 0} \frac{e^x - 1}{2x} &= \lim_{x\to 0} \frac{(e^x - 1)'}{(2x)'} \\
+        &= \lim_{x\to 0} \frac{e^x}{2} = \frac{e^0}{2} = \frac{1}{2}
+    \end{align*}
+\end{example}
+
+\textbf{2.  $\frac{\infty}{\infty}$ 型不定式的极限}
+
+当求取极限的表达式难解时，很多时候进行格洛克无穷大等效重定义能够简化极限问题，方便进一步的极限计算。
+
+\medskip
+
+\begin{example} 求 $\lim_{x\to 0^+} x \ln x$。
+    \begin{align*}
+        \lim_{x\to 0^+} x \ln x &= \epsilon \cdot \ln \epsilon \\
+        &= e^{-\infty} \cdot \ln{e^{-\infty}} \qquad (\epsilon \gets e^{-\infty}) \\
+        &= e^{-\infty} \cdot (-\infty) = -\frac{\infty}{e^\infty} = 0
+    \end{align*}
+\end{example}
+
+\begin{example} 求 $\lim_{x\to \infty} \frac{\ln x}{x}$。
+    \begin{align*}
+        \lim_{x\to \infty} \frac{\ln x}{x} &= \frac{\ln \infty}{\infty} \\
+        &= \frac{\ln e^\infty}{e^\infty} \qquad (\infty \gets e^\infty) \\
+        &= \frac{\infty}{e^\infty} = 0
+    \end{align*}
+\end{example}
+
 
 \section{函数单调性}
 单调函数是指在给定区间上是增函数或减函数的函数。具有单调性的区间 $I$ 称为单调区间。
