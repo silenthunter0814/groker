@@ -4,34 +4,35 @@
 \contentsline {section}{\numberline {1.3}无穷大和无穷小的定义}{4}{section.1.3}%
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}函数和极限}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}理解函数}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}函数的极限}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}自然常数和自然对数}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}泰勒展开在极限计算中的应用}{18}{section.2.4}%
-\contentsline {chapter}{\numberline {第三章\hspace {.3em}}点微分和导数}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}极限变化量与点微分}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}导数和导数公式}{24}{section.3.2}%
-\contentsline {section}{\numberline {3.3}导数的运算法则}{29}{section.3.3}%
-\contentsline {section}{\numberline {3.4}高阶导数}{35}{section.3.4}%
-\contentsline {section}{\numberline {3.5}泰勒级数和麦克劳林级数}{35}{section.3.5}%
-\contentsline {section}{\numberline {3.6}欧拉公式}{42}{section.3.6}%
-\contentsline {section}{\numberline {3.7}微分公式和运算法则}{45}{section.3.7}%
-\contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}极限计算}{47}{section.4.1}%
-\contentsline {section}{\numberline {4.2}函数单调性}{48}{section.4.2}%
-\contentsline {section}{\numberline {4.3}函数的极值}{50}{section.4.3}%
-\contentsline {section}{\numberline {4.4}函数的渐近线}{53}{section.4.4}%
-\contentsline {section}{\numberline {4.5}牛顿法解方程}{55}{section.4.5}%
-\contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}不定积分的基本概念}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}不定积分的主要性质}{61}{section.5.2}%
-\contentsline {section}{\numberline {5.3}基本积分公式}{62}{section.5.3}%
-\contentsline {section}{\numberline {5.4}积分技术}{64}{section.5.4}%
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{75}{chapter.6}%
-\contentsline {section}{\numberline {6.1}一阶常微分方程}{75}{section.6.1}%
-\contentsline {section}{\numberline {6.2}二阶线性常微分方程}{82}{section.6.2}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{89}{chapter.7}%
-\contentsline {section}{\numberline {7.1}区间微分和区间积分}{89}{section.7.1}%
-\contentsline {section}{\numberline {7.2}定积分的主要性质}{92}{section.7.2}%
-\contentsline {section}{\numberline {7.3}曲线的弧长}{97}{section.7.3}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{99}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{99}{section.8.1}%
+\contentsline {section}{\numberline {2.2}参数方程}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}函数的极限}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}自然常数和自然对数}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}泰勒展开在极限计算中的应用}{20}{section.2.5}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}点微分和导数}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}极限变化量与点微分}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}导数和导数公式}{26}{section.3.2}%
+\contentsline {section}{\numberline {3.3}导数的运算法则}{31}{section.3.3}%
+\contentsline {section}{\numberline {3.4}高阶导数}{37}{section.3.4}%
+\contentsline {section}{\numberline {3.5}泰勒级数和麦克劳林级数}{37}{section.3.5}%
+\contentsline {section}{\numberline {3.6}欧拉公式}{44}{section.3.6}%
+\contentsline {section}{\numberline {3.7}微分公式和运算法则}{47}{section.3.7}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}导数和微分的应用}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}极限计算}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}函数单调性}{50}{section.4.2}%
+\contentsline {section}{\numberline {4.3}函数的极值}{52}{section.4.3}%
+\contentsline {section}{\numberline {4.4}函数的渐近线}{55}{section.4.4}%
+\contentsline {section}{\numberline {4.5}牛顿法解方程}{57}{section.4.5}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}不定积分和积分方法}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}不定积分的基本概念}{61}{section.5.1}%
+\contentsline {section}{\numberline {5.2}不定积分的主要性质}{63}{section.5.2}%
+\contentsline {section}{\numberline {5.3}基本积分公式}{64}{section.5.3}%
+\contentsline {section}{\numberline {5.4}积分技术}{66}{section.5.4}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}常微分方程}{77}{chapter.6}%
+\contentsline {section}{\numberline {6.1}一阶常微分方程}{77}{section.6.1}%
+\contentsline {section}{\numberline {6.2}二阶线性常微分方程}{84}{section.6.2}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定积分}{91}{chapter.7}%
+\contentsline {section}{\numberline {7.1}区间微分和区间积分}{91}{section.7.1}%
+\contentsline {section}{\numberline {7.2}定积分的主要性质}{94}{section.7.2}%
+\contentsline {section}{\numberline {7.3}曲线的弧长}{99}{section.7.3}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{101}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{101}{section.8.1}%
