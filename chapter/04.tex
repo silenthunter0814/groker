@@ -8,15 +8,15 @@
 由微分的基本定义 $df(x) = f(x+\epsilon) - f(x)$ 得到$$f(x+\epsilon) = df(x) + f(x)$$
 
 如果 $f(x)$ 在 $x = c$ 处为 $0$，即 $f(c) = 0$，则
-$$f(c + \epsilon) = df(c) + f(c) = df(c) \qquad if f(c) = 0$$
+$$f(c + \epsilon) = df(c) + f(c) = df(c) \qquad \text{if } f(c) = 0$$
 
 同时，基于 $df(x) = f'(x) \,dx \iff df(c) = f'(c) \cdot \epsilon$。
 
 结合以上两点，我们考虑当 $f(c) = g(c) = 0,\; x \to c$ 时函数 $\frac{f(x)}{g(x)}$ 的极限：
 \begin{align*}
-    \lim_{x \to c}\frac{f(x)}{g(x) &= \frac{f(c+\epsilon)}{g(c+\epsilon)} \\
+    \lim_{x \to c}\frac{f(x)}{g(x)} &= \frac{f(c+\epsilon)}{g(c+\epsilon)} \\
     &= \frac{df(c) + f(c)}{dg(c) + g(c)} \\
-    &= \frac{df(c)}{dg(c)} \qquad (if f(c) = g(c) = 0) \\
+    &= \frac{df(c)}{dg(c)} \qquad (\text{if } f(c) = g(c) = 0) \\
     &= \frac{f'(c) \cdot \epsilon}{g'(c) \cdot \epsilon} \\
     &= \frac{f'(c)}{g'(c)}
 \end{align*}
@@ -25,7 +25,7 @@ $$f(c + \epsilon) = df(c) + f(c) = df(c) \qquad if f(c) = 0$$
  
 对于比值函数 $\frac{f(x)}{g(x)}$，如果 $f(c) = g(c) = 0$，那么 $x \to c$ 时函数的极限
 \begin{align}
-    \lim_{x \to c}\frac{f(x)}{g(x) = \frac{f(c+\epsilon)}{g(c+\epsilon)} = \frac{f'(c)}{g'(c)} \qquad (\text{if } f(c) = g(c) = 0)
+    \lim_{x \to c}\frac{f(x)}{g(x)} = \frac{f(c+\epsilon)}{g(c+\epsilon)} = \frac{f'(c)}{g'(c)} \qquad (\text{if } f(c) = g(c) = 0)
 \end{align}
 
 \medskip
@@ -468,7 +468,7 @@ $$0 \approx f(x_n) + f'(x_n)(x^* - x_n)$$
 
 \begin{example} 求解 $e^{-x} = x$ 的根
 
-    求解方程 $e^{-x} = x$ 的根。这等价于求解函数 $f(x) = e^{-x} - x = 0$ 的根。
+    这等价于求解函数 $f(x) = e^{-x} - x = 0$ 的根。
 
     原函数： $f(x) = e^{-x} - x$
 
