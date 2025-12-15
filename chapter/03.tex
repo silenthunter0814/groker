@@ -476,6 +476,98 @@ $$\frac{dy}{dx} = \frac{df(u)}{du} \cdot \frac{du}{dx} \quad \text{或} \quad [f
     \end{align} 
 \end{example}
 
+\section{参数方程求导}
+当一个函数 $y$ 不直接表示为 $x$ 的函数 $y=f(x)$，而是通过第三个变量（参数 $t$）来表示 $x$ 和 $y$ 时，即：
+$$\begin{cases}
+    x = f(t) \\
+    y = g(t)
+\end{cases}$$
+其中 $t$ 是参数。我们要求的是 $\frac{dy}{dx}$，即 $y$ 对 $x$ 的导数。
+
+根据链式法则 (Chain Rule)，我们可以将 $\frac{dy}{dx}$ 表示为关于参数 $t$ 的导数的比值：
+\begin{align}
+    \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+\end{align}
+
+其中：
+
+$\frac{dy}{dt}$ 是 $y$ 对参数 $t$ 的导数，即 $g'(t)$。
+
+$\frac{dx}{dt}$ 是 $x$ 对参数 $t$ 的导数，即 $f'(t)$。
+
+注意： 进行求导的前提是 $\frac{dx}{dt} \neq 0$。
+
+\begin{example} 求参数方程 $\begin{cases} x = 2t + 1 \\ y = t^2 \end{cases}$ 的导数 $\frac{dy}{dx}$。
+    
+    步骤 1：分别求 $\frac{dx}{dt}$ 和 $\frac{dy}{dt}$
+    \begin{align*}
+        \frac{dx}{dt} &= \frac{d}{dt} (2t + 1) = 2 \\
+        \frac{dy}{dt} &= \frac{d}{dt} (t^2) = 2t
+    \end{align*}
+
+    步骤 2：利用公式求 $\frac{dy}{dx}$
+    $$\frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{2t}{2} = t$$
+\end{example}
+
+\begin{example} 由参数方程定义的圆：
+    $$\begin{cases}
+        x = 3 \cos t \\
+        y = 3 \sin t
+    \end{cases}$$
+    求出当参数 $t = \frac{\pi}{4}$ 时，该曲线（圆）的切线斜率。
+
+    确定切点坐标：
+    
+    $x_0 = 3 \cos \left( \frac{\pi}{4} \right) = 3 \cdot \frac{\sqrt{2}}{2} = \frac{3\sqrt{2}}{2}$
+    
+    $y_0 = 3 \sin \left( \frac{\pi}{4} \right) = 3 \cdot \frac{\sqrt{2}}{2} = \frac{3\sqrt{2}}{2}$
+    
+    切点是 $\left( \frac{3\sqrt{2}}{2}, \frac{3\sqrt{2}}{2} \right)$。
+
+    分别对 $x$ 和 $y$ 关于参数 $t$ 求导并计算导数 $\frac{dy}{dx}$：
+    \begin{align*}
+        \frac{dx}{dt} &= \frac{d}{dt} (3 \cos t) = -3 \sin t \\
+        \frac{dy}{dt} &= \frac{d}{dt} (3 \sin t) = 3 \cos t \\
+        \frac{dy}{dx} &= \frac{3 \cos t}{-3 \sin t} = -\frac{\cos t}{\sin t} = -\cot t
+    \end{align*}
+    结果 $\frac{dy}{dx} = -\cot t$ 是曲线的切线斜率关于参数 $t$ 的表达式。
+
+    将 $t = \frac{\pi}{4}$ 代入 $\frac{dy}{dx}$ 的表达式：
+    $$m = \left. \frac{dy}{dx} \right|_{t = \frac{\pi}{4}} = -\cot \left( \frac{\pi}{4} \right) = -1$$
+
+    当 $t = \frac{\pi}{4}$ 时，该参数曲线（圆）在点 $\left( \frac{3\sqrt{2}}{2}, \frac{3\sqrt{2}}{2} \right)$ 处的切线斜率为 $-1$。    
+\end{example}
+
+\medskip
+
+摆线是圆在平面上滚动时，圆周上一点的轨迹，它在微积分中非常经典。
+
+摆线的参数方程通常定义为（假设圆的半径为 $R$）：
+$$\begin{cases}
+    x = R(\theta - \sin \theta) \\
+    y = R(1 - \cos \theta)
+\end{cases}$$
+其中 $\theta$ 是参数，代表圆滚动的角度。
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/03/3.2.png} 
+    \caption{\textbf{摆线在对应点的切线斜率}}
+\end{figure}
+
+我们来求当 $\theta = \frac{\pi}{3}$ 时，摆线在对应点的切线斜率。
+\begin{align*}
+    \frac{dx}{d\theta} &= \frac{dR(\theta - \sin \theta)}{d\theta} = R(1 - \cos \theta) \\
+    \frac{dy}{d\theta} &= \frac{dR(1 - \cos \theta)}{d\theta} = R(0 - (-\sin \theta)) = R \sin \theta \\
+    \frac{dy}{dx} &= \frac{R \sin \theta}{R(1 - \cos \theta)} = \frac{\sin \theta}{1 - \cos \theta}
+\end{align*}
+将 $\theta = \frac{\pi}{3}$ 代入 $\frac{dy}{dx}$ 的表达式：
+
+$\sin \left( \frac{\pi}{3} \right) = \frac{\sqrt{3}}{2},\; \cos \left( \frac{\pi}{3} \right) = \frac{1}{2}$
+
+$$m = \left. \frac{dy}{dx} \right|_{\theta = \frac{\pi}{3}} = \frac{\sin \frac{\pi}{3}}{1 - \cos \frac{\pi}{3}} = \frac{\frac{\sqrt{3}}{2}}{1 - \frac{1}{2}} = \frac{\frac{\sqrt{3}}{2}}{\frac{1}{2}} = \sqrt{3}$$
+
+当 $\theta = \frac{\pi}{3}$ 时，摆线在对应点的切线斜率为 $\sqrt{3}$。
+
 
 \section{高阶导数}
 高阶导数（Higher-order derivative）是指一个函数的导数的导数。
