@@ -11,7 +11,7 @@
     "git.confirmSync": true,
     "git.enableSmartCommit": true,
     "editor.autoIndentOnPaste": true,
-    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.recipes": [
         {
             "name": "xelatex -> bibtex -> xelatex*2",

@@ -35,5 +35,5 @@
 \contentsline {section}{\numberline {7.1}区间微分和区间积分}{95}{section.7.1}%
 \contentsline {section}{\numberline {7.2}定积分的主要性质}{98}{section.7.2}%
 \contentsline {section}{\numberline {7.3}曲线的弧长}{103}{section.7.3}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{105}{chapter.8}%
-\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{105}{section.8.1}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}积分和积分方法}{107}{chapter.8}%
+\contentsline {section}{\numberline {8.1}导数的定义与几何意义}{107}{section.8.1}%
