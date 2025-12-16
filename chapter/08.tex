@@ -118,8 +118,15 @@ $t$ 是积分中的哑变量（dummy variable）。
 
 
 \section{曲线之间的面积}
-如果想计算两条曲线 $y = f(x)$ 和 $y = g(x)$ 在区间 $x=a$ 到 $x=b$ 之间所围成的面积 $A$，且在这个区间内 $f(x) \ge g(x)$（即 $f(x)$ 的曲线始终在 $g(x)$ 的曲线上方或与它相交），那么这个面积 $A$ 可以通过以下定积分来计算：
+如果想计算两条曲线 $y = f(x)$ 和 $y = g(x)$ 在区间 $x=a$ 到 $x=b$ 之间所围成的面积 $A$，且在这个区间内 $f(x) \ge g(x)$（即 $f(x)$ 的曲线始终在 $g(x)$ 的曲线上方或与它相交），如图所示
 
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.4\textwidth]{images/08/8.2.png} 
+    \caption{\textbf{曲线之间的面积}}
+\end{figure}
+
+那么这个面积 $A$ 可以通过以下定积分来计算：
 \begin{align*}
     dA_1 &= f(x) \,dx \\
     dA_2 &= g(x) \,dx \\
@@ -158,7 +165,7 @@ $t$ 是积分中的哑变量（dummy variable）。
     \begin{figure}[htbp] 
         \centering
         \includegraphics[width=0.4\textwidth]{images/08/8.3.png} 
-        \caption{\textbf{曲线之间的面积}}
+        \caption{\textbf{面积计算}}
     \end{figure}
 
     找交点：$x^2 = x \iff x = 0,\; x = 1$。因此，$a = 0$, $b = 1$。
@@ -191,10 +198,16 @@ $d$ 和 $c$： 积分的上下限，$y$ 的值。
 
 \begin{example} 计算由抛物线 $x = 4 - y^2$ 和直线 $x = y$ 所围成的面积。
 
+    \begin{figure}[htbp] 
+        \centering
+        \includegraphics[width=0.6\textwidth]{images/08/8.4.png} 
+        \caption{\textbf{水平矩形}}
+    \end{figure}
+
     找到交点（确定上下限 $c$ 和 $d$）：
     
     将两个函数的 $x$ 设置相等，以找到它们相交的 $y$ 值：
-    $$4 - y^2 = y \\y^2 + y - 4 = 0$$
+    $$4 - y^2 = y $$ $$y^2 + y - 4 = 0$$
 
     使用求根公式 $y = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$：
     \begin{align*}
