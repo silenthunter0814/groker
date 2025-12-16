@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 DEC 2025 17:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  16 DEC 2025 18:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1004,23 +1004,23 @@ File: images/08/8.1.png Graphic file (type bmp)
 [105] [106] [107]
 File: images/08/8.2.png Graphic file (type bmp)
 <images/08/8.2.png>
- [108]
+ [108] [109]
 File: images/08/8.3.png Graphic file (type bmp)
 <images/08/8.3.png>
- [109]
+ [110]
 File: images/08/8.4.png Graphic file (type bmp)
 <images/08/8.4.png>
- [110]) [111]
+ [111]) [112]
 \openout2 = `chapter/09.aux'.
 
- (./chapter/09.tex [112
-
-
-
-
-]
+ (./chapter/09.tex
 第九章
-) [113] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux))
+) [113
+
+
+
+
+] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 

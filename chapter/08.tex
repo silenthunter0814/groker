@@ -12,7 +12,7 @@
 \section{曲线的弧长}
 曲线的弧长，简单来说，就是曲线上两点之间那段路径的精确长度。
 
-要计算平面曲线 $y = f(x)$ 从 $x=a$ 到 $x=b$ 之间的弧长 $L$，我们需要使用定积分。
+要计算平面曲线 $y = f(x)$ 从 $x=a$ 到 $x=b$ 之间的弧长 $s$，我们需要使用定积分。
 
 \begin{figure}[htbp] 
     \centering
@@ -35,9 +35,9 @@
     ds &= \sqrt{d^2 x + [f'(x)]^2 \cdot d^2 x} = \sqrt{1 + [f'(x)]^2 } \,dx
 \end{align*}
 
-（3）定积分求和：将这些微小的弧长 $ds$ 从 $x=a$ 累加到 $x=b$，得到总弧长 $L$
+（3）定积分求和：将这些微小的弧长 $ds$ 从 $x=a$ 累加到 $x=b$，得到总弧长 $s$
 \begin{align}
-    L = \int_{a}^{b} \,ds &= \int_{a}^{b} \sqrt{1 + [f'(x)]^2} \,dx \\
+    s = \int_{a}^{b} \,ds &= \int_{a}^{b} \sqrt{1 + [f'(x)]^2} \,dx \\
     &= \int_{a}^{b} \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \,dx
 \end{align}
 
@@ -45,10 +45,10 @@
 
 \textbf{曲线 $x = g(y)$ 的弧长}
 
-类似地，如果曲线由函数 $x = g(y)$ 定义，且 $g'(y)$ 在闭区间 $[c, d]$ 上连续，则从 $y=c$ 到 $y=d$ 的弧长 $L$ 为：
+类似地，如果曲线由函数 $x = g(y)$ 定义，且 $g'(y)$ 在闭区间 $[c, d]$ 上连续，则从 $y=c$ 到 $y=d$ 的弧长 $s$ 为：
 \begin{align}
-    L &= \int_{c}^{d} \sqrt{1 + [g'(y)]^2} \,dy \\
-    L &= \int_{c}^{d} \sqrt{1 + \left(\frac{dx}{dy}\right)^2} \,dy
+    s &= \int_{c}^{d} \sqrt{1 + [g'(y)]^2} \,dy \\
+    s &= \int_{c}^{d} \sqrt{1 + \left(\frac{dx}{dy}\right)^2} \,dy
 \end{align}
 
 \medskip
@@ -75,7 +75,7 @@
         \sqrt{1 + \left(\frac{dy}{dx}\right)^2} &= \sqrt{1 + x}
     \end{align*}
 
-    设置限值并构建积分：$$L = \int_{0}^{3} \sqrt{1 + x} \,dx$$
+    设置限值并构建积分：$$s = \int_{0}^{3} \sqrt{1 + x} \,dx$$
 
     计算积分：
     \begin{align*}
@@ -116,6 +116,48 @@ $t$ 是积分中的哑变量（dummy variable）。
 
 在物理学中，弧长函数可以用来确定一个物体沿着给定路径（曲线）移动的距离。
 
+\medskip
+
+\textbf{参数方程表示的曲线弧长}
+
+假设一条曲线由参数方程定义：
+$$\begin{cases} x = x(t) \\ y = y(t) \end{cases} \quad (\alpha \le t \le \beta)$$
+
+那么
+\begin{align*}
+    d^2 s &= d^2 x + d^2 y \\
+    d^2 s &= d^2 x(t) + d^2 y(t) \\
+    &= [x'(t)]^2 \cdot d^2 t + [y'(t)]^2 \cdot d^2 t \\
+    \\
+    ds &= \sqrt{[x'(t)]^2 + [y'(t)]^2} \,dt
+\end{align*}
+
+那么该曲线从 $t=\alpha$ 到 $t=\beta$ 的弧长 $s$ 可以用以下定积分表示：
+\begin{align}
+    s = \int_{\alpha}^{\beta} \sqrt{[x'(t)]^2 + [y'(t)]^2} \, dt
+\end{align}
+
+或者写成更常见的形式：
+\begin{align}
+    s = \int_{\alpha}^{\beta} \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt
+\end{align}
+
+\medskip
+
+\begin{example} 求半径为 $R$ 的圆的周长：圆的参数方程为：$$\begin{cases} x = R\cos t \\ y = R\sin t \end{cases} \quad (0 \le t \le 2\pi)$$
+    
+    求导：$\frac{dx}{dt} = -R\sin t$，$\frac{dy}{dt} = R\cos t$
+
+    圆的周长：
+    \begin{align*}
+        &\sqrt{(-R\sin t)^2 + (R\cos t)^2} = \sqrt{R^2(\sin^2 t + \cos^2 t)} = R \\
+        \\
+        &s = \int_{0}^{2\pi} R \, dt = Rt\Bigg |_{0}^{2\pi} = 2\pi R
+    \end{align*}
+\end{example}
+
+在实际计算中，被积函数 $\sqrt{[x'(t)]^2 + [y'(t)]^2}$ 往往带有根号，计算可能会比较复杂，有时需要用到三角代换或特殊的积分技巧。
+
 
 \section{曲线之间的面积}
 如果想计算两条曲线 $y = f(x)$ 和 $y = g(x)$ 在区间 $x=a$ 到 $x=b$ 之间所围成的面积 $A$，且在这个区间内 $f(x) \ge g(x)$（即 $f(x)$ 的曲线始终在 $g(x)$ 的曲线上方或与它相交），如图所示
@@ -139,6 +181,7 @@ $t$ 是积分中的哑变量（dummy variable）。
 \medskip
 
 \textbf{面积计算步骤}
+
 （1）找到交点（确定上下限 $a$ 和 $b$）：
 
 将两个函数 $f(x)$ 和 $g(x)$ 设置相等，$f(x) = g(x)$，解出 $x$ 的值。这些 $x$ 值就是曲线的交点，它们通常作为积分的上下限 $a$ 和 $b$。如果问题已经给出了区间，则使用给定的区间端点。

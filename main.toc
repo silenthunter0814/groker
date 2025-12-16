@@ -36,6 +36,6 @@
 \contentsline {section}{\numberline {7.2}定积分的主要性质}{98}{section.7.2}%
 \contentsline {chapter}{\numberline {第八章\hspace {.3em}}定积分的应用}{105}{chapter.8}%
 \contentsline {section}{\numberline {8.1}曲线的弧长}{105}{section.8.1}%
-\contentsline {section}{\numberline {8.2}曲线之间的面积}{108}{section.8.2}%
+\contentsline {section}{\numberline {8.2}曲线之间的面积}{109}{section.8.2}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}积分和积分方法}{113}{chapter.9}%
 \contentsline {section}{\numberline {9.1}导数的定义与几何意义}{113}{section.9.1}%
