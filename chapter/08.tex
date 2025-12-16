@@ -283,3 +283,38 @@ $d$ 和 $c$： 积分的上下限，$y$ 的值。
 
     因此，面积 $A$ 为：$$A = \frac{(17)^{3/2}}{6(1)^2} = \frac{17\sqrt{17}}{6}$$
 \end{example}
+
+\medskip
+
+\textbf{椭圆的面积}
+
+考虑中心在原点的标准椭圆方程：$$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$其中 $a$ 是长半轴， $b$ 是短半轴。
+
+\begin{figure}[htbp] 
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/08/8.5.png} 
+    \caption{\textbf{椭圆的面积}}
+\end{figure}
+
+椭圆在四个象限内是完全对称的。因此，我们只需要计算第一象限（即 $x$ 从 $0$ 到 $a$）的面积，然后乘以 $4$ 即可。
+
+在第二章我们学习到椭圆的参数方程
+$$\begin{cases} x = a \cos \theta \\ y = b \sin \theta \end{cases} \quad (\theta \in [0, 2\pi])$$
+
+在第一象限，注意到 $x$ 从 $0$ 到 $a$ 时，$\theta$ 由 $\frac \pi 2$ 变化到 $0$。
+
+椭圆的面积：
+\begin{align*}
+    dA &= y \,dx = b\sin\theta \,da\cos\theta \\
+    &= b\sin\theta \cdot (-a\sin\theta \,d\theta) = -ab\sin^2 \theta \,d\theta \\
+    A &= 4\int_{\frac \pi 2}^0 (-ab\sin^2 \theta) \,d\theta = 4ab \int_0^{\frac \pi 2} \sin^2 \theta \,d\theta \\
+    &= 4ab  \int_0^{\frac \pi 2} \frac{1 - \cos 2\theta}{2} \,d\theta \\
+    &= 2ab \int_0^{\frac \pi 2} \,d\theta - ab \int_0^{\frac \pi 2} \cos 2\theta \,d2\theta \\
+    &= \pi ab
+\end{align*}
+
+椭圆面积公式：$S = \pi ab$
+
+如果 $a = b = r$（圆的情况），公式变为 $S = \pi r^2$，这验证了公式的准确性。
+
+直观理解：椭圆可以看作是将半径为 $a$ 的圆在 $y$ 轴方向上压缩（或拉伸）了 $b/a$ 倍。
