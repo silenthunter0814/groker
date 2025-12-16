@@ -46,6 +46,8 @@
 
 左微分：对于区间 $[a+\delta, b]$ 内任意分割点 $x$，微分形式：$dx = x - (x - \delta) = \delta$。
 
+微分面积：$dA = f(x) \,dx$
+
 \medskip
 
 （2）面积计算
@@ -55,10 +57,15 @@
 
 左微分 $x$ 取值：$$x = a+\delta, a+2\delta, \dots, a+(\infty-2)\delta, a+(\infty-1)\delta, b$$
 
+微分面积 $dA$ 和对应点的 $F(x)$ 线性极限变化量精确相等:
+\begin{align}
+    dA = f(x) \,dx = dF(x)
+\end{align}
+
 对应关系及面积计算如下表所示：
 $$
 \begin{array}{llll}
-    n \text{值} &\quad x \text{值} &\quad \text{面积} &\quad F(x) \text{线性变化量} \\
+    n \text{值} &\quad x \text{值} &\quad dA &\quad dF(x) \\
     \hline
     0 &\quad a+0\delta &\quad f(a+0\delta) \,dx &\quad F(a+1\delta)-F(a+0\delta) \\
     1 &\quad a+1\delta &\quad f(a+1\delta) \,dx &\quad F(a+2\delta)-F(a+1\delta) \\
@@ -70,7 +77,7 @@ $$
 \end{array}
 $$
 
-表中面积列的每行和对应的 $F(x)$ 线性变化量列的每行都精确相等，两列分别相加，有
+表中面积列 $dA$ 的每行和对应的 $F(x)$ 线性变化量 $dF(x)$ 列的每行都精确相等，两列分别相加，有
 \begin{align*}
     &f(a) \,dx + f(a+\delta) \,dx + \dots + f(a+(\infty-2)\delta) \,dx + f(a+(\infty-1)\delta) \,dx \\
     &= F(a+\delta)-F(a) + F(a+2\delta)-F(a+\delta) + \cdots + F(b)-F(b-\delta) \\
