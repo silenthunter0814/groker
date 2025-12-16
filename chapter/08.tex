@@ -16,7 +16,7 @@
 
 \begin{figure}[htbp] 
     \centering
-    \includegraphics[width=0.6\textwidth]{images/07/7.3.png} 
+    \includegraphics[width=0.6\textwidth]{images/08/8.1.png} 
     \caption{\textbf{弧长微分}}
 \end{figure}
 
@@ -119,7 +119,8 @@ $t$ 是积分中的哑变量（dummy variable）。
 
 \section{曲线之间的面积}
 如果想计算两条曲线 $y = f(x)$ 和 $y = g(x)$ 在区间 $x=a$ 到 $x=b$ 之间所围成的面积 $A$，且在这个区间内 $f(x) \ge g(x)$（即 $f(x)$ 的曲线始终在 $g(x)$ 的曲线上方或与它相交），那么这个面积 $A$ 可以通过以下定积分来计算：
-begin{align*}
+
+\begin{align*}
     dA_1 &= f(x) \,dx \\
     dA_2 &= g(x) \,dx \\
     dA &= dA_1 - dA_2 = f(x) \,dx - g(x) \,dx \\
@@ -130,7 +131,7 @@ begin{align*}
 
 \medskip
 
-\textb{面积计算步骤}
+\textbf{面积计算步骤}
 （1）找到交点（确定上下限 $a$ 和 $b$）：
 
 将两个函数 $f(x)$ 和 $g(x)$ 设置相等，$f(x) = g(x)$，解出 $x$ 的值。这些 $x$ 值就是曲线的交点，它们通常作为积分的上下限 $a$ 和 $b$。如果问题已经给出了区间，则使用给定的区间端点。
@@ -153,6 +154,12 @@ begin{align*}
 \medskip
 
 \begin{example} 计算曲线 $y = x^2$ 和 $y = x$ 之间的面积。
+
+    \begin{figure}[htbp] 
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/08/8.3.png} 
+        \caption{\textbf{曲线之间的面积}}
+    \end{figure}
 
     找交点：$x^2 = x \iff x = 0,\; x = 1$。因此，$a = 0$, $b = 1$。
 
