@@ -149,3 +149,22 @@ begin{align*}
 \end{align}
 
 然后计算这个定积分，得到面积。
+
+\medskip
+
+\begin{example} 计算曲线 $y = x^2$ 和 $y = x$ 之间的面积。
+
+    找交点：$x^2 = x \iff x = 0,\; x = 1$。因此，$a = 0$, $b = 1$。
+
+    确定上下函数：
+    
+    $(0.5)^2 < (0.5)$，所以 $y = x$ 是上方的函数 ($f_{top}(x) = x$)，而 $y = x^2$ 是下方的函数 ($f_{bottom}(x) = x^2$)。
+
+    计算面积：
+    \begin{align*}
+        A &= \int_{0}^{1} (x - x^2) \, dx \\
+        &= \left[\frac{1}{2}x^2 - \frac{1}{3}x^3 \right]_0^1 = \left(\frac{1}{2} - \frac{1}{3} \right) \\
+        &= \frac 1 6
+    \end{align*}
+    曲线之间的面积是 $1/6$ 平方单位。
+\end{example}
