@@ -517,3 +517,54 @@ $$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\
 
     心形线 $r = a(1+\cos\theta)$ 的总弧长（周长）为 $8a$。
 \end{example}
+
+
+\section{旋转体的体积}
+
+旋转体的体积，简单来说，就是将一个平面图形绕着某条轴旋转 $360^{\circ}$，求所形成的几何体的体积。
+
+最常用的方法有两种：磁盘法（Disk Method） 和 外壳法（Shell Method）。
+
+\medskip
+
+\textbf{1. 磁盘法}
+
+这种方法适用于切片垂直于旋转轴的情况。可以把旋转体想象成由无数个极薄的圆柱体（圆盘）堆叠而成。
+
+如果曲线 $y = f(x)$ 绕 $x$ 轴旋转，从 $x=a$ 到 $x=b$：
+begin{align}
+    V = \int_{a}^{b} \pi f^2(x) \, dx
+\end{align}
+
+每个圆盘的半径是 $R = f(x)$，圆盘面积是 $A = \pi R^2$，厚度是 $dx$。
+
+如果是绕 $y$ 轴旋转： 公式变为
+begin{align}
+    V = \int_{c}^{d} \pi g^2(x) \, dy
+\end{align}
+
+当平面图形是由两条曲线围成，且旋转轴不在图形边缘时，中间会产生空心。这就像是在大圆盘中间挖掉了一个小圆盘。
+
+begin{align}
+V = \int_{a}^{b} \pi \left[f^2(x) - g^2(x) \right] \, dx
+\end{align}
+
+$R$： 外半径（距离旋转轴较远的函数）。
+
+$r$： 内半径（距离旋转轴较近的函数）。
+
+\medskip
+
+\textbf{2. 圆柱外壳法}
+
+这种方法适用于切片平行于旋转轴的情况。可以把几何体想象成由一层层“洋葱皮”（圆柱壳）嵌套而成。
+
+如果曲线 $y = f(x)$ 绕 $y$ 轴旋转：
+begin{align}
+    V = \int_{a}^{b} 2\pi x f(x) \, dx
+\end{align}
+
+每个外壳的半径是 $x$，高度是 $f(x)$，展开后的面积是 $2\pi \cdot \text{radius} \cdot \text{height}$。\
+
+当函数 $y = f(x)$ 很难反解成 $x = g(y)$ 时，绕 $y$ 轴旋转用外壳法通常更容易。
+
