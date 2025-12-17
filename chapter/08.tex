@@ -396,3 +396,78 @@ $$
 
 在计算某些圆形的面积或重积分时，使用极坐标可以极大减少计算的复杂度。
 
+\medskip
+
+\textbf{5. 面积公式}
+
+在极坐标系中推导面积公式，其核心思想与直角坐标系下的定积分一致：将不规则图形切割成无数个微小的“基本单元”，求和后再取极限。
+
+在直角坐标系中，我们使用的是“小矩形”；而在极坐标系中，最基本的单元是“小扇形”。
+
+\medskip
+
+（1）基本单元：扇形的面积
+
+首先，我们需要回顾几何学中扇形的面积公式。对于一个半径为 $r$，圆心角为 $\theta$（弧度制）的扇形，其面积 $A$ 为：
+$$A = \frac{1}{2}r^2\theta$$
+
+假设我们要计算由曲线 $r = f(\theta)$ 以及射线 $\theta = \alpha$ 和 $\theta = \beta$ 所围成的图形面积。
+
+（2）区间微分
+
+将角度区间 $[\alpha, \beta]$ 等分成 $\infty$ 个小区间，微分小扇形的面积 $dA$：
+\begin{align*}
+    \delta &= \frac{\beta - \alpha}{\infty} = ({\beta - \alpha) \epsilon \\
+    d\theta &= (\theta + \delta) - \theta = \theta - (\theta - \delta) = \delta \\
+    dA = \frac{1}{2} f^2(\theta) \d\theta
+\end{align*}
+
+（3）区间积分
+
+将所有小扇形的面积相加，得到总面积 $A$：
+\begin{align*}
+    A = \sum_{n = 1}^\infty \frac{1}{2} (\alpha + n\delta) \,d\theta = \int_\alpha^\beta \frac{1}{2} f^2(\theta) \d\theta 
+\end{align*}
+
+（3）极坐标下面积公式
+
+极坐标下曲线 $r = f(\theta)$ 围成的面积公式为：
+\begin{align}
+    A = \frac{1}{2} \int_\alpha^\beta f^2(\theta) \d\theta = \frac{1}{2} \int_\alpha^\beta r^2 \d\theta
+\end{align}
+
+\medskip
+
+\begin{example} 计算心形线 $r = a(1 + \cos\theta)$ 的面积
+
+    由于心形线在 $\theta$ 从 $0$ 变到 $2\pi$ 时刚好绕原点一周，形成一个封闭图形，因此积分限为：
+    
+    下限 $\alpha = 0$
+    
+    上限 $\beta = 2\pi$
+
+    观察心形线的图形可以发现它关于极轴（$x$轴）对称。因此，我们可以先计算上半部分（$0$ 到 $\pi$），再将结果乘以 $2$。
+
+    根据公式 $A = \frac{1}{2} \int_{\alpha}^{\beta} r^2 \, d\theta$，代入 $r = a(1 + \cos\theta)$：
+    \begin{align*}
+        A &= \frac{1}{2} \int_{0}^{2\pi} [a(1 + \cos\theta)]^2 \, d\theta \\
+        &= \frac{a^2}{2} \int_{0}^{2\pi} (1 + 2\cos\theta + \cos^2\theta) \, d\theta
+    \end{align*}
+
+    用三角恒等式降次：$\cos^2\theta = \frac{1 + \cos(2\theta)}{2}$:
+    \begin{align*}
+        A &= \frac{a^2}{2} \int_{0}^{2\pi} \left( 1 + 2\cos\theta + \frac{1 + \cos(2\theta)}{2} \right) \, d\theta \\
+        &= \frac{a^2}{2} \int_{0}^{2\pi} \left( \frac{3}{2} + 2\cos\theta + \frac{1}{2}\cos(2\theta) \right) \, d\theta
+    \end{align*}
+
+    现在逐项积分：
+    \begin{align*}
+        \int_{0}^{2\pi} \frac{3}{2} \, d\theta &= \frac{3}{2}\theta \,\Bigg |_0^{2\pi} = 3\pi \\
+        \int_{0}^{2\pi} 2\cos\theta \, d\theta &= 2\sin\theta \,\Bigg |_0^{2\pi} = 0 \\
+        \int_{0}^{2\pi} \frac{1}{2}\cos(2\theta) \, d\theta &= \frac{1}{4}\int_{0}^{2\pi} \cos(2\theta) \, d2\theta = \frac{1}{4}\sin(2\theta) \,\Bigg |_0^{2\pi} = 0
+    \end{align*}
+
+    将上述结果加总并乘以系数：$$A = \frac{a^2}{2} \cdot (3\pi + 0 + 0) = \frac{3}{2}\pi a^2$$
+
+    心形线 $r = a(1 + \cos\theta)$ 所围成的面积为 $\frac{3}{2}\pi a^2$。
+\end{example}
