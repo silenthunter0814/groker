@@ -41,3 +41,12 @@
 \contentsline {section}{\numberline {8.4}旋转体的体积}{117}{section.8.4}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}积分和积分方法}{121}{chapter.9}%
 \contentsline {section}{\numberline {9.1}导数的定义与几何意义}{121}{section.9.1}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}向量代数}{123}{chapter.10}%
+\contentsline {section}{\numberline {10.1}1}{123}{section.10.1}%
+\contentsline {section}{\numberline {10.2}2}{124}{section.10.2}%
+\contentsline {section}{\numberline {10.3}3}{125}{section.10.3}%
+\contentsline {section}{\numberline {10.4}4}{126}{section.10.4}%
+\contentsline {section}{\numberline {10.5}5}{127}{section.10.5}%
+\contentsline {section}{\numberline {10.6}6}{128}{section.10.6}%
+\contentsline {section}{\numberline {10.7}7}{129}{section.10.7}%
+\contentsline {section}{\numberline {10.8}8}{130}{section.10.8}%
