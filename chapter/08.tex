@@ -389,8 +389,7 @@ $$
     \text{玫瑰线} & r = a \sin(n\theta) &\text{像花瓣一样的图形，$n$ 决定花瓣数量} \\
     \text{阿基米德螺旋线} & r = a \theta &\text{随着角度增大，距离匀速增加的螺旋} \\
     \text{心形线} & r = a(1 - \sin\theta) &\text{形状像一颗心} \\
-    \hline
-    
+    \hline    
 \end{array}
 $$
 
@@ -416,24 +415,25 @@ $$A = \frac{1}{2}r^2\theta$$
 （2）区间微分
 
 将角度区间 $[\alpha, \beta]$ 等分成 $\infty$ 个小区间，微分小扇形的面积 $dA$：
+
 \begin{align*}
-    \delta &= \frac{\beta - \alpha}{\infty} = ({\beta - \alpha) \epsilon \\
+    \delta &= \frac{\beta - \alpha}{\infty} = (\beta - \alpha) \epsilon \\
     d\theta &= (\theta + \delta) - \theta = \theta - (\theta - \delta) = \delta \\
-    dA = \frac{1}{2} f^2(\theta) \d\theta
+    dA &= \frac{1}{2} f^2(\theta) \,d\theta
 \end{align*}
 
 （3）区间积分
 
 将所有小扇形的面积相加，得到总面积 $A$：
 \begin{align*}
-    A = \sum_{n = 1}^\infty \frac{1}{2} (\alpha + n\delta) \,d\theta = \int_\alpha^\beta \frac{1}{2} f^2(\theta) \d\theta 
+    A = \sum_{n = 1}^\infty \frac{1}{2} f^2(\alpha + n\delta) \,d\theta = \int_\alpha^\beta \frac{1}{2} f^2(\theta) \,d\theta 
 \end{align*}
 
 （3）极坐标下面积公式
 
 极坐标下曲线 $r = f(\theta)$ 围成的面积公式为：
 \begin{align}
-    A = \frac{1}{2} \int_\alpha^\beta f^2(\theta) \d\theta = \frac{1}{2} \int_\alpha^\beta r^2 \d\theta
+    A = \frac{1}{2} \int_\alpha^\beta f^2(\theta) \,d\theta = \frac{1}{2} \int_\alpha^\beta r^2 \,d\theta
 \end{align}
 
 \medskip
@@ -481,19 +481,19 @@ $$x = r \cos\theta, \quad y = r \sin\theta$$
 
 其中 $r$ 是 $\theta$ 的函数 $r = f(\theta)$。对 $x, y$ 关于 $\theta$ 求导：
 \begin{align*}
-    x = r \cos\theta, \quad y = r \sin\theta \\
+    x &= r \cos\theta, \quad y = r \sin\theta \\
     dx &= dr\cos\theta = \cos\theta \,dr + r \,d\cos\theta \\
     &= \cos\theta \,dr - r\sin\theta \,d\theta \\
     dy &= dr\sin\theta = \sin\theta \,dr + r \,d\sin\theta \\
     &= \sin\theta \,dr + r\cos\theta \,d\theta \\
-    d^2 x + d^2 y &= (\cos\theta \,dr - r\sin\theta \,d\theta)^2 + (\sin\theta \,dr + r\cos\theta \,d\theta) \\
+    d^2 x + d^2 y &= (\cos\theta \,dr - r\sin\theta \,d\theta)^2 + (\sin\theta \,dr + r\cos\theta \,d\theta)^2 \\
     &= d^2 r + r^2 \,d^2 \theta \\
     &= \left[r^2 +\left(\frac{dr}{d\theta} \right)^2 \right] \cdot d^2 \theta \\
     ds &= \sqrt{dx^2 + dy^2} = \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\theta
 \end{align*}
 
-如果曲线 $r = f(\theta)$ 在区间 $[\alpha, \beta]$ 上连续可导，则其弧长 $L$ 为：
-$$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\theta = L = \int_{\alpha}^{\beta} \sqrt{r^2 + (r')^2} d\theta$$
+如果曲线 $r = f(\theta)$ 在区间 $[\alpha, \beta]$ 上连续可导，则其弧长 $s$ 为：
+$$s = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\theta = \int_{\alpha}^{\beta} \sqrt{r^2 + (r')^2} d\theta$$
 
 \medskip
 
@@ -510,7 +510,7 @@ $$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\
 
     考虑到对称性，我们计算上半部分（$0$ 到 $\pi$）再乘以 $2$。在 $0 \le \theta \le \pi$ 时，$\cos\frac{\theta}{2} \ge 0$，所以：
     \begin{align*}
-        L &= 2 \int_{0}^{\pi} 2a\cos\frac{\theta}{2} \, d\theta \\
+        s &= 2 \int_{0}^{\pi} 2a\cos\frac{\theta}{2} \, d\theta \\
         &= 4a \cdot \left[ 2\sin\frac{\theta}{2} \right]_0^{\pi} \\
         &= 4a \cdot (2 - 0) = 8a
     \end{align*}
@@ -532,20 +532,19 @@ $$L = \int_{\alpha}^{\beta} \sqrt{r^2 + \left(\frac{dr}{d\theta}\right)^2} \, d\
 这种方法适用于切片垂直于旋转轴的情况。可以把旋转体想象成由无数个极薄的圆柱体（圆盘）堆叠而成。
 
 如果曲线 $y = f(x)$ 绕 $x$ 轴旋转，从 $x=a$ 到 $x=b$：
-begin{align}
+\begin{align}
     V = \int_{a}^{b} \pi f^2(x) \, dx
 \end{align}
 
 每个圆盘的半径是 $R = f(x)$，圆盘面积是 $A = \pi R^2$，厚度是 $dx$。
 
 如果是绕 $y$ 轴旋转： 公式变为
-begin{align}
+\begin{align}
     V = \int_{c}^{d} \pi g^2(x) \, dy
 \end{align}
 
 当平面图形是由两条曲线围成，且旋转轴不在图形边缘时，中间会产生空心。这就像是在大圆盘中间挖掉了一个小圆盘。
-
-begin{align}
+\begin{align}
 V = \int_{a}^{b} \pi \left[f^2(x) - g^2(x) \right] \, dx
 \end{align}
 
@@ -568,11 +567,11 @@ $r$： 内半径（距离旋转轴较近的函数）。
     区间： $x \in [0, \pi/2]$
 
     代入公式计算体积：
-    begin{align*}
-    V &= \int_{0}^{\pi/2} \pi (1^2 - \sin^2 x) \, dx = \pi \int_{0}^{\pi/2} \cos^2 x \, dx \\
-    &= \frac{\pi}{2} \int_{0}^{\pi/2} (1 + \cos(2x)) \, dx \\
-    &= \frac{\pi}{2} \left[ x + \frac{1}{2}\sin(2x) \right]_{0}^{\pi/2} 
-    &= \frac{\pi}{2} \cdot \frac{\pi}{2} = \frac{\pi^2}{4}
+    \begin{align*}
+        V &= \int_{0}^{\pi/2} \pi (1^2 - \sin^2 x) \, dx = \pi \int_{0}^{\pi/2} \cos^2 x \, dx \\
+        &= \frac{\pi}{2} \int_{0}^{\pi/2} (1 + \cos(2x)) \, dx \\
+        &= \frac{\pi}{2} \left[ x + \frac{1}{2}\sin(2x) \right]_{0}^{\pi/2} 
+        &= \frac{\pi}{2} \cdot \frac{\pi}{2} = \frac{\pi^2}{4}
     \end{align*}
 \end{example}
 
@@ -583,7 +582,7 @@ $r$： 内半径（距离旋转轴较近的函数）。
 这种方法适用于切片平行于旋转轴的情况。可以把几何体想象成由一层层“洋葱皮”（圆柱壳）嵌套而成。
 
 如果曲线 $y = f(x)$ 绕 $y$ 轴旋转：
-begin{align}
+\begin{align}
     V = \int_{a}^{b} 2\pi x f(x) \, dx
 \end{align}
 
@@ -610,7 +609,7 @@ begin{align}
     积分区间： 从图形的左端点 $x=0$ 到右端点 $x=3$。
 
     代入公式计算体积：
-    begin{align*}
+    \begin{align*}
         V &= \int_{a}^{b} 2\pi x f(x) \, dx \\
         &= \int_{0}^{3} 2\pi \cdot x \cdot (3x - x^2) \, dx = 2\pi \int_{0}^{3} (3x^2 - x^3) \, dx \\
         &= 2\pi \left[ x^3 - \frac{1}{4}x^4 \right]_{0}^{3} \\
