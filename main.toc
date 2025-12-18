@@ -50,3 +50,5 @@
 \contentsline {section}{\numberline {10.6}6}{128}{section.10.6}%
 \contentsline {section}{\numberline {10.7}7}{129}{section.10.7}%
 \contentsline {section}{\numberline {10.8}8}{130}{section.10.8}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}初等向量分析}{133}{chapter.11}%
+\contentsline {section}{\numberline {11.1}向量的微分与积分}{133}{section.11.1}%
