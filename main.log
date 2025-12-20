@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  20 DEC 2025 20:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  20 DEC 2025 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1035,7 +1035,7 @@ File: images/08/8.5.png Graphic file (type bmp)
 ]
 第十章
 [123] [124] [125]
-Overfull \hbox (2.9706pt too wide) in paragraph at lines 151--152
+Overfull \hbox (2.9706pt too wide) in paragraph at lines 161--162
 []\TU/FandolSong-Regular(0)/m/n/12 这 里 的 $\OML/cmm/m/it/12 z$ \TU/FandolSong-Regular(0)/m/n/12 不 是 独 立 的，|  它 受 制 于 曲 面 方 程 $\OML/cmm/m/it/12 z \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$\TU/FandolSong-Regular(0)/m/n/12 。|  所 以 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 x; y; f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ))$\TU/FandolSong-Regular(0)/m/n/12 。| 
  []
 
@@ -1072,33 +1072,33 @@ Missing character: There is no ∘ (U+2218) in font [lmroman12-regular]:mapping=
 Missing character: There is no ⋅ (U+22C5) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ′ (U+2032) in font [lmroman12-regular]:mapping=tex-text;!
 [136] [137] [138] [139] [140] [141]
-Overfull \hbox (2.28427pt too wide) in paragraph at lines 930--931
+Overfull \hbox (2.28427pt too wide) in paragraph at lines 940--941
 []\TU/FandolSong-Regular(0)/m/n/12 左 边 \TU/lmr/m/n/12 (4): \TU/FandolSong-Regular(0)/m/n/12 沿 $\OML/cmm/m/it/12 y$ \TU/FandolSong-Regular(0)/m/n/12 负 向。|  功 $\OMS/cmsy/m/n/12 ^^Y ^^@\OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )^^A\OML/cmm/m/it/12 y$\TU/FandolSong-Regular(0)/m/n/12 。|  这 两 条 边 之 和：| $\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + ^^A\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )]^^A\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12 ^^Y
  []
 
 
-Overfull \hbox (0.25249pt too wide) in paragraph at lines 948--949
+Overfull \hbox (0.25249pt too wide) in paragraph at lines 958--959
 []\TU/FandolSong-Regular(0)/m/n/12 几 何 事 实：|  通 过 对 微 小 矩 形 四 条 边 的 直 接 计 算，|  发 现 环 流 等 于 $[] \OMS/cmsy/m/n/12 ^^B
  []
 
 [142] [143] [144] [145]
-Overfull \hbox (11.15079pt too wide) in paragraph at lines 1128--1129
+Overfull \hbox (11.15079pt too wide) in paragraph at lines 1138--1139
 []\TU/FandolSong-Regular(0)/m/n/12 对 于 曲 线 边 界  |（如 圆、|  椭 圆） ：|  如 果 你 使 用 极 坐 标 下 的 向 量 表 示 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 r [] ^^R; r [] ^^R\OT1/cmr/m/n/12 )$\TU/FandolSong-Regular(0)/m/n/12 ，|
  []
 
-[146] [147] [148] [149] [150]) [151]
+[146] [147] [148] [149] [150]) [151] [152]
 \openout2 = `chapter/reference.aux'.
 
- (./chapter/reference.tex [152
-
-
-
-
-]
+ (./chapter/reference.tex
 第十一章
 File: images/ref/fig46.png Graphic file (type bmp)
 <images/ref/fig46.png>
-[153] [154]) [155] [156] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
+[153
+
+
+
+
+] [154]) [155] [156] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
