@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  20 DEC 2025 15:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  20 DEC 2025 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,13 +866,14 @@ Underfull \vbox (badness 1275) has occurred while \output is active []
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [8]
+ [8] [9] [10
+
+]
 \openout2 = `chapter/01.aux'.
 
  (./chapter/01.tex
 第一章
 [1
-
 
 
 ]
@@ -1038,22 +1039,14 @@ Overfull \hbox (2.9706pt too wide) in paragraph at lines 151--152
 []\TU/FandolSong-Regular(0)/m/n/12 这 里 的 $\OML/cmm/m/it/12 z$ \TU/FandolSong-Regular(0)/m/n/12 不 是 独 立 的，|  它 受 制 于 曲 面 方 程 $\OML/cmm/m/it/12 z \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$\TU/FandolSong-Regular(0)/m/n/12 。|  所 以 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 x; y; f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ))$\TU/FandolSong-Regular(0)/m/n/12 。| 
  []
 
-[126]
+[126] [127] [128] [129] [130]
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ⋅ (U+22C5) in font [lmroman12-regular]:mapping=tex-text;!
-[127]
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ∘ (U+2218) in font [lmroman12-regular]:mapping=tex-text;!
-[128]
+[131] [132]
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
@@ -1068,29 +1061,35 @@ Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ∘ (U+2218) in font [lmroman12-regular]:mapping=tex-text;!
-[129] [130]
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ∘ (U+2218) in font [lmroman12-regular]:mapping=tex-text;!
+[133] [134] [135]
 Missing character: There is no ⋅ (U+22C5) in font [lmroman12-regular]:mapping=tex-text;!
-[131]
 Missing character: There is no ′ (U+2032) in font [lmroman12-regular]:mapping=tex-text;!
-[132] [133] [134] [135] [136]
-Overfull \hbox (2.28427pt too wide) in paragraph at lines 700--701
+[136] [137] [138] [139] [140] [141]
+Overfull \hbox (2.28427pt too wide) in paragraph at lines 930--931
 []\TU/FandolSong-Regular(0)/m/n/12 左 边 \TU/lmr/m/n/12 (4): \TU/FandolSong-Regular(0)/m/n/12 沿 $\OML/cmm/m/it/12 y$ \TU/FandolSong-Regular(0)/m/n/12 负 向。|  功 $\OMS/cmsy/m/n/12 ^^Y ^^@\OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )^^A\OML/cmm/m/it/12 y$\TU/FandolSong-Regular(0)/m/n/12 。|  这 两 条 边 之 和：| $\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + ^^A\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )]^^A\OML/cmm/m/it/12 y \OMS/cmsy/m/n/12 ^^Y
  []
 
-[137]
-Overfull \hbox (0.25249pt too wide) in paragraph at lines 718--719
+
+Overfull \hbox (0.25249pt too wide) in paragraph at lines 948--949
 []\TU/FandolSong-Regular(0)/m/n/12 几 何 事 实：|  通 过 对 微 小 矩 形 四 条 边 的 直 接 计 算，|  发 现 环 流 等 于 $[] \OMS/cmsy/m/n/12 ^^B
  []
 
-[138] [139] [140] [141]
-Overfull \hbox (11.15079pt too wide) in paragraph at lines 898--899
+[142] [143] [144] [145]
+Overfull \hbox (11.15079pt too wide) in paragraph at lines 1128--1129
 []\TU/FandolSong-Regular(0)/m/n/12 对 于 曲 线 边 界  |（如 圆、|  椭 圆） ：|  如 果 你 使 用 极 坐 标 下 的 向 量 表 示 $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 r [] ^^R; r [] ^^R\OT1/cmr/m/n/12 )$\TU/FandolSong-Regular(0)/m/n/12 ，|
  []
 
-[142] [143] [144] [145] [146]) [147]
+[146] [147] [148] [149] [150]) [151]
 \openout2 = `chapter/reference.aux'.
 
- (./chapter/reference.tex [148
+ (./chapter/reference.tex [152
 
 
 
@@ -1099,18 +1098,18 @@ Overfull \hbox (11.15079pt too wide) in paragraph at lines 898--899
 第十一章
 File: images/ref/fig46.png Graphic file (type bmp)
 <images/ref/fig46.png>
-[149] [150]) [151] [152] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
+[153] [154]) [155] [156] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31993 strings out of 477728
- 729124 string characters out of 5842237
- 967304 words of memory out of 5000000
- 52016 multiletter control sequences out of 15000+600000
+ 32021 strings out of 477728
+ 731143 string characters out of 5842237
+ 968305 words of memory out of 5000000
+ 52044 multiletter control sequences out of 15000+600000
  479494 words of font info for 106 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,16n,97p,1253b,774s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (160 pages).
+Output written on main.pdf (166 pages).
