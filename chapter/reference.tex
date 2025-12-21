@@ -281,3 +281,82 @@ $$r^2 - 2\mathbf{r} \cdot \mathbf{c} + c^2 = a^2$$
 $$(\mathbf{r} - \mathbf{r}_0) \cdot (\mathbf{r}_0 - \mathbf{c}) = 0$$
 
 
+\section{矢量微积分 —— 矢量函数}
+
+矢量函数的定义：
+
+如果对于标量变量 $t$ 在某个区间内的每一个值，都有一个唯一的矢量 $\mathbf{u}$ 与之对应，则称 $\mathbf{u}$ 是 $t$ 的矢量函数，记作 $\mathbf{u} = \mathbf{f}(t)$。在直角坐标系中，这等价于其三个分量都是 $t$ 的标量函数：
+$$\mathbf{u}(t) = u_x(t)\mathbf{i} + u_y(t)\mathbf{j} + u_z(t)\mathbf{k}$$
+
+极限与连续性：
+
+若当 $t \to t_0$ 时，矢量 $\mathbf{u}(t)$ 的模与某一固定矢量 $\mathbf{L}$ 的差趋于零，即 $\lim_{t \to t_0} |\mathbf{u}(t) - \mathbf{L}| = 0$，则称 $\mathbf{L}$ 为 $\mathbf{u}(t)$ 的极限。如果 $\lim_{t \to t_0} \mathbf{u}(t) = \mathbf{u}(t_0)$，则称该矢量函数在 $t_0$ 处连续。
+
+第 27 页：矢量的导数
+
+导数的定义：设 $\mathbf{r}(t)$ 是随标量 $t$ 变化的矢量。其关于 $t$ 的导数定义为：
+
+$$\frac{d\mathbf{r}}{dt} = \lim_{\Delta t \to 0} \frac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}$$
+
+如果 $\mathbf{r}$ 表示质点的位置矢量，且 $t$ 表示时间，那么 $d\mathbf{r}/dt$ 就是质点的瞬时速度矢量 $\mathbf{v}$。
+
+几何意义：
+
+从几何上看，$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$ 是曲线上的弦矢量。随着 $\Delta t \to 0$，该矢量的方向趋于曲线在该点处的切线方向。因此，$d\mathbf{r}/dt$ 是一个沿切线方向的矢量。
+
+第 28 页：微分运算法则
+
+矢量导数的运算法则与标量微积分极其相似，但必须注意叉积的顺序。设 $\mathbf{u}, \mathbf{v}$ 为可微矢量函数，$\phi$ 为可微标量函数：
+
+加法法则：
+$$\frac{d}{dt}(\mathbf{u} + \mathbf{v}) = \frac{d\mathbf{u}}{dt} + \frac{d\mathbf{v}}{dt}$$
+
+标量乘积法则：
+$$\frac{d}{dt}(\phi \mathbf{u}) = \frac{d\phi}{dt}\mathbf{u} + \phi \frac{d\mathbf{u}}{dt}$$
+
+点积法则：
+$$\frac{d}{dt}(\mathbf{u} \cdot \mathbf{v}) = \frac{d\mathbf{u}}{dt} \cdot \mathbf{v} + \mathbf{u} \cdot \frac{d\mathbf{v}}{dt}$$
+
+叉积法则：
+$$\frac{d}{dt}(\mathbf{u} \times \mathbf{v}) = \frac{d\mathbf{u}}{dt} \times \mathbf{v} + \mathbf{u} \times \frac{d\mathbf{v}}{dt}$$
+
+注意：叉积项的顺序必须保持不变。
+
+第 29 页：常量模矢量的性质
+
+重要定理：如果一个矢量 $\mathbf{a}(t)$ 的模长是常数（即 $|\mathbf{a}| = c$），则该矢量与其导数矢量互相垂直。
+
+证明：因为 $|\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a} = c^2$。对等式两边关于 $t$ 求导：
+$$\frac{d}{dt}(\mathbf{a} \cdot \mathbf{a}) = 0$$
+$$\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} + \frac{d\mathbf{a}}{dt} \cdot \mathbf{a} = 0$$
+$$2\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} = 0$$
+
+由此得 $\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} = 0$，即 $\mathbf{a} \perp \frac{d\mathbf{a}}{dt}$。
+这个结论在研究圆周运动（半径矢量模长不变）或单位矢量场时非常有用。
+
+第 30 页：偏导数与复合函数求导
+
+偏导数：
+
+如果矢量 $\mathbf{A}$ 是多个标量变量（如 $x, y, z$）的函数，我们可以定义其偏导数。例如，关于 $x$ 的偏导数为：
+
+$$\frac{\partial \mathbf{A}}{\partial x} = \lim_{\Delta x \to 0} \frac{\mathbf{A}(x + \Delta x, y, z) - \mathbf{A}(x, y, z)}{\Delta x}$$
+
+这可以通过对 $\mathbf{A}$ 的各个分量分别求偏导来实现。
+
+全微分：
+
+若 $\mathbf{A} = \mathbf{A}(x, y, z)$，则其全微分为：
+
+$$d\mathbf{A} = \frac{\partial \mathbf{A}}{\partial x}dx + \frac{\partial \mathbf{A}}{\partial y}dy + \frac{\partial \mathbf{A}}{\partial z}dz$$
+
+链式法则：
+
+若 $\mathbf{A}$ 是 $s$ 的函数，而 $s$ 又是 $t$ 的函数，则：
+$$\frac{d\mathbf{A}}{dt} = \frac{d\mathbf{A}}{ds} \frac{ds}{dt}$$
+
+
+
+
+
+
