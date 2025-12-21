@@ -356,7 +356,78 @@ $$d\mathbf{A} = \frac{\partial \mathbf{A}}{\partial x}dx + \frac{\partial \mathb
 $$\frac{d\mathbf{A}}{dt} = \frac{d\mathbf{A}}{ds} \frac{ds}{dt}$$
 
 
+第 31 页：空间曲线与弧长
 
+曲线的参数化：
+
+考虑由方程 $\mathbf{r} = \mathbf{r}(s)$ 定义的空间曲线，其中 $s$ 是沿曲线测量的弧长。使用弧长作为参数具有特殊的数学意义，因为当参数变化 $\Delta s$ 时，点在空间移动的距离（弦长）在极限情况下等于弧长。
+
+单位切矢量：
+
+导数 $\mathbf{T} = d\mathbf{r}/ds$ 是一个矢量，其方向沿曲线的切线方向。由于 $|\Delta \mathbf{r}| / \Delta s \to 1$（当 $\Delta s \to 0$ 时），因此 $\mathbf{T}$ 是一个单位矢量，即 $|\mathbf{T}| = 1$。
+我们称 $\mathbf{T}$ 为曲线在某点处的单位切矢量。
+
+第 32 页：曲率与主法矢量
+
+曲率的定义：由于 $\mathbf{T}$ 是单位矢量，根据前一页的定理，其导数 $d\mathbf{T}/ds$ 必然与 $\mathbf{T}$ 垂直。我们定义：
+
+其中：
+
+$\kappa$（Kappa）称为曲线在该点处的曲率（Curvature），它衡量了切线方向随弧长变化的速率。
+
+$\mathbf{N}$ 是与 $\mathbf{T}$ 垂直的单位矢量，称为主法矢量（Principal Normal）。
+
+曲率半径：
+
+曲率的倒数 $\rho = 1/\kappa$ 称为曲率半径。$\kappa = 0$ 意味着曲线在这一点是直线。
+
+第 33 页：副法矢量与密切平面
+
+副法矢量的定义：
+
+我们引入第三个单位矢量 $\mathbf{B}$，定义为切矢量和主法矢量的叉积：$$\mathbf{B} = \mathbf{T} \times \mathbf{N}$$
+
+矢量 $\mathbf{B}$ 称为副法矢量（Binormal）。由定义可知，$\mathbf{T, N, B}$ 构成一个彼此垂直的右手正交标架（称为 Frenet 标架）。
+
+相关的平面：
+
+密切平面（Osculating Plane）：由 $\mathbf{T}$ 和 $\mathbf{N}$ 确定的平面（法矢量为 $\mathbf{B}$）。曲线在该平面内有最大的弯曲趋势。
+
+法平面（Normal Plane）：由 $\mathbf{N}$ 和 $\mathbf{B}$ 确定的平面（法矢量为 $\mathbf{T}$）。
+
+从切平面（Rectifying Plane）：由 $\mathbf{T}$ 和 $\mathbf{B}$ 确定的平面（法矢量为 $\mathbf{N}$）。
+
+第 34 页：挠率与 Serret-Frenet 公式 (1)
+
+挠率的定义：现在考虑副法矢量 $\mathbf{B}$ 随弧长的变化率 $d\mathbf{B}/ds$。可以证明它一定平行于 $\mathbf{N}$。我们定义：
+
+$$\frac{d\mathbf{B}}{ds} = -\tau \mathbf{N}$$
+
+其中标量 $\tau$（Tau）称为曲线的挠率（Torsion）。挠率衡量了曲线脱离其密切平面的程度（即曲线在空间中“扭曲”的程度）。
+
+若 $\tau = 0$，则曲线始终位于同一个平面内（平面曲线）。
+
+Serret-Frenet 公式的前两个：
+
+$d\mathbf{T}/ds = \kappa \mathbf{N}$
+
+$d\mathbf{B}/ds = -\tau \mathbf{N}$
+
+第 35 页：Serret-Frenet 公式 (2)
+
+推导 $d\mathbf{N}/ds$：利用 $\mathbf{N} = \mathbf{B} \times \mathbf{T}$，我们可以通过对乘积求导来推导主法矢量的变化率：
+
+$$\frac{d\mathbf{N}}{ds} = \frac{d\mathbf{B}}{ds} \times \mathbf{T} + \mathbf{B} \times \frac{d\mathbf{T}}{ds}$$
+
+代入已知的关系式：
+$$\frac{d\mathbf{N}}{ds} = (-\tau \mathbf{N}) \times \mathbf{T} + \mathbf{B} \times (\kappa \mathbf{N})$$
+
+利用右手定则，最终得到：
+$$\frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T}$$
+
+总结（Serret-Frenet 公式组）：这是一组描述空间曲线几何特性的基本方程：
+
+$$\begin{cases} \frac{d\mathbf{T}}{ds} = \kappa \mathbf{N} \\ \frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T} \\ \frac{d\mathbf{B}}{ds} = -\tau \mathbf{N} \end{cases}$$
 
 
 
