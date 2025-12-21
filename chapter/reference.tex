@@ -502,5 +502,79 @@ $$\frac{d\phi}{ds} = \nabla \phi \cdot \mathbf{u} = |\nabla \phi| \cos \theta$$
 
 结论：梯度矢量的方向是标量场增加最快的方向，其模长等于该最大增加率。
 
+第 41 页：梯度的代数性质与恒等式
 
+基本运算法则：设 $\phi$ 和 $\psi$ 是可微的标量场，$c$ 为常数，则梯度运算满足以下代数性质：
 
+线性性质：$\nabla(\phi + \psi) = \nabla\phi + \nabla\psi$ 以及 $\nabla(c\phi) = c\nabla\phi$。
+
+乘积法则：$\nabla(\phi\psi) = \phi\nabla\psi + \psi\nabla\phi$。
+
+商法则：$\nabla\left(\frac{\phi}{\psi}\right) = \frac{\psi\nabla\phi - \phi\nabla\psi}{\psi^2}$ （在 $\psi \neq 0$ 处）。
+
+复合函数梯度：若 $f$ 是标量 $u$ 的函数，而 $u$ 又是坐标的函数 $u(x, y, z)$，则：
+
+$$\nabla f(u) = f'(u) \nabla u$$
+
+例如，若 $r = \sqrt{x^2+y^2+z^2}$ 是到原点的距离，则 $\nabla r = \frac{\mathbf{r}}{r}$（单位径向矢量）。
+
+第 42 页：矢量场的散度 (The Divergence)
+
+定义：设 $\mathbf{V}(x, y, z) = V_x\mathbf{i} + V_y\mathbf{j} + V_z\mathbf{k}$ 是一个可微的矢量场。$\mathbf{V}$ 的散度定义为一个标量场，记作 $\text{div} \mathbf{V}$ 或 $\nabla \cdot \mathbf{V}$：
+
+$$\nabla \cdot \mathbf{V} = \left(\mathbf{i}\frac{\partial}{\partial x} + \mathbf{j}\frac{\partial}{\partial y} + \mathbf{k}\frac{\partial}{\partial z}\right) \cdot (V_x\mathbf{i} + V_y\mathbf{j} + V_z\mathbf{k})$$
+
+展开得：
+$$\nabla \cdot \mathbf{V} = \frac{\partial V_x}{\partial x} + \frac{\partial V_y}{\partial y} + \frac{\partial V_z}{\partial z}$$
+
+物理意义：在流体动力学中，若 $\mathbf{V}$ 代表流体的速度，那么 $\nabla \cdot \mathbf{V}$ 表示单位时间内从单位体积元中流出的流体净通量。
+
+若 $\nabla \cdot \mathbf{V} > 0$，该点存在“源”（Source）。
+
+若 $\nabla \cdot \mathbf{V} < 0$，该点存在“汇”（Sink）。
+
+若 $\nabla \cdot \mathbf{V} = 0$，则称该场为无散场或螺线场（Solenoidal Field）。
+
+第 43 页：矢量场的旋度 (The Curl)
+
+定义：矢量场 $\mathbf{V}$ 的旋度定义为一个新的矢量场，记作 $\text{curl} \mathbf{V}$ 或 $\nabla \times \mathbf{V}$。它可以通过算子 $\nabla$ 与 $\mathbf{V}$ 的叉积得到：
+
+$$\nabla \times \mathbf{V} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ V_x & V_y & V_z \end{vmatrix}$$
+
+展开分量形式为：
+$$\nabla \times \mathbf{V} = \left( \frac{\partial V_z}{\partial y} - \frac{\partial V_y}{\partial z} \right)\mathbf{i} + \left( \frac{\partial V_x}{\partial z} - \frac{\partial V_z}{\partial x} \right)\mathbf{j} + \left( \frac{\partial V_y}{\partial x} - \frac{\partial V_x}{\partial y} \right)\mathbf{k}$$
+
+物理意义：
+
+旋度描述了矢量场在某点附近的旋转强度和方向。例如，在流体中，旋度代表了流体微团的局部角速度。若 $\nabla \times \mathbf{V} = \mathbf{0}$，则称该场为无旋场（Irrotational Field）。
+
+第 44 页：包含 $\nabla$ 的重要组合恒等式
+
+当 $\nabla$ 算子与多个场结合时，会产生一些极其重要的二阶恒等式。设 $\phi$ 为标量场，$\mathbf{V}$ 为矢量场：
+
+标量场梯度的旋度恒为零：
+$$\nabla \times (\nabla \phi) = \mathbf{0}$$
+
+（这意味着任何梯度场都是无旋场。）
+
+矢量场旋度的散度恒为零：
+$$\nabla \cdot (\nabla \times \mathbf{V}) = 0$$
+
+（这意味着任何旋度场都是无散场。）
+
+乘积的散度：
+$$\nabla \cdot (\phi \mathbf{V}) = \phi (\nabla \cdot \mathbf{V}) + (\nabla \phi) \cdot \mathbf{V}$$
+
+第 45 页：拉普拉斯算子 (The Laplacian)
+
+定义：标量场 $\phi$ 梯度的散度称为 $\phi$ 的拉普拉斯运算，记作 $\nabla^2 \phi$ 或 $\Delta \phi$：
+
+$$\nabla^2 \phi = \nabla \cdot (\nabla \phi) = \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} + \frac{\partial^2 \phi}{\partial z^2}$$
+
+这是一个二阶偏微分算子，广泛应用于波动方程、热传导方程以及静电势分析（泊松方程和拉普拉斯方程）。
+
+矢量拉普拉斯算子：对于矢量场 $\mathbf{V}$，其拉普拉斯运算定义为对其每个分量分别进行拉普拉斯运算：
+$$\nabla^2 \mathbf{V} = (\nabla^2 V_x)\mathbf{i} + (\nabla^2 V_y)\mathbf{j} + (\nabla^2 V_z)\mathbf{k}$$
+
+此外，它与梯度、散度、旋度之间存在著名的恒等式：
+$$\nabla \times (\nabla \times \mathbf{V}) = \nabla (\nabla \cdot \mathbf{V}) - \nabla^2 \mathbf{V}$$
