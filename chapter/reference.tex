@@ -1,110 +1,203 @@
-\chapter{初等向量分析}
+\chapter{矢量与张量分析}
 
 
-\section{向量的微分与积分}
+\section{矢量代数}
 
-曲线的曲率与挠率
+1.1 矢量的定义 (Definition of a Vector)
+在物理学和工程学中，我们经常遇到两类量：标量 (Scalars) 和 矢量 (Vectors)。
 
-55. 本章的主要目的是说明向量关于标量变量（Scalar variable）的微分与积分。
+标量： 仅由其大小（带正号或负号）确定的量。例如：质量、时间、温度、密度、功和能量。标量遵循普通代数的运算法则。
 
-在本章中，我们仅讨论单一自变量的情况，偏微分（Partial differentiation）的内容将留在第二卷中进行探讨。由于篇幅仅限一章，我们无法详尽地考究有关连续性（Continuity）和极限存在性（Existence of a limit）的所有细节。因此，我们并不强求达到无穷小分析（Infinitesimal calculus）专著中所要求的那种严密性。
+矢量： 既有大小又有方向的量。例如：位移、速度、加速度、力和电场强度。
 
-我们的目标在于阐明概念，而非进行严谨的数学证明。
+在几何上，我们用一个带箭头的线段来表示矢量。线段的长度代表矢量的大小，箭头的指向代表矢量的方向。
 
-向量的导数 (Derivative of a Vector)
+1.2 矢量的表示法 (Notation)
 
-假设向量 $\mathbf{r}$ 是标量变量 $t$ 的连续且单值的函数。这意味着对于 $t$ 的每一个值，都有唯一的向量 $\mathbf{r}$ 与之对应；且当 $t$ 连续变化时，$\mathbf{r}$ 也随之连续变化。
+在本书中，我们将用粗体字母（如 $\mathbf{A}, \mathbf{B}, \mathbf{a}, \mathbf{b}$）表示矢量。标量则用斜体字母表示。矢量 $\mathbf{A}$ 的大小（或长度）记作 $|\mathbf{A}|$ 或简单的 $A$。
 
-相对于固定原点 $O$，设 $P$ 为位置向量等于 $\mathbf{r}$ 的点。若 $t$ 连续变化，则点 $P$ 在空间中沿一条连续曲线运动。
+单位矢量 (Unit Vector)： 大小为 1 的矢量称为单位矢量。
 
-\begin{figure}[htbp] 
-    \centering
-    \includegraphics[width=0.6\textwidth]{images/ref/fig46.png} 
-    \caption{\textbf{向量的导数}}
-\end{figure}
+零矢量 (Zero Vector)： 大小为 0 的矢量称为零矢量，记作 $\mathbf{0}$。它的方向是不确定的。
 
-设 $\overrightarrow{OP}$ 为对应于标量变量 $t$ 值的向量 $\mathbf{r}$。在该标量变量上增加一个增量 $\delta t$，会使前者产生一个增量 $\delta \mathbf{r}$。因此，标量的值 $t + \delta t$ 对应于向量值 $\mathbf{r} + \delta \mathbf{r}$，而这正是曲线上另一个点 $P'$ 的位置向量。增量 $\delta \mathbf{r}$ 等于向量 $\overrightarrow{PP'}$。
+1.3 矢量的加法 (Addition of Vectors)
 
-向量 $\delta \mathbf{r}$ 除以标量 $\delta t$ 所得的商 $\frac{\delta \mathbf{r}}{\delta t}$ 本身也是一个向量。
+两个矢量 $\mathbf{A}$ 和 $\mathbf{B}$ 的和 $\mathbf{C} = \mathbf{A} + \mathbf{B}$ 可以通过平行四边形法则或三角形法则来定义。
 
-若此时 $\delta t$ 是一个微小增量，通常情况下 $\delta \mathbf{r}$ 也会很小。当 $\delta t$ 趋于零时，点 $P'$ 会移动到与点 $P$ 重合，且弦 $PP'$ 会趋于与曲线在 $P$ 点处的切线重合。
+三角形法则： 将矢量 $\mathbf{B}$ 的起点放在矢量 $\mathbf{A}$ 的终点，那么从 $\mathbf{A}$ 的起点指向 $\mathbf{B}$ 的终点的矢量就是 $\mathbf{A} + \mathbf{B}$。
 
-当 $\delta t$ 趋于零时，商 $\frac{\delta \mathbf{r}}{\delta t}$ 的极限值是一个向量，其方向是 $\delta \mathbf{r}$ 的极限方向，即 $P$ 点处的切线方向。该商的极限值（如果存在）被称为 $\mathbf{r}$ 关于 $t$ 的导数（Derivative）或微分系数（Differential coefficient），记作 $\frac{d\mathbf{r}}{dt}$。即：
+法则属性：
 
-$$\frac{d\mathbf{r}}{dt} = \lim_{\delta t \to 0} \frac{\delta \mathbf{r}}{\delta t}$$
+交换律： $\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}$
 
-确定导数的过程被称为微分（differentiation）。
+结合律： $(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})$
 
-向量 $\mathbf{r}$ 的导数通常本身也是关于 $t$ 的函数，因此它也拥有导数，这被称为 $\mathbf{r}$ 的二阶导数，记作 $\frac{d^2\mathbf{r}}{dt^2}$。同理，二阶导数的导数被称为 $\mathbf{r}$ 的三阶导数，记作 $\frac{d^3\mathbf{r}}{dt^3}$。
+1.4 矢量的减法 (Subtraction of Vectors)
 
-一种特别重要的情况是：当 $t$ 代表时间变量，而 $\mathbf{r}$ 代表运动质点 $P$ 相对于原点 $O$ 的位置向量时。在这种情况下，$\delta\mathbf{r}$ 表示质点在时间间隔 $\delta t$ 内的位移，因此 $\frac{\delta\mathbf{r}}{\delta t}$ 代表该时段内的平均速度。当 $\delta t$ 趋于零时，该平均速度的极限值即为质点的瞬时速度。因此，代表 $P$ 的瞬时速度的向量 $\mathbf{v}$ 为：
+如果 $\mathbf{B}$ 是一个矢量，那么 $-\mathbf{B}$ 是一个与 $\mathbf{B}$ 大小相等但方向相反的矢量。两个矢量的差定义为：
+$$\mathbf{A} - \mathbf{B} = \mathbf{A} + (-\mathbf{B})$$
 
-$$\mathbf{v} = \frac{d\mathbf{r}}{dt}$$
+在几何上，如果 $\mathbf{A}$ 和 $\mathbf{B}$ 从同一点出发，那么 $\mathbf{A} - \mathbf{B}$ 是从 $\mathbf{B}$ 的终点指向 $\mathbf{A}$ 的终点的矢量。
 
-该向量的方向自然是沿着质点运动轨迹的切线方向。
+1.5 标量与矢量的乘法 (Multiplication of a Vector by a Scalar)
 
-与之类似，如果 $\delta\mathbf{v}$ 是速度向量 $\mathbf{v}$ 在时间间隔 $\delta t$ 内的增量，则比值 $\frac{\delta\mathbf{v}}{\delta t}$ 代表该时段内的平均加速度。质点的瞬时加速度是该平均加速度在 $\delta t$ 趋于零时的极限值。因此，向量
+标量 $m$ 与矢量 $\mathbf{A}$ 的乘积记作 $m\mathbf{A}$。
 
-$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{r}}{dt^2}$$
+如果 $m > 0$，则 $m\mathbf{A}$ 的方向与 $\mathbf{A}$ 相同，大小为 $m|\mathbf{A}|$。
 
-代表了运动质点的瞬时加速度。
+如果 $m < 0$，则 $m\mathbf{A}$ 的方向与 $\mathbf{A}$ 相反，大小为 $|m||\mathbf{A}|$。
 
-常向量的导数：任何常向量 $\mathbf{c}$ 的导数均为零；因为增量 $\delta t$ 不会对 $\mathbf{c}$ 产生任何改变。
+如果 $m = 0$，则结果为零矢量 $\mathbf{0}$。
 
-和的导数：两个向量 $\mathbf{r}$ 与 $\mathbf{s}$（均为 $t$ 的函数）之和 $\mathbf{r} + \mathbf{s}$ 的导数，等于它们各自导数的和。
+该运算满足分配律：
+$$m(\mathbf{A} + \mathbf{B}) = m\mathbf{A} + m\mathbf{B}$$
+$$(m + n)\mathbf{A} = m\mathbf{A} + n\mathbf{A}$$
 
-如果 $\delta \mathbf{r}$ 和 $\delta \mathbf{s}$ 是由增量 $\delta t$ 引起的向量增量，则有：$\delta(\mathbf{r} + \mathbf{s}) = (\mathbf{r} + \delta \mathbf{r} + \mathbf{s} + \delta \mathbf{s}) - (\mathbf{r} + \mathbf{s}) = \delta \mathbf{r} + \delta \mathbf{s}$。
+1.6 共线与共面矢量 (Collinear and Coplanar Vectors)
 
-因此其商为：$\frac{\delta(\mathbf{r} + \mathbf{s})}{\delta t} = \frac{\delta \mathbf{r}}{\delta t} + \frac{\delta \mathbf{s}}{\delta t}$。
+共线： 如果两个矢量平行于同一条直线，则称它们为共线矢量。如果 $\mathbf{A}$ 与 $\mathbf{B}$ 共线，则存在标量 $k$ 使得 $\mathbf{A} = k\mathbf{B}$。
 
-当 $\delta t$ 趋于零时，取两侧的极限值，可得：
+共面： 如果三个或多个矢量平行于同一个平面，则称它们为共面矢量。
 
-$$\frac{d}{dt}(\mathbf{r} + \mathbf{s}) = \frac{d\mathbf{r}}{dt} + \frac{d\mathbf{s}}{dt}$$
+第 6 页：矢量的正交分解 (Orthogonal Components of a Vector)
 
-多向量求和：上述论证显然也适用于任意数量向量之和。
+设 $\mathbf{i, j, k}$ 为沿直角笛卡尔坐标系 $x, y, z$ 轴正方向的一组单位矢量。任何矢量 $\mathbf{A}$ 都可以表示为这些单位矢量的线性组合。
+$$\mathbf{A} = A_x \mathbf{i} + A_y \mathbf{j} + A_z \mathbf{k}$$
 
-复合函数求导（链式法则）
+标量 $A_x, A_y, A_z$ 称为 $\mathbf{A}$ 的分量。$\mathbf{A}$ 的模（大小）由下式给出：
 
-假设 $\mathbf{r}$ 是标量变量 $s$ 的连续函数，而 $s$ 是另一个变量 $t$ 的连续函数。那么后者产生的增量 $\delta t$ 会导致其他变量产生增量 $\delta \mathbf{r}$ 和 $\delta s$，且它们都随 $\delta t$ 趋于零而趋于零。
+$$A = |\mathbf{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2}$$。
 
-关系式 $\frac{\delta \mathbf{r}}{\delta t} = \frac{\delta \mathbf{r}}{\delta s} \frac{\delta s}{\delta t}$ 是一个代数恒等式，其中置于向量之后的数值与置于其前的意义相同。
+第 7 页：方向余弦 (Direction Cosines)
 
-当 $\delta t$ 趋于零时，取两侧极限可得公式：
+若 $\alpha, \beta, \gamma$ 分别是 $\mathbf{A}$ 与 $x, y, z$ 轴正方向的夹角，则有：
 
-$$\frac{d\mathbf{r}}{dt} = \frac{d\mathbf{r}}{ds} \frac{ds}{dt}$$
+$$A_x = A \cos \alpha, \quad A_y = A \cos \beta, \quad A_z = A \cos \gamma$$。
 
-这与代数微积分中的形式一致。
+这些被称为 $\mathbf{A}$ 的方向余弦。由此可知：
+$$\cos^2 \alpha + \cos^2 \beta + \cos^2 \gamma = 1$$。
 
-56. 乘积的导数
+第 8 页：点积/数量积 (The Dot or Scalar Product)
 
-任意向量乘积的导数求法与代数乘积相同，即等于依次对其中一个因子求导而保持其他因子不变所得到的各项之和。
+两个矢量 $\mathbf{A}$ 与 $\mathbf{B}$ 的点积（或称数量积），记作 $\mathbf{A \cdot B}$，定义为它们的模与它们之间夹角 $\theta$ 的余弦之积。
 
-以标量 $u$ 和向量 $\mathbf{r}$ 的乘积 $u\mathbf{r}$ 为例（两者均为变量 $t$ 的函数）：
+$$\mathbf{A \cdot B} = AB \cos \theta, \quad (0 \le \theta \le \pi)$$
 
-若 $\delta u$ 和 $\delta \mathbf{r}$ 是由增量 $\delta t$ 引起的增量，则乘积的增量为：$\delta(u\mathbf{r}) = (u + \delta u)(\mathbf{r} + \delta \mathbf{r}) - u\mathbf{r}$$= \delta u \mathbf{r} + u \delta \mathbf{r} + \delta u \delta \mathbf{r}$。
+根据该定义，显而易见：
 
-对 $\frac{\delta(u\mathbf{r})}{\delta t} = \frac{\delta u}{\delta t} \mathbf{r} + u \frac{\delta \mathbf{r}}{\delta t} + \frac{\delta u}{\delta t} \delta \mathbf{r}$ 取极限可得：
+$\mathbf{A \cdot B} = \mathbf{B \cdot A}$ （交换律）
 
-$$\frac{d}{dt}(u\mathbf{r}) = \frac{du}{dt} \mathbf{r} + u \frac{d\mathbf{r}}{dt} \quad \dots (1)$$
+$\mathbf{A \cdot A} = A^2$
 
-直角坐标分量形式：若 $\mathbf{r} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$，由于 $\mathbf{i, j, k}$ 是常向量，其导数为：
+若 $\mathbf{A \cdot B} = 0$ 且 $\mathbf{A, B} \neq 0$，则 $\mathbf{A}$ 垂直于 $\mathbf{B}$。
 
-$$\frac{d\mathbf{r}}{dt} = \frac{dx}{dt}\mathbf{i} + \frac{dy}{dt}\mathbf{j} + \frac{dz}{dt}\mathbf{k}$$
+第 9 页：分量形式的点积与分配律
 
-点积（标量积）与叉积（向量积）
+点积满足分配律 $\mathbf{A \cdot (B + C)} = \mathbf{A \cdot B} + \mathbf{A \cdot C}$。这可以通过观察发现：$\mathbf{A \cdot B}$ 等于 $A$ 与 $\mathbf{B}$ 在 $\mathbf{A}$ 方向上的投影的乘积。
 
-点积导数：$\frac{d}{dt}(\mathbf{r} \cdot \mathbf{s}) = \frac{d\mathbf{r}}{dt} \cdot \mathbf{s} + \mathbf{r} \cdot \frac{d\mathbf{s}}{dt} \quad \dots (2)$
+用分量表示时，由于 $\mathbf{i \cdot i} = \mathbf{j \cdot j} = \mathbf{k \cdot k} = 1$ 且 $\mathbf{i \cdot j} = \mathbf{j \cdot k} = \mathbf{k \cdot i} = 0$，我们得到：$$\mathbf{A \cdot B} = (A_x \mathbf{i} + A_y \mathbf{j} + A_z \mathbf{k}) \cdot (B_x \mathbf{i} + B_y \mathbf{j} + B_z \mathbf{k}) = A_x B_x + A_y B_y + A_z B_z$$
 
-叉积导数：$\frac{d}{dt}(\mathbf{r} \times \mathbf{s}) = \frac{d\mathbf{r}}{dt} \times \mathbf{s} + \mathbf{r} \times \frac{d\mathbf{s}}{dt} \quad \dots (3)$
+第 10 页：点积的应用：余弦定理与投影
 
-注意：在叉积公式中，各项因子的顺序不能改变，除非同时改变符号。
+利用点积可以轻松推导出三角形的余弦定理。设 $\mathbf{C = A - B}$，则：
 
-特殊情形：模与方向
+$$\mathbf{C \cdot C} = (\mathbf{A - B}) \cdot (\mathbf{A - B}) = \mathbf{A \cdot A} + \mathbf{B \cdot B} - 2\mathbf{A \cdot B}$$
+$$C^2 = A^2 + B^2 - 2AB \cos \theta$$
 
-若在公式 (2) 中令 $\mathbf{s} = \mathbf{r}$，可得 $\frac{d}{dt}(\mathbf{r} \cdot \mathbf{r}) = 2\mathbf{r} \cdot \frac{d\mathbf{r}}{dt}$。
+第 11 页：矢量积或叉积 (The Vector or Cross Product)
 
-若 $r$ 是向量 $\mathbf{r}$ 的模，则 $\mathbf{r} \cdot \mathbf{r} = r^2$。由于 $r^2$ 的导数是 $2r \frac{dr}{dt}$，故有：
+两个矢量 $\mathbf{A}$ 与 $\mathbf{B}$ 的矢量积（又称叉积），记作 $\mathbf{A} \times \mathbf{B}$，其结果是一个矢量 $\mathbf{C}$。其模长定义为 $C = AB \sin \theta$，其中 $\theta$ 是 $\mathbf{A}$ 与 $\mathbf{B}$ 之间的夹角（$0 \le \theta \le \pi$）。
 
-$$\mathbf{r} \cdot \frac{d\mathbf{r}}{dt} = r \frac{dr}{dt}$$
+矢量 $\mathbf{C} = \mathbf{A} \times \mathbf{B}$ 的方向垂直于 $\mathbf{A}$ 和 $\mathbf{B}$ 所确定的平面，且 $\mathbf{A, B, C}$ 构成一个右手系。这意味着，如果右手四指从 $\mathbf{A}$ 经较小夹角 $\theta$ 弯向 $\mathbf{B}$，则大拇指所指的方向即为 $\mathbf{C}$ 的方向。
 
-恒定长度向量：若向量 $\mathbf{a}$ 的长度恒定，则 $\mathbf{a}^2 = a^2 = \text{常数}$。
+第 12 页：叉积的几何性质 (Geometric Properties of the Cross Product)
+
+根据定义可知 $\mathbf{A} \times \mathbf{B} = -(\mathbf{B} \times \mathbf{A})$。因此，交换律不适用于矢量积。
+
+若 $\mathbf{A} \times \mathbf{B} = \mathbf{0}$ 且 $\mathbf{A, B} \neq \mathbf{0}$，则 $\sin \theta = 0$，这意味着 $\mathbf{A}$ 与 $\mathbf{B}$ 平行或共线。
+
+模长 $AB \sin \theta$ 在几何上表示以 $\mathbf{A}$ 和 $\mathbf{B}$ 为邻边的平行四边形的面积。
+
+第 13 页：单位矢量的叉积 (Cross Product of Unit Vectors)
+
+对于右手笛卡尔坐标系中的基本单位矢量 $\mathbf{i, j, k}$，我们有：
+
+$\mathbf{i} \times \mathbf{i} = \mathbf{j} \times \mathbf{j} = \mathbf{k} \times \mathbf{k} = \mathbf{0}$
+
+
+此外：
+
+$\mathbf{i} \times \mathbf{j} = \mathbf{k}, \quad \mathbf{j} \times \mathbf{k} = \mathbf{i}, \quad \mathbf{k} \times \mathbf{i} = \mathbf{j}$。
+$\mathbf{j} \times \mathbf{i} = -\mathbf{k}, \quad \mathbf{k} \times \mathbf{j} = -\mathbf{i}, \quad \mathbf{i} \times \mathbf{k} = -\mathbf{j}$。
+
+第 14 页：叉积的分量形式 (Cross Product in Component Form)
+
+可以证明分配律 $\mathbf{A} \times (\mathbf{B} + \mathbf{C}) = \mathbf{A} \times \mathbf{B} + \mathbf{A} \times \mathbf{C}$ 是成立的。利用该定律，我们可以用分量表示 $\mathbf{A} \times \mathbf{B}$：
+$$\mathbf{A} \times \mathbf{B} = (A_y B_z - A_z B_y)\mathbf{i} + (A_z B_x - A_x B_z)\mathbf{j} + (A_x B_y - A_y B_x)\mathbf{k}$$
+
+这一结果最容易通过行列式的形式来记忆：
+$$\mathbf{A} \times \mathbf{B} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix}$$
+
+第 15 页：标量三重积 (The Scalar Triple Product)
+
+乘积 $\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$ 被称为标量三重积（又称混合积）。其结果是一个标量。
+
+在几何上，$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$ 的绝对值表示以 $\mathbf{A, B, C}$ 为共点棱的平行六面体的体积。
+
+用行列式形式表示为：
+$$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = \begin{vmatrix} A_x & A_y & A_z \\ B_x & B_y & B_z \\ C_x & C_y & C_z \end{vmatrix}$$
+
+第 16 页：矢量三重积 (The Vector Triple Product)
+
+乘积 $\mathbf{A} \times (\mathbf{B} \times \mathbf{C})$ 被称为矢量三重积。与标量三重积不同，其结果是一个矢量。由于 $\mathbf{B} \times \mathbf{C}$ 垂直于 $\mathbf{B}$ 和 $\mathbf{C}$ 构成的平面，因此矢量 $\mathbf{A} \times (\mathbf{B} \times \mathbf{C})$ 必然位于 $\mathbf{B}$ 和 $\mathbf{C}$ 所在的平面内。
+
+下述重要的展开公式成立：
+$$\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C})\mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C}$$
+
+这通常被称为“BAC-CAB”法则。请注意，一般情况下，$\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) \neq (\mathbf{A} \times \mathbf{B}) \times \mathbf{C}$。
+
+第 17 页：标量三重积的循环特性 (Cyclic Permutations)
+
+对于标量三重积 $\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$，点乘和叉乘符号可以互换而不改变其值：
+
+$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \times \mathbf{B}) \cdot \mathbf{C}$
+
+此外，在矢量的循环轮换下，其值保持不变：
+
+$[\mathbf{A, B, C}] = \mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = \mathbf{B} \cdot (\mathbf{C} \times \mathbf{A}) = \mathbf{C} \cdot (\mathbf{A} \times \mathbf{B})$
+
+如果顺序非循环，则符号改变：
+
+$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = -\mathbf{A} \cdot (\mathbf{C} \times \mathbf{B})$
+
+第 18 页：四重积恒等式 (Quadruple Products)
+
+利用前面的公式，我们可以推导出涉及四个矢量的恒等式。四个矢量的数量积：
+
+$(\mathbf{A} \times \mathbf{B}) \cdot (\mathbf{C} \times \mathbf{D}) = (\mathbf{A} \cdot \mathbf{C})(\mathbf{B} \cdot \mathbf{D}) - (\mathbf{A} \cdot \mathbf{D})(\mathbf{B} \cdot \mathbf{C})$
+
+四个矢量的向量积：
+
+$(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{D}) = [\mathbf{A, C, D}]\mathbf{B} - [\mathbf{B, C, D}]\mathbf{A}$
+
+这表明所得矢量既位于 $\mathbf{A}$ 和 $\mathbf{B}$ 确定的平面内，也位于 $\mathbf{C}$ 和 $\mathbf{D}$ 确定的平面内。
+
+第 19 页：矢量方程 (Vector Equations)
+
+考虑方程 $\mathbf{A} \cdot \mathbf{X} = p$，其中 $\mathbf{A}$ 和 $p$ 为已知。该方程不能唯一确定 $\mathbf{X}$。在几何上，它表示一个垂直于 $\mathbf{A}$ 的平面，其到原点的距离为 $p/|\mathbf{A}|$。
+
+现在考虑 $\mathbf{A} \times \mathbf{X} = \mathbf{B}$。为了使解存在，$\mathbf{A}$ 必须垂直于 $\mathbf{B}$（即 $\mathbf{A} \cdot \mathbf{B} = 0$）。其通解为：
+$$\mathbf{X} = \frac{\mathbf{B} \times \mathbf{A}}{A^2} + \lambda \mathbf{A}$$
+其中 $\lambda$ 是任意标量。
+
+第 20 页：倒易矢量系 (Reciprocal System of Vectors)
+
+如果两组矢量 $\mathbf{a, b, c}$ 和 $\mathbf{a', b', c'}$ 满足以下条件，则称它们为倒易系：
+$\mathbf{a} \cdot \mathbf{a'} = \mathbf{b} \cdot \mathbf{b'} = \mathbf{c} \cdot \mathbf{c'} = 1$
+$\mathbf{a} \cdot \mathbf{b'} = \mathbf{a} \cdot \mathbf{c'} = \dots = 0$
+
+倒易矢量可以按如下方式构造：
+$$\mathbf{a'} = \frac{\mathbf{b} \times \mathbf{c}}{[\mathbf{a, b, c}]}, \quad \mathbf{b'} = \frac{\mathbf{c} \times \mathbf{a}}{[\mathbf{a, b, c}]}, \quad \mathbf{c'} = \frac{\mathbf{a} \times \mathbf{b}}{[\mathbf{a, b, c}]}$$
+
+前提是 $[\mathbf{a, b, c}] \neq 0$。
+

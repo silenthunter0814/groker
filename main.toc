@@ -53,5 +53,5 @@
 \contentsline {section}{\numberline {10.9}7}{138}{section.10.9}%
 \contentsline {section}{\numberline {10.10}8}{139}{section.10.10}%
 \contentsline {section}{\numberline {10.11}格林公式}{140}{section.10.11}%
-\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}初等向量分析}{153}{chapter.11}%
-\contentsline {section}{\numberline {11.1}向量的微分与积分}{153}{section.11.1}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}矢量与张量分析}{153}{chapter.11}%
+\contentsline {section}{\numberline {11.1}矢量代数}{153}{section.11.1}%
