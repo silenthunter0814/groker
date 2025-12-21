@@ -201,3 +201,83 @@ $$\mathbf{a'} = \frac{\mathbf{b} \times \mathbf{c}}{[\mathbf{a, b, c}]}, \quad \
 
 前提是 $[\mathbf{a, b, c}] \neq 0$。
 
+第 21 页：直线的矢量方程
+
+直线的表示：空间中的一条直线可以通过一个已知点 $A$（位置矢量为 $\mathbf{a}$）以及直线所平行的方向矢量 $\mathbf{b}$ 来唯一确定。设 $P$ 是直线上任意一点，其位置矢量为 $\mathbf{r}$。
+
+则矢量 $\vec{AP} = \mathbf{r} - \mathbf{a}$ 必定与 $\mathbf{b}$ 平行。因此，存在一个标量参数 $t$，使得：
+$$\mathbf{r} - \mathbf{a} = t\mathbf{b}$$
+
+或者写作：
+$$\mathbf{r} = \mathbf{a} + t\mathbf{b}$$
+
+这就是直线的参数矢量方程。
+
+另一种形式：由于 $\mathbf{r} - \mathbf{a}$ 与 $\mathbf{b}$ 平行，它们的叉积必须为零：
+$$(\mathbf{r} - \mathbf{a}) \times \mathbf{b} = \mathbf{0}$$
+
+第 22 页：两点确定的直线与距离公式
+
+两点式方程：若直线通过两个已知点 $A(\mathbf{a})$ 和 $B(\mathbf{b})$，则直线的方向矢量可以取为 $\mathbf{b} - \mathbf{a}$。此时方程变为：
+$$\mathbf{r} = \mathbf{a} + t(\mathbf{b} - \mathbf{a})$$
+
+或
+$$\mathbf{r} = (1 - t)\mathbf{a} + t\mathbf{b}$$
+
+点到直线的距离：
+
+设已知点 $Q$ 的位置矢量为 $\mathbf{q}$，直线方程为 $\mathbf{r} = \mathbf{a} + t\mathbf{b}$。点 $Q$ 到该直线的垂直距离 $d$ 由下式给出：
+
+$$d = \frac{|(\mathbf{q} - \mathbf{a}) \times \mathbf{b}|}{|\mathbf{b}|}$$
+
+这里 $(\mathbf{q} - \mathbf{a}) \times \mathbf{b}$ 的模表示以 $\mathbf{q} - \mathbf{a}$ 和 $\mathbf{b}$ 为邻边的平行四边形的面积，除以底边长 $|\mathbf{b}|$ 即得高 $d$。
+
+第 23 页：平面的矢量方程
+
+点法式方程：一个平面可以通过平面内的一点 $A(\mathbf{a})$ 和一个垂直于平面的法矢量 $\mathbf{n}$ 来确定。若 $P(\mathbf{r})$ 是平面上的任意一点，则矢量 $\mathbf{r} - \mathbf{a}$ 必然位于平面内，因此与 $\mathbf{n}$ 垂直。其点积必为零：
+
+$$(\mathbf{r} - \mathbf{a}) \cdot \mathbf{n} = 0$$
+
+或者
+$$\mathbf{r} \cdot \mathbf{n} = \mathbf{a} \cdot \mathbf{n} = p$$
+
+其中 $p$ 是一个常数。
+
+三点定平面：
+
+若平面通过不共线的三点 $A(\mathbf{a}), B(\mathbf{b}), C(\mathbf{c})$，则平面上任意一点 $P(\mathbf{r})$ 满足矢量 $\mathbf{r} - \mathbf{a}, \mathbf{b} - \mathbf{a}, \mathbf{c} - \mathbf{a}$ 共面。因此它们的标量三重积为零：
+
+$$(\mathbf{r} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = 0$$
+
+第 24 页：点到平面的距离与两平面夹角
+
+点到平面的距离：点 $Q(\mathbf{q})$ 到平面 $\mathbf{r} \cdot \mathbf{n} = p$ 的垂直距离 $D$ 是 $\mathbf{q} - \mathbf{r}$ 在法方向上的投影长度。如果 $\mathbf{n}$ 是单位法矢量，则：
+
+$$D = | \mathbf{q} \cdot \mathbf{n} - p |$$
+
+若 $\mathbf{n}$ 不是单位矢量，则需除以其模长。
+
+两平面的夹角：两个平面之间的夹角定义为它们法矢量 $\mathbf{n}_1$ 和 $\mathbf{n}_2$ 之间的夹角 $\theta$：
+$$\cos \theta = \frac{\mathbf{n}_1 \cdot \mathbf{n}_2}{|\mathbf{n}_1| |\mathbf{n}_2|}$$
+
+两平面的交线：
+
+两个平面的交线方向与两个法矢量的叉积 $\mathbf{n}_1 \times \mathbf{n}_2$ 平行。
+
+第 25 页：球体与圆的矢量表示
+
+球体方程：
+
+设球心位置矢量为 $\mathbf{c}$，半径为 $a$。球面上任意一点 $P(\mathbf{r})$ 到球心的距离恒为 $a$：
+
+$$|\mathbf{r} - \mathbf{c}| = a$$平方可得：$$(\mathbf{r} - \mathbf{c}) \cdot (\mathbf{r} - \mathbf{c}) = a^2$$
+
+或者
+$$r^2 - 2\mathbf{r} \cdot \mathbf{c} + c^2 = a^2$$
+
+切平面方程：
+
+球面上一点 $P_0(\mathbf{r}_0)$ 处的切平面垂直于半径矢量 $\mathbf{r}_0 - \mathbf{c}$。因此，切平面的方程为：
+$$(\mathbf{r} - \mathbf{r}_0) \cdot (\mathbf{r}_0 - \mathbf{c}) = 0$$
+
+
