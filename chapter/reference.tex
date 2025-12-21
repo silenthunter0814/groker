@@ -429,5 +429,78 @@ $$\frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T}$$
 
 $$\begin{cases} \frac{d\mathbf{T}}{ds} = \kappa \mathbf{N} \\ \frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T} \\ \frac{d\mathbf{B}}{ds} = -\tau \mathbf{N} \end{cases}$$
 
+第 36 页：运动学中的应用：速度与加速度
+
+速度矢量：设一个质点沿曲线运动，其位置矢量为 $\mathbf{r}(t)$，其中 $t$ 代表时间。速度矢量定义为：
+
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \frac{d\mathbf{r}}{ds} \frac{ds}{dt} = v\mathbf{T}$$
+
+这里 $v = ds/dt$ 是质点运动的速率，而 $\mathbf{T}$ 是单位切矢量。这表明速度矢量的方向始终沿曲线的切线方向。
+
+加速度矢量：对速度矢量关于时间 $t$ 再次求导，得到加速度矢量 $\mathbf{a}$：
+$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d}{dt}(v\mathbf{T}) = \frac{dv}{dt}\mathbf{T} + v\frac{d\mathbf{T}}{dt}$$
+
+利用链式法则 $d\mathbf{T}/dt = (d\mathbf{T}/ds)(ds/dt) = \kappa \mathbf{N} v$，代入上式得：
+$$\mathbf{a} = \frac{dv}{dt}\mathbf{T} + \kappa v^2 \mathbf{N}$$
+
+这说明加速度有两个分量：
+
+切向加速度：$a_t = dv/dt$，反映速率的变化。
+
+法向加速度：$a_n = \kappa v^2 = v^2/\rho$，反映运动方向的变化。
+
+第 37 页：标量场与等值面
+
+标量场的定义：
+
+如果在空间区域内的每一个点 $(x, y, z)$，都有一个标量 $\phi(x, y, z)$ 与之对应，则称在该区域内定义了一个标量场。例如：空间中的温度分布、大气压分布或电势。
+
+等值面：
+
+方程 $\phi(x, y, z) = C$（其中 $C$ 为常数）定义了一系列曲面，称为标量场的等值面（如等温面、等势面）。在同一等值面上，标量函数的值保持不变。
+
+第 38 页：梯度算子 (The Gradient)
+
+梯度的定义：
+
+对于标量场 $\phi(x, y, z)$，我们定义其梯度为一个矢量场，记作 $\text{grad} \phi$ 或 $\nabla \phi$（读作 del phi）。在直角坐标系中，其形式为：
+
+$$\nabla \phi = \frac{\partial \phi}{\partial x}\mathbf{i} + \frac{\partial \phi}{\partial y}\mathbf{j} + \frac{\partial \phi}{\partial z}\mathbf{k}$$
+
+算子 $\nabla$：
+
+符号 $\nabla$ 称为哈密顿算子（Hamiltonian Operator）或倒三角算子：
+
+$$\nabla = \mathbf{i}\frac{\partial}{\partial x} + \mathbf{j}\frac{\partial}{\partial y} + \mathbf{k}\frac{\partial}{\partial z}$$
+
+这是一个矢量微分算子，它作用于标量场产生矢量场。
+
+第 39 页：梯度的几何意义 (1)
+
+梯度与等值面的关系：考虑通过点 $P$ 的等值面 $\phi(x, y, z) = C$。设 $\mathbf{r}$ 是该面上一点的位置矢量，则面上的微小位移 $d\mathbf{r}$ 满足全微分方程：
+
+$$d\phi = \frac{\partial \phi}{\partial x}dx + \frac{\partial \phi}{\partial y}dy + \frac{\partial \phi}{\partial z}dz = 0$$
+
+利用点积的形式，这可以写成：
+$$(\nabla \phi) \cdot d\mathbf{r} = 0$$
+
+由于 $d\mathbf{r}$ 位于等值面的切平面内，而点积为零意味着垂直。因此：在空间任意一点，梯度矢量 $\nabla \phi$ 始终垂直于过该点的等值面。
+
+第 40 页：梯度的几何意义 (2) 与方向导数
+
+方向导数：
+
+如果我们想知道 $\phi$ 沿任意方向 $\mathbf{u}$（单位矢量）的变化率，这个变化率称为 $\phi$ 沿方向 $\mathbf{u}$ 的方向导数，记作 $d\phi/ds$。根据复合函数求导法则：
+
+$$\frac{d\phi}{ds} = \nabla \phi \cdot \mathbf{u} = |\nabla \phi| \cos \theta$$
+
+其中 $\theta$ 是 $\nabla \phi$ 与 $\mathbf{u}$ 之间的夹角。
+
+最大变化率：
+
+当 $\theta = 0$ 时，即沿梯度的方向，$d\phi/ds$ 取得最大值，其值为 $|\nabla \phi|$。
+
+结论：梯度矢量的方向是标量场增加最快的方向，其模长等于该最大增加率。
+
 
 
