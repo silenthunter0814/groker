@@ -578,3 +578,67 @@ $$\nabla^2 \mathbf{V} = (\nabla^2 V_x)\mathbf{i} + (\nabla^2 V_y)\mathbf{j} + (\
 
 此外，它与梯度、散度、旋度之间存在著名的恒等式：
 $$\nabla \times (\nabla \times \mathbf{V}) = \nabla (\nabla \cdot \mathbf{V}) - \nabla^2 \mathbf{V}$$
+
+第 46 页：正交曲线坐标系 (Orthogonal Curvilinear Coordinates)
+
+变换定义：在直角坐标系 $(x, y, z)$ 之外，我们可以引入新的坐标变量 $(u_1, u_2, u_3)$，它们与直角坐标的关系由下列方程确定：
+
+$$x = x(u_1, u_2, u_3), \quad y = y(u_1, u_2, u_3), \quad z = z(u_1, u_2, u_3)$$
+
+若三组坐标面（如 $u_1 = \text{常数}$ 等）在每一点都彼此垂直，则称该系统为正交曲线坐标系。
+
+比例因子 (Scale Factors)：位置矢量 $\mathbf{r}$ 的微分可以表示为：
+
+$$d\mathbf{r} = \frac{\partial \mathbf{r}}{\partial u_1}du_1 + \frac{\partial \mathbf{r}}{\partial u_2}du_2 + \frac{\partial \mathbf{r}}{\partial u_3}du_3$$
+
+我们定义比例因子 $h_i$ 为：
+$$h_i = \left| \frac{\partial \mathbf{r}}{\partial u_i} \right|$$
+
+于是，弧长的平方（第一基本形式）表示为：
+$$ds^2 = d\mathbf{r} \cdot d\mathbf{r} = h_1^2 du_1^2 + h_2^2 du_2^2 + h_3^2 du_3^2$$
+
+第 47 页：曲线坐标系中的单位矢量
+
+局部正交基：
+
+在正交曲线坐标系中的每一点，我们定义一组单位矢量 $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$：
+
+$$\mathbf{e}_1 = \frac{1}{h_1}\frac{\partial \mathbf{r}}{\partial u_1}, \quad \mathbf{e}_2 = \frac{1}{h_2}\frac{\partial \mathbf{r}}{\partial u_2}, \quad \mathbf{e}_3 = \frac{1}{h_3}\frac{\partial \mathbf{r}}{\partial u_3}$$
+
+这些单位矢量彼此正交，并随点的位置改变而改变方向。任何矢量 $\mathbf{A}$ 都可以表示为：
+$$\mathbf{A} = A_1\mathbf{e}_1 + A_2\mathbf{e}_2 + A_3\mathbf{e}_3$$
+
+常见的比例因子：
+
+柱坐标 $(r, \theta, z)$：$h_r = 1, h_\theta = r, h_z = 1$。
+
+球坐标 $(r, \theta, \phi)$：$h_r = 1, h_\theta = r, h_\phi = r \sin \theta$。
+
+第 48 页：曲线坐标系中的梯度 (Gradient)
+
+梯度的一般形式：标量场 $\phi(u_1, u_2, u_3)$ 的全微分可以写成：
+$$d\phi = \frac{\partial \phi}{\partial u_1}du_1 + \frac{\partial \phi}{\partial u_2}du_2 + \frac{\partial \phi}{\partial u_3}du_3$$
+
+同时根据梯度的定义 $d\phi = \nabla \phi \cdot d\mathbf{r}$，通过对比可以得到梯度在一般正交曲线坐标系下的表达式：
+$$\nabla \phi = \frac{1}{h_1}\frac{\partial \phi}{\partial u_1}\mathbf{e}_1 + \frac{1}{h_2}\frac{\partial \phi}{\partial u_2}\mathbf{e}_2 + \frac{1}{h_3}\frac{\partial \phi}{\partial u_3}\mathbf{e}_3$$
+
+示例（柱坐标）：
+$$\nabla \phi = \frac{\partial \phi}{\partial r}\mathbf{e}_r + \frac{1}{r}\frac{\partial \phi}{\partial \theta}\mathbf{e}_\theta + \frac{\partial \phi}{\partial z}\mathbf{e}_z$$
+
+第 49 页：曲线坐标系中的散度 (Divergence)
+
+散度的一般形式：利用体积元在变换下的性质，可以推导出矢量场 $\mathbf{A} = A_1\mathbf{e}_1 + A_2\mathbf{e}_2 + A_3\mathbf{e}_3$ 的散度公式：
+
+$$\nabla \cdot \mathbf{A} = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}(h_2 h_3 A_1) + \frac{\partial}{\partial u_2}(h_3 h_1 A_2) + \frac{\partial}{\partial u_3}(h_1 h_2 A_3) \right]$$
+
+物理含义：由于比例因子的存在，散度不仅包含了分量本身的变化率，还包含了由于坐标线“发散”或“汇聚”而导致的额外项。例如在球坐标中，随着半径 $r$ 增大，单位 $dr$ 所对应的截面积也在增大。
+
+第 50 页：曲线坐标系中的旋度与拉普拉斯算子
+
+旋度的一般形式：旋度 $\nabla \times \mathbf{A}$ 的行列式表示形式在一般正交坐标系下修正为：
+
+$$\nabla \times \mathbf{A} = \frac{1}{h_1 h_2 h_3} \begin{vmatrix} h_1\mathbf{e}_1 & h_2\mathbf{e}_2 & h_3\mathbf{e}_3 \\ \frac{\partial}{\partial u_1} & \frac{\partial}{\partial u_2} & \frac{\partial}{\partial u_3} \\ h_1 A_1 & h_2 A_2 & h_3 A_3 \end{vmatrix}$$
+
+拉普拉斯算子的一般形式：结合梯度和散度的公式，$\nabla^2 \phi = \nabla \cdot (\nabla \phi)$ 得到：
+$$\nabla^2 \phi = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}\left( \frac{h_2 h_3}{h_1} \frac{\partial \phi}{\partial u_1} \right) + \frac{\partial}{\partial u_2}\left( \frac{h_3 h_1}{h_2} \frac{\partial \phi}{\partial u_2} \right) + \frac{\partial}{\partial u_3}\left( \frac{h_1 h_2}{h_3} \frac{\partial \phi}{\partial u_3} \right) \right]$$
+
