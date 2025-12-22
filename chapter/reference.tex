@@ -643,3 +643,75 @@ $$\nabla \times \mathbf{A} = \frac{1}{h_1 h_2 h_3} \begin{vmatrix} h_1\mathbf{e}
 拉普拉斯算子的一般形式：结合梯度和散度的公式，$\nabla^2 \phi = \nabla \cdot (\nabla \phi)$ 得到：
 $$\nabla^2 \phi = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}\left( \frac{h_2 h_3}{h_1} \frac{\partial \phi}{\partial u_1} \right) + \frac{\partial}{\partial u_2}\left( \frac{h_3 h_1}{h_2} \frac{\partial \phi}{\partial u_2} \right) + \frac{\partial}{\partial u_3}\left( \frac{h_1 h_2}{h_3} \frac{\partial \phi}{\partial u_3} \right) \right]$$
 
+\section{矢量积分}
+
+
+第 51 页：第三章 积分定理 —— 线积分 (Line Integrals)
+
+定义：设 $\mathbf{F}$ 为空间中的一个矢量场，$C$ 为连接点 $A$ 和 $B$ 的一条平滑曲线。我们将 $C$ 分成无穷多个微小位移 $d\mathbf{r}$。矢量场 $\mathbf{F}$ 沿曲线 $C$ 从 $A$ 到 $B$ 的线积分定义为：
+
+$$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_C (F_x dx + F_y dy + F_z dz)$$
+
+物理意义：
+
+如果 $\mathbf{F}$ 代表作用在质点上的力，那么这个线积分就表示力在质点沿路径 $C$ 运动时所做的功。
+
+环量 (Circulation)：
+
+如果路径 $C$ 是一条闭合曲线，则该积分记作 $\oint_C \mathbf{F} \cdot d\mathbf{r}$。在流体力学中，这被称为流体沿该闭合回路的环量。
+
+第 52 页：保守场与势函数
+
+路径无关性：
+
+对于某些特殊的矢量场，线积分 $\int_A^B \mathbf{F} \cdot d\mathbf{r}$ 的值只取决于起点 $A$ 和终点 $B$，而与连接这两点的具体路径无关。
+
+基本定理：
+
+一个矢量场 $\mathbf{F}$ 是保守场（或称无旋场）的充要条件是存在一个标量函数 $\phi$（称为势函数），使得：
+$$\mathbf{F} = \nabla \phi$$
+
+此时，线积分的结果简单地等于势函数在两点处的差值：
+$$\int_A^B \nabla \phi \cdot d\mathbf{r} = \phi(B) - \phi(A)$$
+
+推论：
+
+在保守场中，沿任何闭合路径的线积分必为零：$\oint \mathbf{F} \cdot d\mathbf{r} = 0$。
+
+第 53 页：面积分 (Surface Integrals)
+
+定义：设 $S$ 为空间中的一个曲面，$\mathbf{n}$ 为该曲面上每一点处的单位法矢量。矢量场 $\mathbf{F}$ 穿过曲面 $S$ 的面积分（或称通量，Flux）定义为：
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} dS = \iint_S \mathbf{F} \cdot d\mathbf{S}$$
+
+其中 $d\mathbf{S} = \mathbf{n} dS$ 被称为矢量面积元。
+
+计算方法：如果曲面 $S$ 在 $xy$ 平面上的投影为区域 $R$，且曲面方程为 $z = f(x, y)$，则：
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} dS = \iint_R \left( -F_x \frac{\partial z}{\partial x} - F_y \frac{\partial z}{\partial y} + F_z \right) dx dy$$
+
+第 54 页：高斯散度定理 (Gauss's Divergence Theorem)
+
+定理陈述：高斯定理建立了封闭曲面的面积分与其所包围体积的体积分之间的联系。设 $V$ 是由闭合曲面 $S$ 所围成的体积，$\mathbf{F}$ 是连续可微的矢量场，则：
+
+$$\iiint_V (\nabla \cdot \mathbf{F}) dV = \oint_S \mathbf{F} \cdot \mathbf{n} dS$$
+
+直观理解： 该定理说明：一个封闭区域内所有“源”的总强度（散度的体积分），等于穿过该区域边界流出的净通量。
+
+物理应用： 在静电学中，这对应于高斯定律：穿过闭合曲面的电通量与该曲面所包围的总电荷量成正比。
+
+第 55 页：格林恒等式 (Green's Identities)
+
+利用高斯散度定理，并令 $\mathbf{F} = \phi \nabla \psi$，我们可以推导出两个在物理学中极负盛名的恒等式：
+
+格林第一恒等式：
+$$\iiint_V (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) dV = \oint_S \phi (\nabla \psi \cdot \mathbf{n}) dS$$
+
+格林第二恒等式：
+$$\iiint_V (\phi \nabla^2 \psi - \psi \nabla^2 \phi) dV = \oint_S (\phi \nabla \psi - \psi \nabla \phi) \cdot \mathbf{n} dS$$
+
+这些恒等式是求解拉普拉斯方程和泊松方程（如电势分布、热传导平衡）的理论基石。
+
+
+
+
