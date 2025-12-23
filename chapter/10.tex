@@ -18,4 +18,97 @@ $$\begin{aligned} \mathbf{du} = &\left( \frac{\partial \alpha}{\partial x} dx + 
 例如，设 $\mathbf{r} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ 为三维空间中运动质点 $P(x, y, z)$ 的位置向量。则：
 $$\mathbf{dr} = dx\,\mathbf{i} + dy\,\mathbf{j} + dz\,\mathbf{k}$$
 
+以及
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \frac{dx}{dt}\mathbf{i} + \frac{dy}{dt}\mathbf{j} + \frac{dz}{dt}\mathbf{k} \quad (44)$$
+
+$$\mathbf{a} = \frac{d^2\mathbf{r}}{dt^2} = \frac{d^2x}{dt^2}\mathbf{i} + \frac{d^2y}{dt^2}\mathbf{j} + \frac{d^2z}{dt^2}\mathbf{k} \quad (45)$$
+
+根据定义，方程 (44) 和 (45) 分别是质点的速度和加速度。我们假设向量 $\mathbf{i, j, k}$ 在空间中保持固定。
+
+如果向量 $\mathbf{u}$ 仅取决于单个变量 $t$，我们可以定义：
+$$\frac{d\mathbf{u}}{dt} = \lim_{\Delta t \to 0} \frac{\mathbf{u}(t + \Delta t) - \mathbf{u}(t)}{\Delta t} \quad (46)$$
+
+很容易验证 (46) 与 (43) 是等价的。
+
+例 14。 考虑一个质点 $P$ 在半径为 $r$ 的圆上以恒定角速度 $\omega = \frac{d\theta}{dt}$ 运动（见图 28）。我们注意到：
+
+$$\mathbf{r} = r \cos \theta\,\mathbf{i} + r \sin \theta\,\mathbf{j}$$
+
+因此：
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = (-r \sin \theta\,\mathbf{i} + r \cos \theta\,\mathbf{j}) \frac{d\theta}{dt}$$
+
+以及：
+$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{r}}{dt^2} = (-r \cos \theta\,\mathbf{i} - r \sin \theta\,\mathbf{j}) \left( \frac{d\theta}{dt} \right)^2$$
+
+所以加速度为：
+$$\mathbf{a} = -\omega^2\mathbf{r} \quad (47)$$
+
+点 $P$ 具有指向原点的加速度，其大小为恒定的 $\omega^2r$。这个加速度是由于速度向量以恒定速率改变方向而产生的；它被称为向心加速度。
+
+例 15。 设 $P$ 为空间曲线上的任意一点（见图 29）：
+
+$$\begin{aligned} x &= x(s) \\ y &= y(s) \\ z &= z(s) \end{aligned} \text{}$$
+
+其中 $s$ 是从某个固定点 $Q$ 开始测量的弧长。那么：
+
+$$\mathbf{r} = x(s)\mathbf{i} + y(s)\mathbf{j} + z(s)\mathbf{k} \quad (48) \text{}$$
+
+因此：
+$$\frac{d\mathbf{r}}{ds} = \frac{dx}{ds}\mathbf{i} + \frac{dy}{ds}\mathbf{j} + \frac{dz}{ds}\mathbf{k} \quad (49) \text{}$$
+
+并且由微积分可知：
+$$\begin{aligned} \frac{d\mathbf{r}}{ds} \cdot \frac{d\mathbf{r}}{ds} &= \left( \frac{dx}{ds} \right)^2 + \left( \frac{dy}{ds} \right)^2 + \left( \frac{dz}{ds} \right)^2 \\ &= \frac{dx^2 + dy^2 + dz^2}{ds^2} \equiv 1 \end{aligned} \text{}$$
+
+因此 $\frac{d\mathbf{r}}{ds}$ 是一个单位向量。当 $\Delta s \to 0$ 时，$\frac{\Delta\mathbf{r}}{\Delta s}$ 的位置趋近于点 $P$ 处的切线。因此，(49) 代表了空间曲线 (48) 的单位切向量。
+
+17. 微分规则。 考虑：
+
+$$\begin{aligned} \varphi(t) &= \mathbf{u}(t) \cdot \mathbf{v}(t) \\ \varphi(t + \Delta t) - \varphi(t) &= \mathbf{u}(t + \Delta t) \cdot \mathbf{v}(t + \Delta t) - \mathbf{u}(t) \cdot \mathbf{v}(t) \end{aligned}$$
+
+现在：
+$$\begin{aligned} \mathbf{u}(t + \Delta t) &= \mathbf{u}(t) + \Delta\mathbf{u} \\ \mathbf{v}(t + \Delta t) &= \mathbf{v}(t) + \Delta\mathbf{v} \end{aligned}$$
+
+（见图 27），所以：
+$$\frac{\varphi(t + \Delta t) - \varphi(t)}{\Delta t} = \mathbf{u} \cdot \frac{\Delta\mathbf{v}}{\Delta t} + \frac{\Delta\mathbf{u}}{\Delta t} \cdot \mathbf{v} + \frac{\Delta\mathbf{u}}{\Delta t} \cdot \Delta\mathbf{v}$$
+
+取极限，我们得到：
+$$\frac{d(\mathbf{u} \cdot \mathbf{v})}{dt} = \mathbf{u} \cdot \frac{d\mathbf{v}}{dt} + \frac{d\mathbf{u}}{dt} \cdot \mathbf{v} \quad (50)$$
+
+类似地：
+$$\frac{d(\mathbf{u} \times \mathbf{v})}{dt} = \mathbf{u} \times \frac{d\mathbf{v}}{dt} + \frac{d\mathbf{u}}{dt} \times \mathbf{v} \quad (51)$$
+
+$$\frac{d(f\mathbf{u})}{dt} = f\frac{d\mathbf{u}}{dt} + \frac{df}{dt}\mathbf{u} \quad (52)$$
+
+请注意这些公式与微积分规则的一致性。
+
+例 16。 设 $\mathbf{u}(t)$ 为一个模（大小）恒定的向量。因此：
+
+$$\mathbf{u} \cdot \mathbf{u} = u^2 = \text{常数}$$
+
+通过微分，我们得到：
+
+$$\begin{aligned} \mathbf{u} \cdot \frac{d\mathbf{u}}{dt} + \frac{d\mathbf{u}}{dt} \cdot \mathbf{u} &= 0 \\ 
+\mathbf{u} \cdot \frac{d\mathbf{u}}{dt} &= 0 \end{aligned}$$
+
+因此，要么 $\frac{d\mathbf{u}}{dt} = 0$，要么 $\frac{d\mathbf{u}}{dt}$ 与 $\mathbf{u}$ 垂直。这是一个重要的结果，学生应当充分理解。读者应给出该定理的几何证明。
+
+例 17。在所有情况下，$\mathbf{u} \cdot \mathbf{u} = u^2$，其中 $u$ 是 $\mathbf{u}$ 的长度。微分得：
+$$2\mathbf{u} \cdot \frac{d\mathbf{u}}{dt} = 2u \frac{du}{dt}$$
+
+以及：
+$$\mathbf{u} \cdot \frac{d\mathbf{u}}{dt} = u \frac{du}{dt} \quad (53)$$
+
+这一结果并非显而易见，因为 $|d\mathbf{u}| \neq du$。
+
+例 18：平面运动。现在 $\mathbf{r} = r\mathbf{R}$，其中 $\mathbf{R}$ 是一个单位向量（见图 30）。因此：
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \frac{dr}{dt}\mathbf{R} + r\frac{d\mathbf{R}}{dt}$$
+
+由于 $\mathbf{R}$ 是单位向量，根据例 16，$\frac{d\mathbf{R}}{dt}$ 与 $\mathbf{R}$ 垂直。同时，通过对 $\mathbf{R} = \cos \theta\,\mathbf{i} + \sin \theta\,\mathbf{j}$ 进行微分，我们可以很容易验证 $|\frac{d\mathbf{R}}{dt}| = \frac{d\theta}{dt}$。因此 $\mathbf{v} = \frac{dr}{dt}\mathbf{R} + r\frac{d\theta}{dt}\mathbf{P}$，其中 $\mathbf{P}$ 是垂直于 $\mathbf{R}$ 的单位向量。再次微分得：
+$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d^2r}{dt^2}\mathbf{R} + \frac{dr}{dt}\frac{d\mathbf{R}}{dt} + \frac{dr}{dt}\frac{d\theta}{dt}\mathbf{P} + r\frac{d^2\theta}{dt^2}\mathbf{P} + r\frac{d\theta}{dt}\frac{d\mathbf{P}}{dt}$$
+
+或：
+$$\mathbf{a} = \left[ \frac{d^2r}{dt^2} - r\left( \frac{d\theta}{dt} \right)^2 \right] \mathbf{R} + \left[ 2\frac{dr}{dt}\frac{d\theta}{dt} + r\frac{d^2\theta}{dt^2} \right] \mathbf{P}$$
+
+因为：
+$$\frac{d\mathbf{P}}{dt} = -\frac{d\theta}{dt}\mathbf{R} \quad (54)$$
 
