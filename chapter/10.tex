@@ -112,3 +112,84 @@ $$\mathbf{a} = \left[ \frac{d^2r}{dt^2} - r\left( \frac{d\theta}{dt} \right)^2 \
 因为：
 $$\frac{d\mathbf{P}}{dt} = -\frac{d\theta}{dt}\mathbf{R} \quad (54)$$
 
+因此：
+$$\mathbf{a} = \left[ \frac{d^2r}{dt^2} - r\left( \frac{d\theta}{dt} \right)^2 \right] \mathbf{R} + \frac{1}{r} \frac{d}{dt} \left( r^2 \frac{d\theta}{dt} \right) \mathbf{P} \quad (55)$$
+
+18. 梯度
+
+设 $\varphi(x, y, z)$ 为任意连续可微的空间函数。根据微积分：
+$$d\varphi = \frac{\partial \varphi}{\partial x} dx + \frac{\partial \varphi}{\partial y} dy + \frac{\partial \varphi}{\partial z} dz \quad (56)$$
+
+现在设 $\mathbf{r}$ 为指向点 $P(x, y, z)$ 的位置向量：
+$$\mathbf{r} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$$
+
+如果我们移动到点 $Q(x + dx, y + dy, z + dz)$（见图 32），则：
+$$d\mathbf{r} = dx\,\mathbf{i} + dy\,\mathbf{j} + dz\,\mathbf{k}$$
+
+现在注意到式 (56) 包含了项 $dx, dy, dz$ 以及项 $\frac{\partial \varphi}{\partial x}, \frac{\partial \varphi}{\partial y}, \frac{\partial \varphi}{\partial z}$。我们定义一个由 $\varphi$ 的三个偏导数组成的新向量。令 $\text{del}\,\varphi \equiv \nabla\varphi \equiv \text{gradient}\,\varphi$（$\varphi$ 的梯度）定义为：
+
+$$\nabla\varphi = \frac{\partial \varphi}{\partial x}\mathbf{i} + \frac{\partial \varphi}{\partial y}\mathbf{j} + \frac{\partial \varphi}{\partial z}\mathbf{k} \quad (57)$$
+
+我们立即可以看到：
+$$d\varphi = d\mathbf{r} \cdot \nabla\varphi \quad (58)$$
+
+梯度的几何解释
+
+我们现在给出 $\nabla\varphi$ 的几何解释。在点 $P(x_0, y_0, z_0)$ 处，$\varphi$ 的值为 $\varphi(x_0, y_0, z_0)$，因此：
+$$\varphi(x, y, z) = \varphi(x_0, y_0, z_0)$$
+
+表示一个显然包含点 $P(x_0, y_0, z_0)$ 的曲面（等值面）。
+
+只要我们沿着这个曲面移动，$\varphi$ 就具有恒定值 $\varphi(x_0, y_0, z_0)$，且 $d\varphi = 0$。因此，根据式 (58)：
+$$d\mathbf{r} \cdot \nabla\varphi = 0 \quad (59)$$
+
+由于 $\nabla\varphi$ 是一个在 $\varphi$ 被求导后就完全确定的向量，而式 (59) 表明，只要 $d\mathbf{r}$ 表示从 $P$ 到 $Q$ 的位移且 $Q$ 仍在 $\varphi = \text{常数}$ 的曲面上，$\nabla\varphi$ 就与 $d\mathbf{r}$ 垂直。
+
+因此，$\nabla\varphi$ 垂直于曲面在 $P$ 点处所有可能的切线，所以 $\nabla\varphi$ 必然正交（垂直）于曲面 $\varphi(x, y, z) = \text{常数}$。
+
+（接上页图 33）。现在让我们回到公式 $d\varphi = d\mathbf{r} \cdot \nabla\varphi$。向量 $\nabla\varphi$ 在任何给定点 $P(x, y, z)$ 都是固定的，因此 $d\varphi$（$\varphi$ 的变化量）在很大程度上取决于 $d\mathbf{r}$。
+
+显然，当 $d\mathbf{r}$ 与 $\nabla\varphi$ 平行时，$d\varphi$ 取得最大值，因为 $d\mathbf{r} \cdot \nabla\varphi = |d\mathbf{r}||\nabla\varphi| \cos \theta$，而 $\cos \theta$ 在 $\theta = 0^\circ$ 时达到最大值。因此，$\nabla\varphi$ 的方向是函数 $\varphi(x, y, z)$ 增加最快的方向。
+
+设 $|d\mathbf{r}| = ds$，则有：
+$$\frac{d\varphi}{ds} = \mathbf{u} \cdot \nabla\varphi \quad (60)$$
+
+设 $|d\mathbf{r}| = ds$，则有：
+$$\frac{d\varphi}{ds} = \mathbf{u} \cdot \nabla\varphi \quad (60)$$
+
+其中 $\mathbf{u}$ 是沿 $d\mathbf{r}$ 方向的单位向量。因此，$\varphi$ 在任何方向上的变化率，就是 $\nabla\varphi$ 在该方向单位向量上的投影。
+
+示例解析例 
+
+19： 求曲面 $x^2 + y^2 - z = 1$ 在点 $P(1, 1, 1)$ 处的单位法向量。
+
+这里，$\varphi(x, y, z) = x^2 + y^2 - z$。
+
+$\nabla\varphi = 2x\mathbf{i} + 2y\mathbf{j} - \mathbf{k}$。
+
+在点 $P(1, 1, 1)$ 处，$\nabla\varphi = 2\mathbf{i} + 2\mathbf{j} - \mathbf{k}$。
+
+因此，单位法向量为：
+
+$$\mathbf{N} = \frac{2\mathbf{i} + 2\mathbf{j} - \mathbf{k}}{3}$$
+
+(注：分母 3 是向量长度 $\sqrt{2^2 + 2^2 + (-1)^2}$)
+
+例 20： 若 $r = (x^2 + y^2 + z^2)^{\frac{1}{2}}$，求 $\nabla r$。
+
+曲面 $r = \text{常数}$ 是一个球面。
+
+因此 $\nabla r$ 与球面正交，也就是说它与位置向量 $\mathbf{r}$ 平行。
+
+故 $\nabla r = k\mathbf{r}$。根据公式 (53) 有 $dr = d\mathbf{r} \cdot \nabla r = k d\mathbf{r} \cdot \mathbf{r} = kr\,dr$。
+
+因此 $k = \frac{1}{r}$，且：
+$$\nabla r = \frac{\mathbf{r}}{r} = \mathbf{R}$$
+
+(此处 $\mathbf{R}$ 表示径向单位向量)
+
+例 21：
+$$\nabla f(u) = f'(u) \nabla u, \quad u = u(x, y, z)$$
+
+(这是梯度运算的链式法则)
+
