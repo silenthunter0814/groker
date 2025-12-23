@@ -41,19 +41,9 @@
 \contentsline {section}{\numberline {8.4}旋转体的体积}{117}{section.8.4}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}积分和积分方法}{121}{chapter.9}%
 \contentsline {section}{\numberline {9.1}导数的定义与几何意义}{121}{section.9.1}%
-\contentsline {chapter}{\numberline {第十章\hspace {.3em}}向量代数}{123}{chapter.10}%
-\contentsline {section}{\numberline {10.1}参数化曲面积}{123}{section.10.1}%
-\contentsline {section}{\numberline {10.2}范例}{127}{section.10.2}%
-\contentsline {section}{\numberline {10.3}1}{131}{section.10.3}%
-\contentsline {section}{\numberline {10.4}2}{132}{section.10.4}%
-\contentsline {section}{\numberline {10.5}3}{133}{section.10.5}%
-\contentsline {section}{\numberline {10.6}4}{134}{section.10.6}%
-\contentsline {section}{\numberline {10.7}5}{135}{section.10.7}%
-\contentsline {section}{\numberline {10.8}6}{136}{section.10.8}%
-\contentsline {section}{\numberline {10.9}7}{138}{section.10.9}%
-\contentsline {section}{\numberline {10.10}8}{139}{section.10.10}%
-\contentsline {section}{\numberline {10.11}格林公式}{140}{section.10.11}%
-\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}矢量与张量分析}{153}{chapter.11}%
-\contentsline {section}{\numberline {11.1}矢量代数}{153}{section.11.1}%
-\contentsline {section}{\numberline {11.2}矢量微积分 —— 矢量函数}{159}{section.11.2}%
-\contentsline {section}{\numberline {11.3}矢量积分}{167}{section.11.3}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}向量微分}{123}{chapter.10}%
+\contentsline {section}{\numberline {10.1}微分向量分析}{123}{section.10.1}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}矢量与张量分析}{129}{chapter.11}%
+\contentsline {section}{\numberline {11.1}矢量代数}{129}{section.11.1}%
+\contentsline {section}{\numberline {11.2}矢量微积分 —— 矢量函数}{135}{section.11.2}%
+\contentsline {section}{\numberline {11.3}矢量积分}{143}{section.11.3}%
