@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  23 DEC 2025 15:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  24 DEC 2025 20:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,28 +1033,36 @@ File: images/08/8.5.png Graphic file (type bmp)
 
 ]
 第十章
-[123] [124] [125] [126] [127]) [128]
+[123] [124] [125] [126] [127] [128]
+File: images/ref/35.png Graphic file (type bmp)
+<images/ref/35.png>
+ [129] [130] [131] [132]
+Overfull \hbox (34.22011pt too wide) detected at line 389
+\OMS/cmsy/m/n/12 r ^^B \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 '\OT1/cmr/m/n/12 ) = [] = [] [] + [] [] + [] []
+ []
+
+[133] [134]) [135]
 \openout2 = `chapter/reference.aux'.
 
- (./chapter/reference.tex
+ (./chapter/reference.tex [136
+
+
+
+
+]
 第十一章
-[129
-
-
-
-
-] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]) [146] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
+[137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153]) [154] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/10.aux) (./chapter/reference.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31870 strings out of 477728
- 721058 string characters out of 5842237
+ 31897 strings out of 477728
+ 722571 string characters out of 5842237
  968303 words of memory out of 5000000
- 51895 multiletter control sequences out of 15000+600000
+ 51920 multiletter control sequences out of 15000+600000
  479494 words of font info for 106 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,16n,97p,1253b,774s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (154 pages).
+Output written on main.pdf (162 pages).
