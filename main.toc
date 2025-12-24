@@ -43,7 +43,7 @@
 \contentsline {section}{\numberline {9.1}导数的定义与几何意义}{121}{section.9.1}%
 \contentsline {chapter}{\numberline {第十章\hspace {.3em}}向量微分}{123}{chapter.10}%
 \contentsline {section}{\numberline {10.1}微分向量分析}{123}{section.10.1}%
-\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}矢量与张量分析}{137}{chapter.11}%
-\contentsline {section}{\numberline {11.1}矢量代数}{137}{section.11.1}%
-\contentsline {section}{\numberline {11.2}矢量微积分 —— 矢量函数}{143}{section.11.2}%
-\contentsline {section}{\numberline {11.3}矢量积分}{151}{section.11.3}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}矢量与张量分析}{141}{chapter.11}%
+\contentsline {section}{\numberline {11.1}矢量代数}{141}{section.11.1}%
+\contentsline {section}{\numberline {11.2}矢量微积分 —— 矢量函数}{147}{section.11.2}%
+\contentsline {section}{\numberline {11.3}矢量积分}{155}{section.11.3}%
