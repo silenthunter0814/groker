@@ -46,6 +46,7 @@
 \contentsline {chapter}{\numberline {第十一章\hspace {.3em}}空间曲线}{141}{chapter.11}%
 \contentsline {section}{\numberline {11.1}向量微分和曲线弧长}{141}{section.11.1}%
 \contentsline {section}{\numberline {11.2}切向量 $\mathbf {T}$、法向量 $\mathbf {N}$ 和副法向量 $\mathbf {B}$}{141}{section.11.2}%
-\contentsline {section}{\numberline {11.3}通量和散度}{145}{section.11.3}%
-\contentsline {section}{\numberline {11.4}环量和旋度}{146}{section.11.4}%
-\contentsline {section}{\numberline {11.5}格林定理}{148}{section.11.5}%
+\contentsline {section}{\numberline {11.3}机器学习中的常用函数及其导函数}{145}{section.11.3}%
+\contentsline {section}{\numberline {11.4}通量和散度}{152}{section.11.4}%
+\contentsline {section}{\numberline {11.5}环量和旋度}{153}{section.11.5}%
+\contentsline {section}{\numberline {11.6}格林定理}{154}{section.11.6}%
