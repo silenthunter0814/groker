@@ -175,3 +175,63 @@ $$\mathbf{B} = \frac{\mathbf{r}'(t) \times \mathbf{r}''(t)}{\|\mathbf{r}'(t) \ti
     当 $x \to \infty$ 时： $\kappa \to 0$。这符合直觉，因为抛物线远端越来越趋于直线。
 
 \end{example}
+
+\section{散度}
+
+
+\section{旋度}
+
+1. 物理直觉：环量密度
+
+如果一个场在某处有旋转趋势，那么你沿着一个极小的闭合回路 $L$ 走一圈，矢量场沿路径的累积效应（环量） $\oint_L \mathbf{F} \cdot d\mathbf{l}$ 就不应该为零。
+
+我们要寻找一个量，用来描述 $\mathbf{F}$ 在某点附近的旋转强度。这个量不应该依赖于我们取的回路大小，因此我们要计算的是单位面积的环量极限。
+
+1. 考察 $xy$ 平面内的旋转 (绕 $z$ 轴)
+
+我们在 $xy$ 平面上取一个微小矩形，中心为 $(x, y, z)$，边长为 $dx, dy$。我们计算沿边界逆时针走一圈的环量 $\Gamma_z = \oint \mathbf{F} \cdot d\mathbf{l}$。
+
+底边 (1)： 路径 $dx$，位于 $y - \frac{dy}{2}$。$F_1$ 的贡献：
+$$\left( F_1(x, y - \frac{dy}{2}, z) \right) dx \approx (F_1 - \frac{\partial F_1}{\partial y}\frac{dy}{2}) dx$$
+
+顶边 (2)： 路径 $-dx$ (向左)，位于 $y + \frac{dy}{2}$。$F_1$ 的贡献：
+$$-\left( F_1(x, y + \frac{dy}{2}, z) \right) dx \approx -(F_1 + \frac{\partial F_1}{\partial y}\frac{dy}{2}) dx$$
+
+右边 (3)： 路径 $dy$ (向上)，位于 $x + \frac{dx}{2}$。$F_2$ 的贡献：
+$$\left( F_2(x + \frac{dx}{2}, y, z) \right) dy \approx (F_2 + \frac{\partial F_2}{\partial x}\frac{dx}{2}) dy$$
+
+左边 (4)： 路径 $-dy$ (向下)，位于 $x - \frac{dx}{2}$。$F_2$ 的贡献：
+$$-\left( F_2(x - \frac{dx}{2}, y, z) \right) dy \approx -(F_2 - \frac{\partial F_2}{\partial x}\frac{dx}{2}) dy$$
+
+累加总环量 $\Gamma_z$：
+$$\Gamma_z = \underbrace{\left[ (F_2 + \frac{\partial F_2}{\partial x}\frac{dx}{2}) - (F_2 - \frac{\partial F_2}{\partial x}\frac{dx}{2}) \right] dy}_{\text{垂直边贡献}} + \underbrace{\left[ (F_1 - \frac{\partial F_1}{\partial y}\frac{dy}{2}) - (F_1 + \frac{\partial F_1}{\partial y}\frac{dy}{2}) \right] dx}_{\text{水平边贡献}}$$
+
+简化后得到：
+$$\Gamma_z = \left( \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right) dx dy$$
+
+由此定义绕 $z$ 轴的旋转强度（单位面积环量）：
+$$\omega_z = \frac{\Gamma_z}{dx dy} = \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}$$
+
+2. 推广到其他两个平面
+
+利用同样的逻辑（轮换对称性），我们可以求出场在其他两个正交平面上的旋转强度：
+
+在 $yz$ 平面内 (绕 $x$ 轴)：考察 $F_2$ 和 $F_3$ 随 $y$ 和 $z$ 的变化：
+$$\omega_x = \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}$$
+
+在 $zx$ 平面内 (绕 $y$ 轴)：考察 $F_3$ 和 $F_1$ 随 $z$ 和 $x$ 的变化：
+$$\omega_y = \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}$$
+
+3. 合成旋度矢量
+
+至此，我们发现这三个量 $(\omega_x, \omega_y, \omega_z)$ 完整地描述了矢量场在这一点三个维度的旋转特性。我们将这三个分量组合成一个新的矢量，并命名为 $\text{curl } \mathbf{F}$：
+
+$$\text{curl } \mathbf{F} = \left( \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right) \mathbf{k}$$
+
+4. 符号化的最终形式
+
+为了方便记忆这种复杂的偏微分组合，我们引入算子 2$\nabla = (\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})$。观察3发现，上述结果恰好等于 $\nabla$ 与 $\mathbf{F}$ 的叉乘结果：
+
+$$\nabla \times \mathbf{F} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ F_1 & F_2 & F_3 \end{vmatrix}$$
+
+
