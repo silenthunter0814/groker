@@ -176,10 +176,59 @@ $$\mathbf{B} = \frac{\mathbf{r}'(t) \times \mathbf{r}''(t)}{\|\mathbf{r}'(t) \ti
 
 \end{example}
 
-\section{散度}
+\section{通量和散度}
+
+通量的物理直觉是：衡量矢量场 $\mathbf{F}$ 在单位时间内穿过某个微小表面的“净流量”。
+
+在直角坐标系下，我们推导矢量场 $\mathbf{F} = (F_1, F_2, F_3)$ 流出一个微元体（体积 $dV = dx dy dz$）的净通量。
+
+1. 建立微元模型
+
+想象一个中心位于 $(x, y, z)$ 的微小长方体，六个面分别垂直于坐标轴。我们以穿过垂直于 $x$ 轴的两个表面的通量为例进行推导。
+
+右侧面（位于 $x + \frac{dx}{2}$）：法向量指向 $+x$ 方向。该面中心处的场分量 $F_1$ 约为：
+$$F_1(x + \frac{dx}{2}, y, z) \approx F_1 + \frac{\partial F_1}{\partial x} \frac{dx}{2}$$
+
+穿出通量：$\Phi_{right} = (F_1 + \frac{\partial F_1}{\partial x} \frac{dx}{2}) \cdot dy dz$
+
+左侧面（位于 $x - \frac{dx}{2}$）：法向量指向 $-x$ 方向（流出体积的方向）。该面中心处的场分量 $F_1$ 约为：
+$$F_1(x - \frac{dx}{2}, y, z) \approx F_1 - \frac{\partial F_1}{\partial x} \frac{dx}{2}$$
+
+左侧面（位于 $x - \frac{dx}{2}$）：法向量指向 $-x$ 方向（流出体积的方向）。该面中心处的场分量 $F_1$ 约为：
+$$F_1(x - \frac{dx}{2}, y, z) \approx F_1 - \frac{\partial F_1}{\partial x} \frac{dx}{2}$$
+
+穿出通量（由于法向量向左，需乘面积向量 $-dy dz \mathbf{i}$）：$\Phi_{left} = -(F_1 - \frac{\partial F_1}{\partial x} \frac{dx}{2}) \cdot dy dz$
+
+$x$ 方向的净通量（两面之和）：
+
+$$d\Phi_x = \Phi_{right} + \Phi_{left} = \left( \frac{\partial F_1}{\partial x} dx \right) dy dz = \frac{\partial F_1}{\partial x} dV$$
+
+3. 汇总三个方向
+
+同理，我们可以得到穿过另外两对面的净通量：
+
+$y$ 方向净通量： $d\Phi_y = \frac{\partial F_2}{\partial y} dy (dx dz) = \frac{\partial F_2}{\partial y} dV$
+
+$z$ 方向净通量： $d\Phi_z = \frac{\partial F_3}{\partial z} dz (dx dy) = \frac{\partial F_3}{\partial z} dV$
+
+总净通量（流出该微元体的总和）：
+$$d\Phi = d\Phi_x + d\Phi_y + d\Phi_z = \left( \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z} \right) dx dy dz$$
+
+4. 结论：从通量到散度
+
+通过上面的推导，我们发现了一个极其重要的物理量：
+
+特征量：括号内的 $\left( \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z} \right)$ 描述了该点处通量的源性。
+
+散度的诞生：如果我们定义单位体积的净通量为该点的“散度”，那么：
+
+$$\text{div } \mathbf{F} = \frac{d\Phi}{dV} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$$
+
+算子表示：这恰好对应 $\nabla$ 算子与 $\mathbf{F}$ 的点乘：$\nabla \cdot \mathbf{F}$。
 
 
-\section{旋度}
+
+\section{环量和旋度}
 
 1. 物理直觉：环量密度
 
