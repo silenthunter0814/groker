@@ -296,4 +296,62 @@ $$\nabla \times \mathbf{F} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k
 闭合面积分 $\oiint \mathbf{F} \cdot d\mathbf{S}$描述局部的发散/汇聚散度 $\nabla \cdot \mathbf{F}$
 
 
+\section{格林定理}
+
+格林定理（Green's Theorem）是向量分析中一个非常优美的结论，它将闭合曲线上的线积分与该曲线所围区域上的面积分联系了起来。
+
+实际上，格林定理可以看作是旋度微元原理在二维平面上的宏观累加。
+
+1. 物理直觉：小漩涡合成大漩涡
+
+想象一个平面区域 $D$，被一条闭合曲线 $C$ 包围。我们将区域 $D$ 划分为无数个极其微小的矩形元（即我们之前推导过的“环量微元”）。
+
+内部抵消：对于两个相邻的微元，它们相交的边会被经过两次，但方向相反。因此，沿这些内部公共边的线积分会全部相互抵消。
+
+边界残留：唯一没有被抵消掉的，只有最外层紧贴曲线 $C$ 的那些微元边。
+
+结论：所有微元环量的总和，等于绕最外圈大边界的环量。
+
+2. 数学推导过程
+
+设平面矢量场为 $\mathbf{F} = P(x, y)\mathbf{i} + Q(x, y)\mathbf{j}$。我们要证明：
+
+$$\oint_C (P dx + Q dy) = \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dA$$
+
+第一步：处理 $Q$ 分量的部分
+
+我们先考察面积分中的 $\iint_D \frac{\partial Q}{\partial x} dA$。假设区域 $D$ 是一个简单的 $x$-型区域（左边界为 $x=g_1(y)$，右边界为 $x=g_2(y)$）：
+
+$$\iint_D \frac{\partial Q}{\partial x} dx dy = \int_{c}^{d} \left[ \int_{g_1(y)}^{g_2(y)} \frac{\partial Q}{\partial x} dx \right] dy$$
+
+据微积分基本定理，内部积分结果为：
+$$\int_{g_1(y)}^{g_2(y)} \frac{\partial Q}{\partial x} dx = Q(g_2(y), y) - Q(g_1(y), y)$$
+
+代回原式：
+$$\iint_D \frac{\partial Q}{\partial x} dA = \int_{c}^{d} Q(g_2(y), y) dy - \int_{c}^{d} Q(g_1(y), y) dy$$
+
+这两个积分正好对应曲线 $C$ 的右半部分和左半部分对 $dy$ 的积分。合并后即为：
+$$\iint_D \frac{\partial Q}{\partial x} dA = \oint_C Q dy$$
+
+第二步：处理 $P$ 分量的部分
+
+同理，假设区域 $D$ 是一个 $y$-型区域（下边界 $y=f_1(x)$，上边界 $y=f_2(x)$），计算 $\iint_D \frac{\partial P}{\partial y} dA$：
+
+$$\iint_D \frac{\partial P}{\partial y} dy dx = \int_{a}^{b} [P(x, f_2(x)) - P(x, f_1(x))] dx$$
+
+注意，当我们沿着曲线 $C$ 逆时针走时，上边界是从右向左走的（$dx$ 为负），下边界是从左向右走的（$dx$ 为正）。因此：
+
+$$\oint_C P dx = \int_{a}^{b} P(x, f_1(x)) dx + \int_{b}^{a} P(x, f_2(x)) dx = -\iint_D \frac{\partial P}{\partial y} dA$$
+
+第三步：组合结果
+
+将上述两部分相加：
+$$\oint_C P dx + \oint_C Q dy = \iint_D \frac{\partial Q}{\partial x} dA - \iint_D \frac{\partial P}{\partial y} dA$$
+
+合并后得到格林定理的标准形式：
+$$\oint_C (P dx + Q dy) = \iint_D \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dx dy$$
+
+
+
+
 
