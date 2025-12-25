@@ -305,6 +305,160 @@ MSE 的特性
 物理意义： MSE 对应于高斯分布下的最大似然估计（MLE）。
 
 
+3. Softmax 函数
+
+Softmax 函数是机器学习中处理多分类问题的核心函数。它通常位于神经网络的最后一层，负责将原始的得分（Logits）转换为概率分布。
+
+函数定义
+
+假设我们有一个向量 $\mathbf{z}$，包含 $K$ 个类别的原始得分 $z_1, z_2, \dots, z_K$。Softmax 函数将其中第 $i$ 个分量映射为一个 $(0, 1)$ 之间的概率值 $a_i$。
+
+数学表达式：
+$$a_i = \text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}}$$
+
+核心特性：
+
+归一化： 所有输出概率之和恒等于 1，即 $\sum_{i=1}^{K} a_i = 1$。
+
+放大差异： 通过指数函数 $e^z$，Softmax 会“拉开”得分之间的差距，使得得分最高的类别在概率分布中占据主导地位。
+
+导函数推导
+
+Softmax 的求导比 Sigmoid 复杂一些，因为它是一个“多对多”的函数——输出向量中的每一个元素 $a_i$ 都依赖于输入向量中的每一个元素 $z_j$。
+
+我们需要计算偏导数 $\frac{\partial a_i}{\partial z_j}$。根据 $i$ 是否等于 $j$，分为两种情况：
+
+准备工作：商法则
+
+回顾导数商法则：$\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$。在 Softmax 中：
+
+$u = e^{z_i}$
+
+$v = \sum_{k=1}^{K} e^{z_k}$
+
+情况 1：$i = j$（对自身得分求导）
+
+此时 $u' = \frac{\partial e^{z_i}}{\partial z_i} = e^{z_i}$，$v' = \frac{\partial (\sum e^{z_k})}{\partial z_i} = e^{z_i}$。
+
+$$\frac{\partial a_i}{\partial z_i} = \frac{e^{z_i} \cdot \sum - e^{z_i} \cdot e^{z_i}}{(\sum)^2}$$
+
+$$\frac{\partial a_i}{\partial z_i} = \frac{e^{z_i}}{\sum} \cdot \frac{\sum - e^{z_i}}{\sum} = a_i(1 - a_i)$$
+
+情况 2：$i \neq j$（对其他得分求导）
+
+此时 $u = e^{z_i}$ 对 $z_j$ 求导为 0（因为 $i \neq j$），$v' = \frac{\partial (\sum e^{z_k})}{\partial z_j} = e^{z_j}$。
+
+$$\frac{\partial a_i}{\partial z_j} = \frac{0 \cdot \sum - e^{z_i} \cdot e^{z_j}}{(\sum)^2}$$
+
+$$\frac{\partial a_i}{\partial z_j} = - \frac{e^{z_i}}{\sum} \cdot \frac{e^{z_j}}{\sum} = -a_i a_j$$
+
+综合结论：
+$$\frac{\partial a_i}{\partial z_j} = \begin{cases} a_i(1 - a_j), & \text{if } i = j \\ -a_i a_j, & \text{if } i \neq j \end{cases}$$
+
+与交叉熵结合
+
+在深度学习框架中，Softmax 通常与交叉熵损失 (Cross-Entropy Loss) 配合使用。有趣的是，当它们结合在一起时，最终的梯度形式会变得异常简洁。
+
+设 $y_i$ 为真实标签（One-hot 编码），$a_i$ 为 Softmax 输出，总损失为 $L = -\sum y_i \ln a_i$。经过链式法则推导，损失 $L$ 对输入 $z_j$ 的梯度简单到令人惊讶：
+
+$$\frac{\partial L}{\partial z_j} = a_j - y_j$$
+
+直观理解： 梯度就是“预测概率与真实标签的差值”。如果预测概率比真实值大，梯度为正，减小该权重；反之亦然。这种完美的抵消特性正是 Softmax + 交叉熵成为分类任务标配的原因。
+
+在计算 Softmax 时，如果 $z_i$ 非常大，$e^{z_i}$ 会导致数值溢出。在计算前减去向量中的最大值，即 $e^{z_i - \max(\mathbf{z})}$。这不会改变输出结果，但能保证计算安全。
+
+4. 交叉熵损失 (Cross-Entropy Loss)
+
+交叉熵损失是分类问题中最核心的损失函数。它源于信息论，用于衡量两个概率分布之间的“距离”。
+
+在机器学习中，我们希望模型输出的概率分布 $P$ 尽可能接近数据的真实概率分布 $Q$。
+
+函数定义
+
+二分类 (Binary Cross-Entropy, BCE)
+
+当我们只有两个类别（如：猫或狗）时，模型输出一个值 $\hat{y} \in (0, 1)$。
+
+数学表达式：
+$$L = -[y \ln(\hat{y}) + (1-y) \ln(1-\hat{y})]$$
+
+其中 $y$ 为真实标签（0 或 1），$\hat{y}$ 为模型预测概率。
+
+多分类 (Categorical Cross-Entropy)
+
+当有 $K$ 个类别时，使用 Softmax 输出概率分布 $\mathbf{\hat{y}}$。
+
+数学表达式：
+$$L = -\sum_{i=1}^{K} y_i \ln(\hat{y}_i)$$
+
+其中 $y_i$ 是真实标签的 One-hot 编码（正确类为 1，其余为 0）。
+
+二分类导函数推导
+
+在神经网络中，$\hat{y}$ 通常由 Sigmoid 函数产生，即 $\hat{y} = \sigma(z) = \frac{1}{1+e^{-z}}$。我们需要求对 $z$ 的梯度。
+
+步骤 1：利用链式法则$$\frac{\partial L}{\partial z} = \frac{\partial L}{\partial \hat{y}} \cdot \frac{\partial \hat{y}}{\partial z}$$
+
+步骤 2：对损失函数求导 $\frac{\partial L}{\partial \hat{y}}$
+
+对 $L = -y \ln\hat{y} - (1-y)\ln(1-\hat{y})$ 求偏导：
+$$\frac{\partial L}{\partial \hat{y}} = -\frac{y}{\hat{y}} + \frac{1-y}{1-\hat{y}} = \frac{\hat{y}-y}{\hat{y}(1-\hat{y})}$$
+
+步骤 3：结合 Sigmoid 的导数
+
+前面推导过 $\frac{\partial \hat{y}}{\partial z} = \hat{y}(1-\hat{y})$。将两者相乘：
+
+$$\frac{\partial L}{\partial z} = \frac{\hat{y}-y}{\hat{y}(1-\hat{y})} \cdot \hat{y}(1-\hat{y})$$$$\frac{\partial L}{\partial z} = \hat{y} - y$$
+
+梯度同样非常简洁，即 预测概率与真实标签的差值。
+
+多分类导函数推导
+
+在多分类任务中，Softmax 激活函数与**交叉熵损失（Cross-Entropy Loss）**的结合是标准配置。它们的组合推导过程展示了数学上的巧妙抵消。
+
+Softmax 输出： $a_i = \frac{e^{z_i}}{\sum_{k=1}^K e^{z_k}}$
+
+多分类交叉熵损失： $L = -\sum_{i=1}^K y_i \ln a_i$
+
+其中 $y_i$ 是标签的 One-hot 编码。对于一个样本，只有一个 $y_{true}=1$，其余均为 0。
+
+Softmax 自身的偏导（前文已证）：
+$$\frac{\partial a_i}{\partial z_j} = \begin{cases} a_i(1 - a_i) & i = j \\ -a_i a_j & i \neq j \end{cases}$$
+
+根据链式法则，由于 $L$ 是关于所有 $a_i$ 的函数，而每个 $a_i$ 又是关于 $z_j$ 的函数：
+
+$$\frac{\partial L}{\partial z_j} = \sum_{i=1}^K \frac{\partial L}{\partial a_i} \cdot \frac{\partial a_i}{\partial z_j}$$
+
+对 $L = -\sum y_i \ln a_i$ 求导：
+$$\frac{\partial L}{\partial a_i} = -\frac{y_i}{a_i}$$
+
+由于 $\frac{\partial a_i}{\partial z_j}$ 在 $i=j$ 和 $i \neq j$ 时表现不同，我们将求和式拆分为两部分：
+$$\frac{\partial L}{\partial z_j} = \left( \frac{\partial L}{\partial a_j} \cdot \frac{\partial a_j}{\partial z_j} \right) + \sum_{i \neq j}^K \left( \frac{\partial L}{\partial a_i} \cdot \frac{\partial a_i}{\partial z_j} \right)$$
+
+代入具体导数
+$$\frac{\partial L}{\partial z_j} = \left( -\frac{y_j}{a_j} \cdot a_j(1 - a_j) \right) + \sum_{i \neq j}^K \left( -\frac{y_i}{a_i} \cdot (-a_i a_j) \right)$$
+
+左边项简化： $-y_j(1 - a_j) = -y_j + y_j a_j$
+
+右边项简化： $\sum_{i \neq j}^K (y_i a_j) = a_j \sum_{i \neq j}^K y_i$
+
+合并与最终简化
+$$\frac{\partial L}{\partial z_j} = -y_j + y_j a_j + a_j \sum_{i \neq j}^K y_i$$
+
+$$\frac{\partial L}{\partial z_j} = -y_j + a_j \left( y_j + \sum_{i \neq j}^K y_i \right)$$
+
+因为 $y$ 是 One-hot 编码，所有概率之和 $\sum_{i=1}^K y_i = 1$，所以括号内的部分等于 1：
+
+$$\frac{\partial L}{\partial z_j} = a_j - y_j$$
+
+这个结果非常优雅：梯度 = 预测值 - 真实值。
+
+如果预测很准： 比如类别 $j$ 是正确的 ($y_j=1$)，模型预测 $a_j=0.99$，那么梯度 $0.99 - 1 = -0.01$，权重只会有极小的修正。
+
+如果预测很差： 比如类别 $j$ 是正确的 ($y_j=1$)，但模型预测 $a_j=0.1$，那么梯度 $0.1 - 1 = -0.9$，巨大的梯度会强制模型大幅度调整权重。
+
+在编写深度学习框架（如 PyTorch 的 CrossEntropyLoss）时，通常会将 Softmax 和 CrossEntropy 合并计算。这不仅是为了求导公式的简洁，更是为了数值稳定性。直接计算 $a_j - y_j$ 避免了中间步骤中可能出现的 log(0) 或极大指数幂溢出的问题。
+
 
 
 
@@ -357,6 +511,9 @@ $$d\Phi = d\Phi_x + d\Phi_y + d\Phi_z = \left( \frac{\partial F_1}{\partial x} +
 $$\text{div } \mathbf{F} = \frac{d\Phi}{dV} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$$
 
 算子表示：这恰好对应 $\nabla$ 算子与 $\mathbf{F}$ 的点乘：$\nabla \cdot \mathbf{F}$。
+
+
+
 
 
 
