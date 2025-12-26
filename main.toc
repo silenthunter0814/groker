@@ -41,12 +41,17 @@
 \contentsline {section}{\numberline {8.4}旋转体的体积}{117}{section.8.4}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}积分和积分方法}{121}{chapter.9}%
 \contentsline {section}{\numberline {9.1}导数的定义与几何意义}{121}{section.9.1}%
-\contentsline {chapter}{\numberline {第十章\hspace {.3em}}向量微分}{123}{chapter.10}%
-\contentsline {section}{\numberline {10.1}微分向量分析}{123}{section.10.1}%
-\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}空间曲线}{141}{chapter.11}%
-\contentsline {section}{\numberline {11.1}向量微分和曲线弧长}{141}{section.11.1}%
-\contentsline {section}{\numberline {11.2}切向量 $\mathbf {T}$、法向量 $\mathbf {N}$ 和副法向量 $\mathbf {B}$}{141}{section.11.2}%
-\contentsline {section}{\numberline {11.3}机器学习中的常用函数及其导函数}{145}{section.11.3}%
-\contentsline {section}{\numberline {11.4}通量和散度}{152}{section.11.4}%
-\contentsline {section}{\numberline {11.5}环量和旋度}{153}{section.11.5}%
-\contentsline {section}{\numberline {11.6}格林定理}{154}{section.11.6}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}多变量函数}{123}{chapter.10}%
+\contentsline {section}{\numberline {10.1}从平面到空间：定义域与可视化}{123}{section.10.1}%
+\contentsline {section}{\numberline {10.2}偏导数：固定维度的变化}{126}{section.10.2}%
+\contentsline {section}{\numberline {10.3}全微分与切平面}{126}{section.10.3}%
+\contentsline {section}{\numberline {10.4}链式法则：变量之间的传递链}{127}{section.10.4}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}空间曲线}{129}{chapter.11}%
+\contentsline {section}{\numberline {11.1}向量微分和曲线弧长}{129}{section.11.1}%
+\contentsline {section}{\numberline {11.2}切向量 $\mathbf {T}$、法向量 $\mathbf {N}$ 和副法向量 $\mathbf {B}$}{129}{section.11.2}%
+\contentsline {section}{\numberline {11.3}机器学习中的常用函数及其导函数}{133}{section.11.3}%
+\contentsline {section}{\numberline {11.4}通量和散度}{140}{section.11.4}%
+\contentsline {section}{\numberline {11.5}环量和旋度}{141}{section.11.5}%
+\contentsline {section}{\numberline {11.6}格林定理}{142}{section.11.6}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}向量微分}{145}{chapter.12}%
+\contentsline {section}{\numberline {12.1}微分向量分析}{145}{section.12.1}%
