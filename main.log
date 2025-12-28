@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  27 DEC 2025 04:49
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.11.13)  28 DEC 2025 08:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -862,11 +862,11 @@ Underfull \vbox (badness 1275) has occurred while \output is active []
 
  [4] [5] [6
 
-] (./main.toc [7])
+] (./main.toc [7] [8])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [8] [9] [10
+ [9] [10
 
 ]
 \openout2 = `chapter/01.aux'.
@@ -1034,7 +1034,7 @@ File: images/08/8.5.png Graphic file (type bmp)
 
 ]
 第十章
-[123] [124] [125] [126] [127]) [128]
+[123] [124] [125] [126] [127] [128] [129]) [130]
 \openout2 = `chapter/ref2.aux'.
 
  (./chapter/ref2.tex
@@ -1063,44 +1063,49 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 7.
 
-[129
+[131
 
 
 
 
-] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142] [143]) [144]
+] [132] [133] [134]
+Overfull \hbox (7.07155pt too wide) in paragraph at lines 188--189
+[]\TU/FandolSong-Regular(0)/m/n/12 想 象 你 在 登 山，|  山 的 高 度 由 $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )$ \TU/FandolSong-Regular(0)/m/n/12 表 示，|  而 你 只 能 沿 着 地 面 上 的 一 条 小 路 $\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) =
+ []
+
+[135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147]) [148]
 \openout2 = `chapter/ref3.aux'.
 
  (./chapter/ref3.tex
 第十二章
-[145
+[149
 
 
 
 
-] [146] [147] [148] [149] [150]
+] [150] [151] [152] [153] [154]
 File: images/ref/35.png Graphic file (type bmp)
 <images/ref/35.png>
- [151] [152] [153] [154]
+ [155] [156] [157] [158]
 Overfull \hbox (34.22011pt too wide) detected at line 389
 \OMS/cmsy/m/n/12 r ^^B \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 r\OML/cmm/m/it/12 '\OT1/cmr/m/n/12 ) = [] = [] [] + [] [] + [] []
  []
 
-[155] [156] [157]
+[159] [160] [161]
 File: images/ref/37.png Graphic file (type bmp)
 <images/ref/37.png>
- [158] [159] [160]) [161] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/ref1.aux) (./chapter/ref2.aux) (./chapter/ref3.aux))
+ [162] [163] [164]) [165] (./main.aux (./chapter/01.aux) (./chapter/02.aux) (./chapter/03.aux) (./chapter/04.aux) (./chapter/05.aux) (./chapter/06.aux) (./chapter/07.aux) (./chapter/08.aux) (./chapter/09.aux) (./chapter/ref1.aux) (./chapter/ref2.aux) (./chapter/ref3.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31981 strings out of 477728
- 725978 string characters out of 5842237
- 968819 words of memory out of 5000000
- 51994 multiletter control sequences out of 15000+600000
+ 32000 strings out of 477728
+ 727335 string characters out of 5842237
+ 967820 words of memory out of 5000000
+ 52013 multiletter control sequences out of 15000+600000
  481048 words of font info for 113 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  89i,16n,97p,1253b,774s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (171 pages).
+Output written on main.pdf (175 pages).
