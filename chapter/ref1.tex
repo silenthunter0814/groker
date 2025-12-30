@@ -168,7 +168,7 @@ $-\sqrt{R^2 - x^2} \leq y \leq \sqrt{R^2 - x^2}$
         d(u + v) &= du + dv \\
         duv &= v\cdot du + u\cdot dv \\
         d\frac{u}{v} &= \frac{v\cdot du - u\cdot dv}{v^2} \\
-        du(v) = u'(v)\cdot dv
+        du(v) &= u'(v)\cdot dv
     \end{align}
 \end{definition}
 
@@ -178,9 +178,11 @@ $-\sqrt{R^2 - x^2} \leq y \leq \sqrt{R^2 - x^2}$
 
 \begin{example} 表达式的自微分。
     \begin{align*}
-        dxy = y \,dx + x \,dy \\
-        d(xy^2 + 2x + y^2) = dxy^2 + d2x + dy^2 = y^2 \,dx + x \,dy^2 + 2 \,dx + 2y \,dy = (y^2 + 2) \,dx + (2xy + 2y) \,dy \\
-        d\frac{1}{x + y} = d(x + y)^{-1} = -1\cdot (x + y)^{-2} \,d(x + y) = -\frac{dx + dy}{(x + y)^2}
+        dxy &= y \,dx + x \,dy \\
+        d(xy^2 + 2x + y^2) &= dxy^2 + d2x + dy^2 = y^2 \,dx + x \,dy^2 + 2 \,dx + 2y \,dy \\
+        &= (y^2 + 2) \,dx + (2xy + 2y) \,dy \\
+        d\frac{1}{x + y} &= d(x + y)^{-1} = -1\cdot (x + y)^{-2} \,d(x + y) \\
+        &= -\frac{dx + dy}{(x + y)^2}
     \end{align*}
 \end{example}
 
