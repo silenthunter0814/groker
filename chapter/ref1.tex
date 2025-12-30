@@ -159,6 +159,39 @@ $-\sqrt{R^2 - x^2} \leq y \leq \sqrt{R^2 - x^2}$
 稀疏的等高线意味着地势平缓。
 
 
+\section{格洛克自微分法则}
+
+\begin{definition} 自微分
+
+    如果变量 $u, v$ 表示一个或多个变量的表达式，那么 $u, v$ 以变量替换的方式进行微分，并根据链式法则展开，即：
+    \begin{align}
+        d(u + v) &= du + dv \\
+        duv &= v\cdot du + u\cdot dv \\
+        d\frac{u}{v} &= \frac{v\cdot du - u\cdot dv}{v^2} \\
+        du(v) = u'(v)\cdot dv
+    \end{align}
+\end{definition}
+
+对于单变量函数 $y = f(x)$，$y$ 的微分总能表示为导函数和 $dx$ 的乘积表达式，即 $dy = f'(x) \,dx$。
+
+对于多变量函数如 $z = f(x, y)$，我们无法确知 $x, y$ 的约束关系，因此需要以独立自变量的形态进行微分，这也是格洛克自微分名称的由来，虽然微分法则本质上没有改变，但确实改变了思考微分问题的角度。同时，对于这里的因变量 $z$,我们也改变思考问题的角度，把函数看作等号两端相等的方程形式，那么 $z$ 也可以看作是自变量，也就是所谓的隐函数形态，那么微分方法就得到了统一。
+
+\begin{example} 表达式的自微分。
+    \begin{align*}
+        dxy = y \,dx + x \,dy \\
+        d(xy^2 + 2x + y^2) = dxy^2 + d2x + dy^2 = y^2 \,dx + x \,dy^2 + 2 \,dx + 2y \,dy = (y^2 + 2) \,dx + (2xy + 2y) \,dy \\
+        d\frac{1}{x + y} = d(x + y)^{-1} = -1\cdot (x + y)^{-2} \,d(x + y) = -\frac{dx + dy}{(x + y)^2}
+    \end{align*}
+\end{example}
+
+
+
+
+
+
+
+
+
 
 \section{偏导数：固定维度的变化}
 
