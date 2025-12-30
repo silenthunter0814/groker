@@ -54,5 +54,8 @@
 \contentsline {section}{\numberline {11.5}通量和散度}{143}{section.11.5}%
 \contentsline {section}{\numberline {11.6}环量和旋度}{145}{section.11.6}%
 \contentsline {section}{\numberline {11.7}格林定理}{146}{section.11.7}%
-\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}向量微分}{149}{chapter.12}%
-\contentsline {section}{\numberline {12.1}微分向量分析}{149}{section.12.1}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}矢量与张量分析}{149}{chapter.12}%
+\contentsline {section}{\numberline {12.1}矢量代数}{149}{section.12.1}%
+\contentsline {section}{\numberline {12.2}矢量微积分 —— 矢量函数}{155}{section.12.2}%
+\contentsline {section}{\numberline {12.3}矢量积分}{163}{section.12.3}%
+\contentsline {section}{\numberline {12.4}微分向量分析}{167}{section.12.4}%
