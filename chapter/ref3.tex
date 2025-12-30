@@ -1,4 +1,775 @@
-\chapter{向量微分}
+
+\chapter{矢量与张量分析}
+
+
+\section{矢量代数}
+
+1.1 矢量的定义 (Definition of a Vector)
+在物理学和工程学中，我们经常遇到两类量：标量 (Scalars) 和 矢量 (Vectors)。
+
+标量： 仅由其大小（带正号或负号）确定的量。例如：质量、时间、温度、密度、功和能量。标量遵循普通代数的运算法则。
+
+矢量： 既有大小又有方向的量。例如：位移、速度、加速度、力和电场强度。
+
+在几何上，我们用一个带箭头的线段来表示矢量。线段的长度代表矢量的大小，箭头的指向代表矢量的方向。
+
+1.2 矢量的表示法 (Notation)
+
+在本书中，我们将用粗体字母（如 $\mathbf{A}, \mathbf{B}, \mathbf{a}, \mathbf{b}$）表示矢量。标量则用斜体字母表示。矢量 $\mathbf{A}$ 的大小（或长度）记作 $|\mathbf{A}|$ 或简单的 $A$。
+
+单位矢量 (Unit Vector)： 大小为 1 的矢量称为单位矢量。
+
+零矢量 (Zero Vector)： 大小为 0 的矢量称为零矢量，记作 $\mathbf{0}$。它的方向是不确定的。
+
+1.3 矢量的加法 (Addition of Vectors)
+
+两个矢量 $\mathbf{A}$ 和 $\mathbf{B}$ 的和 $\mathbf{C} = \mathbf{A} + \mathbf{B}$ 可以通过平行四边形法则或三角形法则来定义。
+
+三角形法则： 将矢量 $\mathbf{B}$ 的起点放在矢量 $\mathbf{A}$ 的终点，那么从 $\mathbf{A}$ 的起点指向 $\mathbf{B}$ 的终点的矢量就是 $\mathbf{A} + \mathbf{B}$。
+
+法则属性：
+
+交换律： $\mathbf{A} + \mathbf{B} = \mathbf{B} + \mathbf{A}$
+
+结合律： $(\mathbf{A} + \mathbf{B}) + \mathbf{C} = \mathbf{A} + (\mathbf{B} + \mathbf{C})$
+
+1.4 矢量的减法 (Subtraction of Vectors)
+
+如果 $\mathbf{B}$ 是一个矢量，那么 $-\mathbf{B}$ 是一个与 $\mathbf{B}$ 大小相等但方向相反的矢量。两个矢量的差定义为：
+$$\mathbf{A} - \mathbf{B} = \mathbf{A} + (-\mathbf{B})$$
+
+在几何上，如果 $\mathbf{A}$ 和 $\mathbf{B}$ 从同一点出发，那么 $\mathbf{A} - \mathbf{B}$ 是从 $\mathbf{B}$ 的终点指向 $\mathbf{A}$ 的终点的矢量。
+
+1.5 标量与矢量的乘法 (Multiplication of a Vector by a Scalar)
+
+标量 $m$ 与矢量 $\mathbf{A}$ 的乘积记作 $m\mathbf{A}$。
+
+如果 $m > 0$，则 $m\mathbf{A}$ 的方向与 $\mathbf{A}$ 相同，大小为 $m|\mathbf{A}|$。
+
+如果 $m < 0$，则 $m\mathbf{A}$ 的方向与 $\mathbf{A}$ 相反，大小为 $|m||\mathbf{A}|$。
+
+如果 $m = 0$，则结果为零矢量 $\mathbf{0}$。
+
+该运算满足分配律：
+$$m(\mathbf{A} + \mathbf{B}) = m\mathbf{A} + m\mathbf{B}$$
+$$(m + n)\mathbf{A} = m\mathbf{A} + n\mathbf{A}$$
+
+1.6 共线与共面矢量 (Collinear and Coplanar Vectors)
+
+共线： 如果两个矢量平行于同一条直线，则称它们为共线矢量。如果 $\mathbf{A}$ 与 $\mathbf{B}$ 共线，则存在标量 $k$ 使得 $\mathbf{A} = k\mathbf{B}$。
+
+共面： 如果三个或多个矢量平行于同一个平面，则称它们为共面矢量。
+
+第 6 页：矢量的正交分解 (Orthogonal Components of a Vector)
+
+设 $\mathbf{i, j, k}$ 为沿直角笛卡尔坐标系 $x, y, z$ 轴正方向的一组单位矢量。任何矢量 $\mathbf{A}$ 都可以表示为这些单位矢量的线性组合。
+$$\mathbf{A} = A_x \mathbf{i} + A_y \mathbf{j} + A_z \mathbf{k}$$
+
+标量 $A_x, A_y, A_z$ 称为 $\mathbf{A}$ 的分量。$\mathbf{A}$ 的模（大小）由下式给出：
+
+$$A = |\mathbf{A}| = \sqrt{A_x^2 + A_y^2 + A_z^2}$$。
+
+第 7 页：方向余弦 (Direction Cosines)
+
+若 $\alpha, \beta, \gamma$ 分别是 $\mathbf{A}$ 与 $x, y, z$ 轴正方向的夹角，则有：
+
+$$A_x = A \cos \alpha, \quad A_y = A \cos \beta, \quad A_z = A \cos \gamma$$。
+
+这些被称为 $\mathbf{A}$ 的方向余弦。由此可知：
+$$\cos^2 \alpha + \cos^2 \beta + \cos^2 \gamma = 1$$。
+
+第 8 页：点积/数量积 (The Dot or Scalar Product)
+
+两个矢量 $\mathbf{A}$ 与 $\mathbf{B}$ 的点积（或称数量积），记作 $\mathbf{A \cdot B}$，定义为它们的模与它们之间夹角 $\theta$ 的余弦之积。
+
+$$\mathbf{A \cdot B} = AB \cos \theta, \quad (0 \le \theta \le \pi)$$
+
+根据该定义，显而易见：
+
+$\mathbf{A \cdot B} = \mathbf{B \cdot A}$ （交换律）
+
+$\mathbf{A \cdot A} = A^2$
+
+若 $\mathbf{A \cdot B} = 0$ 且 $\mathbf{A, B} \neq 0$，则 $\mathbf{A}$ 垂直于 $\mathbf{B}$。
+
+第 9 页：分量形式的点积与分配律
+
+点积满足分配律 $\mathbf{A \cdot (B + C)} = \mathbf{A \cdot B} + \mathbf{A \cdot C}$。这可以通过观察发现：$\mathbf{A \cdot B}$ 等于 $A$ 与 $\mathbf{B}$ 在 $\mathbf{A}$ 方向上的投影的乘积。
+
+用分量表示时，由于 $\mathbf{i \cdot i} = \mathbf{j \cdot j} = \mathbf{k \cdot k} = 1$ 且 $\mathbf{i \cdot j} = \mathbf{j \cdot k} = \mathbf{k \cdot i} = 0$，我们得到：$$\mathbf{A \cdot B} = (A_x \mathbf{i} + A_y \mathbf{j} + A_z \mathbf{k}) \cdot (B_x \mathbf{i} + B_y \mathbf{j} + B_z \mathbf{k}) = A_x B_x + A_y B_y + A_z B_z$$
+
+第 10 页：点积的应用：余弦定理与投影
+
+利用点积可以轻松推导出三角形的余弦定理。设 $\mathbf{C = A - B}$，则：
+
+$$\mathbf{C \cdot C} = (\mathbf{A - B}) \cdot (\mathbf{A - B}) = \mathbf{A \cdot A} + \mathbf{B \cdot B} - 2\mathbf{A \cdot B}$$
+$$C^2 = A^2 + B^2 - 2AB \cos \theta$$
+
+第 11 页：矢量积或叉积 (The Vector or Cross Product)
+
+两个矢量 $\mathbf{A}$ 与 $\mathbf{B}$ 的矢量积（又称叉积），记作 $\mathbf{A} \times \mathbf{B}$，其结果是一个矢量 $\mathbf{C}$。其模长定义为 $C = AB \sin \theta$，其中 $\theta$ 是 $\mathbf{A}$ 与 $\mathbf{B}$ 之间的夹角（$0 \le \theta \le \pi$）。
+
+矢量 $\mathbf{C} = \mathbf{A} \times \mathbf{B}$ 的方向垂直于 $\mathbf{A}$ 和 $\mathbf{B}$ 所确定的平面，且 $\mathbf{A, B, C}$ 构成一个右手系。这意味着，如果右手四指从 $\mathbf{A}$ 经较小夹角 $\theta$ 弯向 $\mathbf{B}$，则大拇指所指的方向即为 $\mathbf{C}$ 的方向。
+
+第 12 页：叉积的几何性质 (Geometric Properties of the Cross Product)
+
+根据定义可知 $\mathbf{A} \times \mathbf{B} = -(\mathbf{B} \times \mathbf{A})$。因此，交换律不适用于矢量积。
+
+若 $\mathbf{A} \times \mathbf{B} = \mathbf{0}$ 且 $\mathbf{A, B} \neq \mathbf{0}$，则 $\sin \theta = 0$，这意味着 $\mathbf{A}$ 与 $\mathbf{B}$ 平行或共线。
+
+模长 $AB \sin \theta$ 在几何上表示以 $\mathbf{A}$ 和 $\mathbf{B}$ 为邻边的平行四边形的面积。
+
+第 13 页：单位矢量的叉积 (Cross Product of Unit Vectors)
+
+对于右手笛卡尔坐标系中的基本单位矢量 $\mathbf{i, j, k}$，我们有：
+
+$\mathbf{i} \times \mathbf{i} = \mathbf{j} \times \mathbf{j} = \mathbf{k} \times \mathbf{k} = \mathbf{0}$
+
+
+此外：
+
+$\mathbf{i} \times \mathbf{j} = \mathbf{k}, \quad \mathbf{j} \times \mathbf{k} = \mathbf{i}, \quad \mathbf{k} \times \mathbf{i} = \mathbf{j}$。
+$\mathbf{j} \times \mathbf{i} = -\mathbf{k}, \quad \mathbf{k} \times \mathbf{j} = -\mathbf{i}, \quad \mathbf{i} \times \mathbf{k} = -\mathbf{j}$。
+
+第 14 页：叉积的分量形式 (Cross Product in Component Form)
+
+可以证明分配律 $\mathbf{A} \times (\mathbf{B} + \mathbf{C}) = \mathbf{A} \times \mathbf{B} + \mathbf{A} \times \mathbf{C}$ 是成立的。利用该定律，我们可以用分量表示 $\mathbf{A} \times \mathbf{B}$：
+$$\mathbf{A} \times \mathbf{B} = (A_y B_z - A_z B_y)\mathbf{i} + (A_z B_x - A_x B_z)\mathbf{j} + (A_x B_y - A_y B_x)\mathbf{k}$$
+
+这一结果最容易通过行列式的形式来记忆：
+$$\mathbf{A} \times \mathbf{B} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix}$$
+
+第 15 页：标量三重积 (The Scalar Triple Product)
+
+乘积 $\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$ 被称为标量三重积（又称混合积）。其结果是一个标量。
+
+在几何上，$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$ 的绝对值表示以 $\mathbf{A, B, C}$ 为共点棱的平行六面体的体积。
+
+用行列式形式表示为：
+$$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = \begin{vmatrix} A_x & A_y & A_z \\ B_x & B_y & B_z \\ C_x & C_y & C_z \end{vmatrix}$$
+
+第 16 页：矢量三重积 (The Vector Triple Product)
+
+乘积 $\mathbf{A} \times (\mathbf{B} \times \mathbf{C})$ 被称为矢量三重积。与标量三重积不同，其结果是一个矢量。由于 $\mathbf{B} \times \mathbf{C}$ 垂直于 $\mathbf{B}$ 和 $\mathbf{C}$ 构成的平面，因此矢量 $\mathbf{A} \times (\mathbf{B} \times \mathbf{C})$ 必然位于 $\mathbf{B}$ 和 $\mathbf{C}$ 所在的平面内。
+
+下述重要的展开公式成立：
+$$\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C})\mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C}$$
+
+这通常被称为“BAC-CAB”法则。请注意，一般情况下，$\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) \neq (\mathbf{A} \times \mathbf{B}) \times \mathbf{C}$。
+
+第 17 页：标量三重积的循环特性 (Cyclic Permutations)
+
+对于标量三重积 $\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C})$，点乘和叉乘符号可以互换而不改变其值：
+
+$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \times \mathbf{B}) \cdot \mathbf{C}$
+
+此外，在矢量的循环轮换下，其值保持不变：
+
+$[\mathbf{A, B, C}] = \mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = \mathbf{B} \cdot (\mathbf{C} \times \mathbf{A}) = \mathbf{C} \cdot (\mathbf{A} \times \mathbf{B})$
+
+如果顺序非循环，则符号改变：
+
+$\mathbf{A} \cdot (\mathbf{B} \times \mathbf{C}) = -\mathbf{A} \cdot (\mathbf{C} \times \mathbf{B})$
+
+第 18 页：四重积恒等式 (Quadruple Products)
+
+利用前面的公式，我们可以推导出涉及四个矢量的恒等式。四个矢量的数量积：
+
+$(\mathbf{A} \times \mathbf{B}) \cdot (\mathbf{C} \times \mathbf{D}) = (\mathbf{A} \cdot \mathbf{C})(\mathbf{B} \cdot \mathbf{D}) - (\mathbf{A} \cdot \mathbf{D})(\mathbf{B} \cdot \mathbf{C})$
+
+四个矢量的向量积：
+
+$(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{D}) = [\mathbf{A, C, D}]\mathbf{B} - [\mathbf{B, C, D}]\mathbf{A}$
+
+这表明所得矢量既位于 $\mathbf{A}$ 和 $\mathbf{B}$ 确定的平面内，也位于 $\mathbf{C}$ 和 $\mathbf{D}$ 确定的平面内。
+
+第 19 页：矢量方程 (Vector Equations)
+
+考虑方程 $\mathbf{A} \cdot \mathbf{X} = p$，其中 $\mathbf{A}$ 和 $p$ 为已知。该方程不能唯一确定 $\mathbf{X}$。在几何上，它表示一个垂直于 $\mathbf{A}$ 的平面，其到原点的距离为 $p/|\mathbf{A}|$。
+
+现在考虑 $\mathbf{A} \times \mathbf{X} = \mathbf{B}$。为了使解存在，$\mathbf{A}$ 必须垂直于 $\mathbf{B}$（即 $\mathbf{A} \cdot \mathbf{B} = 0$）。其通解为：
+$$\mathbf{X} = \frac{\mathbf{B} \times \mathbf{A}}{A^2} + \lambda \mathbf{A}$$
+其中 $\lambda$ 是任意标量。
+
+第 20 页：倒易矢量系 (Reciprocal System of Vectors)
+
+如果两组矢量 $\mathbf{a, b, c}$ 和 $\mathbf{a', b', c'}$ 满足以下条件，则称它们为倒易系：
+$\mathbf{a} \cdot \mathbf{a'} = \mathbf{b} \cdot \mathbf{b'} = \mathbf{c} \cdot \mathbf{c'} = 1$
+$\mathbf{a} \cdot \mathbf{b'} = \mathbf{a} \cdot \mathbf{c'} = \dots = 0$
+
+倒易矢量可以按如下方式构造：
+$$\mathbf{a'} = \frac{\mathbf{b} \times \mathbf{c}}{[\mathbf{a, b, c}]}, \quad \mathbf{b'} = \frac{\mathbf{c} \times \mathbf{a}}{[\mathbf{a, b, c}]}, \quad \mathbf{c'} = \frac{\mathbf{a} \times \mathbf{b}}{[\mathbf{a, b, c}]}$$
+
+前提是 $[\mathbf{a, b, c}] \neq 0$。
+
+第 21 页：直线的矢量方程
+
+直线的表示：空间中的一条直线可以通过一个已知点 $A$（位置矢量为 $\mathbf{a}$）以及直线所平行的方向矢量 $\mathbf{b}$ 来唯一确定。设 $P$ 是直线上任意一点，其位置矢量为 $\mathbf{r}$。
+
+则矢量 $\vec{AP} = \mathbf{r} - \mathbf{a}$ 必定与 $\mathbf{b}$ 平行。因此，存在一个标量参数 $t$，使得：
+$$\mathbf{r} - \mathbf{a} = t\mathbf{b}$$
+
+或者写作：
+$$\mathbf{r} = \mathbf{a} + t\mathbf{b}$$
+
+这就是直线的参数矢量方程。
+
+另一种形式：由于 $\mathbf{r} - \mathbf{a}$ 与 $\mathbf{b}$ 平行，它们的叉积必须为零：
+$$(\mathbf{r} - \mathbf{a}) \times \mathbf{b} = \mathbf{0}$$
+
+第 22 页：两点确定的直线与距离公式
+
+两点式方程：若直线通过两个已知点 $A(\mathbf{a})$ 和 $B(\mathbf{b})$，则直线的方向矢量可以取为 $\mathbf{b} - \mathbf{a}$。此时方程变为：
+$$\mathbf{r} = \mathbf{a} + t(\mathbf{b} - \mathbf{a})$$
+
+或
+$$\mathbf{r} = (1 - t)\mathbf{a} + t\mathbf{b}$$
+
+点到直线的距离：
+
+设已知点 $Q$ 的位置矢量为 $\mathbf{q}$，直线方程为 $\mathbf{r} = \mathbf{a} + t\mathbf{b}$。点 $Q$ 到该直线的垂直距离 $d$ 由下式给出：
+
+$$d = \frac{|(\mathbf{q} - \mathbf{a}) \times \mathbf{b}|}{|\mathbf{b}|}$$
+
+这里 $(\mathbf{q} - \mathbf{a}) \times \mathbf{b}$ 的模表示以 $\mathbf{q} - \mathbf{a}$ 和 $\mathbf{b}$ 为邻边的平行四边形的面积，除以底边长 $|\mathbf{b}|$ 即得高 $d$。
+
+第 23 页：平面的矢量方程
+
+点法式方程：一个平面可以通过平面内的一点 $A(\mathbf{a})$ 和一个垂直于平面的法矢量 $\mathbf{n}$ 来确定。若 $P(\mathbf{r})$ 是平面上的任意一点，则矢量 $\mathbf{r} - \mathbf{a}$ 必然位于平面内，因此与 $\mathbf{n}$ 垂直。其点积必为零：
+
+$$(\mathbf{r} - \mathbf{a}) \cdot \mathbf{n} = 0$$
+
+或者
+$$\mathbf{r} \cdot \mathbf{n} = \mathbf{a} \cdot \mathbf{n} = p$$
+
+其中 $p$ 是一个常数。
+
+三点定平面：
+
+若平面通过不共线的三点 $A(\mathbf{a}), B(\mathbf{b}), C(\mathbf{c})$，则平面上任意一点 $P(\mathbf{r})$ 满足矢量 $\mathbf{r} - \mathbf{a}, \mathbf{b} - \mathbf{a}, \mathbf{c} - \mathbf{a}$ 共面。因此它们的标量三重积为零：
+
+$$(\mathbf{r} - \mathbf{a}) \cdot [(\mathbf{b} - \mathbf{a}) \times (\mathbf{c} - \mathbf{a})] = 0$$
+
+第 24 页：点到平面的距离与两平面夹角
+
+点到平面的距离：点 $Q(\mathbf{q})$ 到平面 $\mathbf{r} \cdot \mathbf{n} = p$ 的垂直距离 $D$ 是 $\mathbf{q} - \mathbf{r}$ 在法方向上的投影长度。如果 $\mathbf{n}$ 是单位法矢量，则：
+
+$$D = | \mathbf{q} \cdot \mathbf{n} - p |$$
+
+若 $\mathbf{n}$ 不是单位矢量，则需除以其模长。
+
+两平面的夹角：两个平面之间的夹角定义为它们法矢量 $\mathbf{n}_1$ 和 $\mathbf{n}_2$ 之间的夹角 $\theta$：
+$$\cos \theta = \frac{\mathbf{n}_1 \cdot \mathbf{n}_2}{|\mathbf{n}_1| |\mathbf{n}_2|}$$
+
+两平面的交线：
+
+两个平面的交线方向与两个法矢量的叉积 $\mathbf{n}_1 \times \mathbf{n}_2$ 平行。
+
+第 25 页：球体与圆的矢量表示
+
+球体方程：
+
+设球心位置矢量为 $\mathbf{c}$，半径为 $a$。球面上任意一点 $P(\mathbf{r})$ 到球心的距离恒为 $a$：
+
+$$|\mathbf{r} - \mathbf{c}| = a$$平方可得：$$(\mathbf{r} - \mathbf{c}) \cdot (\mathbf{r} - \mathbf{c}) = a^2$$
+
+或者
+$$r^2 - 2\mathbf{r} \cdot \mathbf{c} + c^2 = a^2$$
+
+切平面方程：
+
+球面上一点 $P_0(\mathbf{r}_0)$ 处的切平面垂直于半径矢量 $\mathbf{r}_0 - \mathbf{c}$。因此，切平面的方程为：
+$$(\mathbf{r} - \mathbf{r}_0) \cdot (\mathbf{r}_0 - \mathbf{c}) = 0$$
+
+
+\section{矢量微积分 —— 矢量函数}
+
+矢量函数的定义：
+
+如果对于标量变量 $t$ 在某个区间内的每一个值，都有一个唯一的矢量 $\mathbf{u}$ 与之对应，则称 $\mathbf{u}$ 是 $t$ 的矢量函数，记作 $\mathbf{u} = \mathbf{f}(t)$。在直角坐标系中，这等价于其三个分量都是 $t$ 的标量函数：
+$$\mathbf{u}(t) = u_x(t)\mathbf{i} + u_y(t)\mathbf{j} + u_z(t)\mathbf{k}$$
+
+极限与连续性：
+
+若当 $t \to t_0$ 时，矢量 $\mathbf{u}(t)$ 的模与某一固定矢量 $\mathbf{L}$ 的差趋于零，即 $\lim_{t \to t_0} |\mathbf{u}(t) - \mathbf{L}| = 0$，则称 $\mathbf{L}$ 为 $\mathbf{u}(t)$ 的极限。如果 $\lim_{t \to t_0} \mathbf{u}(t) = \mathbf{u}(t_0)$，则称该矢量函数在 $t_0$ 处连续。
+
+第 27 页：矢量的导数
+
+导数的定义：设 $\mathbf{r}(t)$ 是随标量 $t$ 变化的矢量。其关于 $t$ 的导数定义为：
+
+$$\frac{d\mathbf{r}}{dt} = \lim_{\Delta t \to 0} \frac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t)}{\Delta t}$$
+
+如果 $\mathbf{r}$ 表示质点的位置矢量，且 $t$ 表示时间，那么 $d\mathbf{r}/dt$ 就是质点的瞬时速度矢量 $\mathbf{v}$。
+
+几何意义：
+
+从几何上看，$\Delta \mathbf{r} = \mathbf{r}(t + \Delta t) - \mathbf{r}(t)$ 是曲线上的弦矢量。随着 $\Delta t \to 0$，该矢量的方向趋于曲线在该点处的切线方向。因此，$d\mathbf{r}/dt$ 是一个沿切线方向的矢量。
+
+第 28 页：微分运算法则
+
+矢量导数的运算法则与标量微积分极其相似，但必须注意叉积的顺序。设 $\mathbf{u}, \mathbf{v}$ 为可微矢量函数，$\phi$ 为可微标量函数：
+
+加法法则：
+$$\frac{d}{dt}(\mathbf{u} + \mathbf{v}) = \frac{d\mathbf{u}}{dt} + \frac{d\mathbf{v}}{dt}$$
+
+标量乘积法则：
+$$\frac{d}{dt}(\phi \mathbf{u}) = \frac{d\phi}{dt}\mathbf{u} + \phi \frac{d\mathbf{u}}{dt}$$
+
+点积法则：
+$$\frac{d}{dt}(\mathbf{u} \cdot \mathbf{v}) = \frac{d\mathbf{u}}{dt} \cdot \mathbf{v} + \mathbf{u} \cdot \frac{d\mathbf{v}}{dt}$$
+
+叉积法则：
+$$\frac{d}{dt}(\mathbf{u} \times \mathbf{v}) = \frac{d\mathbf{u}}{dt} \times \mathbf{v} + \mathbf{u} \times \frac{d\mathbf{v}}{dt}$$
+
+注意：叉积项的顺序必须保持不变。
+
+第 29 页：常量模矢量的性质
+
+重要定理：如果一个矢量 $\mathbf{a}(t)$ 的模长是常数（即 $|\mathbf{a}| = c$），则该矢量与其导数矢量互相垂直。
+
+证明：因为 $|\mathbf{a}|^2 = \mathbf{a} \cdot \mathbf{a} = c^2$。对等式两边关于 $t$ 求导：
+$$\frac{d}{dt}(\mathbf{a} \cdot \mathbf{a}) = 0$$
+$$\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} + \frac{d\mathbf{a}}{dt} \cdot \mathbf{a} = 0$$
+$$2\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} = 0$$
+
+由此得 $\mathbf{a} \cdot \frac{d\mathbf{a}}{dt} = 0$，即 $\mathbf{a} \perp \frac{d\mathbf{a}}{dt}$。
+这个结论在研究圆周运动（半径矢量模长不变）或单位矢量场时非常有用。
+
+第 30 页：偏导数与复合函数求导
+
+偏导数：
+
+如果矢量 $\mathbf{A}$ 是多个标量变量（如 $x, y, z$）的函数，我们可以定义其偏导数。例如，关于 $x$ 的偏导数为：
+
+$$\frac{\partial \mathbf{A}}{\partial x} = \lim_{\Delta x \to 0} \frac{\mathbf{A}(x + \Delta x, y, z) - \mathbf{A}(x, y, z)}{\Delta x}$$
+
+这可以通过对 $\mathbf{A}$ 的各个分量分别求偏导来实现。
+
+全微分：
+
+若 $\mathbf{A} = \mathbf{A}(x, y, z)$，则其全微分为：
+
+$$d\mathbf{A} = \frac{\partial \mathbf{A}}{\partial x}dx + \frac{\partial \mathbf{A}}{\partial y}dy + \frac{\partial \mathbf{A}}{\partial z}dz$$
+
+链式法则：
+
+若 $\mathbf{A}$ 是 $s$ 的函数，而 $s$ 又是 $t$ 的函数，则：
+$$\frac{d\mathbf{A}}{dt} = \frac{d\mathbf{A}}{ds} \frac{ds}{dt}$$
+
+
+第 31 页：空间曲线与弧长
+
+曲线的参数化：
+
+考虑由方程 $\mathbf{r} = \mathbf{r}(s)$ 定义的空间曲线，其中 $s$ 是沿曲线测量的弧长。使用弧长作为参数具有特殊的数学意义，因为当参数变化 $\Delta s$ 时，点在空间移动的距离（弦长）在极限情况下等于弧长。
+
+单位切矢量：
+
+导数 $\mathbf{T} = d\mathbf{r}/ds$ 是一个矢量，其方向沿曲线的切线方向。由于 $|\Delta \mathbf{r}| / \Delta s \to 1$（当 $\Delta s \to 0$ 时），因此 $\mathbf{T}$ 是一个单位矢量，即 $|\mathbf{T}| = 1$。
+我们称 $\mathbf{T}$ 为曲线在某点处的单位切矢量。
+
+第 32 页：曲率与主法矢量
+
+曲率的定义：由于 $\mathbf{T}$ 是单位矢量，根据前一页的定理，其导数 $d\mathbf{T}/ds$ 必然与 $\mathbf{T}$ 垂直。我们定义：
+
+其中：
+$$\frac{d\mathbf{T}}{ds} = \kappa \mathbf{N}$$
+
+$\kappa$（Kappa）称为曲线在该点处的曲率（Curvature），它衡量了切线方向随弧长变化的速率。
+
+$\mathbf{N}$ 是与 $\mathbf{T}$ 垂直的单位矢量，称为主法矢量（Principal Normal）。
+
+曲率半径：
+
+曲率的倒数 $\rho = 1/\kappa$ 称为曲率半径。$\kappa = 0$ 意味着曲线在这一点是直线。
+
+第 33 页：副法矢量与密切平面
+
+副法矢量的定义：
+
+我们引入第三个单位矢量 $\mathbf{B}$，定义为切矢量和主法矢量的叉积：$$\mathbf{B} = \mathbf{T} \times \mathbf{N}$$
+
+矢量 $\mathbf{B}$ 称为副法矢量（Binormal）。由定义可知，$\mathbf{T, N, B}$ 构成一个彼此垂直的右手正交标架（称为 Frenet 标架）。
+
+相关的平面：
+
+密切平面（Osculating Plane）：由 $\mathbf{T}$ 和 $\mathbf{N}$ 确定的平面（法矢量为 $\mathbf{B}$）。曲线在该平面内有最大的弯曲趋势。
+
+法平面（Normal Plane）：由 $\mathbf{N}$ 和 $\mathbf{B}$ 确定的平面（法矢量为 $\mathbf{T}$）。
+
+从切平面（Rectifying Plane）：由 $\mathbf{T}$ 和 $\mathbf{B}$ 确定的平面（法矢量为 $\mathbf{N}$）。
+
+第 34 页：挠率与 Serret-Frenet 公式 (1)
+
+挠率的定义：现在考虑副法矢量 $\mathbf{B}$ 随弧长的变化率 $d\mathbf{B}/ds$。可以证明它一定平行于 $\mathbf{N}$。我们定义：
+
+$$\frac{d\mathbf{B}}{ds} = -\tau \mathbf{N}$$
+
+其中标量 $\tau$（Tau）称为曲线的挠率（Torsion）。挠率衡量了曲线脱离其密切平面的程度（即曲线在空间中“扭曲”的程度）。
+
+若 $\tau = 0$，则曲线始终位于同一个平面内（平面曲线）。
+
+Serret-Frenet 公式的前两个：
+
+$d\mathbf{T}/ds = \kappa \mathbf{N}$
+
+$d\mathbf{B}/ds = -\tau \mathbf{N}$
+
+第 35 页：Serret-Frenet 公式 (2)
+
+推导 $d\mathbf{N}/ds$：利用 $\mathbf{N} = \mathbf{B} \times \mathbf{T}$，我们可以通过对乘积求导来推导主法矢量的变化率：
+
+$$\frac{d\mathbf{N}}{ds} = \frac{d\mathbf{B}}{ds} \times \mathbf{T} + \mathbf{B} \times \frac{d\mathbf{T}}{ds}$$
+
+代入已知的关系式：
+$$\frac{d\mathbf{N}}{ds} = (-\tau \mathbf{N}) \times \mathbf{T} + \mathbf{B} \times (\kappa \mathbf{N})$$
+
+利用右手定则，最终得到：
+$$\frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T}$$
+
+总结（Serret-Frenet 公式组）：这是一组描述空间曲线几何特性的基本方程：
+
+$$\begin{cases} \frac{d\mathbf{T}}{ds} = \kappa \mathbf{N} \\ \frac{d\mathbf{N}}{ds} = \tau \mathbf{B} - \kappa \mathbf{T} \\ \frac{d\mathbf{B}}{ds} = -\tau \mathbf{N} \end{cases}$$
+
+第 36 页：运动学中的应用：速度与加速度
+
+速度矢量：设一个质点沿曲线运动，其位置矢量为 $\mathbf{r}(t)$，其中 $t$ 代表时间。速度矢量定义为：
+
+$$\mathbf{v} = \frac{d\mathbf{r}}{dt} = \frac{d\mathbf{r}}{ds} \frac{ds}{dt} = v\mathbf{T}$$
+
+这里 $v = ds/dt$ 是质点运动的速率，而 $\mathbf{T}$ 是单位切矢量。这表明速度矢量的方向始终沿曲线的切线方向。
+
+加速度矢量：对速度矢量关于时间 $t$ 再次求导，得到加速度矢量 $\mathbf{a}$：
+$$\mathbf{a} = \frac{d\mathbf{v}}{dt} = \frac{d}{dt}(v\mathbf{T}) = \frac{dv}{dt}\mathbf{T} + v\frac{d\mathbf{T}}{dt}$$
+
+利用链式法则 $d\mathbf{T}/dt = (d\mathbf{T}/ds)(ds/dt) = \kappa \mathbf{N} v$，代入上式得：
+$$\mathbf{a} = \frac{dv}{dt}\mathbf{T} + \kappa v^2 \mathbf{N}$$
+
+这说明加速度有两个分量：
+
+切向加速度：$a_t = dv/dt$，反映速率的变化。
+
+法向加速度：$a_n = \kappa v^2 = v^2/\rho$，反映运动方向的变化。
+
+第 37 页：标量场与等值面
+
+标量场的定义：
+
+如果在空间区域内的每一个点 $(x, y, z)$，都有一个标量 $\phi(x, y, z)$ 与之对应，则称在该区域内定义了一个标量场。例如：空间中的温度分布、大气压分布或电势。
+
+等值面：
+
+方程 $\phi(x, y, z) = C$（其中 $C$ 为常数）定义了一系列曲面，称为标量场的等值面（如等温面、等势面）。在同一等值面上，标量函数的值保持不变。
+
+第 38 页：梯度算子 (The Gradient)
+
+梯度的定义：
+
+对于标量场 $\phi(x, y, z)$，我们定义其梯度为一个矢量场，记作 $\text{grad} \phi$ 或 $\nabla \phi$（读作 del phi）。在直角坐标系中，其形式为：
+
+$$\nabla \phi = \frac{\partial \phi}{\partial x}\mathbf{i} + \frac{\partial \phi}{\partial y}\mathbf{j} + \frac{\partial \phi}{\partial z}\mathbf{k}$$
+
+算子 $\nabla$：
+
+符号 $\nabla$ 称为哈密顿算子（Hamiltonian Operator）或倒三角算子：
+
+$$\nabla = \mathbf{i}\frac{\partial}{\partial x} + \mathbf{j}\frac{\partial}{\partial y} + \mathbf{k}\frac{\partial}{\partial z}$$
+
+这是一个矢量微分算子，它作用于标量场产生矢量场。
+
+第 39 页：梯度的几何意义 (1)
+
+梯度与等值面的关系：考虑通过点 $P$ 的等值面 $\phi(x, y, z) = C$。设 $\mathbf{r}$ 是该面上一点的位置矢量，则面上的微小位移 $d\mathbf{r}$ 满足全微分方程：
+
+$$d\phi = \frac{\partial \phi}{\partial x}dx + \frac{\partial \phi}{\partial y}dy + \frac{\partial \phi}{\partial z}dz = 0$$
+
+利用点积的形式，这可以写成：
+$$(\nabla \phi) \cdot d\mathbf{r} = 0$$
+
+由于 $d\mathbf{r}$ 位于等值面的切平面内，而点积为零意味着垂直。因此：在空间任意一点，梯度矢量 $\nabla \phi$ 始终垂直于过该点的等值面。
+
+第 40 页：梯度的几何意义 (2) 与方向导数
+
+方向导数：
+
+如果我们想知道 $\phi$ 沿任意方向 $\mathbf{u}$（单位矢量）的变化率，这个变化率称为 $\phi$ 沿方向 $\mathbf{u}$ 的方向导数，记作 $d\phi/ds$。根据复合函数求导法则：
+
+$$\frac{d\phi}{ds} = \nabla \phi \cdot \mathbf{u} = |\nabla \phi| \cos \theta$$
+
+其中 $\theta$ 是 $\nabla \phi$ 与 $\mathbf{u}$ 之间的夹角。
+
+最大变化率：
+
+当 $\theta = 0$ 时，即沿梯度的方向，$d\phi/ds$ 取得最大值，其值为 $|\nabla \phi|$。
+
+结论：梯度矢量的方向是标量场增加最快的方向，其模长等于该最大增加率。
+
+第 41 页：梯度的代数性质与恒等式
+
+基本运算法则：设 $\phi$ 和 $\psi$ 是可微的标量场，$c$ 为常数，则梯度运算满足以下代数性质：
+
+线性性质：$\nabla(\phi + \psi) = \nabla\phi + \nabla\psi$ 以及 $\nabla(c\phi) = c\nabla\phi$。
+
+乘积法则：$\nabla(\phi\psi) = \phi\nabla\psi + \psi\nabla\phi$。
+
+商法则：$\nabla\left(\frac{\phi}{\psi}\right) = \frac{\psi\nabla\phi - \phi\nabla\psi}{\psi^2}$ （在 $\psi \neq 0$ 处）。
+
+复合函数梯度：若 $f$ 是标量 $u$ 的函数，而 $u$ 又是坐标的函数 $u(x, y, z)$，则：
+
+$$\nabla f(u) = f'(u) \nabla u$$
+
+例如，若 $r = \sqrt{x^2+y^2+z^2}$ 是到原点的距离，则 $\nabla r = \frac{\mathbf{r}}{r}$（单位径向矢量）。
+
+第 42 页：矢量场的散度 (The Divergence)
+
+定义：设 $\mathbf{V}(x, y, z) = V_x\mathbf{i} + V_y\mathbf{j} + V_z\mathbf{k}$ 是一个可微的矢量场。$\mathbf{V}$ 的散度定义为一个标量场，记作 $\text{div} \mathbf{V}$ 或 $\nabla \cdot \mathbf{V}$：
+
+$$\nabla \cdot \mathbf{V} = \left(\mathbf{i}\frac{\partial}{\partial x} + \mathbf{j}\frac{\partial}{\partial y} + \mathbf{k}\frac{\partial}{\partial z}\right) \cdot (V_x\mathbf{i} + V_y\mathbf{j} + V_z\mathbf{k})$$
+
+展开得：
+$$\nabla \cdot \mathbf{V} = \frac{\partial V_x}{\partial x} + \frac{\partial V_y}{\partial y} + \frac{\partial V_z}{\partial z}$$
+
+物理意义：在流体动力学中，若 $\mathbf{V}$ 代表流体的速度，那么 $\nabla \cdot \mathbf{V}$ 表示单位时间内从单位体积元中流出的流体净通量。
+
+若 $\nabla \cdot \mathbf{V} > 0$，该点存在“源”（Source）。
+
+若 $\nabla \cdot \mathbf{V} < 0$，该点存在“汇”（Sink）。
+
+若 $\nabla \cdot \mathbf{V} = 0$，则称该场为无散场或螺线场（Solenoidal Field）。
+
+第 43 页：矢量场的旋度 (The Curl)
+
+定义：矢量场 $\mathbf{V}$ 的旋度定义为一个新的矢量场，记作 $\text{curl} \mathbf{V}$ 或 $\nabla \times \mathbf{V}$。它可以通过算子 $\nabla$ 与 $\mathbf{V}$ 的叉积得到：
+
+$$\nabla \times \mathbf{V} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ V_x & V_y & V_z \end{vmatrix}$$
+
+展开分量形式为：
+$$\nabla \times \mathbf{V} = \left( \frac{\partial V_z}{\partial y} - \frac{\partial V_y}{\partial z} \right)\mathbf{i} + \left( \frac{\partial V_x}{\partial z} - \frac{\partial V_z}{\partial x} \right)\mathbf{j} + \left( \frac{\partial V_y}{\partial x} - \frac{\partial V_x}{\partial y} \right)\mathbf{k}$$
+
+物理意义：
+
+旋度描述了矢量场在某点附近的旋转强度和方向。例如，在流体中，旋度代表了流体微团的局部角速度。若 $\nabla \times \mathbf{V} = \mathbf{0}$，则称该场为无旋场（Irrotational Field）。
+
+第 44 页：包含 $\nabla$ 的重要组合恒等式
+
+当 $\nabla$ 算子与多个场结合时，会产生一些极其重要的二阶恒等式。设 $\phi$ 为标量场，$\mathbf{V}$ 为矢量场：
+
+标量场梯度的旋度恒为零：
+$$\nabla \times (\nabla \phi) = \mathbf{0}$$
+
+（这意味着任何梯度场都是无旋场。）
+
+矢量场旋度的散度恒为零：
+$$\nabla \cdot (\nabla \times \mathbf{V}) = 0$$
+
+（这意味着任何旋度场都是无散场。）
+
+乘积的散度：
+$$\nabla \cdot (\phi \mathbf{V}) = \phi (\nabla \cdot \mathbf{V}) + (\nabla \phi) \cdot \mathbf{V}$$
+
+第 45 页：拉普拉斯算子 (The Laplacian)
+
+定义：标量场 $\phi$ 梯度的散度称为 $\phi$ 的拉普拉斯运算，记作 $\nabla^2 \phi$ 或 $\Delta \phi$：
+
+$$\nabla^2 \phi = \nabla \cdot (\nabla \phi) = \frac{\partial^2 \phi}{\partial x^2} + \frac{\partial^2 \phi}{\partial y^2} + \frac{\partial^2 \phi}{\partial z^2}$$
+
+这是一个二阶偏微分算子，广泛应用于波动方程、热传导方程以及静电势分析（泊松方程和拉普拉斯方程）。
+
+矢量拉普拉斯算子：对于矢量场 $\mathbf{V}$，其拉普拉斯运算定义为对其每个分量分别进行拉普拉斯运算：
+$$\nabla^2 \mathbf{V} = (\nabla^2 V_x)\mathbf{i} + (\nabla^2 V_y)\mathbf{j} + (\nabla^2 V_z)\mathbf{k}$$
+
+此外，它与梯度、散度、旋度之间存在著名的恒等式：
+$$\nabla \times (\nabla \times \mathbf{V}) = \nabla (\nabla \cdot \mathbf{V}) - \nabla^2 \mathbf{V}$$
+
+第 46 页：正交曲线坐标系 (Orthogonal Curvilinear Coordinates)
+
+变换定义：在直角坐标系 $(x, y, z)$ 之外，我们可以引入新的坐标变量 $(u_1, u_2, u_3)$，它们与直角坐标的关系由下列方程确定：
+
+$$x = x(u_1, u_2, u_3), \quad y = y(u_1, u_2, u_3), \quad z = z(u_1, u_2, u_3)$$
+
+若三组坐标面（如 $u_1 = \text{常数}$ 等）在每一点都彼此垂直，则称该系统为正交曲线坐标系。
+
+比例因子 (Scale Factors)：位置矢量 $\mathbf{r}$ 的微分可以表示为：
+
+$$d\mathbf{r} = \frac{\partial \mathbf{r}}{\partial u_1}du_1 + \frac{\partial \mathbf{r}}{\partial u_2}du_2 + \frac{\partial \mathbf{r}}{\partial u_3}du_3$$
+
+我们定义比例因子 $h_i$ 为：
+$$h_i = \left| \frac{\partial \mathbf{r}}{\partial u_i} \right|$$
+
+于是，弧长的平方（第一基本形式）表示为：
+$$ds^2 = d\mathbf{r} \cdot d\mathbf{r} = h_1^2 du_1^2 + h_2^2 du_2^2 + h_3^2 du_3^2$$
+
+第 47 页：曲线坐标系中的单位矢量
+
+局部正交基：
+
+在正交曲线坐标系中的每一点，我们定义一组单位矢量 $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$：
+
+$$\mathbf{e}_1 = \frac{1}{h_1}\frac{\partial \mathbf{r}}{\partial u_1}, \quad \mathbf{e}_2 = \frac{1}{h_2}\frac{\partial \mathbf{r}}{\partial u_2}, \quad \mathbf{e}_3 = \frac{1}{h_3}\frac{\partial \mathbf{r}}{\partial u_3}$$
+
+这些单位矢量彼此正交，并随点的位置改变而改变方向。任何矢量 $\mathbf{A}$ 都可以表示为：
+$$\mathbf{A} = A_1\mathbf{e}_1 + A_2\mathbf{e}_2 + A_3\mathbf{e}_3$$
+
+常见的比例因子：
+
+柱坐标 $(r, \theta, z)$：$h_r = 1, h_\theta = r, h_z = 1$。
+
+球坐标 $(r, \theta, \phi)$：$h_r = 1, h_\theta = r, h_\phi = r \sin \theta$。
+
+第 48 页：曲线坐标系中的梯度 (Gradient)
+
+梯度的一般形式：标量场 $\phi(u_1, u_2, u_3)$ 的全微分可以写成：
+$$d\phi = \frac{\partial \phi}{\partial u_1}du_1 + \frac{\partial \phi}{\partial u_2}du_2 + \frac{\partial \phi}{\partial u_3}du_3$$
+
+同时根据梯度的定义 $d\phi = \nabla \phi \cdot d\mathbf{r}$，通过对比可以得到梯度在一般正交曲线坐标系下的表达式：
+$$\nabla \phi = \frac{1}{h_1}\frac{\partial \phi}{\partial u_1}\mathbf{e}_1 + \frac{1}{h_2}\frac{\partial \phi}{\partial u_2}\mathbf{e}_2 + \frac{1}{h_3}\frac{\partial \phi}{\partial u_3}\mathbf{e}_3$$
+
+示例（柱坐标）：
+$$\nabla \phi = \frac{\partial \phi}{\partial r}\mathbf{e}_r + \frac{1}{r}\frac{\partial \phi}{\partial \theta}\mathbf{e}_\theta + \frac{\partial \phi}{\partial z}\mathbf{e}_z$$
+
+第 49 页：曲线坐标系中的散度 (Divergence)
+
+散度的一般形式：利用体积元在变换下的性质，可以推导出矢量场 $\mathbf{A} = A_1\mathbf{e}_1 + A_2\mathbf{e}_2 + A_3\mathbf{e}_3$ 的散度公式：
+
+$$\nabla \cdot \mathbf{A} = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}(h_2 h_3 A_1) + \frac{\partial}{\partial u_2}(h_3 h_1 A_2) + \frac{\partial}{\partial u_3}(h_1 h_2 A_3) \right]$$
+
+物理含义：由于比例因子的存在，散度不仅包含了分量本身的变化率，还包含了由于坐标线“发散”或“汇聚”而导致的额外项。例如在球坐标中，随着半径 $r$ 增大，单位 $dr$ 所对应的截面积也在增大。
+
+第 50 页：曲线坐标系中的旋度与拉普拉斯算子
+
+旋度的一般形式：旋度 $\nabla \times \mathbf{A}$ 的行列式表示形式在一般正交坐标系下修正为：
+
+$$\nabla \times \mathbf{A} = \frac{1}{h_1 h_2 h_3} \begin{vmatrix} h_1\mathbf{e}_1 & h_2\mathbf{e}_2 & h_3\mathbf{e}_3 \\ \frac{\partial}{\partial u_1} & \frac{\partial}{\partial u_2} & \frac{\partial}{\partial u_3} \\ h_1 A_1 & h_2 A_2 & h_3 A_3 \end{vmatrix}$$
+
+拉普拉斯算子的一般形式：结合梯度和散度的公式，$\nabla^2 \phi = \nabla \cdot (\nabla \phi)$ 得到：
+$$\nabla^2 \phi = \frac{1}{h_1 h_2 h_3} \left[ \frac{\partial}{\partial u_1}\left( \frac{h_2 h_3}{h_1} \frac{\partial \phi}{\partial u_1} \right) + \frac{\partial}{\partial u_2}\left( \frac{h_3 h_1}{h_2} \frac{\partial \phi}{\partial u_2} \right) + \frac{\partial}{\partial u_3}\left( \frac{h_1 h_2}{h_3} \frac{\partial \phi}{\partial u_3} \right) \right]$$
+
+\section{矢量积分}
+
+
+第 51 页：第三章 积分定理 —— 线积分 (Line Integrals)
+
+定义：设 $\mathbf{F}$ 为空间中的一个矢量场，$C$ 为连接点 $A$ 和 $B$ 的一条平滑曲线。我们将 $C$ 分成无穷多个微小位移 $d\mathbf{r}$。矢量场 $\mathbf{F}$ 沿曲线 $C$ 从 $A$ 到 $B$ 的线积分定义为：
+
+$$\int_C \mathbf{F} \cdot d\mathbf{r} = \int_C (F_x dx + F_y dy + F_z dz)$$
+
+物理意义：
+
+如果 $\mathbf{F}$ 代表作用在质点上的力，那么这个线积分就表示力在质点沿路径 $C$ 运动时所做的功。
+
+环量 (Circulation)：
+
+如果路径 $C$ 是一条闭合曲线，则该积分记作 $\oint_C \mathbf{F} \cdot d\mathbf{r}$。在流体力学中，这被称为流体沿该闭合回路的环量。
+
+第 52 页：保守场与势函数
+
+路径无关性：
+
+对于某些特殊的矢量场，线积分 $\int_A^B \mathbf{F} \cdot d\mathbf{r}$ 的值只取决于起点 $A$ 和终点 $B$，而与连接这两点的具体路径无关。
+
+基本定理：
+
+一个矢量场 $\mathbf{F}$ 是保守场（或称无旋场）的充要条件是存在一个标量函数 $\phi$（称为势函数），使得：
+$$\mathbf{F} = \nabla \phi$$
+
+此时，线积分的结果简单地等于势函数在两点处的差值：
+$$\int_A^B \nabla \phi \cdot d\mathbf{r} = \phi(B) - \phi(A)$$
+
+推论：
+
+在保守场中，沿任何闭合路径的线积分必为零：$\oint \mathbf{F} \cdot d\mathbf{r} = 0$。
+
+第 53 页：面积分 (Surface Integrals)
+
+定义：设 $S$ 为空间中的一个曲面，$\mathbf{n}$ 为该曲面上每一点处的单位法矢量。矢量场 $\mathbf{F}$ 穿过曲面 $S$ 的面积分（或称通量，Flux）定义为：
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} dS = \iint_S \mathbf{F} \cdot d\mathbf{S}$$
+
+其中 $d\mathbf{S} = \mathbf{n} dS$ 被称为矢量面积元。
+
+计算方法：如果曲面 $S$ 在 $xy$ 平面上的投影为区域 $R$，且曲面方程为 $z = f(x, y)$，则：
+
+$$\iint_S \mathbf{F} \cdot \mathbf{n} dS = \iint_R \left( -F_x \frac{\partial z}{\partial x} - F_y \frac{\partial z}{\partial y} + F_z \right) dx dy$$
+
+第 54 页：高斯散度定理 (Gauss's Divergence Theorem)
+
+定理陈述：高斯定理建立了封闭曲面的面积分与其所包围体积的体积分之间的联系。设 $V$ 是由闭合曲面 $S$ 所围成的体积，$\mathbf{F}$ 是连续可微的矢量场，则：
+
+$$\iiint_V (\nabla \cdot \mathbf{F}) dV = \oint_S \mathbf{F} \cdot \mathbf{n} dS$$
+
+直观理解： 该定理说明：一个封闭区域内所有“源”的总强度（散度的体积分），等于穿过该区域边界流出的净通量。
+
+物理应用： 在静电学中，这对应于高斯定律：穿过闭合曲面的电通量与该曲面所包围的总电荷量成正比。
+
+第 55 页：格林恒等式 (Green's Identities)
+
+利用高斯散度定理，并令 $\mathbf{F} = \phi \nabla \psi$，我们可以推导出两个在物理学中极负盛名的恒等式：
+
+格林第一恒等式：
+$$\iiint_V (\phi \nabla^2 \psi + \nabla \phi \cdot \nabla \psi) dV = \oint_S \phi (\nabla \psi \cdot \mathbf{n}) dS$$
+
+格林第二恒等式：
+$$\iiint_V (\phi \nabla^2 \psi - \psi \nabla^2 \phi) dV = \oint_S (\phi \nabla \psi - \psi \nabla \phi) \cdot \mathbf{n} dS$$
+
+这些恒等式是求解拉普拉斯方程和泊松方程（如电势分布、热传导平衡）的理论基石。
+
+第 56 页：斯托克斯定理 (Stokes's Theorem)
+
+定理陈述：斯托克斯定理将矢量场沿闭合曲线的线积分（环量）与其穿过以该曲线为边界的任意曲面的旋度通量联系起来。设 $S$ 是以分段平滑闭合曲线 $C$ 为边界的开放曲面，$\mathbf{F}$ 为连续可微的矢量场，则：
+
+$$\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n} dS$$
+
+方向规定：
+
+法矢量 $\mathbf{n}$ 的方向与曲线 $C$ 的绕行方向遵循右手定则：当右手四指指向 $C$ 的前进方向时，大拇指所指的方向即为 $\mathbf{n}$ 的正方向。
+
+第 57 页：斯托克斯定理的物理意义
+
+旋度的直观理解：斯托克斯定理揭示了“旋度”的本质。如果我们将一个极小的闭合回路面积 $\Delta S$ 放在矢量场中，该点处的旋度分量即为单位面积上的环量极限：
+
+$$((\nabla \times \mathbf{F}) \cdot \mathbf{n}) = \lim_{\Delta S \to 0} \frac{1}{\Delta S} \oint_{\Delta C} \mathbf{F} \cdot d\mathbf{r}$$
+
+这说明旋度衡量了矢量场在局部产生“涡旋”的能力。
+
+环量与无旋场：
+
+如果一个场在整个区域内满足 $\nabla \times \mathbf{F} = \mathbf{0}$，那么根据斯托克斯定理，沿任何闭合路径的环量必为零。这与我们之前讨论的“保守场”的概念是一致的。
+
+第 58 页：平面上的格林定理 (Green's Theorem in the Plane)
+
+定义：格林定理是斯托克斯定理在二维平面上的特殊形式。设 $R$ 是 $xy$ 平面上的一个闭合区域，$C$ 是其边界曲线。若 $P(x, y)$ 和 $Q(x, y)$ 在该区域内具有连续偏导数，则：
+
+$$\oint_C (P dx + Q dy) = \iint_R \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dx dy$$
+
+面积计算应用：利用格林定理，我们可以通过线积分来计算平面图形的面积。若令 $P = -y/2$，$Q = x/2$，则：
+
+$$\text{面积} A = \frac{1}{2} \oint_C (x dy - y dx)$$
+
+第 59 页：积分恒等式的扩展
+
+除了高斯定理和斯托克斯定理，还有一些涉及标量场和矢量场组合的积分变形公式。利用高斯定理，可以推导出：
+
+梯度定理：
+$$\iiint_V \nabla \phi dV = \oint_S \phi \mathbf{n} dS$$
+
+（体内的总梯度等于边界上的压力合力。）
+
+旋度定理：
+$$\iiint_V (\nabla \times \mathbf{F}) dV = \oint_S (\mathbf{n} \times \mathbf{F}) dS$$
+
+这些公式在处理连续介质力学中的受力分析时非常有用，可以将体积分转化为边界上的面积分。
+
+第 60 页：势论基础与拉普拉斯方
+
+程调和函数：在没有源电荷或质量的区域内，位势函数 $\phi$ 满足拉普拉斯方程：
+$$\nabla^2 \phi = 0$$
+
+满足该方程的函数称为调和函数（Harmonic Functions）。
+
+唯一性定理简述： 
+
+利用格林恒等式可以证明，如果一个调和函数在闭合区域的边界上具有确定的值（狄利克雷条件）或确定的法向导数（内曼条件），那么该函数在区域内部的解是唯一的（或仅差一个常数）。这是物理学中许多定解问题具有确定物理意义的数学保障。
+
 
 \section{微分向量分析}
 
